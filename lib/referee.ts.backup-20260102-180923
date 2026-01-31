@@ -1,0 +1,624 @@
+import Database from 'better-sqlite3';
+
+// ============================================
+// TYPES
+// ============================================
+export interface Venue {
+  id: number;
+  name: string;
+  category: string;
+  neighborhood?: string;
+  acoustic_band?: number;
+  friction_score?: string;
+  gatekeeper_status?: number;
+  conversation_level?: number;
+  photo_op_priority?: number;
+  latitude?: number;
+  longitude?: number;
+  rating?: number;
+  peak_friction_hour?: number;
+  dwell_time_avg?: number;
+  last_call_vibe?: boolean;
+  momentum_risk_score?: number;
+  image_url?: string;
+  [key: string]: any;
+}
+
+export interface ArcVenue extends Venue {
+  stop: number;
+  role: 'safe' | 'elevated' | 'wildcard';
+  effectiveFriction?: number;
+  ai_reasoning?: string;
+}
+
+export interface ValidationResult {
+  valid: boolean;
+  code: string;
+  message: string;
+  venue?: Venue;
+  stopIndex?: number;
+}
+
+export interface ArcValidation {
+  valid: boolean;
+  violations: ValidationResult[];
+  score: number;
+  dominantViolation?: string;
+}
+
+export type PersonaType = 'curator' | 'minimalist' | 'intellectual' | 'socialite' | 'insider' | 'wildcard' | 'default';
+
+export interface RefereeContext {
+  persona: PersonaType;
+  occasion: string;
+  hour: number;
+  dayOfWeek: number;
+  city: string;
+}
+
+// ============================================
+// CONSTANTS
+// ============================================
+const FRICTION_MAP: Record<string, number> = {
+  'low': 0.2,
+  'medium': 0.5,
+  'high': 0.8,
+};
+
+const PERSONA_MAX_FRICTION: Record<PersonaType, number> = {
+  curator: 0.6,
+  minimalist: 0.4,
+  intellectual: 0.4,
+  socialite: 0.7,
+  insider: 0.7,
+  wildcard: 0.9,
+  default: 0.6,
+};
+
+const PERSONA_ACOUSTIC_MAX: Record<PersonaType, number> = {
+  curator: 2,
+  minimalist: 1,
+  intellectual: 1,
+  socialite: 3,
+  insider: 2,
+  wildcard: 3,
+  default: 2,
+};
+
+const PERSONA_COMPATIBILITY: Record<PersonaType, (v: Venue) => number> = {
+  curator: (v) => {
+    let score = 0.5;
+    if ((v.photo_op_priority || 1) >= 2) score += 0.2;
+    if ((v.gatekeeper_status || 1) >= 2) score += 0.15;
+    if ((v.acoustic_band || 2) <= 2) score += 0.15;
+    return Math.min(score, 1);
+  },
+  minimalist: (v) => {
+    let score = 0.5;
+    const friction = FRICTION_MAP[v.friction_score || 'medium'] || 0.5;
+    if (friction <= 0.3) score += 0.25;
+    if ((v.acoustic_band || 2) === 1) score += 0.25;
+    return Math.min(score, 1);
+  },
+  intellectual: (v) => {
+    let score = 0.5;
+    if ((v.conversation_level || 1) >= 2) score += 0.25;
+    if ((v.acoustic_band || 2) === 1) score += 0.25;
+    return Math.min(score, 1);
+  },
+  socialite: (v) => {
+    let score = 0.5;
+    if ((v.acoustic_band || 2) >= 2) score += 0.25;
+    if ((v.popularity || 1) >= 2) score += 0.25;
+    return Math.min(score, 1);
+  },
+  insider: (v) => {
+    let score = 0.5;
+    if ((v.gatekeeper_status || 1) >= 2) score += 0.25;
+    if ((v.popularity || 2) <= 2) score += 0.15;
+    return Math.min(score, 1);
+  },
+  wildcard: () => 0.8,
+  default: () => 0.7,
+};
+
+export const REASON_CODES = {
+  VALID: 'VALID',
+  EARLY_HIGH_FRICTION: 'EARLY_HIGH_FRICTION',
+  ACOUSTIC_DROP: 'ACOUSTIC_DROP',
+  TRAVEL_TOO_FAR: 'TRAVEL_TOO_FAR',
+  FRICTION_ACCUMULATED: 'FRICTION_ACCUMULATED',
+  PERSONA_MISMATCH: 'PERSONA_MISMATCH',
+  PEAK_HOUR_RISK: 'PEAK_HOUR_RISK',
+  NO_VALID_REPLACEMENT: 'NO_VALID_REPLACEMENT',
+  MAX_REPAIRS_EXCEEDED: 'MAX_REPAIRS_EXCEEDED',
+};
+
+export const REASON_MESSAGES: Record<string, string> = {
+  VALID: '',
+  EARLY_HIGH_FRICTION: 'This spot gets crowded early — adjusted for easier entry',
+  ACOUSTIC_DROP: 'Energy flow would drop too hard — adjusted the sequence',
+  TRAVEL_TOO_FAR: 'Too far between stops — found something closer',
+  FRICTION_ACCUMULATED: 'Too many friction points stacking up — simplified the route',
+  PERSONA_MISMATCH: 'Didn\'t match your vibe — found a better fit',
+  PEAK_HOUR_RISK: 'Peak hours at this spot tonight — swapped for smoother entry',
+  NO_VALID_REPLACEMENT: 'Couldn\'t find a valid alternative for this tier',
+  MAX_REPAIRS_EXCEEDED: 'Too many adjustments needed — showing cleaner options',
+};
+
+const MAX_REPAIR_DEPTH = 2;
+
+// ============================================
+// UTILITY FUNCTIONS
+// ============================================
+function getFrictionValue(venue: Venue): number {
+  return FRICTION_MAP[venue.friction_score || 'medium'] || 0.5;
+}
+
+function getDistance(v1: Venue, v2: Venue): number {
+  if (!v1.latitude || !v1.longitude || !v2.latitude || !v2.longitude) {
+    return 0.5;
+  }
+  const R = 3959;
+  const dLat = (v2.latitude - v1.latitude) * Math.PI / 180;
+  const dLon = (v2.longitude - v1.longitude) * Math.PI / 180;
+  const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(v1.latitude * Math.PI / 180) * Math.cos(v2.latitude * Math.PI / 180) *
+            Math.sin(dLon/2) * Math.sin(dLon/2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R * c;
+}
+
+function getTravelPenalty(distance: number, city: string): number {
+  const walkThreshold = city === 'Miami' ? 3.0 : 0.8;
+  if (distance <= walkThreshold) return 0;
+  return 0.5;
+}
+
+function isWeekend(dayOfWeek: number): boolean {
+  return dayOfWeek === 5 || dayOfWeek === 6;
+}
+
+function getFrictionMultiplier(hour: number, dayOfWeek: number): number {
+  if (hour >= 22 && isWeekend(dayOfWeek)) return 1.5;
+  if (hour < 20) return 0.8;
+  return 1.0;
+}
+
+// FIX #2: Dynamic compatibility threshold based on stop
+function getCompatibilityThreshold(stopIndex: number): number {
+  return stopIndex === 0 ? 0.6 : 0.5;
+}
+
+// ============================================
+// CORE REFEREE FUNCTIONS
+// ============================================
+export function calculateEffectiveFriction(
+  venue: Venue,
+  stopIndex: number,
+  previousVenue: Venue | null,
+  context: RefereeContext
+): number {
+  let friction = getFrictionValue(venue);
+  
+  if (previousVenue) {
+    const distance = getDistance(previousVenue, venue);
+    friction += getTravelPenalty(distance, context.city);
+  }
+  
+  if (venue.peak_friction_hour && Math.abs(context.hour - venue.peak_friction_hour) <= 1) {
+    friction += 0.2;
+  }
+  
+  friction += (venue.momentum_risk_score || 0.5) * 0.2;
+  
+  if (isWeekend(context.dayOfWeek) && (venue.gatekeeper_status || 1) >= 2) {
+    friction += 0.15;
+  }
+  
+  return friction;
+}
+
+export function validateVenue(
+  venue: ArcVenue,
+  stopIndex: number,
+  previousVenue: ArcVenue | null,
+  context: RefereeContext
+): ValidationResult {
+  const effectiveFriction = calculateEffectiveFriction(venue, stopIndex, previousVenue, context);
+  venue.effectiveFriction = effectiveFriction;
+  
+  const frictionMultiplier = getFrictionMultiplier(context.hour, context.dayOfWeek);
+  const maxFriction = PERSONA_MAX_FRICTION[context.persona] * frictionMultiplier;
+  
+  // Law 1: Momentum Protection
+  if (stopIndex === 0) {
+    const earlyFrictionCap = context.hour < 20 ? 0.4 : 0.5;
+    if (effectiveFriction > earlyFrictionCap) {
+      return {
+        valid: false,
+        code: REASON_CODES.EARLY_HIGH_FRICTION,
+        message: REASON_MESSAGES.EARLY_HIGH_FRICTION,
+        venue,
+        stopIndex
+      };
+    }
+  }
+  
+  // Law 2: Acoustic Flow
+  if (previousVenue) {
+    const prevBand = previousVenue.acoustic_band || 2;
+    const currBand = venue.acoustic_band || 2;
+    
+    if (currBand < prevBand && !venue.last_call_vibe) {
+      return {
+        valid: false,
+        code: REASON_CODES.ACOUSTIC_DROP,
+        message: REASON_MESSAGES.ACOUSTIC_DROP,
+        venue,
+        stopIndex
+      };
+    }
+  }
+  
+  // Law 3: Travel Cap
+  if (previousVenue) {
+    const distance = getDistance(previousVenue, venue);
+    const dwellTime = venue.dwell_time_avg || 60;
+    const travelTime = distance * 20;
+    
+    if (travelTime > dwellTime * 0.25) {
+      return {
+        valid: false,
+        code: REASON_CODES.TRAVEL_TOO_FAR,
+        message: REASON_MESSAGES.TRAVEL_TOO_FAR,
+        venue,
+        stopIndex
+      };
+    }
+  }
+  
+  // Law 4: Friction Accumulation Cap
+  if (effectiveFriction > maxFriction) {
+    return {
+      valid: false,
+      code: REASON_CODES.FRICTION_ACCUMULATED,
+      message: REASON_MESSAGES.FRICTION_ACCUMULATED,
+      venue,
+      stopIndex
+    };
+  }
+  
+  // Law 5: Persona Compatibility (FIX #2: dynamic threshold)
+  const compatibility = PERSONA_COMPATIBILITY[context.persona](venue);
+  const threshold = getCompatibilityThreshold(stopIndex);
+  if (compatibility < threshold) {
+    return {
+      valid: false,
+      code: REASON_CODES.PERSONA_MISMATCH,
+      message: REASON_MESSAGES.PERSONA_MISMATCH,
+      venue,
+      stopIndex
+    };
+  }
+  
+  return {
+    valid: true,
+    code: REASON_CODES.VALID,
+    message: '',
+    venue,
+    stopIndex
+  };
+}
+
+export function validateArc(arc: ArcVenue[], context: RefereeContext): ArcValidation {
+  const violations: ValidationResult[] = [];
+  let score = 100;
+  const violationCounts: Record<string, number> = {};
+  
+  for (let i = 0; i < arc.length; i++) {
+    const previousVenue = i > 0 ? arc[i - 1] : null;
+    const result = validateVenue(arc[i], i, previousVenue, context);
+    
+    if (!result.valid) {
+      violations.push(result);
+      violationCounts[result.code] = (violationCounts[result.code] || 0) + 1;
+      
+      if (result.code === REASON_CODES.EARLY_HIGH_FRICTION) score -= 30;
+      else if (result.code === REASON_CODES.ACOUSTIC_DROP) score -= 50;
+      else if (result.code === REASON_CODES.TRAVEL_TOO_FAR) score -= 20;
+      else if (result.code === REASON_CODES.FRICTION_ACCUMULATED) score -= 25;
+      else if (result.code === REASON_CODES.PERSONA_MISMATCH) score -= 15;
+    }
+  }
+  
+  // FIX #3: Track dominant violation
+  let dominantViolation: string | undefined;
+  let maxCount = 0;
+  for (const [code, count] of Object.entries(violationCounts)) {
+    if (count > maxCount) {
+      maxCount = count;
+      dominantViolation = code;
+    }
+  }
+  
+  return {
+    valid: violations.length === 0,
+    violations,
+    score: Math.max(0, score),
+    dominantViolation
+  };
+}
+
+export function findReplacement(
+  failedVenue: ArcVenue,
+  stopIndex: number,
+  previousVenue: ArcVenue | null,
+  context: RefereeContext,
+  excludeIds: number[]
+): ArcVenue | null {
+  let db: any = null;
+  try {
+    db = new Database('/opt/viberyte/lumina-web/data/lumina.db');
+    
+    // FIX #1: Correct maxAcoustic logic - persona caps are upper bounds
+    const personaMax = PERSONA_ACOUSTIC_MAX[context.persona];
+    const prevBand = previousVenue?.acoustic_band || 1;
+    
+    // Replacement must be >= previous band (acoustic flow) but <= persona max
+    const minAcoustic = prevBand;
+    const maxAcoustic = personaMax;
+    
+    const excludePlaceholder = excludeIds.length > 0 
+      ? excludeIds.map(() => '?').join(',') 
+      : '-1';
+    
+    const query = `
+      SELECT id, name, category, neighborhood, acoustic_band, friction_score,
+             gatekeeper_status, conversation_level, photo_op_priority,
+             latitude, longitude, rating, peak_friction_hour, dwell_time_avg,
+             last_call_vibe, momentum_risk_score, image_url, vibe_tags
+      FROM venues
+      WHERE category = ?
+        AND id NOT IN (${excludePlaceholder})
+        AND (acoustic_band >= ? OR acoustic_band IS NULL)
+        AND (acoustic_band <= ? OR acoustic_band IS NULL)
+        AND image_url IS NOT NULL
+        AND should_exclude = 0
+      ORDER BY 
+        CASE WHEN neighborhood = ? THEN 0 ELSE 1 END,
+        rating DESC
+      LIMIT 5
+    `;
+    
+    const params = [
+      failedVenue.category,
+      ...excludeIds,
+      minAcoustic,
+      maxAcoustic,
+      failedVenue.neighborhood || ''
+    ];
+    
+    const candidates = db.prepare(query).all(...params) as Venue[];
+    db.close();
+    
+    // FIX #2: Use dynamic threshold
+    const threshold = getCompatibilityThreshold(stopIndex);
+    
+    for (const candidate of candidates) {
+      const arcVenue: ArcVenue = {
+        ...candidate,
+        stop: stopIndex,
+        role: failedVenue.role
+      };
+      
+      const result = validateVenue(arcVenue, stopIndex, previousVenue, context);
+      if (result.valid) {
+        const compatibility = PERSONA_COMPATIBILITY[context.persona](candidate);
+        if (compatibility >= threshold) {
+          arcVenue.ai_reasoning = `Swapped in – better flow for tonight`;
+          return arcVenue;
+        }
+      }
+    }
+    
+    return null;
+    
+  } catch (error) {
+    console.error('Referee replacement error:', error);
+    if (db) db.close();
+    return null;
+  }
+}
+
+// FIX #4: Add max repair depth
+export function repairArc(
+  arc: ArcVenue[],
+  validation: ArcValidation,
+  context: RefereeContext,
+  depth: number = 0
+): ArcVenue[] | null {
+  if (validation.valid) return arc;
+  
+  // Max repair depth check
+  if (depth >= MAX_REPAIR_DEPTH) {
+    console.log(`⚠️ Max repair depth (${MAX_REPAIR_DEPTH}) exceeded`);
+    return null;
+  }
+  
+  const repairedArc = [...arc];
+  const excludeIds = arc.map(v => v.id);
+  let repairsMade = 0;
+  
+  for (const violation of validation.violations) {
+    if (violation.stopIndex === undefined) continue;
+    
+    const previousVenue = violation.stopIndex > 0 ? repairedArc[violation.stopIndex - 1] : null;
+    const replacement = findReplacement(
+      repairedArc[violation.stopIndex],
+      violation.stopIndex,
+      previousVenue,
+      context,
+      excludeIds
+    );
+    
+    if (replacement) {
+      repairedArc[violation.stopIndex] = replacement;
+      excludeIds.push(replacement.id);
+      repairsMade++;
+    } else {
+      console.log(`❌ Could not repair stop ${violation.stopIndex}`);
+      return null;
+    }
+  }
+  
+  // Re-validate repaired arc
+  const recheck = validateArc(repairedArc, context);
+  if (recheck.valid) {
+    return repairedArc;
+  }
+  
+  // Recursive repair with increased depth
+  return repairArc(repairedArc, recheck, context, depth + 1);
+}
+
+export function scoreArc(arc: ArcVenue[], context: RefereeContext): number {
+  const validation = validateArc(arc, context);
+  let score = validation.score;
+  
+  let acousticProgression = 0;
+  for (let i = 1; i < arc.length; i++) {
+    const prev = arc[i-1].acoustic_band || 2;
+    const curr = arc[i].acoustic_band || 2;
+    if (curr >= prev) acousticProgression += 10;
+  }
+  score += acousticProgression;
+  
+  const totalFriction = arc.reduce((sum, v) => sum + (v.effectiveFriction || 0.5), 0);
+  if (totalFriction < 1.5) score += 15;
+  
+  const avgCompatibility = arc.reduce((sum, v) => {
+    return sum + PERSONA_COMPATIBILITY[context.persona](v);
+  }, 0) / arc.length;
+  score += avgCompatibility * 20;
+  
+  return Math.min(100, Math.round(score));
+}
+
+// FIX #3: Use actual violation codes for pivot message
+export function refereeCheck(
+  tiers: { safe: ArcVenue[]; elevated: ArcVenue[]; wildcard: ArcVenue[] },
+  context: RefereeContext
+): {
+  safe: { arc: ArcVenue[] | null; score: number; valid: boolean; dominantViolation?: string };
+  elevated: { arc: ArcVenue[] | null; score: number; valid: boolean; dominantViolation?: string };
+  wildcard: { arc: ArcVenue[] | null; score: number; valid: boolean; dominantViolation?: string };
+  hiddenTiers: string[];
+  pivotMessage: string | null;
+  recommendedTier: string | null;
+} {
+  const safeResult = processArc(tiers.safe, context);
+  const elevatedResult = processArc(tiers.elevated, context);
+  const wildcardResult = processArc(tiers.wildcard, context);
+  
+  const results = {
+    safe: safeResult,
+    elevated: elevatedResult,
+    wildcard: wildcardResult,
+    hiddenTiers: [] as string[],
+    pivotMessage: null as string | null,
+    recommendedTier: null as string | null,
+  };
+  
+  // Track hidden tiers and their reasons
+  const hiddenReasons: { tier: string; reason: string }[] = [];
+  
+  if (!safeResult.valid) {
+    results.hiddenTiers.push('safe');
+    if (safeResult.dominantViolation) {
+      hiddenReasons.push({ tier: 'safe', reason: safeResult.dominantViolation });
+    }
+  }
+  if (!elevatedResult.valid) {
+    results.hiddenTiers.push('elevated');
+    if (elevatedResult.dominantViolation) {
+      hiddenReasons.push({ tier: 'elevated', reason: elevatedResult.dominantViolation });
+    }
+  }
+  if (!wildcardResult.valid) {
+    results.hiddenTiers.push('wildcard');
+    if (wildcardResult.dominantViolation) {
+      hiddenReasons.push({ tier: 'wildcard', reason: wildcardResult.dominantViolation });
+    }
+  }
+  
+  // Generate pivot message using actual violation codes
+  if (hiddenReasons.length > 0 && hiddenReasons.length < 3) {
+    const firstHidden = hiddenReasons[0];
+    const reasonMessage = REASON_MESSAGES[firstHidden.reason] || 'adjusted for better flow';
+    results.pivotMessage = `I've adjusted the ${firstHidden.tier} path – ${reasonMessage}`;
+  } else if (results.hiddenTiers.length === 3) {
+    results.pivotMessage = `Tonight's conditions are tough for this vibe. Showing what I could salvage.`;
+  }
+  
+  // Determine recommended tier (Phase 2 prep)
+  const validTiers = [
+    { name: 'safe', score: safeResult.score, valid: safeResult.valid },
+    { name: 'elevated', score: elevatedResult.score, valid: elevatedResult.valid },
+    { name: 'wildcard', score: wildcardResult.score, valid: wildcardResult.valid },
+  ].filter(t => t.valid);
+  
+  if (validTiers.length > 0) {
+    validTiers.sort((a, b) => b.score - a.score);
+    results.recommendedTier = validTiers[0].name;
+  }
+  
+  return results;
+}
+
+function processArc(
+  arc: ArcVenue[],
+  context: RefereeContext
+): { arc: ArcVenue[] | null; score: number; valid: boolean; dominantViolation?: string } {
+  if (!arc || arc.length === 0) {
+    return { arc: null, score: 0, valid: false };
+  }
+  
+  const validation = validateArc(arc, context);
+  
+  if (validation.valid) {
+    return {
+      arc,
+      score: scoreArc(arc, context),
+      valid: true
+    };
+  }
+  
+  const repaired = repairArc(arc, validation, context);
+  if (repaired) {
+    return {
+      arc: repaired,
+      score: scoreArc(repaired, context),
+      valid: true
+    };
+  }
+  
+  return { 
+    arc: null, 
+    score: 0, 
+    valid: false,
+    dominantViolation: validation.dominantViolation
+  };
+}
+
+export default {
+  validateArc,
+  validateVenue,
+  repairArc,
+  scoreArc,
+  refereeCheck,
+  calculateEffectiveFriction,
+  findReplacement,
+  REASON_CODES,
+  REASON_MESSAGES,
+};

@@ -1,0 +1,138 @@
+{
+  "cuisines": {
+    "description": "Complete cuisine taxonomy - primary + secondary for each venue",
+    "categories": {
+      "Italian": ["Northern Italian", "Southern Italian", "Neapolitan Pizza", "Roman", "Sicilian", "Tuscan", "Italian-American"],
+      
+      "Asian": {
+        "Japanese": ["Sushi", "Ramen", "Izakaya", "Omakase", "Yakitori", "Teppanyaki", "Japanese Fusion"],
+        "Chinese": ["Cantonese", "Sichuan", "Hunan", "Dim Sum", "Shanghai", "Beijing", "Hot Pot"],
+        "Korean": ["Korean BBQ", "Korean Fried Chicken", "Korean Fusion"],
+        "Thai": ["Northern Thai", "Southern Thai", "Thai Fusion"],
+        "Vietnamese": ["Pho", "Banh Mi", "Vietnamese Fusion"],
+        "Indian": ["North Indian", "South Indian", "Bengali", "Punjabi", "Indian Fusion"],
+        "Filipino": ["Traditional Filipino", "Filipino Fusion"],
+        "Malaysian": ["Malaysian", "Malaysian Fusion"],
+        "Indonesian": ["Indonesian", "Indonesian Fusion"]
+      },
+      
+      "Latin American": {
+        "Mexican": ["Traditional Mexican", "Tex-Mex", "Oaxacan", "Yucatan", "Mexican Street Food", "Tacos", "Mexican Fusion"],
+        "Caribbean": ["Jamaican", "Trinidadian", "Cuban", "Puerto Rican", "Dominican", "Haitian", "Caribbean Fusion"],
+        "South American": ["Peruvian", "Brazilian", "Argentinian", "Colombian", "Venezuelan", "Chilean"],
+        "Central American": ["Salvadoran", "Guatemalan", "Honduran"]
+      },
+      
+      "European": {
+        "French": ["Classic French", "Bistro", "Brasserie", "French Fusion", "Provençal"],
+        "Spanish": ["Tapas", "Basque", "Catalan", "Spanish Fusion"],
+        "Greek": ["Traditional Greek", "Greek Taverna", "Greek Fusion"],
+        "Mediterranean": ["Lebanese", "Turkish", "Moroccan", "Israeli", "Middle Eastern", "Mediterranean Fusion"],
+        "Eastern European": ["Russian", "Polish", "Ukrainian", "Hungarian"]
+      },
+      
+      "African": ["Ethiopian", "West African", "Nigerian", "Ghanaian", "Senegalese", "North African", "East African", "South African"],
+      
+      "Soul Food & Southern": ["Soul Food", "Southern", "Cajun", "Creole", "Low Country", "BBQ"],
+      
+      "American": {
+        "New American": ["Farm-to-Table", "Contemporary American", "Seasonal American"],
+        "Regional American": ["California Cuisine", "Pacific Northwest", "Southwest", "New England"],
+        "Classic American": ["Burgers", "Comfort Food", "Diner", "American BBQ"]
+      },
+      
+      "Steakhouse & Seafood": ["Steakhouse", "Seafood", "Oyster Bar", "Fish & Chips", "Lobster Shack"],
+      
+      "Specialty": ["Vegan", "Vegetarian", "Plant-Based", "Organic", "Gluten-Free", "Raw", "Health-Conscious"],
+      
+      "Fusion & Modern": ["Asian Fusion", "Latin Fusion", "Global Fusion", "Contemporary", "Experimental", "Molecular Gastronomy"],
+      
+      "Casual Dining": ["Pizza", "Sandwiches", "Wings", "Fried Chicken", "Hot Dogs", "Bakery", "Cafe", "Brunch Spot"]
+    }
+  },
+
+  "cuisine_style_modifiers": {
+    "description": "Combine with cuisine (e.g., 'upscale Italian', 'trendy soul food')",
+    "options": [
+      "upscale",
+      "trendy", 
+      "casual",
+      "authentic",
+      "modern",
+      "traditional",
+      "fusion",
+      "fine dining",
+      "fast casual",
+      "contemporary",
+      "experimental",
+      "family-style",
+      "street food style",
+      "gastropub"
+    ]
+  },
+
+  "primary_vibes": [
+    "upscale", "casual", "romantic", "lively", "intimate", "trendy",
+    "cozy", "energetic", "chill", "sophisticated", "welcoming", "vibrant",
+    "artistic", "cultural", "festive", "relaxed", "fun", "exclusive",
+    "historic", "rooftop", "waterfront", "speakeasy", "dive", "boutique",
+    "warehouse", "neighborhood", "hidden gem", "authentic", "local favorite",
+    "touristy", "industrial", "bohemian", "elegant", "rustic"
+  ],
+
+  "occasions_multi_select": [
+    "date_night",
+    "brunch",
+    "business_meeting", 
+    "pregame",
+    "late_night",
+    "girls_night",
+    "guys_night",
+    "birthday",
+    "anniversary",
+    "after_work",
+    "lunch",
+    "dinner",
+    "drinks",
+    "dancing",
+    "live_music",
+    "celebration",
+    "family_gathering",
+    "solo_dining",
+    "group_dinner"
+  ],
+
+  "music_genres": [
+    "Afrobeats", "Amapiano", "Hip-Hop", "House", "EDM", "Techno",
+    "Latin", "Reggaeton", "Salsa", "Bachata", "Reggae", "Dancehall",
+    "R&B", "Soul", "Funk", "Jazz", "Blues", "Live Music",
+    "Electronic", "Trance", "Drum & Bass", "Dubstep",
+    "Pop", "Top 40", "Rock", "Indie", "Alternative",
+    "Country", "Folk", "Acoustic", "Classical"
+  ],
+
+  "energy_levels": ["low", "medium", "high"],
+  
+  "dress_codes": ["casual", "smart casual", "upscale", "formal", "no dress code"],
+  
+  "acoustic_bands": {
+    "1": "Quiet - Easy conversation",
+    "2": "Low - Comfortable talking", 
+    "3": "Moderate - Need to speak up",
+    "4": "Loud - Hard to hear",
+    "5": "Very Loud - Club level, shouting"
+  },
+
+  "price_tiers": ["$", "$$", "$$$", "$$$$"],
+
+  "meal_times": ["breakfast", "brunch", "lunch", "dinner", "late_night", "all_day"],
+
+  "special_features": [
+    "outdoor_seating", "rooftop", "waterfront", "fireplace", "live_music",
+    "dj", "dancing", "pool_table", "games", "karaoke", "private_dining",
+    "bar_seating", "happy_hour", "bottomless_brunch", "prix_fixe",
+    "omakase", "tasting_menu", "craft_cocktails", "wine_bar",
+    "beer_garden", "speakeasy", "hidden_entrance", "reservations_required",
+    "walk_ins_only", "byob", "full_bar", "wine_only"
+  ]
+}

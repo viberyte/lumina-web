@@ -1,0 +1,314 @@
+/**
+ * ENHANCED RECOMMENDATION AGENT V3
+ * FIX ADDED: Geospatial Proximity Sort (Ensures closer venues are prioritized)
+ */
+
+import Anthropic from '@anthropic-ai/sdk';
+import Database from 'better-sqlite3';
+
+const anthropic = new Anthropic({ 
+  apiKey: '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'
+});
+
+// --- CITY/NEIGHBORHOOD MAPPING ---
+const CITY_NEIGHBORHOOD_MAP = {
+    "new york city": ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island", "NYC", "New York", "Jersey City", "Newark"],
+    "nyc": ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island", "NYC", "New York", "Jersey City", "Newark"],
+    "miami": ["Miami", "South Beach", "Brickell", "Wynwood", "Downtown Miami"],
+    "paris": ["Paris", "Ile-de-France"],
+};
+
+const CITY_COORDINATES = {
+    "new york city": { lat: 40.730610, lon: -73.935242 }, // Near Midtown/East Village
+    "nyc": { lat: 40.730610, lon: -73.935242 },
+    "miami": { lat: 25.761681, lon: -80.193669 },
+    "paris": { lat: 48.8566, lon: 2.3522 },
+};
+// --- END MAPPING ---
+
+const DEFAULT_LIMIT = 10;
+const MAX_RECOMMENDATIONS_FOR_AI_EXPLANATION = 12;
+
+export async function getEnhancedRecommendations(userContext, dbPath) {
+  const db = new Database(dbPath);
+  
+  const limit = userContext.limit || DEFAULT_LIMIT;
+  const offset = userContext.offset || 0;
+  const cityInput = userContext.city?.toLowerCase() || '';
+
+  // Get coordinates for sorting prioritization (uses default NYC if needed)
+  const centerCoords = CITY_COORDINATES[cityInput] || CITY_COORDINATES['nyc'];
+
+  console.log(`🎯 Enhanced Agent V3: ${userContext.city} (Offset: ${offset})`);
+  
+  let level = userContext.level || 'strict';
+  let venues = [];
+
+  // Logic remains the same: use progressive fallback only on the first page (offset=0)
+  if (offset === 0) {
+      venues = getVenues(db, userContext, 'strict', limit, offset, centerCoords);
+      // ... (Fallback checks simplified for brevity, assume they call getVenues with increasing levels)
+      if (venues.length < 5) {
+          level = 'relaxed';
+          venues = getVenues(db, userContext, level, limit, offset, centerCoords);
+      }
+      if (venues.length < 5) {
+          level = 'broad';
+          venues = getVenues(db, userContext, level, limit, offset, centerCoords);
+      }
+      if (venues.length < 3) {
+          level = 'fallback';
+          venues = getVenues(db, userContext, level, limit, offset, centerCoords);
+      }
+  } else {
+      level = userContext.level || 'broad';
+      venues = getVenues(db, userContext, level, limit, offset, centerCoords);
+  }
+
+  // Ensure venues are always returned even if the initial query was empty
+  if (venues.length === 0 && offset === 0) {
+      venues = getVenues(db, userContext, 'fallback', limit, offset, centerCoords);
+  }
+  
+  db.close();
+  
+  const venuesToExplain = venues.slice(0, MAX_RECOMMENDATIONS_FOR_AI_EXPLANATION);
+  const venuesWithWhy = await addWhyExplanations(venuesToExplain, userContext);
+  
+  if (venues.length > MAX_RECOMMENDATIONS_FOR_AI_EXPLANATION) {
+      venuesWithWhy.push(...venues.slice(MAX_RECOMMENDATIONS_FOR_AI_EXPLANATION));
+  }
+  
+  return {
+    ok: true,
+    venues: venuesWithWhy,
+    count: venuesWithWhy.length,
+    level: level,
+  };
+}
+
+function getVenues(db, ctx, level, limit, offset, centerCoords) {
+  // Use array for dynamic parameters to avoid SQL injection risks with dynamic strings
+  const paramsArray = []; 
+  const filters = [];
+  
+  // --- CITY/NEIGHBORHOOD FILTERING LOGIC (Unchanged from Step 4) ---
+  const cityInput = ctx.city?.toLowerCase();
+  let searchCities;
+  
+  if (CITY_NEIGHBORHOOD_MAP[cityInput]) {
+    searchCities = CITY_NEIGHBORHOOD_MAP[cityInput];
+  } else if (['manhattan', 'brooklyn', 'queens', 'bronx', 'staten island'].includes(cityInput)) {
+    searchCities = CITY_NEIGHBORHOOD_MAP["nyc"].concat([ctx.city]); 
+  } else {
+    searchCities = [ctx.city];
+  }
+
+  if (searchCities.length > 0) {
+    const placeholders = searchCities.map(() => '?').join(',');
+    filters.push(`city IN (${placeholders})`);
+    paramsArray.push(...searchCities);
+  }
+  
+  // Always exclude bad venues
+  filters.push('should_exclude = 0');
+  
+  // ... (Other filters: category, cuisine, etc. - UNCHANGED) ...
+  // (Full code omitted here for brevity, but included in the cat script)
+
+  // Category mapping (Full original logic maintained)
+  const categoryGroups = {
+    'lounge': ['lounge', 'nightlife'],
+    'nightlife': ['nightlife', 'lounge'], 
+    'nightclub': ['nightlife', 'lounge'],
+    'dinner': ['dining'],
+    'dining': ['dining'],
+    'brunch': ['dining'],
+    'events': ['events'],
+    'attractions': ['attraction', 'cultural', 'outdoor']
+  };
+  
+  // --- LEVEL FILTERING LOGIC (strict, relaxed, broad, fallback) ---
+  if (level === 'strict') {
+    filters.push('(viberyte_certified = 1 OR viberyte_score >= 7)');
+    if (ctx.vibe) {
+      const vibe = ctx.vibe.toLowerCase();
+      const categories = categoryGroups[vibe] || [vibe];
+      const categoryConditions = categories.map(cat => 
+        `category = '${cat}' OR category LIKE '${cat}|%' OR category LIKE '%|${cat}' OR category LIKE '%|${cat}|%'`
+      );
+      filters.push(`(${categoryConditions.join(' OR ')})`);
+    }
+    if (ctx.cuisine && ctx.cuisine !== 'Surprise me') {
+      const cuisineLower = ctx.cuisine.toLowerCase();
+      filters.push(`(
+        LOWER(cuisine) LIKE '%${cuisineLower}%' 
+        OR LOWER(cuisine_types) LIKE '%${cuisineLower}%'
+        OR cuisine_types LIKE '%"${ctx.cuisine}"%'
+        OR cuisine_types LIKE '%["${ctx.cuisine}"]%'
+      )`);
+    }
+  } else if (level === 'relaxed') {
+    filters.push('viberyte_score >= 6');
+    if (ctx.vibe) {
+      const vibe = ctx.vibe.toLowerCase();
+      const categories = categoryGroups[vibe] || [vibe];
+      const categoryConditions = categories.map(cat => 
+        `category = '${cat}' OR category LIKE '${cat}|%' OR category LIKE '%|${cat}' OR category LIKE '%|${cat}|%'`
+      );
+      filters.push(`(${categoryConditions.join(' OR ')})`);
+    }
+  } else if (level === 'broad') {
+    filters.push('viberyte_score >= 5');
+    if (ctx.vibe) {
+      const vibeLower = ctx.vibe.toLowerCase();
+      filters.push(`(LOWER(category) LIKE '%${vibeLower}%' OR LOWER(vibe_tags) LIKE '%${vibeLower}%' OR LOWER(name) LIKE '%${vibeLower}%')`);
+    }
+  } else {
+    filters.push('(viberyte_score >= 5 OR google_rating >= 4.0)');
+  }
+
+  // --- BUILD ORDER BY CLAUSE ---
+  let orderBy = [];
+
+  // 1. CRITICAL: Proximity Sort (Highest Priority)
+  // We use a simplified distance metric (squared difference) for performance 
+  // since SQLite lacks complex math functions like SIN/COS unless custom functions are enabled.
+  if (centerCoords && centerCoords.lat && centerCoords.lon) {
+      // NOTE: Assumes 'latitude' and 'longitude' columns exist in the 'venues' table.
+      const latDiff = `(latitude - ${centerCoords.lat})`;
+      const lonDiff = `(longitude - ${centerCoords.lon})`;
+      orderBy.push(`${latDiff} * ${latDiff} + ${lonDiff} * ${lonDiff} ASC`);
+  }
+
+  // 2. Music Match Prioritization (Next Priority)
+  if (ctx.musicGenre) {
+    const musicLower = ctx.musicGenre.toLowerCase();
+    orderBy.push(`
+      CASE 
+        WHEN LOWER(music_genres) LIKE '%${musicLower}%' THEN 0
+        WHEN LOWER(music_genres) LIKE '%r&b%' AND '${musicLower}' = 'r&b' THEN 0
+        WHEN LOWER(music_genres) LIKE '%hip%hop%' AND '${musicLower}' = 'hip-hop' THEN 0
+        WHEN category IN ('nightlife', 'lounge') AND viberyte_score >= 8 THEN 1
+        ELSE 2 
+      END
+    `);
+  }
+  
+  // 3. Quality Sorting (Lowest Priority)
+  orderBy.push('viberyte_score DESC');
+  orderBy.push('CASE WHEN google_rating IS NOT NULL THEN google_rating ELSE 0 END DESC');
+  
+  // --- FINAL SQL QUERY ---
+  const sql = `
+    SELECT * FROM venues
+    WHERE ${filters.join(' AND ')}
+    ORDER BY ${orderBy.join(', ')}
+    LIMIT ${limit} OFFSET ${offset}
+  `;
+  
+  console.log(`  Level ${level} SQL:`, sql.substring(0, 150) + '...');
+  
+  try {
+    return db.prepare(sql).all(...paramsArray);
+  } catch (error) {
+    console.error(`Error in ${level} query:`, error);
+    return [];
+  }
+}
+
+// ... (addWhyExplanations and generateFallbackReason functions UNCHANGED)
+
+async function addWhyExplanations(venues, ctx) {
+  if (venues.length === 0) return [];
+  
+  try {
+    const contextStr = [
+      ctx.vibe && `${ctx.vibe}`,
+      ctx.who && `for ${ctx.who}`,
+      ctx.musicGenre && `with ${ctx.musicGenre} music`,
+      ctx.cuisine && ctx.cuisine !== 'Surprise me' && `serving ${ctx.cuisine}`,
+      ctx.when && `${ctx.when.toLowerCase()}`
+    ].filter(Boolean).join(' ');
+    
+    const prompt = `User wants: ${contextStr || 'venue recommendations'}
+    
+For each venue, write ONE concise sentence (max 20 words) explaining why it's perfect for them.
+Focus on atmosphere, music, vibe, and what makes it special.
+
+Venues:
+${venues.map((v, i) => 
+  `${i+1}. ${v.name} - ${v.category}, Music: ${v.music_genres || 'varied'}, Vibe: ${v.vibe_tags || v.category}`
+).join('\n')}
+
+Return a JSON array of explanations in order.`;
+
+    const response = await anthropic.messages.create({
+      model: 'claude-3-haiku-20240307',
+      max_tokens: 1000,
+      temperature: 0.7,
+      messages: [{ role: 'user', content: prompt }]
+    });
+    
+    const text = response.content[0].text;
+    const explanations = JSON.parse(text);
+    
+    return venues.map((v, i) => ({
+      ...v,
+      why_recommended: explanations[i] || generateFallbackReason(v, ctx)
+    }));
+    
+  } catch (error) {
+    console.error('AI explanation error:', error);
+    return venues.map(v => ({
+      ...v,
+      why_recommended: generateFallbackReason(v, ctx)
+    }));
+  }
+}
+
+function generateFallbackReason(venue, ctx) {
+  const parts = [];
+  
+  // Quality indicators
+  if (venue.viberyte_certified) {
+    parts.push('Viberyte certified');
+  } else if (venue.where_score >= 8) {
+    parts.push('Highly rated');
+  }
+  
+  // Music match
+  if (ctx.musicGenre && venue.music_genres) {
+    const musicLower = venue.music_genres.toLowerCase();
+    const requestedLower = ctx.musicGenre.toLowerCase();
+    if (musicLower.includes(requestedLower) || 
+        (requestedLower === 'r&b' && musicLower.includes('r&b')) ||
+        (requestedLower === 'hip-hop' && musicLower.includes('hip'))) {
+      parts.push(`plays ${ctx.musicGenre}`);
+    }
+  }
+  
+  // Context-based
+  if (ctx.who === 'Date night' && venue.vibe_tags?.includes('romantic')) {
+    parts.push('romantic atmosphere');
+  } else if (ctx.who === 'Solo' && venue.vibe_tags?.includes('casual')) {
+    parts.push('relaxed solo-friendly vibe');
+  } else if ((ctx.who === 'With friends' || ctx.who === 'Group outing') && venue.vibe_tags?.includes('lively')) {
+    parts.push('great for groups');
+  }
+  
+  // Venue features
+  if (venue.vibe_tags) {
+    const tags = venue.vibe_tags.split(',').slice(0, 2).map(t => t.trim()).join(' and ');
+    if (!parts.some(p => p.includes(tags))) {
+      parts.push(tags);
+    }
+  }
+  
+  return parts.length > 0 
+    ? parts.join(', ') + '.'
+    : `Popular ${venue.category || 'spot'} in ${venue.neighborhood || venue.city || 'the area'}.`;
+}
+
+// Export functions
+export { getVenues, generateFallbackReason };

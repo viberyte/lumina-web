@@ -1,0 +1,175 @@
+import { NextRequest, NextResponse } from 'next/server';
+import path from 'path';
+import Database from 'better-sqlite3';
+
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
+type Quality = 'strict' | 'loose' | 'none';
+type Table = 'clean_venues' | 'clean_nj_venues';
+
+interface AppCtx {
+  city?: string;
+  vibe?: string;
+  cuisine?: string;
+  musicGenre?: string;
+  seed?: string | number;
+}
+
+function toStr(v: unknown): string {
+  return typeof v === 'string' ? v.trim() : '';
+}
+
+function normalizeCtx(body: any): AppCtx {
+  const c = body?.context ?? body ?? {};
+  return {
+    city: toStr(c.city),
+    vibe: toStr(c.vibe),
+    cuisine: toStr(c.cuisine),
+    musicGenre: toStr(c.musicGenre),
+    seed: c.seed ?? ''
+  };
+}
+
+function pickSource(rawCity: string): Table {
+  const rc = rawCity.toLowerCase();
+  const njHits = [
+    'new jersey','nj','hoboken','jersey city','newark','clifton',
+    'montclair','teaneck','edison','trenton','camden','bayonne',
+    'weehawken','secaucus','fort lee','edgewater','paramus'
+  ];
+  return njHits.some(s => rc.includes(s)) ? 'clean_nj_venues' : 'clean_venues';
+}
+
+function hashSeed(seed: string | number): number {
+  const s = String(seed ?? '');
+  let total = 0;
+  for (let i = 0; i < s.length; i++) total = (total + s.charCodeAt(i)) % 10007;
+  return total;
+}
+
+function pushLikeJSON(where: string[], params: any[], column: string, value: string) {
+  if (!value) return;
+  where.push(`LOWER(${column}) LIKE ?`);
+  params.push(`%"${value.toLowerCase()}"%`);
+}
+
+function buildWhere(
+  table: Table,
+  ctx: AppCtx,
+  opts: { ignoreCity?: boolean } = {}
+): { where: string[]; params: any[] } {
+  const where: string[] = ['COALESCE(should_exclude,0)=0'];
+  const params: any[] = [];
+
+  const vibe = ctx.vibe?.toLowerCase() ?? '';
+  if (vibe === 'dinner' || vibe === 'restaurant') {
+    where.push("(LOWER(category)='dining' OR LOWER(category) LIKE '%restaurant%')");
+  } else if (vibe === 'lounge' || vibe === 'club' || vibe === 'nightlife') {
+    where.push("(LOWER(category) IN ('nightlife','lounge','bar','club') OR LOWER(category) LIKE '%nightlife%')");
+  } else {
+    where.push("(LOWER(category) IN ('dining','nightlife','lounge','bar','club'))");
+  }
+
+  if (!opts.ignoreCity && ctx.city) {
+    const c = ctx.city.toLowerCase();
+    if (table === 'clean_venues') {
+      where.push('(LOWER(city)=? OR LOWER(neighborhood)=?)');
+      params.push(c, c);
+    } else {
+      where.push('(LOWER(city)=? OR LOWER(address) LIKE ?)');
+      params.push(c, `%${c}%`);
+    }
+  }
+
+  if (ctx.cuisine) pushLikeJSON(where, params, 'cuisine_json', ctx.cuisine);
+  if (ctx.musicGenre) pushLikeJSON(where, params, 'music_json', ctx.musicGenre);
+
+  return { where, params };
+}
+
+function qualitySQLFragment(q: Quality): string {
+  if (q === 'strict')
+    return " AND rating>=4.2 AND photo_url IS NOT NULL AND TRIM(photo_url)<>''";
+  if (q === 'loose')
+    return " AND (rating IS NULL OR rating>=4.0)";
+  return '';
+}
+
+function runQuery(
+  db: Database.Database,
+  table: Table,
+  baseWhere: string[],
+  baseParams: any[],
+  q: Quality,
+  limit: number,
+  offset: number
+) {
+  const whereSQL = baseWhere.join(' AND ') + qualitySQLFragment(q);
+  const sql = `
+    SELECT id, name, city, neighborhood, address, rating,
+           cuisine_json, music_json, photo_url, why_recommended
+    FROM ${table}
+    ${whereSQL ? 'WHERE ' + whereSQL : ''}
+    ORDER BY (photo_url IS NOT NULL AND TRIM(photo_url)<>'') DESC,
+             rating DESC NULLS LAST, name ASC
+    LIMIT ? OFFSET ?`;
+  const stmt = db.prepare(sql);
+  return stmt.all(...baseParams, limit, offset);
+}
+
+function pickOutput(rows: any[]) {
+  return {
+    primary: rows.slice(0, 4),
+    tryThis: rows.length > 4 ? rows[4] : null
+  };
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json().catch(() => ({}));
+    const ctx = normalizeCtx(body);
+    const dbPath = path.join(process.cwd(), 'data', 'lumina.db');
+    const db = new Database(dbPath);
+    let table = pickSource(ctx.city ?? '');
+
+    const { where, params } = buildWhere(table, ctx);
+    const qualities: Quality[] = ['strict', 'loose', 'none'];
+    const limit = 12;
+    const offset = hashSeed(ctx.seed ?? Date.now()) % 20;
+
+    let rows: any[] = [];
+    for (const q of qualities) {
+      rows = runQuery(db, table, where, params, q, limit, offset);
+      if (rows.length >= 4) break;
+    }
+
+    // Fallback: if NJ too small, merge NYC
+    if (table === 'clean_nj_venues' && rows.length < 4) {
+      const nyc = buildWhere('clean_venues', ctx, { ignoreCity: true });
+      for (const q of qualities) {
+        const add = runQuery(db, 'clean_venues', nyc.where, nyc.params, q, limit, offset);
+        if (add.length) {
+          const merged = [...rows];
+          const seen = new Set(rows.map(r => r.id));
+          for (const r of add) if (!seen.has(r.id)) merged.push(r);
+          rows = merged;
+          table = 'clean_venues';
+          break;
+        }
+      }
+    }
+
+    const out = pickOutput(rows);
+    return NextResponse.json({
+      ok: true,
+      sourceTable: table,
+      count: rows.length,
+      primary: out.primary,
+      tryThis: out.tryThis
+    });
+  } catch (err: any) {
+    console.error('recommend error:', err);
+    return NextResponse.json({ ok: false, error: String(err.message || err) }, { status: 500 });
+  }
+}

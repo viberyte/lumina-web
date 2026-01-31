@@ -1,0 +1,110 @@
+import { NextRequest, NextResponse } from 'next/server';
+import Database from 'better-sqlite3';
+import path from 'path';
+
+type Ctx = {
+  city?: string;
+  state?: string;
+  vibe?: string;
+  cuisine?: string;
+  musicGenre?: string;
+  seed?: string | number;
+  offset?: number;
+};
+
+function pickTable(ctx: Ctx): 'clean_venues' | 'clean_nj_venues' {
+  const s = `${ctx.city || ''} ${ctx.state || ''}`.toLowerCase();
+  const isNJ =
+    s.includes('new jersey') || s.includes(', nj') || s.endsWith(' nj') ||
+    s.includes('jersey city') || s.includes('hoboken') || s.includes('newark') ||
+    s.includes('clifton') || s.includes('montclair') || s.includes('edison') ||
+    s.includes('teaneck') || s.includes('princeton') || s.includes('camden') ||
+    s.includes('paterson') || s.includes('trenton');
+  return isNJ ? 'clean_nj_venues' : 'clean_venues';
+}
+
+function buildWhere(ctx: Ctx) {
+  const where: string[] = ['COALESCE(should_exclude,0)=0'];
+  const args: any[] = [];
+
+  // Vibe → coarse category gate (string LITs via LIKE or IN with literals)
+  const vibe = (ctx.vibe || '').toLowerCase();
+  if (vibe === 'dinner') {
+    where.push(
+      `(
+         LOWER(category) LIKE '%dining%' OR
+         LOWER(category) IN ('restaurant','bar','wine bar','steakhouse','sushi','italian','mexican','latin','caribbean','seafood','bistro','trattoria')
+       )`
+    );
+  } else if (vibe === 'lounge' || vibe === 'club' || vibe === 'nightlife') {
+    where.push(
+      `(
+         LOWER(category) LIKE '%lounge%' OR
+         LOWER(category) LIKE '%nightlife%' OR
+         LOWER(category) IN ('lounge','club','bar','speakeasy','cigar lounge','hookah lounge')
+       )`
+    );
+  }
+
+  // Cuisine / Music (views store text JSON; use LIKE safely)
+  if (ctx.cuisine) {
+    args.push(`%${String(ctx.cuisine).toLowerCase()}%`);
+    where.push(`LOWER(cuisine_json) LIKE ?`);
+  }
+  if (ctx.musicGenre) {
+    args.push(`%${String(ctx.musicGenre).toLowerCase()}%`);
+    where.push(`LOWER(music_json) LIKE ?`);
+  }
+
+  return { where: where.join(' AND '), args };
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json().catch(() => ({}));
+    const ctx: Ctx = body?.context ?? body ?? {};
+    const table = pickTable(ctx);
+
+    const dbPath = path.join(process.cwd(), 'data', 'lumina.db');
+    const db = new Database(dbPath, { readonly: true });
+
+    const { where, args } = buildWhere(ctx);
+
+    // simple refresh: derive offset from seed (or provided offset)
+    const limit = 8; // we’ll split 4 + 1 below
+    let offset = Number.isFinite(ctx.offset) ? Number(ctx.offset) : 0;
+    if (!offset && ctx.seed) {
+      const s = String(ctx.seed);
+      // basic deterministic-ish offset from seed
+      offset = (function(){ let acc=0; for (let i=0;i<s.length;i++) acc += s.charCodeAt(i); return acc % 24; })(); // 0..23
+    }
+
+    const sql = `
+      SELECT
+        id, name, city, neighborhood, address,
+        rating, photo_url, why_recommended, category,
+        cuisine_json, music_json
+      FROM ${table}
+      WHERE ${where}
+      ORDER BY rating DESC NULLS LAST, name ASC
+      LIMIT ? OFFSET ?
+    `;
+
+    const rows = db.prepare(sql).all(...args, limit, offset);
+
+    // Primary 4 + TryThis 1 (if available)
+    const primary = rows.slice(0, 4);
+    const tryThis = rows.length > 4 ? [rows[4]] : [];
+
+    return NextResponse.json({
+      ok: true,
+      sourceTable: table,
+      count: rows.length,
+      primary,
+      tryThis
+    });
+  } catch (err: any) {
+    console.error('recommend error:', err);
+    return NextResponse.json({ ok: false, error: String(err?.message || err) }, { status: 500 });
+  }
+}

@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "=== ENRICHMENT PROGRESS CHECK ==="
+echo "Time: $(date)"
+echo ""
+echo "Philly:    $(cat philly/super_enriched_philly.json | grep -c '"venueName":') / 404"
+echo "Baltimore: $(cat baltimore/super_enriched_baltimore.json | grep -c '"venueName":') / 497"
+echo "Richmond:  $(cat richmond/super_enriched_richmond.json | grep -c '"venueName":') / 479"
+echo "Norfolk:   $(cat norfolk/super_enriched_norfolk.json | grep -c '"venueName":') / 346"
+echo ""
+echo "Total: $(( $(cat philly/super_enriched_philly.json | grep -c '"venueName":') + $(cat baltimore/super_enriched_baltimore.json | grep -c '"venueName":') + $(cat richmond/super_enriched_richmond.json | grep -c '"venueName":') + $(cat norfolk/super_enriched_norfolk.json | grep -c '"venueName":') )) / 1726"

@@ -1,0 +1,602 @@
+id,name,city,address,website,category
+10890,"Prime Lounge",Philadelphia,,"",lounge
+10935,"LUXOR CAFE & HOOKAH LOUNGE",Philadelphia,,"",lounge
+10940,"The Crown Hookah Lounge",Philadelphia,,"",lounge
+10941,"Vira Hookah Lounge",Philadelphia,,"",lounge
+10942,"Alamodak Restaurant and Hookah bar",Philadelphia,,https://www.alamodakrestauranthookahbar.com/?utm_source=gbp,restaurant
+10945,Dahlak,Philadelphia,,http://www.dahlakrestaurant.com/,restaurant
+10946,"Dalida hookah lounge",Philadelphia,,"",lounge
+10949,"The Centurion Lounge",Philadelphia,,"",lounge
+10992,"Bud & Marilyn's",Philadelphia,,http://budandmarilyns.com/,restaurant
+10995,Fork,Philadelphia,,http://www.forkrestaurant.com/,restaurant
+10998,"Cuba Libre Restaurant & Rum Bar",Philadelphia,,https://cubalibrerestaurant.com/en/philadelphia,restaurant
+10999,"Estia Restaurant",Philadelphia,,http://www.estiarestaurant.com/,restaurant
+11000,"Del Frisco's Double Eagle Steakhouse",Philadelphia,,https://www.delfriscos.com/location/del-friscos-double-eagle-steakhouse-philadelphia-pa/,restaurant
+11010,"The Capital Grille",Philadelphia,,https://www.thecapitalgrille.com/locations/pa/philadelphia/philadelphia/8013?cmpid=br:tcg_ag:ie_ch:loc_ca:TCGGMB_sn:gmb_gt:philadelphia-pa-8013_pl:locurl_rd:1010,restaurant
+11019,"Fiorella Pasta",Philadelphia,,https://fiorellaphilly.com/,restaurant
+11020,"Villa di Roma",Philadelphia,,http://www.villadiroma.com/,restaurant
+11021,"Giorgio On Pine",Philadelphia,,https://www.giorgio-on-pine.com/,restaurant
+11023,"Dante & Luigi's",Philadelphia,,http://www.danteandluigis.com/,restaurant
+11025,"Le Virtù",Philadelphia,,http://www.levirtu.com/,restaurant
+11027,"Palizzi Social Club",Philadelphia,,https://palizzisocial.com/,restaurant
+11029,"Spasso Italian Grill",Philadelphia,,http://www.spassoitaliangrill.com/,restaurant
+11030,"L'Angolo Ristorante",Philadelphia,,"",restaurant
+11033,"Kichi Omakase",Philadelphia,,"",restaurant
+11034,"Royal Sushi & Izakaya",Philadelphia,,http://royalizakaya.com/,restaurant
+11037,"Nakama Japanese Cuisines & Omakase",Philadelphia,,https://exploretock.com/nakama-japanese-cuisines--omakase-philadelphia,restaurant
+11040,"Shiso Noodle and Sushi Bar",Philadelphia,,https://shisonoodleandsushi.com/?utm_source=google,restaurant
+11041,Zama,Philadelphia,,http://www.zamaphilly.com/,restaurant
+11042,"Umami Steak and Sushi Bar",Philadelphia,,https://umamisteakandsushi.com/?utm_source=google,restaurant
+11044,"Bleu Sushi",Philadelphia,,http://www.bleusushi.com/,restaurant
+11045,"Samurai Japanese Restaurant",Philadelphia,,https://samuraiasianfusion.com/,restaurant
+11047,"KIRIN HOUSE",Philadelphia,,https://www.kirinhousephilly.com/,restaurant
+11048,"Kiku Sushi",Philadelphia,,https://www.ezordernow.com/philadelphia-19145-kiku-sushi-802637,restaurant
+11051,"Shinto Japanese Sushi & Hibachi",Philadelphia,,https://shintophiladelphia.com/,restaurant
+11052,"Fuji Mountain Japanese Restaurant",Philadelphia,,http://www.fujimt.com/,restaurant
+11053,"Yanaga Kappo Izakaya",Philadelphia,,https://www.ykisushi.com/,restaurant
+11054,"Gyu-Kaku Japanese BBQ",Philadelphia,,http://www.gyu-kaku.com/philadelphia,restaurant
+11056,"Kissho House Japanese Cuisine & Omakase",Philadelphia,,https://www.kisshohouse.com/,restaurant
+11058,"Shay’s Steaks",Philadelphia,,https://shayssteaks.shop/,restaurant
+11061,"Fogo de Chão Brazilian Steakhouse",Philadelphia,,https://fogodechao.com/location/philadelphia/,restaurant
+11062,"Urban Farmer Philadelphia",Philadelphia,,https://www.urbanfarmersteakhouse.com/,restaurant
+11063,"NaBrasa Brazilian Steakhouse",Philadelphia,,https://nabrasa.com/locations/philadelphia/,restaurant
+11067,"Ruth's Chris Steak House",Philadelphia,,https://www.ruthschris.com/locations/pa/philadelphia/philadelphia/7365?cmpid=br:rc_ag:ie_ch:loc_ca:RCGMB_sn:gmb_gt:philadelphia-pa-7365_pl:locurl_rd:1066,restaurant
+11068,"SY'S SOULFOOD PALACE",Philadelphia,,https://www.syspalacesoulfood.com/,restaurant
+11069,"Tasties Soul Food Restaurant",Philadelphia,,"",restaurant
+11070,"Greedy's",Philadelphia,,"",restaurant
+11071,"Butter's Soul Food To Go",Philadelphia,,https://www.butterssoulfood.com/,restaurant
+11074,"Soul Greedy",Philadelphia,,https://www.toasttab.com/local/order/soulgreedy215/r-aa24f4f8-43f7-4620-812f-0f73118864df,restaurant
+11075,"Corinne's Place",Philadelphia,,http://www.corinnesplace.com/,restaurant
+11077,"Ma Lessie's Chicken & Waffles",Philadelphia,,"",restaurant
+11078,"Crafty Soul",Philadelphia,,https://craftysoulfoodphilly.com/,restaurant
+11079,"Ol Boys Soul Food Restaurant",Philadelphia,,"",restaurant
+11081,"Emmanuel Kings & Queens of Soul Food",Philadelphia,,https://instagram.com/emmanuel_soul_food?igshid=1u1jwjw53jyw,restaurant
+11082,"Thomasena's Restaurant and Catering Hall",Philadelphia,,"",restaurant
+11083,"Samaiyah B. Cooking",Philadelphia,,"",restaurant
+11084,"From the Kitchen of LindaLicious, LLC",Philadelphia,,"",restaurant
+11085,"Quality Taste Jamaican Restaurant & Jerk Hut",Philadelphia,,https://qualitytastejamaican.cfd/,restaurant
+11088,"Jamaican D's Kitchen and Catering",Philadelphia,,https://www.instagram.com/jamaican_ds?igsh=MWgydnd6c21nZ3pyaA==,restaurant
+11090,"Sunday Best",Philadelphia,,"",restaurant
+11091,"Little Delicious",Philadelphia,,"",restaurant
+11092,"Ron's Caribbean Cafe",Philadelphia,,http://phillyrons.com/,restaurant
+11093,"Ron's Caribbean Cuisine",Philadelphia,,https://www.phillyrons.com/,restaurant
+11094,"Ocho Rios Parrilla",Philadelphia,,https://ochoriosparilla1710.com/,restaurant
+11095,"The Lighthouse Jamaican Restaurant",Philadelphia,,"",restaurant
+11096,"K & J Caribbean American Diner",Philadelphia,,http://kjcaribbeanamericandiner.com/,restaurant
+11097,"Georgiana's Caribbean Cuisine",Philadelphia,,"",restaurant
+11099,"SHANAS CARIBBEAN CAFE",Philadelphia,,https://shanascaribbeancafe.com/,restaurant
+11100,"Biggs jamaican restaurant",Philadelphia,,"",restaurant
+11101,"Top Taste",Philadelphia,,https://top-taste.shop/,restaurant
+11103,"Le Mandingue African Restaurant",Philadelphia,,https://www.lemandingue.com/,restaurant
+11104,"Kilimandjaro restaurant",Philadelphia,,"",restaurant
+11110,"Sahara Restaurant",Philadelphia,,http://ordersahararestaurant.com/,restaurant
+11111,"TOUBA African Restaurant",Philadelphia,,https://usamapsdet.top/details/touba-african-restaurant-ChIJpbn,restaurant
+11112,"Soul of Africa Restaurant LLC",Philadelphia,,https://soulofafricarestaurant.com/?utm_source=google,restaurant
+11113,"Emma’s Liberian Kitchen",Philadelphia,,https://emmaliberiankitchen.com/,restaurant
+11114,"New Era Cuisine",Philadelphia,,https://food.orders.co/1vxelaie?y_source=1_MjAxNTA3MjY1Mi03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D,restaurant
+11115,"Ecowas African Restaurant",Philadelphia,,"",restaurant
+11117,"Djoliba Restaurant",Philadelphia,,https://www.tiktok.com/@djolibarestaurantphilly?_t=8rgHA8xYvyJ&_r=1,restaurant
+11118,"Le Faso",Philadelphia,,"",restaurant
+11119,"Aku's Kitchen",Philadelphia,,http://akuskitchen.com/,restaurant
+11120,"Palace african restaurant",Philadelphia,,https://order.online/business/palace-african-824073,restaurant
+11121,"Almaz Cafe",Philadelphia,,http://almazcafes.com/,restaurant
+11122,Abyssinia,Philadelphia,,http://www.abyssiniabarandrestaurant.com/,restaurant
+11123,"Kaffa Crossing",Philadelphia,,https://qmenu.us/#/kaffa-crossing-ethiopian,restaurant
+11124,"Eshkol Ethiopian Cuisine & Cafe",Philadelphia,,https://eshkolcuisine.com/,restaurant
+11125,"Amsale Cafe",Philadelphia,,http://www.amsalecafe.com/,restaurant
+11127,"Queen of Sheba",Philadelphia,,http://queenofshebaphiladelphia.com/,restaurant
+11130,ERA,Philadelphia,,https://haklilu.github.io/Era-Bar-and-Restaurant/,restaurant
+11132,"Merkato Baltena",Philadelphia,,"",restaurant
+11136,"El Fogon Latino Restaurant",Philadelphia,,https://order.online/business/el-fogon-latino-restaurant-997026,restaurant
+11137,"Restaurante Latino Lela",Philadelphia,,"",restaurant
+11139,"Izlas Puertorican Cuisine",Philadelphia,,https://food.orders.co/izlaslatincuisine,restaurant
+11141,"DECOO Restaurant",Philadelphia,,"",restaurant
+11145,"Latin American Restaurant",Philadelphia,,https://www.instagram.com/latinamerican1inc/,restaurant
+11146,"El Sabor Restaurant",Philadelphia,,https://instagram.com/elsabor.restaurant?utm_medium=copy_link,restaurant
+11148,"Fuego Latin Food",Philadelphia,,"",restaurant
+11149,"Parada Maimon",Philadelphia,,https://paradamaimon.shop/,restaurant
+11150,"El Fuerte de Loreto Philly",Philadelphia,,http://www.elfuertedeloretophilly.com/,restaurant
+11154,"Tu Rinconcito",Philadelphia,,https://turinconcitophilly.com/,restaurant
+11155,"Tacoteca Mexican Grill",Philadelphia,,https://tacotecamexicangrill.toast.site/,restaurant
+11158,"El Mictlan Restaurant",Philadelphia,,https://elmictlanrestaurantpa.com/,restaurant
+11161,"El Mezcal Cantina",Philadelphia,,http://elmezcalcantina.us/,restaurant
+11163,"Jose Pistola's",Philadelphia,,https://www.pistolaslife.com/,restaurant
+11164,"Don Barriga",Philadelphia,,http://donbarriga.com/,restaurant
+11165,"Cilantro Mediterranean Cuisine",Philadelphia,,https://www.cilantromediterraneancuisine.com/,restaurant
+11170,"Paprica Grill",Philadelphia,,https://papricagrill.com/,restaurant
+11171,"Alyan's Middle Eastern & Mediterranean Restaurant",Philadelphia,,"",restaurant
+11175,Marrakesh,Philadelphia,,https://marrakesh-philadelphia.club/,restaurant
+11180,"Apricot Stone BYOB",Philadelphia,,http://www.apricotstonephilly.com/,restaurant
+11181,"Zorba's Tavern",Philadelphia,,http://www.zorbastavern.com/,restaurant
+11183,"Sahara Grill",Philadelphia,,https://www.saharagrillphiladelphia.com/,restaurant
+11184,"Kamals Middle Eastern Cuisine",Philadelphia,,https://www.kamalsmiddleeasterncuisine.com/,restaurant
+11192,"Ji Bei Chuan Philly",Philadelphia,,https://www.jbcphilly.com/,restaurant
+11194,"Nan Zhou Hand Drawn Noodle House",Philadelphia,,http://www.nanzhounoodle.com/,restaurant
+11195,"Ting Wong",Philadelphia,,http://www.tingwongphilly.com/?utm_source=google&utm_medium=search,restaurant
+11198,"China House No. 5",Philadelphia,,"",restaurant
+11199,"Han Dynasty University City",Philadelphia,,http://www.handynasty.net/,restaurant
+11200,"Mana Modern Chinese",Philadelphia,,"",restaurant
+11202,"Ho Sai Gai Restaurant",Philadelphia,,"",restaurant
+11204,"China Gourmet",Philadelphia,,http://www.chinagourmetphillypa.com/,restaurant
+11205,Sampan,Philadelphia,,https://www.sampanphilly.com/,restaurant
+11206,"Lee How Fook",Philadelphia,,http://leehowfook.com/,restaurant
+11212,"Ratchada Thai & Laos Cuisine",Philadelphia,,http://www.ratchada.net/,restaurant
+11215,"Erawan Thai Cuisine (Philadelphia)",Philadelphia,,http://www.erawanphiladelphia.com/,restaurant
+11216,Manorah,Philadelphia,,https://manorahthai.com/,restaurant
+11217,"House of Thai Cuisine",Philadelphia,,https://www.houseofthaipa.com/,restaurant
+11222,"Thai Square Restaurant",Philadelphia,,http://www.thaisquarephilly.com/,restaurant
+11223,"Vientiane Bistro",Philadelphia,,https://www.vientianebistro.com/,restaurant
+11224,"Sukho Thai Restaurant",Philadelphia,,https://www.sukhothainj.com/,restaurant
+11225,"Golden Triangle",Philadelphia,,http://www.goldentrianglepa.net/,restaurant
+11228,"Turmeric Indian Kitchen",Philadelphia,,http://www.turmericphilly.com/,restaurant
+11230,"Tiffin Indian Cuisine Fairmount",Philadelphia,,http://www.tiffin.com/,restaurant
+11231,"Masala Fusion Indian Restaurant",Philadelphia,,https://order.online/business/masala-fusion-14317507,restaurant
+11232,"New Indian Sizzler",Philadelphia,,https://www.newindiansizzler.com/,restaurant
+11233,DABBAWALA,Philadelphia,,https://www.dabbawalaphiladelphia.com/,restaurant
+11234,"Saffron Indian Kitchen",Philadelphia,,https://saffronofphilly.com/saffron-philly?utm_source=google,restaurant
+11238,"Tikka Mahal - Modern Indian Restaurant",Philadelphia,,https://www.tikkamahal.com/,restaurant
+11239,"Raindrops Indian Restaurant",Philadelphia,,https://raindropsindianrestaurant.com/,restaurant
+11242,"CURRY LEAF NEPALI & INDIAN CUISINE",Philadelphia,,https://curryleafphiladelphia.com/,restaurant
+11243,"Masala Kitchen : Kati Rolls & Platters",Philadelphia,,https://www.masalakitchen.com/,restaurant
+11245,"Manayunk Indian grille",Philadelphia,,https://www.manayunkindiangrille.com//,restaurant
+11251,"Café Lutécia",Philadelphia,,https://www.facebook.com/pages/Cafe-Lutecia/117702891589376,restaurant
+11254,"TOWNSEND EPX",Philadelphia,,https://www.townsendepx.com/,restaurant
+11259,"Honey's Sit 'n Eat",Philadelphia,,https://honeyssitneat-north.mobilebytes.com/menu,restaurant
+11265,"Loch Bar",Philadelphia,,http://www.lochbar.com/philly,restaurant
+11269,"Jordan Johnson",Philadelphia,,https://jordanjohnsons.toast.site/order,restaurant
+11274,"Chickie's & Pete's",Philadelphia,,https://chickiesandpetes.com/location/roosevelt-blvd-2/?utm_source=gmb&utm_medium=organic&utm_campaign=roosevelt_blvd,restaurant
+11275,"Alaska King Crab House",Philadelphia,,"",restaurant
+11276,"Fishtown Seafood",Philadelphia,,https://www.fishtownseafood.com/,restaurant
+11277,"Somewhere Nowhere","New York","112 W 25th St Floor 38 & 39, New York, NY 10001",https://www.somewherenowherenyc.com/,nightclub
+11278,"TAO Group Venue",Manhattan,"369 W 16th St, New York, NY 10011",https://taodowntown.com/nightclub/,nightclub
+11279,"Nebula NYC","New York","135 W 41st St, New York, NY 10036",https://nebulanewyork.com/,nightclub
+11280,"Bar 13","New York","121 University Pl, New York, NY 10003",http://www.bar13nyc.com/,nightclub
+11281,"Treadwell Park","New York","1125 1st Ave, New York, NY 10065",https://treadwellpark.com/,nightclub
+11282,Elsewhere,"New York","599 Johnson Ave #1, Brooklyn, NY 11237",http://www.elsewhere.club/,nightclub
+11283,SILO,"New York","90 Scott Ave, Brooklyn, NY 11237",https://www.silobrooklyn.com/,nightclub
+11284,"Superior Ingredients","New York","74 Wythe Ave, Brooklyn, NY 11249",https://www.si-bk.com/,nightclub
+11285,"High Bar New York","New York","346 W 40th St, New York, NY 10018",https://www.highbarnyc.co/,nightclub
+11286,Nexo,"New York","29 W 36th St., New York, NY 10018",,nightclub
+11287,"San Antonios","New York","247 Eldridge St, New York, NY 10002",https://www.sanantoniosnyc.com/,nightclub
+11288,"99 Scott Ave","New York","99 Scott Ave, Brooklyn, NY 11237",,nightclub
+11289,"Brooklyn Storehouse","New York","Building 293, Brooklyn Navy Yard, Assembly Rd, Brooklyn, NY 11205",https://brooklynstorehouse.com/,nightclub
+11290,"Republic Latin Fusion","New York","181 N 10th St, Brooklyn, NY 11211",http://www.republiclatinfusion.com/,nightclub
+11291,"Knockdown Center","New York","52-19 Flushing Ave, Maspeth, NY 11378",http://www.knockdown.center/,nightclub
+11292,"Good Room","New York","98 Meserole Ave, Brooklyn, NY 11222",http://goodroombk.com/,nightclub
+11293,Paragon,"New York","990 Broadway, Brooklyn, NY 11221",https://www.paragonbroadway.com/,nightclub
+11294,"Brooklyn Steel","New York","319 Frost St, Brooklyn, NY 11222",https://www.bowerypresents.com/new-york-metro/shows/brooklyn-steel,nightclub
+11295,"Highbar NYC","New York","346 W 40th St, New York, NY 10018",https://www.highbarnyc.co/,nightclub
+11296,"House of Yes","New York","2 Wyckoff Ave, Brooklyn, NY 11237",http://houseofyes.org/,nightclub
+11297,Marquee,"New York","289 10th Ave, New York, NY 10001",https://taogroup.com/venues/marquee-new-york/,nightclub
+11298,"Bossa Nova Civic Club","New York","1271 Myrtle Ave, Brooklyn, NY 11221",https://bossanovacivicclub.shop/,nightclub
+11299,"Common Ground","New York","63 Gansevoort St, New York, NY 10014",http://commongroundnyc.com/,live_music
+11300,H0L0,"New York","10-90 Wyckoff Ave, Ridgewood, NY 11385",https://www.h0l0.nyc/,nightclub
+11301,"Lost in Paradise Rooftop","New York","11-01 43rd Ave, Long Island City, NY 11101",https://www.lostinparadiserooftop.com/,nightclub
+11302,Purgatory,"New York","675 Central Ave, Brooklyn, NY 11207",http://www.purgatorybk.com/,nightclub
+11303,Signal,"New York","175 Morgan Ave, Brooklyn, NY 11237",https://www.signalnyc.club/,nightclub
+11304,"The Delancey","New York",,,nightclub
+11305,"The Sultan Room","New York","234 Starr St, Brooklyn, NY 11237",http://thesultanroom.com/,nightclub
+11307,"Ace Hotel","New York","20 W 29th St, New York, NY 10001",https://www.acehotel.com/newyork/,live_music
+11308,"Ainsworth Midtown","New York","45 E 33rd St, New York, NY 10016",http://www.theainsworth.com/midtown,nightclub
+11309,"Location TBA","New York","346 W 40th St, New York, NY 10018",,live_music
+11310,Margaritaville,"New York","560 7th Ave 7th Floor, New York, NY 10018",https://www.margaritavilleresorts.com/margaritaville-resort-times-square?utm_source=google&utm_medium=listing&utm_campaign=margaritaville+times+square,nightclub
+11311,Nublu,"New York","151 Loisaida Ave, New York, NY 10009",http://nublu.net/,nightclub
+11312,Refuge,"New York","360 Ten Eyck St, Brooklyn, NY 11206",http://www.refuge.nyc/,nightclub
+11313,"Virgin Hotels NYC","New York","1227 Broadway, New York, NY 10001",https://virginhotels.com/nyc/,nightclub
+11314,"Amelia's","New York","450 Park Ave S, New York, NY 10016",http://amelias.nyc/,nightclub
+11315,"American Whiskey","New York","247 W 30th St, New York, NY 10001",https://www.americanwhiskeynyc.com/,nightclub
+11316,"Apollo Studio","New York","321 Nassau Ave, Brooklyn, NY 11222",https://www.facebook.com/apollostudionyc/,nightclub
+11317,Chester,"New York","Chester, NY 10918",http://www.thetownofchester.org/,nightclub
+11318,"Darling Rooftop","New York","36 Central Park S, New York, NY 10019",https://www.darlingrooftop.com/,nightclub
+11319,"Dead Letter No. 9","New York","63 Grand St, Brooklyn, NY 11249",https://www.deadletterno9.com/,live_music
+11320,Delancey,"New York","168 Delancey St, New York, NY 10002",https://www.thedelancey.com/,live_music
+11321,"HOA (HOME OF ASTORIA)","New York","28-49 Steinway St, Astoria, NY 11103",,nightclub
+11322,"Jupiter Disco","New York","1237 Flushing Ave, Brooklyn, NY 11237",http://www.jupiterdisco.com/,nightclub
+11323,"New York City's Johnny Utah's","New York","90 Greenwich Ave, New York, NY 10011",,nightclub
+11324,Nowadays,"New York","56-06 Cooper Ave, Glendale, NY 11385",http://nowadays.nyc/,nightclub
+11325,"ONE Manhattan","New York","New York, NY 10035",,nightclub
+11326,"Royalton Park Avenue","New York","420 Park Ave S, New York, NY 10016",https://www.royaltonparkavenue.com/,nightclub
+11327,"So & So's Piano Bar","New York",,,live_music
+11328,"Stone Street Tavern","New York","52 Stone St, New York, NY 10004",http://www.stonestreettavernnyc.com/,nightclub
+11329,TBA,"New York","395 Wythe Ave, Brooklyn, NY 11249",,nightclub
+11330,"Taj II","New York","25-27 Steinway St, Astoria, NY 11103",https://tajmahallounge.com/,live_music
+11331,"The DL-NYC","New York","95 Delancey St 3rd Floor, New York, NY 10002",https://www.thedl-nyc.com/,nightclub
+11332,"The Meadows","New York","17 Meadow St, Brooklyn, NY 11206",https://www.thebrooklynmonarch.com/the-meadows,nightclub
+11333,"Various Venues","New York","27 E 21st St 6 FLOOR, New York, NY 10010",http://www.venuesnyc.com/?utm_source=Google%20My%20Business&utm_medium=Website%20Button,nightclub
+11334,"Virgin Hotels New York","New York",,,live_music
+11335,Xanadu,"New York","262 Starr St, Brooklyn, NY 11237",https://xanadu.nyc/,nightclub
+11336,"and converted from a","New York","124 Nassau St # 2, New York, NY 10038",,nightclub
+11337,00:00,"New York","21-38 44th Rd, Long Island City, NY 11101",http://www.0000space.com/,nightclub
+11338,"3 Dollar Bill","New York","260 Meserole St, Brooklyn, NY 11206",https://3dollarbillbk.com/,nightclub
+11339,"AMC Times Square","New York","19501 Biscayne Blvd #3001, Aventura, FL 33180",https://www.amctheatres.com/movie-theatres/miami-ft-lauderdale/amc-aventura-24?utm_medium=organic&utm_source=google&utm_campaign=local,nightclub
+11340,"American Whiskey Midtown","New York","247 W 30th St, New York, NY 10001",https://www.americanwhiskeynyc.com/,nightclub
+11341,"Blind Barber NYC","New York","East Village, 339 E 10th St, New York, NY 10009",http://www.blindbarber.com/,live_music
+11342,Bounce,"New York",,,nightclub
+11343,Bowlero,"New York","222 W 44th St, New York, NY 10036",https://www.luckystrikeent.com/location/lucky-strike-times-square?utm_source=gbp&utm_medium=organic&utm_campaign=yext_listings,nightclub
+11344,"Bowlero Times Square","New York","222 W 44th St, New York, NY 10036",https://www.luckystrikeent.com/location/lucky-strike-times-square?utm_source=gbp&utm_medium=organic&utm_campaign=yext_listings,live_music
+11345,"Bowlero's whopping New Year's celebration","New York","1287 S Park Victoria Dr, Milpitas, CA 95035",https://www.luckystrikeent.com/location/lucky-strike-milpitas?utm_source=gbp&utm_medium=organic&utm_campaign=yext_listings,live_music
+11346,"Brooklyn NY US","New York","New York",http://www.brooklyn-usa.org/index.htm,nightclub
+11347,"Buca di Beppo","New York","16677 Southpark Center, Strongsville, OH 44136",https://dineatbuca.com/locations/strongsville/?utm_campaign=local&utm_source=gbp&utm_medium=organic&utm_content=strongsville,live_music
+11348,"C'mon Everybody","New York","325 Franklin Ave, Brooklyn, NY 11238",http://www.cmoneverybody.com/,nightclub
+11349,"Cafe Erzulie","New York","894 Broadway, Brooklyn, NY 11206",https://www.cafeerzulie.com/,nightclub
+11350,"Celon Lounge","New York","40 W 40th St, New York, NY 10001",http://bryantparkhotel.com/eat-plus-drink/celon-lounge/,nightclub
+11351,"Cin Cin Lounge","New York","681 Washington St, New York, NY 10014",https://www.ciccionyc.com/,nightclub
+11352,"Cin Cin Lounge
+Ring","New York",,,nightclub
+11353,"Civilian Hotel NYC","New York","305 W 48th St, New York, NY 10036",http://www.civilianhotel.com/,nightclub
+11354,"Common Ground Bar","New York","63 Gansevoort St, New York, NY 10014",http://commongroundnyc.com/,nightclub
+11355,"Dallas BBQ","New York","241 W 42nd St, New York, NY 10036",https://www.dallasbbq.com/times-square,live_music
+11356,Delilah,"New York","155 Rivington St, New York, NY 10002",,live_music
+11357,"Dream Hotel","New York","355 W 16th St, New York, NY 10011",https://www.hyatt.com/dream-hotels/en-US/nycdd-dream-downtown?src=corp_lclb_google_seo_nycdd&utm_source=google&utm_medium=organic&utm_campaign=lmr,nightclub
+11358,"Fontainhas DUMBO","New York","28 Jay St, Brooklyn, NY 11201",http://www.fontainhasnyc.com/,live_music
+11359,Gabriela,"New York","90 Wythe Ave, Brooklyn, NY 11249",https://www.gabriela.nyc/,nightclub
+11360,GoldBar,"New York","389 Broome St, New York, NY 10013",http://www.goldbarnewyork.com/,nightclub
+11361,"HB Burger","New York","127 W 43rd St, New York, NY 10036",,nightclub
+11362,"HK Hall","New York","605 W 48th St, New York, NY 10036",https://www.hkhall.com/,nightclub
+11363,"HOA HOME OF ASTORIA","New York","28-49 Steinway St, Astoria, NY 11103",,nightclub
+11364,"Hart Bar","New York","538 Hart St #1, Brooklyn, NY 11221",http://hartbarnyc.com/,nightclub
+11365,"Headless Horseman","New York","778 Broadway, US-9W, Ulster Park, NY 12487",https://headlesshorseman.com/?utm_campaign=GMB,live_music
+11366,"Highline Ballroom After","New York","New York, NY 10011",https://www.thehighline.org/,live_music
+11367,"Hotel Chantelle","New York","92 Ludlow St, New York, NY 10002",https://www.hotelchantellenyc.com/,nightclub
+11368,"Hotel on Rivington","New York","107 Rivington St, New York, NY 10002",http://www.hotelonrivington.com/,nightclub
+11369,"House of Brews has","New York","363 W 46th St, New York, NY 10036",,nightclub
+11370,"Le Bain","New York","The Standard, High Line, 848 Washington St, New York, NY 10014",https://www.lebainnewyork.com/?utm_source=google&utm_campaign=google_my_business&utm_medium=organic,nightclub
+11371,Lexicon,"New York","100 Church St, New York, NY 10014",https://www.lexiconusa.com/,live_music
+11372,"Margaritaville - Time Square","New York","560 7th Ave 7th Floor, New York, NY 10018",https://www.margaritavilleresorts.com/margaritaville-resort-times-square?utm_source=google&utm_medium=listing&utm_campaign=margaritaville+times+square,nightclub
+11373,"Marriott Marquis","New York","1535 Broadway, New York, NY 10036",https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0,live_music
+11374,"Midtown Party Pass","New York","723 7th Ave Suite 901, New York, NY 10019",https://newyorkpass.com/en-us?utm_medium=organic&utm_source=GoogleMyBusiness&utm_campaign=nyp,nightclub
+11375,"Musica Club NYC","New York","637 W 50th St, New York, NY 10019",http://musicanewyork.net/,nightclub
+11376,"New York Beer Company","New York","321 W 44th St, New York, NY 10036",,nightclub
+11377,"Pando Park","New York","227 Kingston Ave, Brooklyn, NY 11213",https://www.pandosnyc.com/,nightclub
+11378,"Penny Williamsburg","New York","288 N 8th St, Brooklyn, NY 11211",https://www.penny-hotel.com/?utm_source=local-listings&utm_medium=organic&utm_campaign=local-listings,nightclub
+11379,"Prime Astoria","New York","40-06 Astoria Blvd S, Astoria, NY 11103",https://primeastoria.com/,nightclub
+11380,"Proper West","New York","12 William Saroyan Place, San Francisco, CA 94133",https://www.specsbarsf.com/,live_music
+11381,"Public House","New York","140 E 41st St, New York, NY 10017",http://publichousenyc.com/,nightclub
+11382,"Racket NY","New York","431 W 16th St, New York, NY 10011",http://racketnyc.com/,nightclub
+11383,"Ripley would be the first to believe that","New York","New York",http://www.nyc.gov/,nightclub
+11384,"Ruby Tuesday","New York","41 Orange Plaza Ln, Scotchtown, NY 10940",https://rubytuesday.com/,nightclub
+11385,"Saint
+Step","New York",,,nightclub
+11386,"Selva NYC","New York","1329 Willoughby Ave Suite 121, Brooklyn, NY 11237",http://selva.nyc/,nightclub
+11387,Skinos,"New York","123 Washington St, New York, NY 10006",https://skinos123.com/?utm_source=google,nightclub
+11388,"Skyport Marina","New York","2430 FDR Dr, New York, NY 10010",,nightclub
+11389,"Sons of Essex","New York","124 Rivington St, New York, NY 10002",https://www.essexnyc.com/?utm_campaign=gmb&utm_medium=organic&utm_source=gmb_listing,nightclub
+11390,"Sony Hall","New York","235 W 46th St, New York, NY 10036",https://sonyhall.com/,live_music
+11391,South,"New York","New York, NY",,nightclub
+11392,"Stone Creek Bar & Lounge","New York","7 Old Tavern Rd, Hunlock Creek, PA 18621",,nightclub
+11393,"Summer Club at Ravel Hotel","New York","8-08 Queens Plaza S, Long Island City, NY 11101",http://www.summerclubnyc.com/,nightclub
+11395,"Tao Downtown",Manhattan,"92 9th Ave, New York, NY 10011",https://taogroup.com/venues/tao-downtown-new-york/,nightclub
+11396,"Tavern 29","New York","47 E 29th St, New York, NY 10016",http://tavern29.com/,nightclub
+11397,"Terminal 5","New York","610 W 56th St #612, New York, NY 10019",http://www.terminal5nyc.com/,nightclub
+11398,"The Chocolate Factory","New York","70 Scott Ave, Brooklyn, NY 11237",http://www.chocolatefactoryvibes.com/,nightclub
+11399,"The Dean NYC","New York","214 W 39th St Unit #5, New York, NY 10018",https://thedean-nyc.com/,nightclub
+11400,"The Highlight Room",Manhattan,"145 Bowery, New York, NY 10002",https://taogroup.com/venues/the-highlight-room-new-york/,nightclub
+11401,"The Penny Hotel","New York",,,nightclub
+11402,"The Roof at Superior Ingredients","New York","74 Wythe Ave, Brooklyn, NY 11249",https://www.si-bk.com/,nightclub
+11403,"Times Square","New York","Manhattan, NY 10036",https://www.timessquarenyc.org/,nightclub
+11404,Unveiled,"New York","94 N 13th St, Brooklyn, NY 11249",http://unveilednewyork.com/,nightclub
+11405,"Up & Down","New York","8818 Harmony Grove Rd, Escondido, CA 92029",,nightclub
+11406,"White Horse Tavern NYC","New York","567 Hudson St, New York, NY 10014",https://www.whitehorsetavern1880.com/,nightclub
+11407,"and nightclub favored by NYC","New York","191 Chrystie St, New York, NY 10002",http://outerheaven.nyc/,nightclub
+11408,"chaos and opt for a more intimate venue","New York","55 Grove St, New York, NY 10014",https://littleowleventsnyc.com/,live_music
+11409,"has an array of amenities","New York","333 E 102nd St, New York, NY 10029",,nightclub
+11410,"house DJ","New York","26601 Richmond Rd, Bedford Heights, OH 44146",https://www.rthgroup.com/,live_music
+11411,"in the back room","New York","102 Norfolk St, New York, NY 10002",http://www.backroomnyc.com/,live_music
+11413,"sought after by locals and tourists alike","New York","169 Madison Ave, New York, NY 10016",http://www.likealocaltours.com/,nightclub
+11415,"154 Scott Ave","New York","154 Scott Ave, Brooklyn, NY 11237",,nightclub
+11416,"20 Church St","New York","20 Church St, Jamaica, NY 11414",,nightclub
+11417,"200 Central Park S","New York","200 Central Park S, New York, NY 10019",,nightclub
+11418,"315 Meserole","New York","315 Meserole St, Brooklyn, NY 11206",,nightclub
+11419,"434 E 9th St","New York","434 E 9th St, New York, NY 10009",,nightclub
+11420,"58 Avenue A","New York","58 Avenue A, New York, NY 10009",,nightclub
+11421,"5th & Mad","New York","Jonestown, TX 78645",,nightclub
+11422,"617 W 46th St","New York","617 W 46th St, New York, NY 10036",,nightclub
+11423,"64-02 Myrtle Ave","New York","64-02 Myrtle Ave, Flushing, NY 11385",,nightclub
+11424,"65 Kent Ave, Brooklyn, NY 11249, USA","New York","65 Kent Ave, Brooklyn, NY 11249",,nightclub
+11425,"A New York NY US","New York","New York, NY",http://www.mbpo.org/,nightclub
+11426,"AMC Times Square NYE Mega","New York","234 W 42nd St, New York, NY 10036",https://www.amctheatres.com/movie-theatres/new-york-city/amc-empire-25?utm_medium=organic&utm_source=google&utm_campaign=local,nightclub
+11427,"Acoustik Garden Lounge","New York","1515 Atlantic Ave, Brooklyn, NY 11213",https://acoustikgardenlounge.com/,nightclub
+11428,"Adults Only Times Square NYE Party Pass","New York","225 W 39th St, New York, NY 10018",http://timessquarenewyears.com/,nightclub
+11429,"After Party","New York","299 Vandervoort Ave, Brooklyn, NY 11211",,nightclub
+11430,"Ainsworth Chelsea","New York","122 W 26th St, New York, NY 10001",http://www.the-ainsworth.com/,nightclub
+11431,"Ainsworth Hoboken",Hoboken,"310 Sinatra Dr, Hoboken, NJ 07030",https://www.the-ainsworth.com/,nightclub
+11432,"All Access NYE Party Pass NYC","New York","1441 Broadway Suite 5015, New York, NY 10018",https://nycnewyears.com/,nightclub
+11433,"Arlo SoHo, Living Room","New York","231 Hudson St, New York, NY 10013",https://www.arlohotels.com/soho,nightclub
+11434,"Arlo Williamsburg","New York","96 Wythe Ave, Brooklyn, NY 11249",https://www.arlohotels.com/williamsburg/?utm_campaign=GoogleMyBusiness&utm_source=Google&utm_medium=LocalSearch,nightclub
+11435,"ArtSpace @ PUBLIC Hotel","New York","215 Chrystie St, New York, NY 10002",https://www.publichotels.com/newyork/eat-and-drink/artspace,nightclub
+11436,"Aspen Social at the Night Hotel","New York","132 W 45th St, New York, NY 10036",https://nighthotelattimessquare.reservandohoteles.com/,nightclub
+11437,"Atlantic Avenue Brooklyn NY","New York","New York, NY",,nightclub
+11438,"Attic Rooftop & Lounge","New York","Ermou 86, Athina 105 54, Greece",https://www.atticurbanrooftop.com/,nightclub
+11439,"Avalon Yacht","New York","1700 York Ave, New York, NY 10128",http://www.y4as.com/,live_music
+11440,Avenue,"New York","259 10th Ave, New York, NY 10001",https://www.avenues.org/ny,nightclub
+11441,"B Bar aka Bowery Bar","New York","310 Bowery #2, New York, NY 10012",http://www.310bowery.nyc/,nightclub
+11442,"B New York New York United States","New York","New York, NY 10009",,nightclub
+11443,"Baby's All Right","New York","146 Broadway, Brooklyn, NY 11211",http://babysallright.com/,nightclub
+11444,"Bar Sella","New York","134 4th Ave, New York, NY 10003",https://barsellanyc.com/,nightclub
+11445,"Bar Sprezzatura","New York","251 W 48th St, New York, NY 10036",https://www.barsprezzaturanyc.com/,nightclub
+11446,"Bar Sprezzatura
+Ring","New York",,,nightclub
+11447,Barcelona,"New York","Westfield, NY 14787",,nightclub
+11448,"Bathtub Gin","New York","132 9th Ave, New York, NY 10011",http://www.bathtubginnyc.com/,live_music
+11449,Bembe,"New York","81 S 6th St, Brooklyn, NY 11249",http://www.bembe.us/,nightclub
+11450,"Bk Backyard Bar","New York","151 Banker St, Brooklyn, NY 11222",https://www.bkbackyard.com/,nightclub
+11451,"Blind Barber","New York","East Village, 339 E 10th St, New York, NY 10009",http://www.blindbarber.com/,nightclub
+11452,"Blue Lounge","New York","59 W 44th St, New York, NY 10036",http://www.algonquinhotel.com/blue-bar,nightclub
+11453,Boardroom,"New York","150 E 54th St, New York, NY 10022",http://www.theboardroomny.com/,nightclub
+11454,"Boardroom Bar NYC","New York",,,nightclub
+11455,"Body by Brooklyn","New York","275 Park Ave, Brooklyn, NY 11205",http://www.bodybybrooklyn.com/,nightclub
+11456,"Bohemian Hall & Beer Garden","New York","4939 Broadway Ave, Cleveland, OH 44127",http://www.sokolgreatercleveland.org/,nightclub
+11457,"Bohemian Hall Beer Garden","New York","29-19 24th Ave, Astoria, NY 11105",https://bohemianhall.com/,nightclub
+11458,"Bolo Bolo Café & Bakery","New York","364 Richmond St W, Toronto, ON M5V 1X6, Canada",,nightclub
+11459,"Bourbon Street","New York","40-12 Bell Blvd, Bayside, NY 11361",https://bourbonstreetny.com/?utm_source=google,live_music
+11460,"Bourbon Street Bar & Grille restaurant","New York","Inside Bourbon Orleans Hotel, 730 Bourbon St, New Orleans, LA 70116",http://www.bourbonorleans.com/eat-drink-jazz/bourbon-o-bar/,live_music
+11461,"Bourbon Street Dinner","New York","160 Central Park S Suite 1101-62, New York, NY 10019",https://www.bourbonsteaknyc.com/,live_music
+11462,"Bowery Ballroom","New York","6 Delancey St, New York, NY 10002",http://www.mercuryeastpresents.com/boweryballroom,nightclub
+11463,"Bowlero NYC","New York","13307 San Pedro Ave, San Antonio, TX 78216",https://www.luckystrikeent.com/location/lucky-strike-san-antonio?utm_source=gbp&utm_medium=organic&utm_campaign=yext_listings,nightclub
+11464,Bravos,"New York","378 5th Ave, New York, NY 10018",https://www.bravokosherpizza.com/,nightclub
+11465,"Bravos lounge","New York","261 Dyckman St, New York, NY 10034",,nightclub
+11466,"Bronze Owl","New York","52 W 33rd St, New York, NY 10001",https://thebronzeowlnyc.com/?SEO_id=GMB--R-NYCCUQQ-3&y_source=1_MTA1NjIzNDEzNC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D,nightclub
+11467,"Brooklyn Chop House",Brooklyn,"150 Nassau St, New York, NY 10038",https://www.brooklynchophouse.com/,nightclub
+11468,"Brooklyn NY
+Age","New York",,,live_music
+11469,"Broome Street Ganesha Temple","New York","430 Broome St, New York, NY 10013",https://broomestreetganesh.org/,nightclub
+11470,"Bryant Park Grill","New York","25 W 40th St, New York, NY 10018",https://bryantparkgrillnyc.com/,live_music
+11471,"Bryant Park Hotel
+Sunday","New York",,,nightclub
+11472,"CATCH Roof","New York","21 9th Ave, New York, NY 10014",https://www.catchrestaurants.com/location/catch-nyc/,nightclub
+11473,"CIVILIAN Hotel","New York","305 W 48th St, New York, NY 10036",http://www.civilianhotel.com/,live_music
+11474,"CIVILIAN Hotel
+Featuring Starchild Rooftop","New York",,,nightclub
+11475,"Cabanas at the Maritime","New York","3700 Surf Ave, Brooklyn, NY 11224",,nightclub
+11476,"Cafè Lakay","New York","3323 Avenue I, Brooklyn, NY 11210",,nightclub
+11477,Capitale,"New York","130 Bowery, New York, NY 10013",https://capitaleny.com/,nightclub
+11479,Carpark,"New York","2 5th Ave, New York, NY 10012",https://www.gmcparking.com/locations-rates/downtown/washington-square/,nightclub
+11480,"Casa Bocado","New York","341 Broome St, New York, NY 10013",,nightclub
+11481,Cassette,"New York","68-38 Forest Ave storefront B, Flushing, NY 11385",https://www.barcassettenyc.com/,nightclub
+11482,"Central Park Lanes","New York","New York, NY",https://www.centralparknyc.org/,nightclub
+11483,"Chatroom at Elsewhere","New York","599 Johnson Ave #1, Brooklyn, NY 11237",http://www.elsewhere.club/,nightclub
+11484,"Chelsea Table & Stage","New York","Hilton Fashion District Hotel, 152 W 26th St, New York, NY 10001",http://chelseatableandstage.com/,nightclub
+11485,"Chelsea's Hotel Hayden","New York","127 W 28th St, New York, NY 10001",https://www.hotelhaydennyc.com/,live_music
+11486,"Chevy's","New York","105-20 Gerard Pl, Forest Hills, NY 11375",https://www.drivesunrisechevy.com/,nightclub
+11487,Cielo,"New York","14 Little W 12th St, New York, NY 10014",,nightclub
+11488,Cipriani,"New York","376 W Broadway, New York, NY 10012",https://www.cipriani.com/cipriani-downtown?utm_source=gbp&utm_medium=organic&utm_campaign=gbp-downtown-nyc,nightclub
+11489,"Cipriani 42nd St.","New York","110 E 42nd St, New York, NY 10017",https://ciprianievents.com/venue/new-york-42nd-street/?utm_source=gbp&utm_medium=organic&utm_campaign=gbp-42nd-events,nightclub
+11490,"Civilian Hotel
+Ring","New York",,,nightclub
+11491,"Classic Car Club Manhattan","New York","1 PIER 76, 408 12th Ave, New York, NY 10018",http://classiccarclubmanhattan.com/,nightclub
+11492,"Code Astoria","New York","20-30 Steinway St, Astoria, NY 11105",https://www.codeastorianyc.com/,nightclub
+11493,"Common Country","New York","344 3rd Ave, New York, NY 10010",http://commoncountrybar.com/,nightclub
+11494,"Common Country
+Midnight","New York",,,live_music
+11495,"Common Ground After Party","New York",,,nightclub
+11496,"Concert Grove Pavilion, Prospect Park","New York","153 East Dr, Brooklyn, NY 11225",,nightclub
+11497,Consigliere,"New York","31 Warren St, Newark, NJ 07102",https://www.consiglierewine.com/,nightclub
+11499,Craftsman,"New York","3155 Broadway, New York, NY 10027",http://www.thecraftsmannyc.com/,nightclub
+11500,DOM,"New York","287 Park Ave S, New York, NY 10010",https://dom-lounge.com/,nightclub
+11501,"Dallas BBQ Restaurant","New York","1265 3rd Ave, New York, NY 10021",https://dallasbbq.com/,live_music
+11502,Damballa,"New York","895 Broadway, Brooklyn, NY 11206",https://www.damballa.nyc/,nightclub
+11503,"Desert 5 Spot","New York","94 Wythe Ave, Brooklyn, NY 11249",https://www.desertfivespot.com/ny,nightclub
+11504,"Desert 5 Spot NY","New York",,,nightclub
+11505,"Dive BK","New York","408 Troutman St, Brooklyn, NY 11237",https://www.divebarbk.com/,nightclub
+11506,"Dream Midtown","New York","210 W 55th St, New York, NY 10019",https://www.hyatt.com/dream-hotels/en-US/nycdm-dream-midtown?src=corp_lclb_google_seo_nycdm&utm_source=google&utm_medium=organic&utm_campaign=lmr,nightclub
+11507,"El Nico","New York","288 N 8th St, Brooklyn, NY 11211",https://elnico-rooftop.com/,nightclub
+11508,"El Nico Rooftop Williamsburg","New York","288 N 8th St, Brooklyn, NY 11211",https://elnico-rooftop.com/,nightclub
+11509,"El Nico Rooftop by The Penny Williamsburg","New York",,,nightclub
+11510,"Electric Room","New York","Dream Downtown, by Hyatt, Lower Level, 355 W 16th St, New York, NY 10011",http://electricroomnyc.com/,nightclub
+11511,"Elevate Nightclub","New York","123-07 Liberty Ave, South Richmond Hill, NY 11419",,nightclub
+11512,"Elsie Penthouse","New York","1412 Broadway, New York, NY 10018",https://www.elsierooftop.com/,nightclub
+11513,"Empire Hotel Rooftop","New York","44 W 63rd St, New York, NY 10023",/url?q=http://www.theempirerooftop.com/&opi=79508299&sa=U&ved=0ahUKEwiuhpfErtWRAxXbLUQIHUALMV8Q61gIGCgO&usg=AOvVaw0cp0b5ckqzcheduwhubmQW,nightclub
+11514,"Empress Nautical Yacht","New York","1676 Dean St #1f, Brooklyn, NY 11213",http://nyprincesscruises.com/,nightclub
+11515,"Everdene at Virgin Hotel","New York","1227 Broadway, New York, NY 10001",https://virginhotels.com/nyc/dine-and-drink/everdene/,live_music
+11516,"Evol NewYork","New York","2 Thompson St 2nd Fl, New York, NY 10013",https://evolnyc.us/,nightclub
+11517,"First Round's on Me Social Club","New York","109 W 25th St, New York, NY 10001",https://www.firstroundsonme.co/,nightclub
+11518,Folly,"New York","92 W Houston St, New York, NY 10012",http://www.follynyc.com/,nightclub
+11519,Frames,"New York","550 9th Ave, New York, NY 10018",http://www.framesnyc.com/,live_music
+11520,"Frames Times Square","New York",,,nightclub
+11521,"Gallery at Dream Downtown","New York","Lower Level, 355 W 16th St, New York, NY 10011",http://www.dreamhotels.com/downtown/meetings-events/default-en.html,live_music
+11522,"Gansevoort Park Rooftop","New York","18 9th Ave, New York, NY 10014",https://www.gansevoorthotelgroup.com/gansevoort-meatpacking-nyc/eat-drink/gansevoort-rooftop,nightclub
+11523,"Gilded Lily","New York",,http://gildedlilyevents.com/,nightclub
+11524,Gospel,"New York","281 Lafayette St, New York, NY 10012",https://www.gospelnyc.com/,nightclub
+11525,Griffin,"New York","Wells, NY 12190",,nightclub
+11526,"Guy's American Kitchen","New York","229 West 43rd Street, 220 W 44th St, New York, NY 10036",,nightclub
+11527,"HOA - HOME OF ASTORIA","New York",,,nightclub
+11528,"Hana House","New York","345 Adams St, Brooklyn, NY 11201",https://www.hanahouse.co/,nightclub
+11529,"Haswell Greens","New York","240 W 52nd St, New York, NY 10019",https://haswellgreens.com/,live_music
+11530,Haus,"New York","135 Franklin St, Brooklyn, NY 11222",,nightclub
+11531,"Hearsay Club NYC","New York","1370 Broadway, New York, NY 10018",https://hearsaysystems.com/,nightclub
+11532,"Hello Bar BK","New York","1110 Nostrand Ave, Brooklyn, NY 11225",https://www.hellobarinc.com/,nightclub
+11533,"Hendricks Hotel Rooftop","New York","2 New Montgomery St, San Francisco, CA 94105",https://www.piedpipersf.com/,nightclub
+11534,Hill,"New York","New York, NY",,live_music
+11535,"Hoa Astoria","New York",,,nightclub
+11536,Hotel,"New York","107 Rivington St, New York, NY 10002",http://www.hotelonrivington.com/,nightclub
+11537,"Hotel Alameda","New York","518 W 27th St Lower Level, New York, NY 10001",https://www.hotelalameda.com//?utm_source=google&utm_medium=organic&utm_campaign=business_listing,nightclub
+11538,"Houston Hall","New York","222 W Houston St, New York, NY 10014",https://www.houstonhallny.com/,nightclub
+11539,"Houston Hall
+A Grand Beer Hall Celebration","New York",,,live_music
+11540,"IDDC HQ","New York","420 E 79th St, New York, NY 10075",http://www.iddcnyc.com/,nightclub
+11541,"IL Bastardo","New York","828 9th Ave, New York, NY 10019",https://www.ilbastardonyc.com/,nightclub
+11542,"IYKYK ROOM","New York","35-28 Farrington St 1st Fl, Flushing, NY 11354",http://www.iykykny.com/,nightclub
+11543,"Industry City","New York","220 36th St, Brooklyn, NY 11232",https://industrycity.com/,nightclub
+11544,"Inside Park at St","New York","at, 325 Park Ave, E 50th St Entrance, New York, NY 10022",http://www.insideparknyc.com/,nightclub
+11545,"Invite Only After Party","New York",,http://www.iopartyplanning.com/,nightclub
+11546,"Iron Bar","New York","713 8th Ave, New York, NY 10036",https://ironbarnyc.com/,nightclub
+11547,"Isola Brooklyn","New York","361 Metropolitan Ave, Brooklyn, NY 11211",http://www.isolabrooklyn.com/,nightclub
+11548,J.Bespoke,"New York","121 E 27th St, New York, NY 10016",http://jbespoke.com/,nightclub
+11549,"Jeromes
+Sunday","New York",,,nightclub
+11550,"Jewel Yacht","New York","11 W 51st St, New York, NY 10019",https://www.thejewelny.com/?utm_source=B2C&utm_medium=Google&utm_campaign=GoogleListing,nightclub
+11551,"Kixby Hotel","New York","45 W 35th St, New York, NY 10001",https://www.kixby.com/?utm_source=local-directories&utm_medium=organic&utm_campaign=travelclick-localconnect,live_music
+11552,"Knickerbocker Rooftop","New York","6 Times Sq 17th Floor, New York, NY 10036",https://theknickerbocker.com/dine/st-cloud/,nightclub
+11553,LAVO,"New York","105 W 28th St, New York, NY 10001",https://taogroup.com/venues/lavo-italian-restaurant-new-york/,nightclub
+11554,"LAVO Nightclub","New York","369 W 16th St, New York, NY 10011",https://taodowntown.com/nightclub/,nightclub
+11555,"LEVEL 2 (SECOND FLOOR) - HOME OF ASTORIA","New York",,,nightclub
+11556,"LOST IN PARADISE","New York","11-01 43rd Ave, Long Island City, NY 11101",https://www.lostinparadiserooftop.com/,nightclub
+11557,LPR,"New York",,,nightclub
+11558,"Laissez Faire","New York","10 Theatre Alley, New York, NY 10038",https://laissezfaire.nyc/,nightclub
+11559,"Laissez Faire
+A Chic","New York",,,nightclub
+11560,"Lalin's","New York","1131 Broadway, Brooklyn, NY 11221",http://lalinsbk.com/,nightclub
+11561,"Late Late","New York","159 E Houston St, New York, NY 10002",,live_music
+11562,Lately,"New York","23-08 44th Dr, Long Island City, NY 11101",http://www.latelycafelic.com/,nightclub
+11563,"Le Bain, The Standard Hotel","New York",,,nightclub
+11564,"Le Grande at The Time Hotel","New York","224 W 49th St, New York, NY 10019",https://www.hyatt.com/jdv-by-hyatt/en-US/lgajt-the-time-new-york?src=corp_lclb_google_seo_lgajt&utm_source=google&utm_medium=organic&utm_campaign=lmr,nightclub
+11565,"Le Poisson Rouge","New York","158 Bleecker St, New York, NY 10012",http://lpr.com/,nightclub
+11566,Libation,"New York","134 Plaza Dr, Buffalo, NY 14221",https://m.facebook.com/pages/category/Transit-Hub/Libation-Station-141701359230682/,nightclub
+11567,"Lillistar Rooftop","New York","353 Bedford Ave, Brooklyn, NY 11211",http://www.lillistarbk.com/,nightclub
+11568,"Little More","New York","111 Reade St, New York, NY 10013",http://littlemorenyc.com/,nightclub
+11569,"Locust Grove","New York","2683 South Rd, Poughkeepsie, NY 12601",http://www.lgny.org/,nightclub
+11570,"Lola Hoboken",Hoboken,"102 Sinatra Dr, Hoboken, NJ 07030",https://www.thelolahoboken.com/,nightclub
+11571,Loosies,Manhattan,"145 Bowery, New York, NY 10002",https://taogroup.com/venues/loosies-nightclub-new-york/,nightclub
+11572,"Los Feliz","New York","109 Ludlow St, New York, NY 10002",,nightclub
+11573,"Love's Club","New York","106 Melrose St, Brooklyn, NY 11206",http://lovesclubnyc.com/,nightclub
+11574,Lovejoys,"New York","412 Troutman St, Brooklyn, NY 11237",https://www.lovejoysnyc.com/,nightclub
+11575,"Lower East Side NYE Party Pass","New York","110 Delancey St, New York, NY 10002",https://www.sourmousenyc.com/,nightclub
+11576,"Lucky Strike","New York","11413 E 13th St N, Wichita, KS 67206",https://www.luckystrikeent.com/location/lucky-strike-wichita?utm_source=gbp&utm_medium=organic&utm_campaign=yext_listings,nightclub
+11577,"Lucky Strike - Times Square","New York",,,nightclub
+11578,"Lucky Strike / Luxe","New York","60 Chelsea Piers, New York, NY 10011",https://www.luckystrikeent.com/location/lucky-strike-chelsea-piers?utm_source=gbp&utm_medium=organic&utm_campaign=yext_listings,nightclub
+11579,"Madame Tussauds","New York","234 W 42nd St, New York, NY 10036",https://www.madametussauds.com/new-york/tickets/?utm_source=local-listing&utm_medium=organic&utm_campaign=tickets,nightclub
+11580,"Magic Hour Rooftop Bar & Lounge","New York","485 7th Ave 18th floor, New York, NY 10018",http://moxytimessquare.com/dining/magic-hour-rooftop-bar-lounge/,nightclub
+11583,"Manhattan has to offer","New York","45 Rockefeller Plaza, New York, NY 10111",https://www.rockefellercenter.com/,nightclub
+11584,"Maple NYC at the Night Hotel","New York","157 W 47th St, New York, NY 10036",,nightclub
+11585,"Margaritaville LandShark","New York","560 7th Ave, New York, NY 10018",https://timessquare.landsharkbarandgrill.com/,nightclub
+11586,"Market Hotel","New York","1140 Myrtle Ave, Brooklyn, NY 11221",http://markethotel.org/,nightclub
+11587,"McCarren Hotel Rooftop Williamsburg","New York","595 Union Ave, Brooklyn, NY 11211",https://www.themccarren.com/,nightclub
+11588,"MeatPacking Social Club","New York","403 W 13th St, New York, NY 10014",https://www.chez-margaux.com/,nightclub
+11589,"Meatpacking NYC Party Pass","New York","New York, NY 10014",,nightclub
+11590,Megu,"New York","355 W 16th St, New York, NY 10011",https://www.meguworldwide.com/,nightclub
+11591,"Mehanata Bar","New York","113 Ludlow St, New York, NY 10002",http://www.mehanata.com/,nightclub
+11592,"Millennium Broadway Hotel Ball Drop View","New York","145 W 44th St, New York, NY 10036",https://www.millenniumhotels.com/en/new-york/millennium-hotel-broadway-times-square/,nightclub
+11593,"Mister H","New York","9 Crosby St, New York, NY 10013",https://www.morganshotelgroup.com/mondrian/mondrian-soho/eat-drink/mister-h,nightclub
+11594,"Monarch Rooftop Lounge","New York","71 W 35th St, New York, NY 10001",http://www.monarchrooftop.com/,nightclub
+11595,"Mood Ring","New York","1260 Myrtle Ave, Brooklyn, NY 11221",https://moodringnyc.club/,nightclub
+11596,Motel,"New York","201 W 87th St, New York, NY 10024",https://www.centralparkwesthostelwg.com/,nightclub
+11597,Motivo,"New York","915 Broadway, New York, NY 10010",,live_music
+11598,"Mr Jones","New York","22 Jones St, New York, NY 10014",http://www.misterjonesnyc.com/,nightclub
+11599,"Music For A While","New York","518 W 27th St Lower Level, New York, NY 10001",https://musicforawhile.nyc/,nightclub
+11600,"Mykonos Blue","New York","420 E 59th St, Manhattan, NY 10022",http://www.mykoniangarden.com/,nightclub
+11601,"NYC's date night party place","New York","707 8th Ave, New York, NY 10036",https://www.secretroomnyc.com/,nightclub
+11603,"New York has to offer","New York","20595 Lorain Rd # 314, Cleveland, OH 44126",http://www.newyorklife.com/,nightclub
+11605,Nightmoves,"New York","295 Grand St, Brooklyn, NY 11211",,nightclub
+11606,No,"New York","56-06 Cooper Ave, Glendale, NY 11385",http://nowadays.nyc/,live_music
+11607,Noir,"New York","357 W 16th St, New York, NY 10011",,nightclub
+11608,"Old Savings Bank","New York","67 Bridge St, Glasgow G5 9JB, United Kingdom",http://thesavingsbank.inhouse.scot/,nightclub
+11609,PH,"New York","617 W 46th St PH Floor, New York, NY 10036",http://www.thepenthouseny.com/,nightclub
+11610,"PHD Terrace","New York","210 W 55th St, New York, NY 10019",https://www.phdterrace.com/,nightclub
+11611,Pachita,"New York","1612 Newkirk Ave, Brooklyn, NY 11226",https://panchitasplace.dine.online/,nightclub
+11612,"Pando Park Avenue","New York","450 Park Ave S, New York, NY 10016",,nightclub
+11613,"Paris Cafe","New York","416 E Las Tunas Dr Unit C, San Gabriel, CA 91776",http://www.my-little-paris.com/,nightclub
+11614,"Party on the Paddle Wheel Queen","New York","495 New St Suite A, Oceanside, NY 11572",http://paddlepub.com/longisland,nightclub
+11615,"Patrick's","New York","5th Ave, New York, NY 10022",https://www.saintpatrickscathedral.org/,nightclub
+11617,Petaluma,"New York",,,nightclub
+11618,Pianos,"New York","158 Ludlow St, New York, NY 10002",http://pianosnyc.com/,nightclub
+11619,"Pioneer Works","New York","159 Pioneer St, Brooklyn, NY 11231",https://pioneerworks.org/,nightclub
+11620,"Planet Hollywood Times Square","New York","136 W 42nd St, New York, NY 10036",https://planethollywoodnyc.com/?y_source=1_MTA4MzQ0ODA0Ni03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D,nightclub
+11621,Pranna,"New York","79 Madison Ave, New York, NY 10016",http://prannarestaurant.com/,nightclub
+11622,Pravda,"New York","281 Lafayette St, New York, NY 10012",http://www.pravdany.com/,live_music
+11623,"Premier Hotel Penthouse","New York","133 W 44th St, New York, NY 10036",https://www.millenniumhotels.com/en/new-york/millennium-premier-new-york-times-square/,nightclub
+11624,"Pretty Ricky","New York","101 Rivington St, New York, NY 10002",http://www.prettyrickys.com/,nightclub
+11625,"Printer's Alley","New York","215 W 40th St, New York, NY 10018",http://www.printersalleynyc.com/,live_music
+11626,"Printer's and enjoy a five hour open bar","New York","653 11th Ave 16th Floor, New York, NY 10036",,nightclub
+11627,"Public House NYC","New York","215 Chrystie St, New York, NY 10002",https://www.publichotels.com/?utm_source=local-directories&utm_medium=organic&utm_campaign=travelclick-localconnect,nightclub
+11628,Queens,"New York","New York",http://www.queensbp.org/,nightclub
+11629,"Radio City Music Hall","New York","1260 6th Ave, New York, NY 10020",https://www.msg.com/radio-city-music-hall,nightclub
+11630,Rash,"New York","941 Willoughby Ave, Brooklyn, NY 11221",http://rash-bar.nyc/,nightclub
+11631,"Refinery Hotel
+Sunday","New York",,,live_music
+11632,Rickey,"New York","210 W 55th St #1, New York, NY 10019",https://taogroup.com/venues/the-rickey-cocktail-lounge-new-york/,nightclub
+11633,"Riff Raff","New York","1227 Broadway 39th Floor, New York, NY 10001",https://www.riffraffnyc.com/,nightclub
+11634,"Rodney's Comedy Club","New York","1118 1st Ave, New York, NY 10065",http://www.rodneysnewyorkcomedyclub.com/,nightclub
+11635,Rogue,"New York","154 Allen St, New York, NY 10002",http://www.roguegarms.com/,nightclub
+11636,"Rooftop Bar & Club Lounge","New York","1150 Broadway, New York, NY 10001",http://www.230-fifth.com/,nightclub
+11637,"Rosevale Cocktail Lounge","New York","305 W 48th St 2nd Floor, New York, NY 10036",https://rosevalenyc.com/,nightclub
+11638,Royal,"New York","420 Park Ave S, New York, NY 10016",https://www.royaltonparkavenue.com/,nightclub
+11639,"Royalton Hotel Rooftop","New York","44 W 44th St, New York, NY 10036",http://www.royaltonhotel.com/,nightclub
+11640,"STK Meatpacking Rooftop","New York","26 Little W 12th St, New York, NY 10014",https://stksteakhouse.com/en-us/location/nyc-downtown/?gad_source=1&gbraid=0AAAAA9ZsvRDTVinv9ryZLGgsJ_f1OJpTj&gclid=EAIaIQobChMIyo3I5u6vigMVzWFHAR1wKSNiEAAYASAAEgLKoPD_BwE,nightclub
+11641,"STK Meatpacking with their numerous VIP specials","New York","26 Little W 12th St, New York, NY 10014",https://stksteakhouse.com/venues/nyc-downtown/,nightclub
+11642,"Salud Soho","New York","183 Grand St, New York, NY 10013",https://www.saludsoho.co/,live_music
+11643,"Santo's Party House","New York","96 Lafayette St, New York, NY 10013",,nightclub
+11644,"Sapphire Lounge","New York","LaGuardia Airport, Terminal B, Level 1A, Queens, NY 11371",https://account.chase.com/sapphire-airport-lounge?y_source=1_MTAzMTk4NzIwNC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D,nightclub
+11645,"Se7en Lounge","New York","677 Washington Ave, Brooklyn, NY 11238",,nightclub
+11646,"Sea Wolf","New York","19 Wyckoff Ave, Brooklyn, NY 11237",https://www.seawolfbk.com/,nightclub
+11647,"Seven House Gallery","New York","35 Meadow St, Brooklyn, NY 11206",https://www.peerspace.com/pages/listings/5ae5e23a8a765b0c0043b98e?sort_order=2,nightclub
+11648,"Shay & Ivy","New York","2122 Eggert Rd, Amherst, NY 14226",https://shaymazaesthetics.com/,nightclub
+11649,"Silver Lining Lounge","New York","145 Bowery, New York, NY 10002",https://taogroup.com/venues/silver-lining-lounge-new-york/,live_music
+11650,"Sir Henri Rooftop","New York","795 8th Ave 1st Fl, New York, NY 10019",http://sirhenrysnyc.com/,nightclub
+11651,"Skinos NYC","New York",,,nightclub
+11652,"Social Club","New York","101 E 69th St, New York, NY 10021",http://www.theunionclub.com/,nightclub
+11653,"Somewhere Nowhere NYC","New York","112 W 25th St Floor 38 & 39, New York, NY 10001",https://www.somewherenowherenyc.com/,nightclub
+11654,Space,"New York","34 W 32nd St Floor 11, New York, NY 10001",https://spacekaraoke.com/,nightclub
+11655,Stage,"New York","340 W 50th St, New York, NY 10019",http://www.newworldstages.com/,nightclub
+11656,"Stanton Social","New York","99 Stanton St, New York, NY 10002",,nightclub
+11657,"Starchild Rooftop","New York","305 W 48th St, New York, NY 10036",https://starchildrooftop.com/,nightclub
+11658,"Stitch Lounge","New York","63 Flushing Ave Bldg 3, Brooklyn, NY 11205",https://stitchnycinc.com/contact-1,nightclub
+11659,"Sugar Mouse","New York","47 3rd Ave, New York, NY 10003",https://sugarmousenyc.com/,nightclub
+11660,"Superior Ingredients Rooftop","New York",,,nightclub
+11661,"Sutton Place has you covered on all three levels","New York","New York, NY 10022",,live_music
+11662,"Sweetwater Social","New York","105 N 6th St, Brooklyn, NY 11211",http://www.sweetwaterny.com/,nightclub
+11664,"TBA - Downtown NYC","New York","3795 10th Ave, New York, NY 10034",,nightclub
+11665,"TBA - Secret Bushwick Location ","New York",,,nightclub
+11666,"TBA - Secret East Williamsburg Locations & Green Room NYC","New York","401 Wythe Ave, Brooklyn, NY 11249",https://www.secretprojectrobot.org/,nightclub
+11667,"TBA - The Queens Social - 3286 Steinway St Astoria, NY","New York","32-86 Steinway St, Astoria, NY 11103",,nightclub
+11668,"TBA - The Reserve, 212 E 125th St The Living Room, New York, NY","New York","215 E 124th St, New York, NY 10035",https://thereservenyc.com/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb_listing&hyly_channel=pr&hyly_method=w,nightclub
+11669,"Tapster Lexington","New York","14 E 33rd St, New York, NY 10016",http://taphaus33.net/,nightclub
+11670,"Tavern 29 NYC","New York",,,nightclub
+11671,Tawny,"New York","173 Henry St, New York, NY 10002",http://www.tawny.nyc/,live_music
+11672,Tenjune,"New York","26 Little W 12th St, New York, NY 10014",,nightclub
+11673,"The Ainsworth","New York",,,nightclub
+11674,"The Ainsworth - Midtown","New York",,,nightclub
+11675,"The BogArt","New York","56 Bogart St, Brooklyn, NY 11206",http://56bogartstreet.com/,live_music
+11676,"The Bronze Owl","New York",,,nightclub
+11677,"The Bush","New York","333 Troutman St Store 4, Brooklyn, NY 11237",http://bushbk.com/,nightclub
+11678,"The DL","New York","95 Delancey St 3rd Floor, New York, NY 10002",https://www.thedl-nyc.com/,nightclub
+11679,"The Fleur Room",Manhattan,"105 W 28th St, New York, NY 10001",https://moxychelsea.com/the-fleur-room/,nightclub
+11680,"The Forgotten Dreams Supper Club","New York","178 5th Ave, New York, NY 10010",http://www.supperclubnyc.com/,nightclub
+11681,"The High Note","New York","119 E 15th St, New York, NY 10003",https://www.thehighnoteny.com/,live_music
+11682,"The House","New York","29 Locust St, Brooklyn, NY 11206",http://www.wearethehouse.com/,nightclub
+11683,"The Lola Hoboken","New York",,,nightclub
+11684,"The Newsroom","New York","11-01 43rd Ave, Queens, NY 11101",https://newsroomny.com/,nightclub
+11685,"The Red Pavilion","New York","1241 Flushing Ave, Brooklyn, NY 11237",https://theredpavilion.com/,nightclub
+11686,"The Saint NYC","New York","136 2nd Ave, New York, NY 10003",http://www.saintny.com/,nightclub
+11687,"The Se7en","New York",,,nightclub
+11688,"The Vino Theater","New York","274 Morgan Ave Suite 201, Brooklyn, NY 11211",http://thevinotheater.com/,nightclub
+11689,"The trendy eatery","New York","403 W 43rd St, New York, NY 10036",http://www.beanyc.com/,nightclub
+11690,"This destination hotspot","New York","1220 Broadway Store #5, New York, NY 10001",,nightclub
+11691,TikiTabu,"New York","517 Amsterdam Ave, New York, NY 10024",https://www.tikichick.com/,nightclub
+11692,"Time Hotel","New York",,,live_music
+11693,"Tito Murphy's","New York","19 W 46th St, New York, NY 10036",http://www.addictivenyc.com/,live_music
+11694,UNVEILED,"New York","94 N 13th St, Brooklyn, NY 11249",http://unveilednewyork.com/,live_music
+11695,"VIRGO
+A Seductive","New York",,,live_music
+11696,VNYL,"New York","756 9th Ave, New York, NY 10019",,nightclub
+11697,"Van Diemens","New York","783 8th Ave, New York, NY 10036",https://www.thedickensnyc.com/,nightclub
+11698,Vandal,"New York","199 Bowery, New York, NY 10002",https://taogroup.com/venues/vandal-new-york/,nightclub
+11699,"Vault Lounge","New York","3600 S Las Vegas Blvd, Las Vegas, NV 89109",https://bellagio.mgmresorts.com/en/nightlife/the-vault.html,nightclub
+11700,Verboten,"New York","54 N 11th St, Brooklyn, NY 11249",,nightclub
+11701,"Versa Rooftop","New York","218 W 35th St, New York, NY 10001",http://versanyc.com/,nightclub
+11702,Virgo,"New York","324 Grand St, New York, NY 10002",http://virgonewyork.com/,nightclub
+11703,"Viva Toro Nightclub","New York","987 Grand St, Brooklyn, NY 11211",http://www.vivatoro.com/,nightclub
+11704,"Voted Best Ball Drop Views","New York","6 Times Sq, New York, NY 10036",https://theknickerbocker.com/?utm_source=google-gbp&utm_medium=organic&utm_campaign=gbp,nightclub
+11705,"Vshow Nightclub","New York","31-01 Downing St 2nd Floor, Queens, NY 11354",https://www.vshow.bar/,nightclub
+11706,"Walnut Bar and Grill","New York","12599 Perry Hwy, Wexford, PA 15090",http://wexford.eatwalnut.com/,nightclub
+11707,"Webster Hall","New York","125 E 11th St, New York, NY 10003",https://www.websterhall.com/,nightclub
+11708,"White Horse Tavern","New York","567 Hudson St, New York, NY 10014",https://www.whitehorsetavern1880.com/,nightclub
+11710,Woodstock,"New York","Woodstock, NY",,nightclub
+11711,XANADU,"New York","262 Starr St, Brooklyn, NY 11237",https://xanadu.nyc/,nightclub
+11712,"an NYC staple among A","New York","200 5th Ave, New York, NY 10010",https://www.eataly.com/us_en/stores/nyc-flatiron,nightclub
+11713,"and Marquee","New York",,http://www.marqueeohio.com/,nightclub
+11714,"and NYE","New York","450 W 42nd St #24a, New York, NY 10036",http://timessquarenewyears.com/,nightclub
+11716,"capacity limits",Hoboken,"New Jersey",http://www.hobokennj.org/,nightclub
+11717,"elegant Park Avenue Tavern","New York","99 Park Ave, New York, NY 10016",https://parkavenuetavern.com/nyc/,nightclub
+11718,"for NYC events","New York","450 Lexington Ave A - 468, New York, NY 10163",http://www.newyorkevents.co/,nightclub
+11719,"for an equally vibrant crowd","New York","285 W 12th St, New York, NY 10014",http://www.dnd-nyc.com/,nightclub
+11720,"g Lounge","New York","225 W 19th St, New York, NY 10011",https://gloungechelsea.com/,nightclub
+11722,"in the heart of Midtown NYC","New York","727 6th Ave, New York, NY 10010",http://heartveinnyc.com/,live_music
+11723,"infused with timeless character","New York","1130 Nostrand Ave, Brooklyn, NY 11225",https://www.infusedexotics.com/,live_music
+11724,"into a smoldering affair","New York","1305 W 80th St Suite #225, Cleveland, OH 44102",http://www.toomuchawesomeness.com/,live_music
+11725,"marries state","New York","141 Worth St, New York, NY 10007",http://www.cityclerk.nyc.gov/html/marriage/marriage_bureau.shtml,nightclub
+11727,"on the night of","New York","599 Lexington Ave, New York, NY 10022",https://www.newyorkencounter.org/,nightclub
+11729,that,"New York","305 Indian Lake Blvd, Hendersonville, TN 37075",http://nypienashville.com/,nightclub
+11730,"this exclusive subterranean nightclub","New York","104-09 123rd St, South Richmond Hill, NY 11419",https://m.facebook.com/queens.undergroundlounge/,nightclub
+11731,"welcomes you with its own unique vibe","New York","138 E 3rd St, New York, NY 10009",http://www.highvibe.com/,live_music
+11732,"with an intimate feel","New York","43 W 33rd St, New York, NY 10001",https://www.bellanita-intimate.com/,nightclub
+11733,"Public Records","New York","233 Butler St, Brooklyn, NY 11217",http://publicrecords.nyc/,nightclub

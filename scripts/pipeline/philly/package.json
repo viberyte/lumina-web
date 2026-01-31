@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
+    "axios": "^1.6.0",
+    "dotenv": "^17.2.3",
+    "openai": "^6.10.0"
+  }
+}

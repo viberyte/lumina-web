@@ -1,0 +1,8265 @@
+[
+  {
+    "venueName": "Attico Rooftop",
+    "venueType": "Bar",
+    "vibes": [
+      "Chill",
+      "Social",
+      "Scenic"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Hip-Hop",
+      "Electronic"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "Young Professionals",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "El Techo",
+    "venueType": "Bar",
+    "vibes": [
+      "positive vibes"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "friends",
+    "eventType": "celebration",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Assembly Rooftop Lounge",
+    "venueType": "Bar",
+    "vibes": [
+      "Cozy",
+      "Chill",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Seasonal Event",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Stratus Lounge",
+    "venueType": "Bar",
+    "vibes": [
+      "Chill",
+      "Social",
+      "Energetic"
+    ],
+    "musicGenres": [
+      "House",
+      "Tech House",
+      "EDM"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Day Party",
+    "day": "Saturday",
+    "timeOfDay": "Afternoon",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Rooftop Bar",
+    "venueType": "Bar",
+    "vibes": [
+      "chilling",
+      "celebratory"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "birthday celebration",
+    "day": "weekend",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Philadelphia Rooftop",
+    "venueType": "Bar",
+    "vibes": [
+      "Urban",
+      "Relaxed",
+      "Community-focused"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Social Gathering",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Jg Sky High",
+    "venueType": "Rooftop",
+    "vibes": [
+      "luxury",
+      "stylish",
+      "romantic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$$",
+    "crowdType": "celebratory",
+    "eventType": "birthday celebration",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Barbary",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "EDM"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Fishtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "DJ event",
+    "day": "August 29",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Stratus Rooftop",
+    "venueType": "Bar",
+    "vibes": [
+      "Party",
+      "All White Party",
+      "Social"
+    ],
+    "musicGenres": [
+      "House",
+      "Tech House",
+      "EDM"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "21+",
+    "eventType": "Music Event",
+    "day": "Sunday",
+    "timeOfDay": "Afternoon",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Cherry Street Pier",
+    "venueType": "Event Space",
+    "vibes": [
+      "art",
+      "music",
+      "community",
+      "cultural"
+    ],
+    "musicGenres": [
+      "live music"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "diverse",
+    "eventType": "festivals, markets, workshops, live performances",
+    "day": "various",
+    "timeOfDay": "day and evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Ave",
+    "venueType": "Nightclub",
+    "vibes": [
+      "chaotic",
+      "disappointing"
+    ],
+    "musicGenres": [
+      "pop",
+      "reggaeton"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "concert",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 3
+  },
+  {
+    "venueName": "The Winston",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "social",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "lowkey part of Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Vibe Philly Events",
+    "venueType": "Event Space",
+    "vibes": [
+      "safe space",
+      "unforgettable memories"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Manayunk",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "Event Planning",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Pretty N Pink Places",
+    "venueType": "Event Space",
+    "vibes": [
+      "Chill",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Private Events",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Location 215",
+    "venueType": "Event Space",
+    "vibes": [
+      "Festive",
+      "Social",
+      "Community"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "General Public",
+    "eventType": "Market",
+    "day": "Sunday",
+    "timeOfDay": "Daytime",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Time Mission",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "romantic",
+      "fun"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "couples, friends",
+    "eventType": "date night",
+    "day": "any day",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Bistro Romano",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "moody",
+      "romantic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "couples",
+    "eventType": "dinner",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 0
+  },
+  {
+    "venueName": "FIA",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "romantic",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "couples",
+    "eventType": "dinner",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Del Rossi's",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social",
+      "local"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "tourists, locals",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Laguna Lounge",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "romantic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Northeast Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "couples",
+    "eventType": "dining",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "royalshookahlounge",
+    "venueType": "Lounge",
+    "vibes": [
+      "party",
+      "energetic"
+    ],
+    "musicGenres": [
+      "afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "nightlife",
+    "day": "weekend",
+    "timeOfDay": "evening",
+    "trendScore": 4
+  },
+  {
+    "venueName": "The Boiler",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Buckhead",
+    "priceTier": "$",
+    "crowdType": "mixed",
+    "eventType": "promotion",
+    "day": "today",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "GoldenGirl Lounge",
+    "venueType": "Lounge",
+    "vibes": [
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "412",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Pineapple Bowl",
+    "venueType": "Event Space",
+    "vibes": [
+      "BYOB",
+      "social",
+      "networking",
+      "foodie",
+      "hookah"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Riverdale",
+    "priceTier": "$$",
+    "crowdType": "Social Media Influencers",
+    "eventType": "Summit",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Aura Lounge",
+    "venueType": "Lounge",
+    "vibes": [
+      "fun",
+      "energetic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Clifton",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Xoxo Lounge",
+    "venueType": "Lounge",
+    "vibes": [
+      "Chill",
+      "Social",
+      "Vibrant"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "R&B",
+      "Top 40"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown Detroit",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Ave Live",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Party",
+      "Energetic",
+      "Fun"
+    ],
+    "musicGenres": [
+      "Dance",
+      "Pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "All-girl",
+    "eventType": "Party",
+    "day": "Saturday",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Alan Horwitz “Sixth Man” Center",
+    "venueType": "Event Space",
+    "vibes": [],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "Event Hosting",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Four Seasons Hotel Philadelphia at Comcast Center",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "gorgeous",
+      "scenic",
+      "luxurious"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$$",
+    "crowdType": "upscale",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Hidden Gem Restaurants",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "cozy",
+      "local"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "locals",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Philadelphia Restaurants",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Casual",
+      "Trendy",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Foodies",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "South Flavors",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "supportive",
+      "casual",
+      "friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "South Street",
+    "priceTier": "$$",
+    "crowdType": "diverse",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Skinny Joey's Cheesesteaks",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "locals, food enthusiasts",
+    "eventType": "food tasting",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Carmine’s Eatery",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Casual",
+      "Family-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Newtown Square",
+    "priceTier": "$$",
+    "crowdType": "Foodies",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Kitchen+ Kocktails By Kevin Kelley",
+    "venueType": "Bar",
+    "vibes": [
+      "romantic",
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "North Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 10
+  },
+  {
+    "venueName": "Cess & Soul",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "trendy",
+      "hidden gem"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Northeast Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "foodies",
+    "eventType": "food review",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 10
+  },
+  {
+    "venueName": "Checkmate Lounge",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "weekend",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Giuseppe & Sons",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "lively",
+      "casual",
+      "social"
+    ],
+    "musicGenres": [
+      "Italian",
+      "pop"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Philadelphia Pennsylvania Temple",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "late-night",
+      "friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Northeast Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "locals",
+    "eventType": "food pickup and delivery",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Chatayee Thai",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "family-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "12th & Walnut",
+    "priceTier": "$$",
+    "crowdType": "families",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Bar Jawn",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Manayunk",
+    "priceTier": "$$",
+    "crowdType": "locals, food enthusiasts",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Black Hen",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "community-oriented"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Old City",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Fallin Off The Bone",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Late-night",
+      "Tropical",
+      "Casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Foodies",
+    "eventType": "Grand Opening",
+    "day": "Today",
+    "timeOfDay": "Late Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Angelo Pizza",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "fun"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Market St, Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Kim Sum",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Pennsauken",
+    "priceTier": "$$",
+    "crowdType": "food lovers",
+    "eventType": "dim sum service",
+    "day": "daily",
+    "timeOfDay": "daytime",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Mr. Ivy",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "social",
+      "energetic"
+    ],
+    "musicGenres": [
+      "electronic",
+      "hip-hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Northern Liberties",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "German Beer Hall",
+    "venueType": "Bar",
+    "vibes": [
+      "crazy",
+      "trending",
+      "vibes"
+    ],
+    "musicGenres": [
+      "house",
+      "tech house",
+      "bad bunny"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "daytime",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Max's Steaks & Hoagies",
+    "venueType": "Bar",
+    "vibes": [
+      "party",
+      "lively",
+      "social"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Thursday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Big Mama",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "energetic",
+      "inclusive"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "misconductphl",
+    "venueType": "Bar",
+    "vibes": [
+      "social",
+      "mingle",
+      "fun"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Logan Square",
+    "priceTier": "$$",
+    "crowdType": "singles",
+    "eventType": "mingle",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Bar X",
+    "venueType": "Bar",
+    "vibes": [
+      "lively",
+      "social",
+      "casual"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Silk City Diner",
+    "venueType": "Bar",
+    "vibes": [
+      "Birthday Bash",
+      "Party",
+      "Concert"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Spring Garden",
+    "priceTier": "$$",
+    "crowdType": "Party-goers",
+    "eventType": "Concert/Afterparty",
+    "day": "Thursday",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Pace & Blossom",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "lively",
+      "party"
+    ],
+    "musicGenres": [
+      "electronic",
+      "hip-hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "University City",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Silk City",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funky",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "dance",
+      "funk"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "monthly",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Broad Hall",
+    "venueType": "Nightclub",
+    "vibes": [
+      "underground",
+      "goth",
+      "dark"
+    ],
+    "musicGenres": [
+      "Darkwave",
+      "EBM",
+      "Industrial"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Goth community",
+    "eventType": "DJ Night",
+    "day": "Tuesday",
+    "timeOfDay": "10pm-2am",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Neon Clown Dream Lounge",
+    "venueType": "Bar",
+    "vibes": [
+      "Halloween",
+      "Neon",
+      "Lounge"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Misconduct Tavern",
+    "venueType": "Bar",
+    "vibes": [
+      "social",
+      "mingle",
+      "fun"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Logan Square",
+    "priceTier": "$$",
+    "crowdType": "singles",
+    "eventType": "mixer",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Roar Nightclub",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Lively"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "Electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Fishtown",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Buena Vista",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Latin",
+      "Festive",
+      "Social"
+    ],
+    "musicGenres": [
+      "Latin",
+      "Reggaeton",
+      "Salsa"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Old City",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Grand Opening Party",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Lounges in Philly",
+    "venueType": "Lounge",
+    "vibes": [
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "concert-goers",
+    "eventType": "pre-concert gathering",
+    "day": "Thursday",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Zodiac Lounge",
+    "venueType": "Nightclub",
+    "vibes": [
+      "after hours",
+      "party",
+      "lively"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "after party",
+    "day": "",
+    "timeOfDay": "late night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "uptopbarandlounge",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "vibrant",
+      "social"
+    ],
+    "musicGenres": [
+      "jamaican",
+      "dancehall"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "all week",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Billionaire Lounge",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "social",
+      "lively"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop",
+      "dance"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "girls night out",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Grand Kitchen & Lounge",
+    "venueType": "Lounge",
+    "vibes": [
+      "Chill",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Culture&Crabs",
+    "venueType": "Lounge",
+    "vibes": [
+      "casual",
+      "social",
+      "lively"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Castor Avenue",
+    "priceTier": "$$",
+    "crowdType": "friends, seafood lovers",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "The View at Old City",
+    "venueType": "Lounge",
+    "vibes": [
+      "Charming",
+      "Modern",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Old City",
+    "priceTier": "$$",
+    "crowdType": "Young Professionals",
+    "eventType": "Social Gathering",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Rooftop at the G",
+    "venueType": "Bar",
+    "vibes": [
+      "cozy",
+      "relaxing",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Providence",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "evening hangout",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "kitchenkocktailsusa",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Instagrammable",
+      "floral",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "grand opening",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "City Winery Philadelphia",
+    "venueType": "Bar",
+    "vibes": [
+      "Chill",
+      "Social",
+      "Artistic"
+    ],
+    "musicGenres": [
+      "R&B",
+      "Live Music"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Open Mic",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Gardendale Athletic Social Club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "social",
+      "energetic"
+    ],
+    "musicGenres": [
+      "edm"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "friends",
+    "eventType": "afterhours",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 0
+  },
+  {
+    "venueName": "The Winston Social Club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Social",
+      "Vibrant"
+    ],
+    "musicGenres": [
+      "Soul",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Northern Liberties",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "Saturday",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "SET NoLibs",
+    "venueType": "Nightclub",
+    "vibes": [
+      "good music",
+      "great food",
+      "better energy"
+    ],
+    "musicGenres": [
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Northern Liberties",
+    "priceTier": "$$",
+    "crowdType": "Young adults",
+    "eventType": "Weekly R&B Night",
+    "day": "Wednesday",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Sao Paulo",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Kyuramen x TBaar",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "cozy",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Ski",
+    "venueType": "Bar",
+    "vibes": [
+      "energetic",
+      "exciting",
+      "social"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "sports fans",
+    "eventType": "game day",
+    "day": "Sunday",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Rodney's",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "casual",
+      "friendly"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "North Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Hold My Beer",
+    "venueType": "Bar",
+    "vibes": [
+      "relatable",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Kenosha",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Top Rated Restaurants",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Casual",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Foodies",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Grand D Kitchen",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "cozy",
+      "family-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Osteria Ama Philly",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "cozy",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "food lovers",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Unnamed Restaurant",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Top tier ambience",
+      "Casual",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Couples, Foodies",
+    "eventType": "Dinner",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Chubby Nori",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "creative",
+      "authentic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Chinatown",
+    "priceTier": "$$",
+    "crowdType": "food enthusiasts",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Fancy Dinner Places",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Upscale",
+      "Trendy",
+      "Chic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$$",
+    "crowdType": "Foodies",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Mana Modern Chinese",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "romantic",
+      "innovative"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Northern Liberties",
+    "priceTier": "$$",
+    "crowdType": "couples, foodies",
+    "eventType": "dinner",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Philadelphia City Hall",
+    "venueType": "Event Space",
+    "vibes": [
+      "festive",
+      "holiday",
+      "community"
+    ],
+    "musicGenres": [
+      "holiday",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "families, tourists, locals",
+    "eventType": "holiday market",
+    "day": "varies",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "FRAME PHL",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "romantic",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Market Street",
+    "priceTier": "$$",
+    "crowdType": "foodies, couples",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Temple SF",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "party",
+      "exciting"
+    ],
+    "musicGenres": [
+      "electronic",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "San Francisco",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "DJ performance",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "OFF THE GRID",
+    "venueType": "Nightclub",
+    "vibes": [
+      "underground",
+      "party",
+      "lively"
+    ],
+    "musicGenres": [
+      "rave",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "live performance",
+    "day": "November 8th",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "La Glorie",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Filadelfiasushi",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "divine",
+      "casual",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Cova Club Paris",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Champs-Élysées",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 10
+  },
+  {
+    "venueName": "McGillin's Olde Ale House",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "historic"
+    ],
+    "musicGenres": [
+      "varied"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Official Afterparty",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Celebratory"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "Rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Fans",
+    "eventType": "Afterparty",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Noto IV",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Halloween",
+      "Party",
+      "Festive"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Hip-Hop",
+      "Pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young adults",
+    "eventType": "Special Event",
+    "day": "30",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Sophia Steak Chicago",
+    "venueType": "Bar",
+    "vibes": [
+      "iconic",
+      "trolling"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Near North Side",
+    "priceTier": "$$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Philadelphia Bar",
+    "venueType": "Bar",
+    "vibes": [
+      "late night",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "after hours",
+    "day": "",
+    "timeOfDay": "late night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "R&B AFTER DARK",
+    "venueType": "Nightclub",
+    "vibes": [
+      "live performance",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "R&B",
+      "soul"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Rittenhouse Square",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "social",
+      "energetic",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Rittenhouse Square",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "gathering",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Favorite Rooftop",
+    "venueType": "Bar",
+    "vibes": [
+      "City View",
+      "Chill",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "5th Ave",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 0
+  },
+  {
+    "venueName": "WineDive Rittenhouse",
+    "venueType": "Bar",
+    "vibes": [
+      "Trendy",
+      "Casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Rittenhouse",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Grand Rapids",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "fun",
+      "iconic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Grand Rapids",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Hearts & Harmonies",
+    "venueType": "Live Music Venue",
+    "vibes": [
+      "intimate",
+      "perfect vibe"
+    ],
+    "musicGenres": [
+      "indie soul",
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "live band performance",
+    "day": "Fri",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "shakirahamina",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "friendly",
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "friends",
+    "eventType": "dinner",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Alpen Rose",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "soft life",
+      "romantic",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "couples, young adults",
+    "eventType": "dinner date",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Blind Barber",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "nightlife"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "West Loop",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "The Giant Penny Whistle",
+    "venueType": "Bar",
+    "vibes": [
+      "vibe",
+      "fun",
+      "energetic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Pilsen",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "nice bar",
+    "venueType": "Bar",
+    "vibes": [
+      "great",
+      "lively"
+    ],
+    "musicGenres": [
+      "fye"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "chicago",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Hidden Laundry Mat Speakeasy",
+    "venueType": "Speakeasy",
+    "vibes": [
+      "Cute",
+      "Hidden",
+      "Chill"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Chicago",
+    "priceTier": "$$",
+    "crowdType": "Girls Night Out",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 8
+  },
+  {
+    "venueName": "LondonHouse Chicago, Curio Collection by Hilton",
+    "venueType": "Bar",
+    "vibes": [
+      "chic",
+      "stylish",
+      "modern"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Magnificent Mile",
+    "priceTier": "$$$",
+    "crowdType": [
+      "tourists",
+      "couples",
+      "groups of friends"
+    ],
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Macaroni's",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "romantic",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Bustleton",
+    "priceTier": "$$",
+    "crowdType": "couples",
+    "eventType": "date night",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Pop the Balloon",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "romantic",
+      "energetic"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Manhattan",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "themed party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Ole Red",
+    "venueType": "Bar",
+    "vibes": [
+      "lively",
+      "exciting",
+      "social"
+    ],
+    "musicGenres": [
+      "country",
+      "live music"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Las Vegas Strip",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "Formula 1 viewing",
+    "day": "weekend",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Benjamin Franklin Parkway",
+    "venueType": "Event Space",
+    "vibes": [
+      "Social",
+      "Festive",
+      "Cultural"
+    ],
+    "musicGenres": [
+      "Variety"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Community Event",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Living Proof, Inc.",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Ka Thai Uptown",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Uptown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dining",
+    "day": "weekend",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Avra Dallas",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "romantic",
+      "upscale",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Crescent Court",
+    "priceTier": "$$$",
+    "crowdType": "couples, foodies",
+    "eventType": "dinner",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "The Sporting Club at The Bellevue",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "upscale",
+      "social"
+    ],
+    "musicGenres": [
+      "various"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$$",
+    "crowdType": "young professionals",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Festive Bars",
+    "venueType": "Bar",
+    "vibes": [
+      "Spooky",
+      "Festive",
+      "Seasonal"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Celebratory",
+    "eventType": "Halloween Celebration",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Din Tai Fung",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "family-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown Disney District",
+    "priceTier": "$$",
+    "crowdType": "families, tourists",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Paris Club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "vibrant",
+      "energetic"
+    ],
+    "musicGenres": [
+      "varied"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Ile de France",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "varies",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Little Bit of Texas",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "fun",
+      "social"
+    ],
+    "musicGenres": [
+      "country",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "El Paso",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Burberry KOP",
+    "venueType": "Bar",
+    "vibes": [
+      "upscale",
+      "trendy",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "King of Prussia",
+    "priceTier": "$$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "weekend",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Tampa Bay",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Party",
+      "Social"
+    ],
+    "musicGenres": [
+      "Hip-Hop",
+      "EDM"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "St. Petersburg",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Chili's Grill & Bar",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "lively"
+    ],
+    "musicGenres": [
+      "pop",
+      "top 40"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "City Avenue",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Flamin' Hot",
+    "venueType": "Bar",
+    "vibes": [
+      "nostalgic",
+      "fun",
+      "casual"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "urban",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "snack tasting",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Boiler Room",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Vibrant",
+      "Inclusive"
+    ],
+    "musicGenres": [
+      "Baile Funk",
+      "Jersey Club",
+      "Afro",
+      "Afrofunk"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Perth",
+    "priceTier": "$$",
+    "crowdType": "Diverse",
+    "eventType": "DJ Set",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Best Nightclubs in Tokyo",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Vibrant",
+      "Social"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Dance",
+      "Hip-Hop"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Shinjuku, Shibuya, Roppongi, Ginza",
+    "priceTier": "$$",
+    "crowdType": "Young Adults, Tourists",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "2xRakai",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "energetic"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "SilK CITY PHILLY",
+    "venueType": "Nightclub",
+    "vibes": [
+      "live music",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Spring Garden",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Shibuya Crossing",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "Energetic",
+      "Festive",
+      "Youthful"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "Jersey Club"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Shibuya",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "Any",
+    "timeOfDay": "Early Morning",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Her Place Supper Club",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "upscale",
+      "celebratory"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$$",
+    "crowdType": "foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Clover Club",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "casual",
+      "lively"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Level Up Philly",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "party",
+      "social"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "West Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "twopiecemadeit",
+    "venueType": "Nightclub",
+    "vibes": [
+      "jolly",
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "afrobeats",
+      "remix"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "A Pretty Face",
+    "venueType": "Bar",
+    "vibes": [
+      "lively",
+      "social",
+      "fun"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "St. Augustine",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Shannon",
+    "venueType": "Bar",
+    "vibes": [
+      "lively",
+      "casual"
+    ],
+    "musicGenres": [
+      "pop",
+      "top 40"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Hoboken",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "RH Rooftop Restaurant at RH Dallas",
+    "venueType": "Rooftop",
+    "vibes": [
+      "luxury",
+      "romantic",
+      "fine dining"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Knox District",
+    "priceTier": "$$$",
+    "crowdType": "couples, upscale diners",
+    "eventType": "date night",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Harbor Rockwall",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Rockwall",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Gigi's Bar & Lounge",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "social",
+      "party"
+    ],
+    "musicGenres": [
+      "pop",
+      "reggaeton",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Plano",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "weekly event",
+    "day": "Friday",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Tipsy Elf Holiday Bar",
+    "venueType": "Bar",
+    "vibes": [
+      "Festive",
+      "Holiday",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Bishop Lane",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Pop-Up",
+    "day": "Wednesday to Sunday",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "The Charlotte",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Dallas",
+    "priceTier": "$$",
+    "crowdType": "foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 10000
+  },
+  {
+    "venueName": "Houston Q",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "romantic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "pop"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "East End",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "The Vine",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "nostalgic"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Vineyard",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Spoke Society",
+    "venueType": "Bar",
+    "vibes": [
+      "lively",
+      "social",
+      "trendy"
+    ],
+    "musicGenres": [
+      "pop",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Fishtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "six move to seven",
+    "venueType": "Bar",
+    "vibes": [
+      "chill",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "happy hour",
+    "day": "Friday",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "puttshackphilly",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "casual",
+      "family-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "families, couples",
+    "eventType": "date night, kids fun",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "abigailghoward",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "social",
+      "casual"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "gathering",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Dih Island",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "competitive"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Sarasota",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dart competition",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "The Adolphus, Autograph Collection",
+    "venueType": "Rooftop",
+    "vibes": [
+      "peace",
+      "calm",
+      "comfort"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Dallas",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "Stay/Event",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 0
+  },
+  {
+    "venueName": "InterContinental Los Angeles Downtown",
+    "venueType": "Bar",
+    "vibes": [
+      "Chill",
+      "Social",
+      "Trendy"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Hip-Hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown LA",
+    "priceTier": "$$",
+    "crowdType": "Young Professionals",
+    "eventType": "Nightlife",
+    "day": "Monday",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "destinyraeangel",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "TIME restaurant",
+    "venueType": "Bar",
+    "vibes": [
+      "live music",
+      "dance floor"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "live music",
+    "day": "7 days a week",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Arlo Williamsburg",
+    "venueType": "Bar",
+    "vibes": [
+      "Party",
+      "Social",
+      "Chill"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "House"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Brooklyn",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Day Party",
+    "day": "Sunday",
+    "timeOfDay": "Afternoon",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Nicetown-Tioga",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "fun",
+      "social",
+      "trendy"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Nicetown-Tioga",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dining",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Paradox Lounge",
+    "venueType": "Lounge",
+    "vibes": [
+      "brunch",
+      "good energy",
+      "social"
+    ],
+    "musicGenres": [
+      "live DJ"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Indianapolis",
+    "priceTier": "$$",
+    "crowdType": "friends",
+    "eventType": "brunch",
+    "day": "Sunday",
+    "timeOfDay": "Noon–4PM",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Jan",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Epic",
+      "Fun",
+      "Social"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Hip-Hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Party",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Margolis Philly",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Fundraising",
+      "Live Music",
+      "Social"
+    ],
+    "musicGenres": [
+      "Soul",
+      "Tribute",
+      "Multi-Genre"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Concert",
+    "day": "Wednesday",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "REC Philly",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Tribute",
+      "Fun"
+    ],
+    "musicGenres": [
+      "Pop",
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Market East",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Tribute Concert",
+    "day": "Friday",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Strangelove’s",
+    "venueType": "Bar",
+    "vibes": [
+      "Social",
+      "Networking",
+      "Casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Adults",
+    "eventType": "Networking Event",
+    "day": "Wednesday",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "The Grant Hall Wedding & Special Events",
+    "venueType": "Event Space",
+    "vibes": [],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Event Attendees",
+    "eventType": "Weddings, Special Events",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Fleur&Fizz",
+    "venueType": "Event Space",
+    "vibes": [
+      "Fun",
+      "Creative",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Friends/Groups",
+    "eventType": "Hobby Workshop",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 7
+  },
+  {
+    "venueName": "La Familia Event Lounge",
+    "venueType": "Event Space",
+    "vibes": [
+      "Celebratory",
+      "Social",
+      "Festive"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Private Events",
+    "eventType": "Birthday, Event Rentals",
+    "day": "Saturday, Friday, Sunday, Monday, Tuesday, Wednesday, Thursday",
+    "timeOfDay": "Daytime",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Crownedbeauty",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "trendy"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "destinationsmokehouse",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "destinationmurrieta",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "fun",
+      "social",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Southern String Hat Co",
+    "venueType": "Bar",
+    "vibes": [
+      "wild",
+      "relatable"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "5th Ave",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Celebratory",
+      "Energetic"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "R&B"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Manhattan",
+    "priceTier": "$$",
+    "crowdType": "Mixed Age",
+    "eventType": "Birthday Celebration",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Santa Monica",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "Family-friendly",
+      "Informative"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Santa Monica",
+    "priceTier": "$$",
+    "crowdType": "Parents",
+    "eventType": "Parenting Tips",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Yuli La Fleur",
+    "venueType": "Bar",
+    "vibes": [
+      "romantic",
+      "casual",
+      "fun"
+    ],
+    "musicGenres": [
+      "pop",
+      "chill"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Center City",
+    "priceTier": "$$",
+    "crowdType": "couples, young adults",
+    "eventType": "date night",
+    "day": "any day",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Rooftops in San Francisco",
+    "venueType": "Bar",
+    "vibes": [
+      "Romantic",
+      "Chill",
+      "Scenic"
+    ],
+    "musicGenres": [
+      "Acoustic",
+      "Chillhop"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Various",
+    "priceTier": "$$",
+    "crowdType": "Couples, Young Professionals",
+    "eventType": "Date Night",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Prettiest Restaurants in San Francisco Bay Area",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "romantic",
+      "scenic",
+      "elegant"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "San Francisco Bay",
+    "priceTier": "$$$",
+    "crowdType": "couples, foodies",
+    "eventType": "dinner",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "La Taqueria",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Mission District",
+    "priceTier": "$",
+    "crowdType": "foodies",
+    "eventType": "food tasting",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Electric Lemon",
+    "venueType": "Bar",
+    "vibes": [
+      "romantic",
+      "celebratory",
+      "chill"
+    ],
+    "musicGenres": [
+      "pop",
+      "electronic"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Hudson Yards",
+    "priceTier": "$$$",
+    "crowdType": "young professionals, couples",
+    "eventType": "date night, birthday celebration",
+    "day": "any day",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Chicago Loop",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Chicago Loop",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "bl0s3om",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Franklin Music Hall",
+    "venueType": "Live Music Venue",
+    "vibes": [
+      "R&B",
+      "Vibrant",
+      "Energetic"
+    ],
+    "musicGenres": [
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Concert",
+    "day": "Friday",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Four Seasons Hotels Skyhigh",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "luxurious",
+      "romantic",
+      "scenic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$$",
+    "crowdType": "couples, tourists",
+    "eventType": "dining experience",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Levant BBQ",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Westheimer Rd",
+    "priceTier": "$$",
+    "crowdType": "food enthusiasts",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Entrepôt Restaurant",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Robertson Quay",
+    "priceTier": "$$",
+    "crowdType": "meat lovers",
+    "eventType": "buffet",
+    "day": "Saturday and Sunday",
+    "timeOfDay": "dinner",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Le Relais de L’entrecote",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively",
+      "culinary"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Champs-Élysées",
+    "priceTier": "$$",
+    "crowdType": "food enthusiasts",
+    "eventType": "dining",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Trend Setters",
+    "venueType": "Nightclub",
+    "vibes": [
+      "social observation",
+      "loneliness",
+      "party atmosphere"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Bedford",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "The Loft Lounge",
+    "venueType": "Bar",
+    "vibes": [
+      "good vibes",
+      "delicious food",
+      "strong drinks"
+    ],
+    "musicGenres": [
+      "Caribbean"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Manayunk",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "Caribbean night",
+    "day": "Friday",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Rock N Rolls",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively",
+      "social"
+    ],
+    "musicGenres": [
+      "rock",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$",
+    "crowdType": "mixed",
+    "eventType": "food review",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Celebre's Pizza",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "friendly",
+      "local"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "South Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Cage",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "ambiance",
+      "cocktails",
+      "fine dining"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Huntingdon Valley",
+    "priceTier": "$$",
+    "crowdType": "couples, foodies",
+    "eventType": "dining",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Perfect Summer Date Night Spot",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "romantic",
+      "casual",
+      "outdoor"
+    ],
+    "musicGenres": [
+      "pop",
+      "acoustic"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "couples",
+    "eventType": "dinner date",
+    "day": "any day",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "IDK Smash Burgerz & Nashville Hot Chicken",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "foodie",
+      "couples"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$",
+    "crowdType": "young adults",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Spice 28",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "affordable",
+      "great atmosphere"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "foodies",
+    "eventType": "happy hour",
+    "day": "Monday to Saturday",
+    "timeOfDay": "4pm to 7pm",
+    "trendScore": 10
+  },
+  {
+    "venueName": "Chubby Chicks Cafe",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "fun",
+      "family-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Gloucester Township",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "food tasting",
+    "day": "",
+    "timeOfDay": "daytime",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Pretty Girls Cook",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "good vibes",
+      "warm",
+      "welcoming",
+      "comfort"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "diverse",
+    "eventType": "brunch",
+    "day": "",
+    "timeOfDay": "brunch",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Brunch Spots in Philly",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Casual",
+      "Social",
+      "Food-focused"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Brunch-goers, Foodies",
+    "eventType": "Brunch",
+    "day": "Sunday",
+    "timeOfDay": "Morning",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Sky High, Amina, Prime Fusion, Rogue",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Boozy Mutt",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "friendly",
+      "fun"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Fairmount",
+    "priceTier": "$$",
+    "crowdType": "dog lovers, friends",
+    "eventType": "trivia night",
+    "day": "weeknight",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "New Era",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Casual",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Foodies",
+    "eventType": "All-You-Can-Eat",
+    "day": "Thursday",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Taco Heart",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "friendly",
+      "lively"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "South Philadelphia",
+    "priceTier": "$",
+    "crowdType": "foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "breakfast",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Via Locusta",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "friends, brunch-goers",
+    "eventType": "brunch, happy hour",
+    "day": "weekend",
+    "timeOfDay": "day",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Booker's Restaurant & Bar",
+    "venueType": "Bar",
+    "vibes": [
+      "disappointed",
+      "frustrated",
+      "supportive"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "West Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "brunch",
+    "trendScore": 2
+  },
+  {
+    "venueName": "Pearl and Mary Oyster Bar",
+    "venueType": "Bar",
+    "vibes": [
+      "vibrant",
+      "casual",
+      "fresh"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Midtown Village",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Garden Grove",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Orange County",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "man",
+    "venueType": "Bar",
+    "vibes": [
+      "funny",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "social",
+    "day": "every day",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Joshua Baraka",
+    "venueType": "Bar",
+    "vibes": [
+      "exciting",
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "afrobeats",
+      "afrofusion"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Uganda",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Gates of Hell",
+    "venueType": "Nightclub",
+    "vibes": [
+      "girly",
+      "party",
+      "lively"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Benjamin Franklin Parkway",
+    "priceTier": "$$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "La La Land",
+    "venueType": "Bar",
+    "vibes": [
+      "relatable",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Houston",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "social",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Classe Parisienne",
+    "venueType": "Nightclub",
+    "vibes": [
+      "chic",
+      "sophisticated",
+      "elegant"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Ile de France",
+    "priceTier": "$$",
+    "crowdType": "young professionals",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "han",
+    "venueType": "Bar",
+    "vibes": [
+      "funny",
+      "playful"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "night out",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Times Square",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "energetic",
+      "urban",
+      "social"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Manhattan",
+    "priceTier": "$$",
+    "crowdType": "tourists, locals",
+    "eventType": "social gathering",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "8OO",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Florida Vibes",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "lively",
+      "beach"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Pompano Beach",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "VIP WRLD",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "jersey club",
+      "remix"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "New York",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "club night",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "City of Newark",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic",
+      "vibrant"
+    ],
+    "musicGenres": [
+      "Jersey Club",
+      "Hip-Hop",
+      "Electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Newark",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Tumble 22 San Marcos",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "San Marcos",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "social",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Buenos Aires",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Urban",
+      "Latino"
+    ],
+    "musicGenres": [
+      "Reggaeton",
+      "Hip-Hop",
+      "Latin"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Buenos Aires",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Party",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Shibuya Scramble Crossing",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "Energetic",
+      "Vibrant",
+      "Urban"
+    ],
+    "musicGenres": [
+      "Japanese Rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Shibuya",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Late Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Don",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Lively"
+    ],
+    "musicGenres": [
+      "Hip-Hop",
+      "Rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Live Performance",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "chrisbrownofficial",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "fun",
+      "celebratory"
+    ],
+    "musicGenres": [
+      "R&B",
+      "Hip-Hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "fans",
+    "eventType": "concert",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Loc'd In",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "social",
+      "student-friendly"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Semmes",
+    "priceTier": "$$",
+    "crowdType": "students",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Chris Brown",
+    "venueType": "Nightclub",
+    "vibes": [
+      "nostalgic",
+      "energetic"
+    ],
+    "musicGenres": [
+      "R&B",
+      "Hip-Hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "DJ set",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Yogurt Club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Chill",
+      "Fun",
+      "Social"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Hip-Hop",
+      "Electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Upper East Side",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Fairmount Avenue",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "social"
+    ],
+    "musicGenres": [
+      "electronic",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Fairmount",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Pittsburgh Nightclub",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "playful",
+      "energetic"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Mandalay Bay",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Lively"
+    ],
+    "musicGenres": [
+      "R&B",
+      "Hip-Hop"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Las Vegas Strip",
+    "priceTier": "$$$",
+    "crowdType": "Young Adults",
+    "eventType": "Concert",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "410 de Silver",
+    "venueType": "Bar",
+    "vibes": [
+      "lively",
+      "social"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Beteshda",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Sky Deck View Bar",
+    "venueType": "Bar",
+    "vibes": [
+      "romantic",
+      "casual",
+      "scenic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Intramuros",
+    "priceTier": "$$",
+    "crowdType": [
+      "couples",
+      "friends",
+      "families"
+    ],
+    "eventType": "dining",
+    "day": "daily",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Bay Leaf Langkawi",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Langkawi",
+    "priceTier": "$$",
+    "crowdType": "locals and tourists",
+    "eventType": "dining",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Texas Roadhouse",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Texas",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Adrian’s 67 effoc barbershop",
+    "venueType": "Bar",
+    "vibes": [
+      "festive",
+      "casual"
+    ],
+    "musicGenres": [
+      "gaming",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Harrow",
+    "priceTier": "$$",
+    "crowdType": "gamers",
+    "eventType": "gaming night",
+    "day": "Friday",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "1ndonlyrel",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "casual",
+      "playful"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "skit/performance",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Pittsburgh Barber",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Pittsburgh",
+    "priceTier": "$$",
+    "crowdType": "local",
+    "eventType": "haircut appointment",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Los Molina",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "playful",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "reggaeton"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Las Vegas",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Party",
+      "Fun"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Hip-Hop",
+      "Pop"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Las Vegas Strip",
+    "priceTier": "$$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Life Is Good",
+    "venueType": "Nightclub",
+    "vibes": [
+      "youthful",
+      "energetic",
+      "vibrant"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Onslow",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "DAREYESDELASIERRAOFICIAL",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "party",
+      "social"
+    ],
+    "musicGenres": [
+      "regional mexican",
+      "norteño"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "live performance",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "QUAYS pacific grill",
+    "venueType": "Bar",
+    "vibes": [
+      "party",
+      "nightlife",
+      "exclusive"
+    ],
+    "musicGenres": [
+      "reggae"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Yokohama",
+    "priceTier": "$$",
+    "crowdType": "limited",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Buffalo Wild Wings",
+    "venueType": "Bar",
+    "vibes": [
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "dance",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Buffalo",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "BAM",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "late-night",
+      "fun"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dining",
+    "day": "any",
+    "timeOfDay": "late-night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Underground Arts",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Social",
+      "Underground"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "Electronic",
+      "Live Music"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Callowhill",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Boys Night Out",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Bobo Don",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic"
+    ],
+    "musicGenres": [
+      "afrobeats",
+      "hip hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Lagos Island",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "The Webster",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "party",
+      "youthful"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Hartford",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "concert",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "GANGNAM KOREAN STEAKHOUSE",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Indianapolis",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Egg Roll #1 Phở Số",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "nostalgic",
+      "casual",
+      "affordable"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Indianapolis",
+    "priceTier": "$$",
+    "crowdType": "students, foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "3RUN7 Indianapolis Run Club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "supportive"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "friends",
+    "eventType": "group activity",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Union Square",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "casual",
+      "exciting",
+      "celebrity"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Union Square",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "celebrity sighting",
+    "day": "unknown",
+    "timeOfDay": "day",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Wedding Venue",
+    "venueType": "Event Space",
+    "vibes": [
+      "luxury",
+      "elegant"
+    ],
+    "musicGenres": [],
+    "dressCode": "Formal",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$1000",
+    "crowdType": "couples, families",
+    "eventType": "wedding, baby shower",
+    "day": "Monday-Thursday",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Circo Volador",
+    "venueType": "Event Space",
+    "vibes": [
+      "chaotic",
+      "fun",
+      "energetic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Jamaica, Venustiano Carranza",
+    "priceTier": "$$",
+    "crowdType": "fans",
+    "eventType": "fan meeting",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "PS : You’re Beautiful",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Fun",
+      "Trendy"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Sittingbourne",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Brookside Golf Club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "excited",
+      "celebratory"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Pasadena",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "concert",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Coolest Christmas Bar",
+    "venueType": "Bar",
+    "vibes": [
+      "Festive",
+      "Holiday",
+      "Cozy"
+    ],
+    "musicGenres": [
+      "Holiday",
+      "Pop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Ridley Park",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Seasonal Event",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "that boy is corrupt",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "playful"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "ザスペースボーイズクラブ",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Fun",
+      "Social"
+    ],
+    "musicGenres": [
+      "R&B",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Odaiba",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "Saturday",
+    "timeOfDay": "Evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Jah",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic"
+    ],
+    "musicGenres": [
+      "jersey",
+      "tang"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Am I Dreaming",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Virginia Beach",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Louvre - Rivoli",
+    "venueType": "Nightclub",
+    "vibes": [
+      "trendy",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Louvre",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "NTX",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Trendy",
+      "Energetic",
+      "Fashionable"
+    ],
+    "musicGenres": [
+      "K-Pop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Fashion Challenge",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "VIDA PRIME",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lit",
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "amapiano"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Kosofe",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance challenge",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Red Bull Polska",
+    "venueType": "Nightclub",
+    "vibes": [
+      "South African",
+      "energetic",
+      "dance"
+    ],
+    "musicGenres": [
+      "amapiano",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "dance event",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Warsaw Nightclub",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Party",
+      "Social"
+    ],
+    "musicGenres": [
+      "Hip-Hop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "City Center",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Island of France",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Fun",
+      "Social"
+    ],
+    "musicGenres": [
+      "Dance",
+      "Pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Paris",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "THE SPC BOYS CLUB",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "K CLUB",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic"
+    ],
+    "musicGenres": [
+      "amapiano"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "DJ set",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Zsongo club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "vibe",
+      "party"
+    ],
+    "musicGenres": [
+      "Amapiano"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Madrid",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "r3dmanph",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "lively"
+    ],
+    "musicGenres": [
+      "amapiano",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "DC",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "willzwidavibez",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "party",
+      "vibrant"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Call 911",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Soweto",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The End",
+    "venueType": "Nightclub",
+    "vibes": [
+      "dramatic",
+      "suspenseful"
+    ],
+    "musicGenres": [
+      "pop",
+      "alternative"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "unknown",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "unknown",
+    "timeOfDay": "night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Sam",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Party",
+      "Energetic"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Hip-Hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Social Gathering",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Mujerdebuenapasta",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "festive",
+      "fun",
+      "energetic"
+    ],
+    "musicGenres": [
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dance trend",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Pretoria Sunnyside Bowling Club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "casual",
+      "fun",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Sunnyside",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Chicago Fire",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "lively",
+      "fun"
+    ],
+    "musicGenres": [
+      "dance",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Chicago",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Gas Can",
+    "venueType": "Bar",
+    "vibes": [
+      "Halloween",
+      "Spooky",
+      "Fun"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Hershey Park",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Halloween Event",
+    "day": "Thursday",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "haunted place",
+    "venueType": "Nightclub",
+    "vibes": [
+      "spooky",
+      "mysterious"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "college students",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "TxC",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Mzansi",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Let It Happen",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "creative"
+    ],
+    "musicGenres": [
+      "freestyle",
+      "hip hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "freestyle dance event",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Orlando Nightclub",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "romantic",
+      "energetic"
+    ],
+    "musicGenres": [
+      "pop",
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown Orlando",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "On the Floor",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "energetic",
+      "playful"
+    ],
+    "musicGenres": [
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Sandy",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance trend",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "543 Howard",
+    "venueType": "Rooftop",
+    "vibes": [
+      "casual",
+      "relaxed",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "South Beach",
+    "priceTier": "$$",
+    "crowdType": "locals, tourists",
+    "eventType": "hangout",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Frutiger Aero",
+    "venueType": "Nightclub",
+    "vibes": [
+      "nightlife",
+      "trendy",
+      "vibrant"
+    ],
+    "musicGenres": [
+      "electronic",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "night out",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Huda Beauty",
+    "venueType": "Lounge",
+    "vibes": [
+      "Trendy",
+      "Chic",
+      "Glamorous"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Emirates",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Beauty Event",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Los Angeles",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "pop",
+      "R&B"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "use",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "energetic",
+      "playful"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Goiânia",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "nostalgic",
+      "social"
+    ],
+    "musicGenres": [
+      "funk",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Goias",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "New York City Center",
+    "venueType": "Nightclub",
+    "vibes": [
+      "underground",
+      "vibes"
+    ],
+    "musicGenres": [
+      "electronic",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Midtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Embu das Artes",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "urban",
+      "nostalgic"
+    ],
+    "musicGenres": [
+      "rap",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Embu das Artes",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Memphis Nightclub",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "fun",
+      "trendy"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown Memphis",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Ter",
+    "venueType": "Bar",
+    "vibes": [
+      "funny",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "social",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Tout Le Monde",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "social",
+      "trendy"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Erezee",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Rancho Ochoa",
+    "venueType": "Nightclub",
+    "vibes": [
+      "festive",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "regional Mexican",
+      "cumbia",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Phoenix",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Freseando 🍓",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "lively",
+      "social"
+    ],
+    "musicGenres": [
+      "regional mexican",
+      "cumbia"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Tlalpan",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Alun-Alun Pati",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "casual",
+      "social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Pati Regency",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "gathering",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Noa",
+    "venueType": "Nightclub",
+    "vibes": [
+      "trendy",
+      "energetic"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "unknown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "İçeriçumra",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Çumra",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "SV Blerick",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "social",
+      "energetic"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Blerick",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Care and Care Center",
+    "venueType": "Event Space",
+    "vibes": [
+      "Celebratory",
+      "Family-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Badami Bagh",
+    "priceTier": "$$",
+    "crowdType": "Families",
+    "eventType": "Gender Reveal",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Rgv",
+    "venueType": "Event Space",
+    "vibes": [
+      "Celebratory",
+      "Family-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "McAllen",
+    "priceTier": "$$",
+    "crowdType": "Families, Friends",
+    "eventType": "Gender Reveal",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Lekker Lufo",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "food enthusiasts",
+    "eventType": "food preparation",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "DJI",
+    "venueType": "Nightclub",
+    "vibes": [
+      "chill",
+      "intimate"
+    ],
+    "musicGenres": [
+      "electronic",
+      "DJ set"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "DJ performance",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Fat Cat",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "fun",
+      "playful"
+    ],
+    "musicGenres": [
+      "various"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "West Town",
+    "priceTier": "$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "IThinkSomethingWentWrong",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "messy",
+      "fun"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "moving party",
+    "day": "Friday",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Faena New York",
+    "venueType": "Bar",
+    "vibes": [
+      "romantic",
+      "chic",
+      "sophisticated"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Chelsea",
+    "priceTier": "$$$",
+    "crowdType": "couples",
+    "eventType": "dinner and drinks",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Cutest restaurant",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Cozy",
+      "Romantic",
+      "Charming"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "New York City",
+    "priceTier": "$$",
+    "crowdType": "Couples, Foodies",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "MONO+MONO",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "romantic",
+      "casual",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Lower East Side",
+    "priceTier": "$$",
+    "crowdType": "couples, foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Beekman, A Thompson Hotel, by Hyatt",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "romantic",
+      "aesthetic",
+      "hidden gem"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Financial District",
+    "priceTier": "$$$",
+    "crowdType": "couples",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Shibuya Station",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "vibrant",
+      "urban"
+    ],
+    "musicGenres": [
+      "house",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Shibuya",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "late night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Shibuya Center-Gai",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Vibrant",
+      "Late-night"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Shibuya",
+    "priceTier": "$$",
+    "crowdType": "Young adults",
+    "eventType": "Dance party",
+    "day": "Any",
+    "timeOfDay": "Late-night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Jersey club",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "party",
+      "exciting"
+    ],
+    "musicGenres": [
+      "club",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Tokyo",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "R2Bees",
+    "venueType": "Nightclub",
+    "vibes": [
+      "nostalgic",
+      "energetic"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Ghana",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "sankofanaturalspices",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "lively",
+      "social",
+      "trendy"
+    ],
+    "musicGenres": [
+      "afrobeats",
+      "hip hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Ghana",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "jafiavalencia",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic"
+    ],
+    "musicGenres": [
+      "electronic",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Valencia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Mastro's Steakhouse",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "celebratory",
+      "romantic",
+      "upscale"
+    ],
+    "musicGenres": [
+      "jazz",
+      "contemporary"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Times Square",
+    "priceTier": "$$$",
+    "crowdType": "couples, special occasion diners",
+    "eventType": "birthday dinner",
+    "day": "any day",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Indian Sizzler",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Family-friendly",
+      "Casual",
+      "Foodie"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Watford",
+    "priceTier": "$$",
+    "crowdType": "Food lovers, Families",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "RH Restaurant at RH Yountville",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "aesthetic",
+      "romantic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Yountville",
+    "priceTier": "$$$",
+    "crowdType": "couples, foodies",
+    "eventType": "dinner date",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Seneca Trattoria",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "rooftop",
+      "casual",
+      "lively"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Little Italy",
+    "priceTier": "$$",
+    "crowdType": "foodies, young adults",
+    "eventType": "dinner",
+    "day": "daily",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Lori Jayne",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Bushwick",
+    "priceTier": "$",
+    "crowdType": "foodies",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "MILANO Bar Ristorante",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "cozy",
+      "beautiful"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Kleinburg",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "birthday dinner",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Langley Township Greenbelt",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "modern",
+      "fine dining",
+      "brunch"
+    ],
+    "musicGenres": [],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Langley, BC",
+    "priceTier": "$$$",
+    "crowdType": "foodies, couples, families",
+    "eventType": "dining",
+    "day": "any",
+    "timeOfDay": "dinner, brunch",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Restaurants on the Mainland",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Casual",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Lagos Mainland",
+    "priceTier": "$$",
+    "crowdType": "Foodies",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Saperavi NYC",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Cultural",
+      "Casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "East Village",
+    "priceTier": "$$",
+    "crowdType": "Foodies",
+    "eventType": "Dining",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Bali Island",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "lively",
+      "energetic"
+    ],
+    "musicGenres": [
+      "electronic",
+      "dance",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Bali",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Gaston’s Tavern",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "family-friendly",
+      "themed"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Magic Kingdom",
+    "priceTier": "$",
+    "crowdType": "tourists",
+    "eventType": "snack stop",
+    "day": "any day",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Alma Fonda Fina",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively",
+      "authentic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Highland",
+    "priceTier": "$$",
+    "crowdType": "food enthusiasts",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "The Cliff at Highlands de Busay",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "romantic",
+      "casual",
+      "scenic",
+      "pet-friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Busay",
+    "priceTier": "$$",
+    "crowdType": "couples, families",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Shinjuku WARP",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "party",
+      "late-night"
+    ],
+    "musicGenres": [
+      "trap",
+      "jerk",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Kawasaki",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "Saturday",
+    "timeOfDay": "early morning",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Downtown Greenville",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Trendy"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "Rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Cat Istanbul",
+    "venueType": "Bar",
+    "vibes": [
+      "chill",
+      "social",
+      "lively"
+    ],
+    "musicGenres": [
+      "pop",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Istanbul",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Nawab’s Legendary BBQ",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Casual",
+      "Lively",
+      "Late Night"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Toronto",
+    "priceTier": "$$",
+    "crowdType": "Foodies",
+    "eventType": "Dining",
+    "day": "Any",
+    "timeOfDay": "Late Night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "The Activity Space",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Dfw",
+    "venueType": "Nightclub",
+    "vibes": [
+      "trendy",
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "dance",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Dfw",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "550 22nd St",
+    "venueType": "Event Space",
+    "vibes": [
+      "fun",
+      "lively",
+      "celebratory"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Sacramento",
+    "priceTier": "$$",
+    "crowdType": "LGBTQ+ community",
+    "eventType": "wedding",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Kaz",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "casual",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "trendy",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Cheaper Than Therapy",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "social",
+      "fun"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Tenderloin",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "i said",
+    "venueType": "Nightclub",
+    "vibes": [
+      "confident",
+      "bold"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "POST Houston",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "social",
+      "lively"
+    ],
+    "musicGenres": [
+      "various"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown Houston",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "dining, nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Z on 23",
+    "venueType": "Bar",
+    "vibes": [
+      "Chill",
+      "Social",
+      "Scenic"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Hip-Hop",
+      "Electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown Houston",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Handam BBQ",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "social",
+      "lively"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Houston Heights",
+    "priceTier": "$$",
+    "crowdType": "foodies, groups",
+    "eventType": "dining",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Piano Piano Restaurant",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "cozy",
+      "romantic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown Toronto",
+    "priceTier": "$$",
+    "crowdType": [
+      "couples",
+      "friends"
+    ],
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Aga's",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "bustling",
+      "casual",
+      "cultural"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Houston",
+    "priceTier": "$$",
+    "crowdType": "diverse",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "officialsoulbarbieent",
+    "venueType": "Bar",
+    "vibes": [
+      "trendy",
+      "energetic"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Johannesburg South Africa Temple",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Trendy",
+      "Social"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "Amapiano",
+      "Kwaito"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Parktown",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Music Release Party",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "2woshortrsa",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Festive"
+    ],
+    "musicGenres": [
+      "Afrobeats",
+      "Hip Hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Nigeria",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Party",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Orange Farm",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "fun",
+      "social"
+    ],
+    "musicGenres": [
+      "Amapiano",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Emfuleni",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance challenge",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Pietermaritzburg",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "gqom"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "KwaZulu-Natal",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "World in Motion",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Festive"
+    ],
+    "musicGenres": [
+      "Dance",
+      "Afrobeat"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "London",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "Saturday",
+    "timeOfDay": "Evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Ibadan South West Local Government Public Library",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "sweet",
+      "romantic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Ibadan South West",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Tik",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Fun",
+      "Trendy"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Challenge",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "TEAM 1LLUSION",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Exciting"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Seocho District",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Nashville-Davidson",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "nostalgic",
+      "fun"
+    ],
+    "musicGenres": [
+      "R&B",
+      "Hip-Hop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Nashville",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Nyama & Chips - Tsakane Corner",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "lively"
+    ],
+    "musicGenres": [
+      "local",
+      "afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Tsakane",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "ZinedinexSguche",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Nia",
+    "venueType": "Live Music Venue",
+    "vibes": [
+      "soulful",
+      "intimate"
+    ],
+    "musicGenres": [
+      "Amapiano",
+      "soul"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "live performance",
+    "day": "Friday",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Classy Dock",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Fashionable",
+      "Chic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "mia",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "hip hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Nikeboyshxtra",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "energetic",
+      "youthful"
+    ],
+    "musicGenres": [
+      "dance",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "South Africa",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance challenge",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Mr Langa",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Party"
+    ],
+    "musicGenres": [
+      "Hip-Hop",
+      "Afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Langa",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Live Performance",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Fleurhof Ext 3",
+    "venueType": "Nightclub",
+    "vibes": [
+      "trendy",
+      "energetic",
+      "stylish"
+    ],
+    "musicGenres": [
+      "dance",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Fleurhof",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Collymbashele",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic"
+    ],
+    "musicGenres": [
+      "electronic",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Jvckthevillain",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Party",
+      "Social"
+    ],
+    "musicGenres": [
+      "Hip-Hop",
+      "R&B"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Live Performance",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Did I Miss",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Vibrant",
+      "Social"
+    ],
+    "musicGenres": [
+      "Amapiano"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "1youngboy",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "lively"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "downtown",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 75
+  },
+  {
+    "venueName": "useredeyberbrenes",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "playful",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "reggaeton"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "social gathering",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "eva",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "fun",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "THE REAL BOSS BABY",
+    "venueType": "Nightclub",
+    "vibes": [
+      "luxurious",
+      "chill"
+    ],
+    "musicGenres": [
+      "Afrobeats",
+      "Hip Hop"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Urban",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Kwazulu-Natal South Coast Publicity",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "festive",
+      "energetic"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Ray Nkonyeni",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Zürich",
+    "venueType": "Nightclub",
+    "vibes": [
+      "trendy",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "amapiano"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Zürich",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Tiger's Milk Century City",
+    "venueType": "Bar",
+    "vibes": [
+      "lively",
+      "social",
+      "casual"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Century City",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Gert Sibande",
+    "venueType": "Nightclub",
+    "vibes": [
+      "casual",
+      "trendy"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Mpumalanga",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "social gathering",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Thats So Fetch UK",
+    "venueType": "Bar",
+    "vibes": [
+      "fun",
+      "playful"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "halloween party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Bee",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "amapiano"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "News Cafe Rosebank",
+    "venueType": "Bar",
+    "vibes": [
+      "Chill",
+      "Social"
+    ],
+    "musicGenres": [
+      "Amapiano"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Rosebank",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Collaboration Discussion",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Dakar-Plateau",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "social",
+      "vibrant"
+    ],
+    "musicGenres": [
+      "afrobeats",
+      "hip hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Dakar",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Kel",
+    "venueType": "Nightclub",
+    "vibes": [
+      "trending",
+      "unreleased"
+    ],
+    "musicGenres": [
+      "afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "music release",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Usernotactive",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "amapiano"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Made In South Africa",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "fun",
+      "cultural"
+    ],
+    "musicGenres": [
+      "dance",
+      "afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Cape Town",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "San Francisco Bay",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Fun",
+      "Social"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Bay Area",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "Saturday",
+    "timeOfDay": "Night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "City Place",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "trendy"
+    ],
+    "musicGenres": [
+      "maskandi"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Pretoria",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live music",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Route 66 Pub & Grill",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "lively",
+      "energetic",
+      "party"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Vanderbijlpark",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "festival",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Friends of Amstel",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Party",
+      "Social"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "Afrobeats"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Live Performance",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Unknown Venue",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Fun",
+      "Trendy",
+      "Social"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Amsterdam",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "Any",
+    "timeOfDay": "Night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Nut Island",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "relatable",
+      "viral"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Quincy",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Vienna Nightclub",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "romantic"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "City Center",
+    "priceTier": "$$",
+    "crowdType": "couples",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "TheOneNOnlyMir",
+    "venueType": "Nightclub",
+    "vibes": [
+      "festive",
+      "energetic",
+      "fun"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "Halloween party",
+    "day": "October 31",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Club Nouveau",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Weekend Vibes"
+    ],
+    "musicGenres": [
+      "80s",
+      "80s Music"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Los Angeles County",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Downtown Los Angeles",
+    "venueType": "Nightclub",
+    "vibes": [
+      "70s",
+      "Energetic",
+      "Fun"
+    ],
+    "musicGenres": [
+      "Rock",
+      "Classic Rock"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Live Music",
+    "day": "Any",
+    "timeOfDay": "Night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Los Socios Del Ritmo",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lively",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "Mexican",
+      "Latin",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Downtown Los Angeles",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live music",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Cape Town Views",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "energetic",
+      "social"
+    ],
+    "musicGenres": [
+      "dance",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Plattekloof",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance challenge",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "PINK PALM PUFF",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "trendy",
+      "youthful"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "trendy area",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Ñam Ñam",
+    "venueType": "Bar",
+    "vibes": [
+      "lively",
+      "social",
+      "festive"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Murcia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "murk3r",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "playful"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Ghxst3d",
+    "venueType": "Nightclub",
+    "vibes": [
+      "fun",
+      "energetic",
+      "playful"
+    ],
+    "musicGenres": [
+      "electronic",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "collaboration dance event",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "mook662p",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "fun",
+      "trendy"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "so fye",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "trendy"
+    ],
+    "musicGenres": [
+      "hip hop",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "BIH GET CRITICAL",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "party",
+      "fun"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "electronic"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "ICE TEAA",
+    "venueType": "Nightclub",
+    "vibes": [
+      "lit",
+      "energetic",
+      "party"
+    ],
+    "musicGenres": [
+      "hip-hop",
+      "pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Hip",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Party",
+      "Fun"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Dance Party",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "manifestgirls",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "social",
+      "dance"
+    ],
+    "musicGenres": [
+      "pop",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Just for You",
+    "venueType": "Nightclub",
+    "vibes": [
+      "nostalgic",
+      "fun",
+      "energetic"
+    ],
+    "musicGenres": [
+      "80s music"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Bellflower",
+    "priceTier": "$$",
+    "crowdType": "mixed age",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "OfficeDrummer",
+    "venueType": "Live Music Venue",
+    "vibes": [
+      "energetic",
+      "uplifting"
+    ],
+    "musicGenres": [
+      "rock",
+      "alternative"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live performance",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Cajó",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Lively"
+    ],
+    "musicGenres": [
+      "Electronic",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Live Music",
+    "day": "",
+    "timeOfDay": "Night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Like a Feather",
+    "venueType": "Bar",
+    "vibes": [
+      "Chill",
+      "Elegant",
+      "Whimsical"
+    ],
+    "musicGenres": [
+      "Jazz",
+      "Lounge"
+    ],
+    "dressCode": "Smart Casual",
+    "neighborhood": "Trendy",
+    "priceTier": "$$",
+    "crowdType": "Young Professionals",
+    "eventType": "Live Music",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Sigurrós",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Chill",
+      "Fun",
+      "Social"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Hip-Hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Duo Performance",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Chick Magnet - Fried Chicken",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "fun",
+      "playful"
+    ],
+    "musicGenres": [
+      "pop",
+      "hip-hop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Penfield",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Rock in Rio",
+    "venueType": "Bar",
+    "vibes": [
+      "Energetic",
+      "Live Performance"
+    ],
+    "musicGenres": [
+      "Rock"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Concert",
+    "day": "September 15",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "City of London",
+    "venueType": "Nightclub",
+    "vibes": [
+      "nostalgic",
+      "energetic"
+    ],
+    "musicGenres": [
+      "rock",
+      "classic rock"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "City of London",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "live music",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Belo Horizonte",
+    "venueType": "Nightclub",
+    "vibes": [
+      "nostalgic",
+      "energetic"
+    ],
+    "musicGenres": [
+      "funk",
+      "melody"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Minas Gerais",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "Saturday",
+    "timeOfDay": "night",
+    "trendScore": 8
+  },
+  {
+    "venueName": "geethasingapor",
+    "venueType": "Nightclub",
+    "vibes": [
+      "energetic",
+      "fun",
+      "dance"
+    ],
+    "musicGenres": [
+      "Tamil",
+      "dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance party",
+    "day": "",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "United Kingv",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Social"
+    ],
+    "musicGenres": [
+      "Pop",
+      "Dance"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Karachi South",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "KOC",
+    "venueType": "Bar",
+    "vibes": [
+      "Energetic",
+      "Competitive"
+    ],
+    "musicGenres": [
+      "Hip-Hop",
+      "Pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "Sports Fans",
+    "eventType": "Game Night",
+    "day": "",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "LOCK THE BAR",
+    "venueType": "Bar",
+    "vibes": [
+      "Viral",
+      "Trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "New York",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Brownies pwee",
+    "venueType": "Bar",
+    "vibes": [
+      "funny",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "nightlife",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "La Grande Recre",
+    "venueType": "Event Space",
+    "vibes": [
+      "fun",
+      "cute"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "families, toy enthusiasts",
+    "eventType": "mini event",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Foryou Via Appia Nuova",
+    "venueType": "Bar",
+    "vibes": [
+      "Family-friendly",
+      "Creative"
+    ],
+    "musicGenres": [
+      "Children's",
+      "Poetry"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Appio Latino",
+    "priceTier": "$$",
+    "crowdType": "Families, Children",
+    "eventType": "Open Mic",
+    "day": "Any",
+    "timeOfDay": "Evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Place New York",
+    "venueType": "Bar",
+    "vibes": [
+      "deep",
+      "emotional"
+    ],
+    "musicGenres": [
+      "pop",
+      "rap"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Angoulême",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "live music",
+    "day": "any day",
+    "timeOfDay": "evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Unnamed Venue",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Energetic",
+      "Social",
+      "Vibrant"
+    ],
+    "musicGenres": [
+      "Hip Hop",
+      "Afrobeats",
+      "Electronic"
+    ],
+    "dressCode": "Casual Chic",
+    "neighborhood": "Durban Central",
+    "priceTier": "$$",
+    "crowdType": "Young Adults",
+    "eventType": "Nightlife",
+    "day": "Any",
+    "timeOfDay": "Night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Scrub Daddy Mx",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "exciting",
+      "social",
+      "celebratory"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "mixed",
+    "eventType": "gathering",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Le Graveur",
+    "venueType": "Nightclub",
+    "vibes": [
+      "Chill",
+      "Social"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "de Dieu3",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "entertaining"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": [
+      "young adults",
+      "comedy enthusiasts"
+    ],
+    "eventType": "comedy show",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Texas Steak House",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "Halloween",
+      "Clean & Reset",
+      "Chill"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Richardson",
+    "priceTier": "$$",
+    "crowdType": "Mixed",
+    "eventType": "Themed Event",
+    "day": "Sunday",
+    "timeOfDay": "Evening",
+    "trendScore": 7
+  },
+  {
+    "venueName": "my backyard bar",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "relaxed"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "backyard",
+    "priceTier": "$$",
+    "crowdType": "friends",
+    "eventType": "social gathering",
+    "day": "Friday",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "La Casa de los Famosos México",
+    "venueType": "Nightclub",
+    "vibes": [
+      "party",
+      "celebrity",
+      "fun"
+    ],
+    "musicGenres": [
+      "pop",
+      "reggaeton"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Mexico",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "social gathering",
+    "day": "any",
+    "timeOfDay": "night",
+    "trendScore": 7
+  },
+  {
+    "venueName": "Mire Mire",
+    "venueType": "Nightclub",
+    "vibes": [
+      "funny",
+      "viral"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Venlo",
+    "priceTier": "$$",
+    "crowdType": "",
+    "eventType": "",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 0
+  },
+  {
+    "venueName": "Culiacán",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "family-friendly"
+    ],
+    "musicGenres": [
+      "traditional",
+      "Mexican"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Culiacán",
+    "priceTier": "$$",
+    "crowdType": "locals",
+    "eventType": "food preparation",
+    "day": "any",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Los Altos Foods",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "casual",
+      "friendly"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Philadelphia",
+    "priceTier": "$$",
+    "crowdType": "food enthusiasts",
+    "eventType": "food tasting",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Medellín",
+    "venueType": "Restaurant / Dining",
+    "vibes": [
+      "social",
+      "casual"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Antioquia",
+    "priceTier": "$$",
+    "crowdType": "locals",
+    "eventType": "dining",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 5
+  },
+  {
+    "venueName": "Italy Villa",
+    "venueType": "Nightclub",
+    "vibes": [
+      "luxurious",
+      "elegant",
+      "social"
+    ],
+    "musicGenres": [
+      "pop",
+      "R&B",
+      "dance"
+    ],
+    "dressCode": "Formal",
+    "neighborhood": "Capannori",
+    "priceTier": "$$$",
+    "crowdType": "young professionals",
+    "eventType": "nightlife",
+    "day": "Saturday",
+    "timeOfDay": "evening",
+    "trendScore": 75
+  },
+  {
+    "venueName": "Red Velvet",
+    "venueType": "Nightclub",
+    "vibes": [
+      "iconic",
+      "fun",
+      "energetic"
+    ],
+    "musicGenres": [
+      "K-pop",
+      "Pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Trendy",
+    "priceTier": "$$",
+    "crowdType": "Young adults",
+    "eventType": "Live performance",
+    "day": "Any",
+    "timeOfDay": "Night",
+    "trendScore": 85
+  },
+  {
+    "venueName": "Stephansplatz",
+    "venueType": "Pub / Tavern",
+    "vibes": [
+      "energetic",
+      "fun",
+      "interactive"
+    ],
+    "musicGenres": [
+      "K-Pop"
+    ],
+    "dressCode": "Casual",
+    "neighborhood": "Innere Stadt",
+    "priceTier": "$$",
+    "crowdType": "young adults",
+    "eventType": "dance cover performance",
+    "day": "",
+    "timeOfDay": "evening",
+    "trendScore": 8
+  },
+  {
+    "venueName": "Ordinary Barber Place",
+    "venueType": "Bar",
+    "vibes": [
+      "casual",
+      "trendy"
+    ],
+    "musicGenres": [],
+    "dressCode": "Casual",
+    "neighborhood": "Kōenji",
+    "priceTier": "$$",
+    "crowdType": "locals",
+    "eventType": "haircut",
+    "day": "",
+    "timeOfDay": "",
+    "trendScore": 5
+  }
+]

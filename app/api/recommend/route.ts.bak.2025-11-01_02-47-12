@@ -1,0 +1,258 @@
+import { NextRequest, NextResponse } from 'next/server';
+import path from 'path';
+import Database from 'better-sqlite3';
+
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
+/** ---------- Types (kept light to avoid strict TS friction) ---------- */
+type Quality = 'strict' | 'loose' | 'none';
+type TableName = 'clean_venues' | 'clean_nj_venues';
+type Venue = {
+  id: number | string;
+  name: string;
+  city: string | null;
+  neighborhood: string | null;
+  address: string | null;
+  rating: number | null;
+  cuisine_json: string | null;
+  music_json: string | null;
+  photo_url: string | null;
+  why_recommended: string | null;
+};
+
+/** ---------- Utilities (top-level; no function declarations in blocks) ---------- */
+
+/** Decide which view to use based on city hint. */
+function pickSource(rawCity: string): TableName {
+  const rc = String(rawCity || '').toLowerCase();
+  const njHits = [
+    'new jersey',' nj',', nj','hoboken','jersey city','newark','clifton',
+    'montclair','teaneck','edison','trenton','camden','bayonne',
+    'weehawken','secaucus','fort lee','edgewater','paramus','woodbridge',
+    'princeton','belmar','asbury park'
+  ];
+  return njHits.some(s => rc.includes(s)) ? 'clean_nj_venues' : 'clean_venues';
+}
+
+/** Parse request body and normalize context. */
+function parseContext(body: any): {
+  city: string;
+  vibe: string;
+  cuisine: string;
+  music: string;
+  seed: string;
+  limit: number;
+} {
+  const ctx = (body?.context ?? body ?? {}) as any;
+  const city = String(ctx.city ?? ctx.state ?? ctx.area ?? '').trim();
+  const vibe = String(ctx.vibe ?? '').trim();
+  const cuisine = String(ctx.cuisine ?? ctx.cuisineType ?? '').trim();
+  const music = String(ctx.musicGenre ?? ctx.music ?? '').trim();
+  const seed = String(ctx.seed ?? ctx.userId ?? ctx.sessionId ?? city ?? 'lumina');
+  const limit = Math.min(Math.max(Number(ctx.limit ?? 5), 1), 12);
+  return { city, vibe, cuisine, music, seed, limit };
+}
+
+/** Build WHERE and params for the SQL query. */
+function buildWhere(
+  table: TableName,
+  ctx: { city: string; vibe: string; cuisine: string; music: string },
+  opts?: { ignoreCity?: boolean }
+): { where: string[]; params: any[] } {
+  const where: string[] = ['COALESCE(should_exclude,0)=0'];
+  const params: any[] = [];
+
+  // vibe → category family
+  const vibeLc = ctx.vibe.toLowerCase();
+  if (vibeLc === 'dinner' || vibeLc === 'restaurant') {
+    where.push('lower(category) = ?');
+    params.push('dining');
+  } else if (['lounge','club','nightlife','bar'].includes(vibeLc)) {
+    where.push("(lower(category) IN ('nightlife','lounge','bar','club') OR lower(category) LIKE '%nightlife%')");
+  }
+
+  // city scoping (view-aware)
+  if (!opts?.ignoreCity && ctx.city) {
+    const c = ctx.city.toLowerCase();
+    if (table === 'clean_venues') {
+      // NYC: city OR neighborhood textual match
+      where.push('(lower(city) = ? OR lower(neighborhood) = ?)');
+      params.push(c, c);
+    } else {
+      // NJ: city OR address like
+      where.push('(lower(city) = ? OR lower(address) LIKE ?)');
+      params.push(c, `%${c}%`);
+    }
+  }
+
+  // cuisine
+  if (ctx.cuisine) {
+    const k = ctx.cuisine.toLowerCase().trim();
+    // expect JSON-ish array strings; store as lower-case LIKE on the raw column
+    where.push('lower(cuisine_json) LIKE ?');
+    params.push(`%"${k}"%`);
+  }
+
+  // music
+  if (ctx.music) {
+    const k = ctx.music.toLowerCase().trim();
+    where.push('lower(music_json) LIKE ?');
+    params.push(`%"${k}"%`);
+  }
+
+  return { where, params };
+}
+
+/** Quality → rating/photo gates */
+function qualitySQL(q: Quality): string {
+  if (q === 'strict') {
+    return (
+      " AND rating IS NOT NULL AND rating >= 3.8" +
+      " AND photo_url IS NOT NULL AND trim(photo_url) <> ''"
+    );
+  }
+  if (q === 'loose') {
+    return (
+      " AND (rating IS NULL OR rating >= 3.6)" +
+      " AND (photo_url IS NULL OR trim(photo_url) <> '')"
+    );
+  }
+  return ''; // none
+}
+
+/** Execute a single query with ordering & pagination. */
+function runQuery(
+  db: Database.Database,
+  table: TableName,
+  baseWhere: string[],
+  baseParams: any[],
+  q: Quality,
+  limit: number,
+  offset: number
+): Venue[] {
+  const where = baseWhere.slice(0);
+  const params = baseParams.slice(0);
+  const qSQL = qualitySQL(q);
+  const order =
+    " ORDER BY (photo_url IS NOT NULL AND trim(photo_url) <> '') DESC, " +
+    "rating DESC NULLS LAST, name ASC";
+  const sql =
+    "SELECT id, name, city, neighborhood, address, rating, " +
+    "cuisine_json, music_json, photo_url, why_recommended " +
+    `FROM ${table} ` +
+    (where.length ? "WHERE " + where.join(" AND ") : "") +
+    qSQL +
+    order +
+    " LIMIT ? OFFSET ?";
+
+  params.push(limit, offset);
+  const stmt = db.prepare(sql);
+  const rows = stmt.all(...params) as any[];
+  // normalize to Venue
+  return (rows || []).map(r => ({
+    id: r.id,
+    name: r.name,
+    city: r.city ?? null,
+    neighborhood: r.neighborhood ?? null,
+    address: r.address ?? null,
+    rating: (r.rating ?? null) as number | null,
+    cuisine_json: r.cuisine_json ?? null,
+    music_json: r.music_json ?? null,
+    photo_url: r.photo_url ?? null,
+    why_recommended: r.why_recommended ?? null
+  }));
+}
+
+/** Simple charCode sum for deterministic offset without spread on string */
+function offsetFromSeed(seed: string): number {
+  let sum = 0;
+  for (let i = 0; i < seed.length; i++) {
+    sum = (sum + seed.charCodeAt(i)) | 0;
+  }
+  const mod = Math.abs(sum) % 24; // 0..23
+  return mod;
+}
+
+/** Choose primary (up to 5) and a "tryThis" from a different neighborhood if possible. */
+function choosePrimaryAndTry(rows: Venue[]): { primary: Venue[]; tryThis: Venue | null } {
+  const primary = rows.slice(0, Math.min(5, rows.length));
+  const hoods = new Set(primary.map(v => (v.neighborhood || '').toLowerCase()));
+  let tryThis: Venue | null = null;
+
+  for (let i = 5; i < rows.length; i++) {
+    const v = rows[i];
+    const hood = String(v.neighborhood || '').toLowerCase();
+    if (!hood || !hoods.has(hood)) {
+      tryThis = v;
+      break;
+    }
+  }
+
+  return { primary, tryThis };
+}
+
+/** ---------- Route ---------- */
+export async function POST(req: NextRequest) {
+  try {
+    const body = await req.json().catch(() => ({}));
+    const ctx = parseContext(body);
+    const table: TableName = pickSource(ctx.city);
+    const dbPath = path.join(process.cwd(), 'data', 'lumina.db');
+    const db = new Database(dbPath);
+
+    // Deterministic paging offset from seed
+    const offset = offsetFromSeed(ctx.seed);
+    const qualities: Quality[] = ['strict', 'loose', 'none'];
+
+    // Build base WHERE for chosen table
+    const base = buildWhere(table, ctx, { ignoreCity: false });
+
+    // Try qualities in order
+    let rows: Venue[] = [];
+    for (const q of qualities) {
+      rows = runQuery(db, table, base.where, base.params, q, ctx.limit + 6 /* headroom */, offset);
+      if (rows.length) break;
+    }
+
+    // NJ → NYC fallback (small set)
+    let sourceTable: TableName = table;
+    if (table === 'clean_nj_venues' && rows.length < 4) {
+      const nycBase = buildWhere('clean_venues', ctx, { ignoreCity: true }); // widen to NYC
+      for (const q of qualities) {
+        const add: Venue[] = runQuery(db, 'clean_venues', nycBase.where, nycBase.params, q, ctx.limit + 6, offset);
+        if (add.length) {
+          // merge unique by id
+          const seen = new Set((rows as any[]).map((r: any) => r.id));
+          const merged: Venue[] = rows.slice(0);
+          for (let i = 0; i < add.length; i++) {
+            const v = add[i]!;
+            if (!seen.has(v.id)) {
+              merged.push(v);
+              seen.add(v.id);
+            }
+          }
+          rows = merged;
+          sourceTable = 'clean_venues';
+          break;
+        }
+      }
+    }
+
+    // Final selection
+    const { primary, tryThis } = choosePrimaryAndTry(rows);
+
+    return NextResponse.json({
+      ok: true,
+      sourceTable,
+      count: primary.length,
+      primary,
+      tryThis
+    });
+  } catch (err: any) {
+    return NextResponse.json(
+      { ok: false, error: String(err?.message ?? err) },
+      { status: 500 }
+    );
+  }
+}

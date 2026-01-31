@@ -1,0 +1,389 @@
+import { NextResponse } from 'next/server';
+import Database from 'better-sqlite3';
+import OpenAI from 'openai';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
+
+const dbPath = '/opt/viberyte/lumina-web/data/lumina.db';
+
+// Simple in-memory cache for AI reasoning
+const reasoningCache = new Map<string, { reasoning: string; timestamp: number }>();
+const CACHE_TTL = 1000 * 60 * 60 * 24; // 24 hours
+
+// CORS headers
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+export async function OPTIONS(request: Request) {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
+// Helper: Pick random item from array
+const pickRandom = (arr: any[]) => {
+  if (arr.length === 0) return null;
+  return arr[Math.floor(Math.random() * arr.length)];
+};
+
+// Helper: Calculate confidence score
+const calculateConfidence = (
+  tier: string,
+  venueCount: number,
+  eventCount: number,
+  isEvent: boolean
+): number => {
+  const totalOptions = venueCount + eventCount;
+  
+  if (totalOptions === 0) return 0.3;
+  if (totalOptions === 1) return 0.5;
+  if (totalOptions < 3) return 0.6;
+  if (totalOptions < 5) return 0.75;
+  
+  // Higher confidence for events in wildcard, venues in safe
+  if (tier === 'WILDCARD' && isEvent && eventCount > 2) return 0.95;
+  if (tier === 'SAFE' && !isEvent && venueCount > 3) return 0.9;
+  
+  return 0.85;
+};
+
+export async function POST(request: Request) {
+  try {
+    const { 
+      primaryVenueId, 
+      persona = 'friends', 
+      timeOfDay = '21:00',
+      dateSelection 
+    } = await request.json();
+    
+    console.log('🌆 Multi-Stop API:', { primaryVenueId, persona, timeOfDay, dateSelection });
+    
+    if (!primaryVenueId) {
+      return NextResponse.json({ error: 'Missing primaryVenueId' }, { status: 400, headers: corsHeaders });
+    }
+
+    const db = new Database(dbPath);
+    
+    // Use prepared statement (SQL injection safe)
+    const primaryVenue: any = db.prepare('SELECT * FROM venues WHERE id = ?').get(primaryVenueId);
+    
+    if (!primaryVenue) {
+      db.close();
+      return NextResponse.json({ error: 'Primary venue not found' }, { status: 404, headers: corsHeaders });
+    }
+
+    console.log('🎯 Primary venue:', primaryVenue.name, '| Neighborhood:', primaryVenue.neighborhood);
+
+    // Get venues in same neighborhood (prepared statement)
+    const allVenues: any[] = db.prepare(`
+      SELECT * FROM venues 
+      WHERE neighborhood = ? 
+      AND id != ?
+      LIMIT 150
+    `).all(primaryVenue.neighborhood, primaryVenueId);
+
+    // 📅 Get events based on date selection (SQL injection safe)
+    let targetDate = new Date().toISOString().split('T')[0];
+    let events: any[] = [];
+    
+    if (dateSelection) {
+      if (dateSelection === 'tonight' || dateSelection.type === 'tonight') {
+        targetDate = new Date().toISOString().split('T')[0];
+        events = db.prepare(`SELECT * FROM events WHERE event_date LIKE ? LIMIT 50`)
+          .all(`${targetDate}%`);
+      } else if (dateSelection === 'weekend' || dateSelection.type === 'weekend') {
+        const today = new Date();
+        const daysUntilFriday = (5 - today.getDay() + 7) % 7 || 7;
+        const friday = new Date(today);
+        friday.setDate(today.getDate() + daysUntilFriday);
+        const sunday = new Date(friday);
+        sunday.setDate(friday.getDate() + 2);
+        
+        const fridayStr = friday.toISOString().split('T')[0];
+        const sundayStr = sunday.toISOString().split('T')[0];
+        
+        events = db.prepare(`SELECT * FROM events WHERE event_date >= ? AND event_date <= ? LIMIT 50`)
+          .all(fridayStr, sundayStr);
+      } else if (dateSelection.type === 'date' && dateSelection.date) {
+        targetDate = dateSelection.date;
+        events = db.prepare(`SELECT * FROM events WHERE event_date LIKE ? LIMIT 50`)
+          .all(`${targetDate}%`);
+      }
+    } else {
+      events = db.prepare(`SELECT * FROM events WHERE event_date LIKE ? LIMIT 50`)
+        .all(`${targetDate}%`);
+    }
+    
+    console.log('🎉 Found events for date:', events.length);
+
+    db.close();
+
+    if (allVenues.length < 3) {
+      return NextResponse.json({
+        error: 'insufficient_venues',
+        message: `Not enough venues in ${primaryVenue.neighborhood} to generate recommendations.`
+      }, { headers: corsHeaders });
+    }
+
+    const parseVibes = (vibes: any): string[] => {
+      if (!vibes) return [];
+      if (typeof vibes === 'string') {
+        try {
+          const parsed = JSON.parse(vibes);
+          return Array.isArray(parsed) ? parsed : [];
+        } catch {
+          return [];
+        }
+      }
+      return Array.isArray(vibes) ? vibes : [];
+    };
+
+    // 🛡️ SAFE MODE: Dessert, cafe, quiet spots, or safe events
+    const safeVenues = allVenues.filter(v => {
+      const vibes = parseVibes(v.vibe_tags).map((t: string) => t.toLowerCase());
+      const category = (v.category || '').toLowerCase();
+      const cuisine = (v.cuisine_primary || '').toLowerCase();
+      
+      return (
+        cuisine.includes('dessert') ||
+        cuisine.includes('cafe') ||
+        cuisine.includes('bakery') ||
+        cuisine.includes('ice cream') ||
+        vibes.some((t: string) => ['cozy', 'quiet', 'intimate', 'calm', 'chill'].includes(t)) ||
+        (category.includes('dining') && vibes.some((t: string) => ['quiet', 'intimate'].includes(t)))
+      );
+    });
+
+    // Filter SAFE events (not clubs/high energy)
+    const safeEvents = events.filter(e => {
+      const genre = (e.music_genre || '').toLowerCase();
+      return !genre.includes('club') && !genre.includes('rave');
+    });
+
+    // ✨ ELEVATED MODE: Lounges, rooftops, speakeasies, trendy spots
+    const elevatedVenues = allVenues.filter(v => {
+      const vibes = parseVibes(v.vibe_tags).map((t: string) => t.toLowerCase());
+      const category = (v.category || '').toLowerCase();
+      
+      return (
+        vibes.some((t: string) => ['rooftop', 'speakeasy', 'trendy', 'hip', 'upscale'].includes(t)) ||
+        category.includes('lounge')
+      );
+    });
+
+    // Filter ELEVATED events (concerts, live music, comedy)
+    const elevatedEvents = events.filter(e => {
+      const genre = (e.music_genre || '').toLowerCase();
+      const title = (e.title || '').toLowerCase();
+      return genre.includes('jazz') || genre.includes('r&b') || title.includes('comedy') || title.includes('concert');
+    });
+
+    // 🎲 WILDCARD MODE: Clubs, high energy, dance floors
+    const wildcardVenues = allVenues.filter(v => {
+      const vibes = parseVibes(v.vibe_tags).map((t: string) => t.toLowerCase());
+      const category = (v.category || '').toLowerCase();
+      
+      return (
+        vibes.some((t: string) => ['club', 'dance', 'party', 'energetic', 'lively', 'mixy'].includes(t)) ||
+        category.includes('nightlife') ||
+        category.includes('club')
+      );
+    });
+
+    // Filter WILDCARD events (clubs, Afrobeats parties, high energy)
+    const wildcardEvents = events.filter(e => {
+      const genre = (e.music_genre || '').toLowerCase();
+      return genre.includes('afrobeats') || genre.includes('amapiano') || genre.includes('hip-hop') || genre.includes('club');
+    });
+
+    console.log('🛡️ SAFE: venues:', safeVenues.length, '| events:', safeEvents.length);
+    console.log('✨ ELEVATED: venues:', elevatedVenues.length, '| events:', elevatedEvents.length);
+    console.log('🎲 WILDCARD: venues:', wildcardVenues.length, '| events:', wildcardEvents.length);
+
+    // Pick best candidate from each tier with RANDOMIZATION
+    const getSafeOption = () => {
+      if (safeVenues.length > 0) return { type: 'venue', data: pickRandom(safeVenues) };
+      if (safeEvents.length > 0) return { type: 'event', data: pickRandom(safeEvents) };
+      return { type: 'venue', data: pickRandom(allVenues) };
+    };
+
+    const getElevatedOption = () => {
+      // Mix events and venues for ELEVATED
+      if (elevatedEvents.length > 0 && Math.random() > 0.5) return { type: 'event', data: pickRandom(elevatedEvents) };
+      if (elevatedVenues.length > 0) return { type: 'venue', data: pickRandom(elevatedVenues) };
+      if (elevatedEvents.length > 0) return { type: 'event', data: pickRandom(elevatedEvents) };
+      
+      // Fallback: random from all venues (excluding first pick)
+      const fallbackVenues = allVenues.filter((v, i) => i !== 0);
+      return { type: 'venue', data: pickRandom(fallbackVenues) || allVenues[1] };
+    };
+
+    const getWildcardOption = () => {
+      // Prefer events for WILDCARD (parties!)
+      if (wildcardEvents.length > 0) return { type: 'event', data: pickRandom(wildcardEvents) };
+      if (wildcardVenues.length > 0) return { type: 'venue', data: pickRandom(wildcardVenues) };
+      
+      // Fallback: random from all venues (excluding first two picks)
+      const fallbackVenues = allVenues.filter((v, i) => i !== 0 && i !== 1);
+      return { type: 'venue', data: pickRandom(fallbackVenues) || allVenues[2] };
+    };
+
+    const safeOption = getSafeOption();
+    const elevatedOption = getElevatedOption();
+    const wildcardOption = getWildcardOption();
+
+    // Generate AI reasoning with caching
+    const generateReasoning = async (option: any, tier: string) => {
+      if (!option || !option.data) {
+        return 'Perfect next stop to continue your night.';
+      }
+
+      const isEvent = option.type === 'event';
+      const item = option.data;
+      const cacheKey = `${primaryVenueId}-${tier}-${item.id}`;
+      
+      // Check cache
+      const cached = reasoningCache.get(cacheKey);
+      if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+        console.log('💾 Cache hit for:', cacheKey);
+        return cached.reasoning;
+      }
+      
+      const prompt = isEvent 
+        ? `You're a nightlife concierge. Explain in ONE sentence why this event is perfect as a ${tier} continuation after ${primaryVenue.name}.
+
+Primary venue: ${primaryVenue.name}
+Next: ${item.title} (${item.music_genre || 'Event'})
+Tier: ${tier}
+
+${tier === 'SAFE' ? 'Focus on: Easy, low-pressure event' : ''}
+${tier === 'ELEVATED' ? 'Focus on: Fun, social, good vibes' : ''}
+${tier === 'WILDCARD' ? 'Focus on: High energy, turn-up vibes' : ''}
+
+Return ONLY the one-sentence explanation, no quotes.`
+        : `You're a nightlife concierge. Explain in ONE sentence why this venue is perfect as a ${tier} continuation after ${primaryVenue.name}.
+
+Primary venue: ${primaryVenue.name}
+Next venue: ${item.name} (${item.cuisine_primary || item.category})
+Tier: ${tier}
+
+${tier === 'SAFE' ? 'Focus on: Easy, cozy, smooth ending' : ''}
+${tier === 'ELEVATED' ? 'Focus on: Fun but refined, good vibes' : ''}
+${tier === 'WILDCARD' ? 'Focus on: High energy, spontaneous vibes' : ''}
+
+Return ONLY the one-sentence explanation, no quotes.`;
+
+      try {
+        const response = await openai.chat.completions.create({
+          model: 'gpt-4o-mini',
+          messages: [{ role: 'user', content: prompt }],
+          temperature: 0.8,
+          max_tokens: 100
+        });
+
+        const reasoning = response.choices[0].message.content?.trim() || 'Perfect next stop to continue your night.';
+        
+        // Cache the result
+        reasoningCache.set(cacheKey, { reasoning, timestamp: Date.now() });
+        
+        return reasoning;
+      } catch (error) {
+        console.error('AI reasoning error:', error);
+        return 'Perfect next stop to continue your night.';
+      }
+    };
+
+    const [safeReasoning, elevatedReasoning, wildcardReasoning] = await Promise.all([
+      generateReasoning(safeOption, 'SAFE'),
+      generateReasoning(elevatedOption, 'ELEVATED'),
+      generateReasoning(wildcardOption, 'WILDCARD')
+    ]);
+
+    // Calculate confidence scores
+    const safeConfidence = calculateConfidence('SAFE', safeVenues.length, safeEvents.length, safeOption?.type === 'event');
+    const elevatedConfidence = calculateConfidence('ELEVATED', elevatedVenues.length, elevatedEvents.length, elevatedOption?.type === 'event');
+    const wildcardConfidence = calculateConfidence('WILDCARD', wildcardVenues.length, wildcardEvents.length, wildcardOption?.type === 'event');
+
+    // Build response
+    const formatOption = (option: any, reasoning: string, tier: string, confidence: number) => {
+      if (!option || !option.data) {
+        return null;
+      }
+
+      const isEvent = option.type === 'event';
+      const item = option.data;
+      
+      if (isEvent) {
+        return {
+          type: 'event',
+          venue: {
+            id: item.id,
+            name: item.title,
+            neighborhood: item.venue_neighborhood || primaryVenue.neighborhood,
+            cuisine: item.music_genre || 'Event',
+            price_tier: item.ticket_price ? `$${item.ticket_price}` : 'Varies',
+            rating: '⭐',
+            photo: item.image_url,
+            address: item.venue_address || item.venue_name,
+            eventDate: item.event_date,
+            venueName: item.venue_name
+          },
+          reasoning,
+          travelTime: 'Same neighborhood',
+          proTip: tier === 'SAFE' ? 'Perfect low-key event to end the night.' 
+                : tier === 'ELEVATED' ? 'Great vibe without overwhelming energy.'
+                : 'High-energy event to turn the night up!',
+          confidence
+        };
+      } else {
+        return {
+          type: 'venue',
+          venue: {
+            id: item.id,
+            name: item.name,
+            neighborhood: item.neighborhood,
+            cuisine: item.cuisine_primary || item.category,
+            price_tier: item.price_tier,
+            rating: item.rating,
+            photo: item.professional_photo_url,
+            address: item.address
+          },
+          reasoning,
+          travelTime: 'Same neighborhood',
+          proTip: tier === 'SAFE' ? 'Great for a smooth, easy ending.'
+                : tier === 'ELEVATED' ? 'Elevated vibes without overwhelming energy.'
+                : 'Turn the night up with high-energy vibes.',
+          confidence
+        };
+      }
+    };
+
+    const response = {
+      primaryVenue: {
+        id: primaryVenue.id,
+        name: primaryVenue.name,
+        neighborhood: primaryVenue.neighborhood
+      },
+      dateSelection,
+      recommendations: {
+        safe: formatOption(safeOption, safeReasoning, 'SAFE', safeConfidence),
+        elevated: formatOption(elevatedOption, elevatedReasoning, 'ELEVATED', elevatedConfidence),
+        wildcard: formatOption(wildcardOption, wildcardReasoning, 'WILDCARD', wildcardConfidence)
+      }
+    };
+
+    console.log('✅ Multi-stop recommendations generated successfully');
+
+    return NextResponse.json(response, { headers: corsHeaders });
+
+  } catch (error: any) {
+    console.error('❌ Multi-stop error:', error);
+    return NextResponse.json(
+      { error: 'Failed to generate recommendations', message: error.message },
+      { status: 500, headers: corsHeaders }
+    );
+  }
+}

@@ -1,0 +1,589 @@
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+import { X, MapPin, Star, Phone, Globe, ChevronLeft, ChevronRight, Sparkles, Loader2, Navigation2 } from 'lucide-react';
+import InstagramGrid from '@/components/InstagramGrid';
+import CompactMultiStopModal from '@/components/CompactMultiStopModal';
+import DatePickerModal from '@/components/DatePickerModal';
+
+interface VenueModalProps {
+  venue: any;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function VenueModal({ venue, isOpen, onClose }: VenueModalProps) {
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  // Swipe detection for photos
+  const photoTouchStartX = useRef(0);
+  const photoTouchEndX = useRef(0);
+
+  const handlePhotoTouchStart = (e: React.TouchEvent) => {
+    photoTouchStartX.current = e.touches[0].clientX;
+  };
+
+  const handlePhotoTouchMove = (e: React.TouchEvent) => {
+    photoTouchEndX.current = e.touches[0].clientX;
+  };
+
+  const handlePhotoTouchEnd = () => {
+    const swipeThreshold = 50;
+    const diff = photoTouchStartX.current - photoTouchEndX.current;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swiped left - next photo
+        nextPhoto();
+      } else {
+        // Swiped right - previous photo
+        prevPhoto();
+      }
+    }
+  };
+
+  const [dragY, setDragY] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  
+  const [showBudget, setShowBudget] = useState(false);
+  const [budget, setBudget] = useState('50');
+  const [partySize, setPartySize] = useState('1');
+  const [budgetLoading, setBudgetLoading] = useState(false);
+  const [budgetResult, setBudgetResult] = useState<any>(null);
+  const [budgetError, setBudgetError] = useState<string | null>(null);
+  
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const [selectedDateInfo, setSelectedDateInfo] = useState<any>(null);
+  const [showMultiStop, setShowMultiStop] = useState(false);
+  const [multiStopLoading, setMultiStopLoading] = useState(false);
+  const [multiStopData, setMultiStopData] = useState<any>(null);
+  const [multiStopError, setMultiStopError] = useState<string | null>(null);
+  
+  const startY = useRef(0);
+
+  const safeParseArray = (data: any): any[] => {
+    if (!data) return [];
+    if (Array.isArray(data)) return data;
+    if (typeof data === 'string') {
+      try {
+        const parsed = JSON.parse(data);
+        return Array.isArray(parsed) ? parsed : [];
+      } catch {
+        return [];
+      }
+    }
+    return [];
+  };
+
+  // USE ONLY GOOGLE & PROFESSIONAL PHOTOS (Skip expired Instagram URLs)
+
+  // FETCH MORE PHOTOS
+  const professionalPhoto = venue?.professional_photo_url;
+  const googlePhotosArray = safeParseArray(venue?.google_photos); // Usually 5 photos
+  const instagramPhotosArray = safeParseArray(venue?.instagram_photos); // Get Instagram photos too
+  
+  // Combine all photo sources
+  const allPhotos = [
+    ...(professionalPhoto ? [{ url: professionalPhoto, type: 'professional' }] : []),
+    ...googlePhotosArray.map((url: string) => ({ url, type: 'google' })),
+    ...instagramPhotosArray.slice(0, 10).map((url: string) => ({ url, type: 'instagram' })) // Add first 10 Instagram photos
+  ];
+  
+  const normalizedPhotos = allPhotos.map(photo => ({ url: photo.url, type: 'image' }));
+  const hasPhotos = normalizedPhotos.length > 0;
+
+  // Parse vibe tags
+  const parseVibeTagsArray = (tags: any): string[] => {
+    if (Array.isArray(tags)) return tags;
+    if (typeof tags === "string") {
+      try { return JSON.parse(tags); } catch { return []; }
+    }
+    return [];
+  };
+  const vibeTags = parseVibeTagsArray(venue?.vibe_tags);
+  const moodTags = parseVibeTagsArray(venue?.mood_tags);
+
+  console.log('📸 Total photos loaded:', normalizedPhotos.length);
+
+  const fetchBudgetMeal = async () => {
+    setBudgetLoading(true);
+    setBudgetError(null);
+    setBudgetResult(null);
+
+    try {
+      const response = await fetch('/api/budget-meal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          venueId: venue.id,
+          budget: parseFloat(budget),
+          partySize: parseInt(partySize),
+          context: { who: 'friends', when: 'tonight' }
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        if (data.error === 'no_menu') {
+          setBudgetError(data.message || 'Menu not available yet for this venue 📋');
+        } else {
+          setBudgetError('Failed to generate recommendations. Try again!');
+        }
+        return;
+      }
+
+      setBudgetResult(data);
+    } catch (error) {
+      console.error('Budget meal error:', error);
+      setBudgetError('Something went wrong. Please try again.');
+    } finally {
+      setBudgetLoading(false);
+    }
+  };
+
+  const handleDateSelection = async (selection: { type: 'tonight' | 'weekend' | 'date'; date?: string }) => {
+    setShowDatePicker(false);
+    setSelectedDateInfo(selection);
+    setMultiStopLoading(true);
+    setMultiStopError(null);
+
+    try {
+      const response = await fetch('/api/multi-stop', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          primaryVenueId: venue.id,
+          persona: 'friends',
+          timeOfDay: new Date().toTimeString().slice(0, 5),
+          dateSelection: selection
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setMultiStopError(data.message || 'Failed to generate recommendations');
+        setMultiStopLoading(false);
+        return;
+      }
+
+      setMultiStopData(data);
+      setShowMultiStop(true);
+      setMultiStopLoading(false);
+    } catch (error) {
+      console.error('Multi-stop error:', error);
+      setMultiStopError('Something went wrong. Please try again.');
+      setMultiStopLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      setCurrentPhotoIndex(0);
+      setShowBudget(false);
+      setBudgetResult(null);
+      setBudgetError(null);
+      setMultiStopData(null);
+      setMultiStopError(null);
+      setShowDatePicker(false);
+      setSelectedDateInfo(null);
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    startY.current = e.touches[0].clientY;
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    const currentY = e.touches[0].clientY;
+    const diff = currentY - startY.current;
+    if (diff > 0) setDragY(diff);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    if (dragY > 250) onClose();
+    setDragY(0);
+  };
+
+  const nextPhoto = () => {
+    setCurrentPhotoIndex((prev) => (prev + 1) % normalizedPhotos.length);
+  };
+
+  const prevPhoto = () => {
+    setCurrentPhotoIndex((prev) => (prev - 1 + normalizedPhotos.length) % normalizedPhotos.length);
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <>
+      <div
+        className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      <div
+        className="fixed inset-x-0 bottom-0 z-[250] bg-zinc-950 rounded-t-3xl max-h-[90vh] overflow-y-auto"
+        style={{ transform: `translateY(${dragY}px)` }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="sticky top-0 z-10 flex justify-center py-3 bg-zinc-950">
+          <div className="w-12 h-1.5 bg-zinc-700 rounded-full" />
+        </div>
+
+        <button
+          onClick={(e) => { e.stopPropagation(); onClose(); }}
+          className="absolute top-6 right-6 z-20 w-10 h-10 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-black/80 transition-all active:scale-95"
+        >
+          <X className="w-6 h-6 text-white" />
+        </button>
+
+        {hasPhotos ? (
+          <div className="relative h-80 bg-zinc-900">
+            <img 
+              src={normalizedPhotos[currentPhotoIndex].url}
+              alt={`${venue.name} - Photo ${currentPhotoIndex + 1}`}
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+            
+            <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-sm">
+              {currentPhotoIndex + 1} / {normalizedPhotos.length}
+            </div>
+
+            {normalizedPhotos.length > 1 && (
+              <>
+                <button
+                  onClick={(e) => { e.stopPropagation(); prevPhoto(); }}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-black/80 transition-all active:scale-95"
+                >
+                  <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+                <button
+                  onClick={(e) => { e.stopPropagation(); nextPhoto(); }}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-black/80 transition-all active:scale-95"
+                >
+                  <ChevronRight className="w-6 h-6 text-white" />
+                </button>
+              </>
+            )}
+
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent pointer-events-none" />
+          </div>
+        ) : venue.professional_photo_url ? (
+          <div className="relative h-80">
+            <img 
+              src={venue.professional_photo_url}
+              alt={venue.name}
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />
+          </div>
+        ) : (
+          <div className="h-80 bg-zinc-900 flex items-center justify-center">
+            <span className="text-zinc-600">No Image</span>
+          </div>
+        )}
+
+        <div className="p-6 space-y-6">
+          <div className="space-y-3">
+            <h1 className="text-3xl font-bold text-white">{venue.name}</h1>
+            
+            <div className="flex items-center gap-4 flex-wrap">
+              <div className="flex items-center gap-1">
+                <Star className="w-5 h-5 fill-yellow-500 text-yellow-500" />
+                <span className="text-white font-semibold">{venue.rating || venue.google_rating || '4.5'}</span>
+              </div>
+              <span className="text-zinc-500">•</span>
+              <span className="text-white font-medium">{venue.price_tier || '$$'}</span>
+              <span className="text-zinc-500">•</span>
+              <span className="text-white">{venue.cuisine_primary || venue.cuisine}</span>
+            </div>
+
+            <div className="flex items-center gap-2 text-zinc-400">
+              <MapPin className="w-4 h-4" />
+              <span>{venue.neighborhood}, {venue.city}</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2">
+            <button 
+              onClick={(e) => { 
+                e.stopPropagation(); 
+                const bookingUrl = venue.opentable_url || venue.resy_url || venue.yelp_reservation_url || venue.website;
+                if (bookingUrl) window.open(bookingUrl, '_blank');
+              }}
+              className="py-3 bg-violet-600 hover:bg-violet-500 rounded-xl font-semibold text-sm transition-all active:scale-95"
+            >
+              Book
+            </button>
+            <button 
+              onClick={(e) => { e.stopPropagation(); setShowBudget(!showBudget); }}
+              className="py-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-semibold text-sm transition-all active:scale-95"
+            >
+              Budget
+            </button>
+            {venue.instagram_handle && (
+              <button 
+                onClick={(e) => { e.stopPropagation(); window.open(`https://instagram.com/${venue.instagram_handle}`, '_blank'); }}
+                className="py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-xl font-semibold text-sm transition-all active:scale-95"
+              >
+                📸 IG
+              </button>
+            )}
+            <button 
+              onClick={(e) => { e.stopPropagation(); window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(venue.address || venue.name)}`, '_blank'); }}
+              className="py-3 bg-zinc-900 border border-zinc-800 hover:border-violet-500 rounded-xl font-semibold text-sm transition-all active:scale-95 flex items-center justify-center"
+            >
+              <Navigation2 className="w-4 h-4" />
+            </button>
+          </div>
+
+
+          {showBudget && (
+            <div className="bg-gradient-to-br from-emerald-600/20 to-green-600/20 border border-emerald-500/30 rounded-2xl p-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-white font-bold text-lg">💰 Budget Meal</h3>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setShowBudget(false); }}
+                    className="text-zinc-400 hover:text-white transition"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+
+                {!budgetResult && !budgetLoading && (
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label className="text-sm text-zinc-400 mb-2 block">Budget ($)</label>
+                        <input
+                          type="number"
+                          value={budget}
+                          onChange={(e) => setBudget(e.target.value)}
+                          className="w-full px-4 py-2 bg-black/40 border border-zinc-700 rounded-lg text-white focus:border-emerald-500 focus:outline-none"
+                          placeholder="50"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-sm text-zinc-400 mb-2 block">Party Size</label>
+                        <input
+                          type="number"
+                          value={partySize}
+                          onChange={(e) => setPartySize(e.target.value)}
+                          className="w-full px-4 py-2 bg-black/40 border border-zinc-700 rounded-lg text-white focus:border-emerald-500 focus:outline-none"
+                          placeholder="2"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); fetchBudgetMeal(); }}
+                      className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-semibold transition-all active:scale-95"
+                    >
+                      Get Recommendations
+                    </button>
+                  </div>
+                )}
+
+                {budgetLoading && (
+                  <div className="flex items-center justify-center py-8">
+                    <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
+                  </div>
+                )}
+
+                {budgetError && (
+                  <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4">
+                    <p className="text-red-300 text-sm">{budgetError}</p>
+                  </div>
+                )}
+
+                {budgetResult && (
+                  <div className="space-y-4">
+                    <div className="bg-black/40 rounded-lg p-4 space-y-3">
+                      <p className="text-emerald-400 font-semibold">
+                        {budgetResult.recommendation?.emoji || '✨'} {budgetResult.recommendation?.pro_tip || 'Here\'s what we recommend!'}
+                      </p>
+                      <div className="space-y-2">
+                        {budgetResult.recommendation?.recommended_meal?.map((item: any, i: number) => (
+                          <div key={i} className="space-y-1">
+                            <div className="flex justify-between text-sm">
+                              <span className="text-zinc-300">{item.item}</span>
+                              <span className="text-white font-semibold">${item.price}</span>
+                            </div>
+                            {item.reason && (
+                              <p className="text-xs text-zinc-500">{item.reason}</p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="pt-3 border-t border-zinc-700 flex justify-between font-bold">
+                        <span className="text-white">Total</span>
+                        <span className={budgetResult.recommendation?.within_budget ? "text-emerald-400" : "text-yellow-400"}>
+                          ${budgetResult.recommendation?.total}
+                        </span>
+                      </div>
+                      {!budgetResult.recommendation?.within_budget && budgetResult.recommendation?.alternative_meal && (
+                        <>
+                          <div className="pt-3 border-t border-zinc-700">
+                            <p className="text-xs text-yellow-400 mb-2">💡 Alternative (within budget):</p>
+                            <div className="space-y-1">
+                              {budgetResult.recommendation.alternative_meal.map((item: any, i: number) => (
+                                <div key={i} className="flex justify-between text-sm">
+                                  <span className="text-zinc-400">{item.item}</span>
+                                  <span className="text-zinc-300">${item.price}</span>
+                                </div>
+                              ))}
+                            </div>
+                            <div className="flex justify-between text-sm font-bold mt-2">
+                              <span className="text-zinc-400">Total</span>
+                              <span className="text-emerald-400">${budgetResult.recommendation.alternative_total}</span>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setBudgetResult(null); }}
+                      className="w-full py-2 bg-zinc-800 hover:bg-zinc-700 rounded-lg text-sm font-semibold transition"
+                    >
+                      Try Different Budget
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+          {!showBudget && !multiStopData && (
+            <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Navigation2 className="w-6 h-6 text-blue-400" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-white font-bold text-lg mb-2">🌆 Continue The Vibe?</h3>
+                  <p className="text-zinc-300 text-sm mb-4">
+                    Let me map out the rest of your night with 3 perfectly matched options
+                  </p>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setShowDatePicker(true); }}
+                    disabled={multiStopLoading}
+                    className="w-full py-3 bg-blue-600 hover:bg-blue-500 disabled:bg-zinc-800 disabled:text-zinc-600 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 active:scale-95"
+                  >
+                    {multiStopLoading ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Planning Your Night...
+                      </>
+                    ) : (
+                      <>
+                        <Navigation2 className="w-5 h-5" />
+                        Plan My Night
+                      </>
+                    )}
+                  </button>
+                  {multiStopError && (
+                    <p className="mt-3 text-red-400 text-sm">{multiStopError}</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {venue.bio && (
+            <div className="space-y-2">
+              <h3 className="text-white font-semibold">About</h3>
+              <p className="text-zinc-300 leading-relaxed">{venue.bio}</p>
+            </div>
+          )}
+
+          <InstagramGrid media={normalizedPhotos} venueName={venue?.name || ""} />
+
+          {vibeTags.length > 0 && (
+            <div className="space-y-3">
+              <h3 className="text-white font-semibold">Vibe</h3>
+              <div className="flex flex-wrap gap-2">
+                {vibeTags.map((tag: string, i: number) => (
+                  <span key={i} className="px-3 py-1.5 bg-violet-600/20 border border-violet-500/30 text-violet-300 rounded-full text-sm">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {moodTags.length > 0 && (
+            <div className="space-y-3">
+              <h3 className="text-white font-semibold">Perfect For</h3>
+              <div className="flex flex-wrap gap-2">
+                {moodTags.map((tag: string, i: number) => (
+                  <span key={i} className="px-3 py-1.5 bg-zinc-900 border border-zinc-800 text-zinc-300 rounded-full text-sm">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {(venue.address || venue.phone || venue.website) && (
+            <div className="space-y-3 pt-4 border-t border-zinc-800">
+              <h3 className="text-white font-semibold">Contact</h3>
+              <div className="space-y-2">
+                {venue.address && (
+                  <div className="flex items-start gap-3 text-zinc-300">
+                    <MapPin className="w-5 h-5 text-zinc-500 mt-0.5" />
+                    <span>{venue.address}</span>
+                  </div>
+                )}
+                {venue.phone && (
+                  <div className="flex items-center gap-3 text-zinc-300">
+                    <Phone className="w-5 h-5 text-zinc-500" />
+                    <a href={`tel:${venue.phone}`} className="hover:text-violet-400 transition-colors">{venue.phone}</a>
+                  </div>
+                )}
+                {venue.website && (
+                  <div className="flex items-center gap-3 text-zinc-300">
+                    <Globe className="w-5 h-5 text-zinc-500" />
+                    <a href={venue.website} target="_blank" rel="noopener noreferrer" className="hover:text-violet-400 transition-colors">
+                      Website
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <DatePickerModal
+        isOpen={showDatePicker}
+        onClose={() => setShowDatePicker(false)}
+        onSelectDate={handleDateSelection}
+      />
+
+      {multiStopData && (
+        <CompactMultiStopModal
+          isOpen={showMultiStop}
+          onClose={() => setShowMultiStop(false)}
+          recommendations={multiStopData.recommendations}
+          primaryVenue={venue}
+          onVenueClick={(venueId) => {
+            console.log('Opening venue:', venueId);
+          }}
+        />
+      )}
+    </>
+  );
+}

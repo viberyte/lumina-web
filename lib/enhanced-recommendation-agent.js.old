@@ -1,0 +1,209 @@
+/**
+ * ENHANCED RECOMMENDATION AGENT V2
+ * Smarter category matching + better music handling
+ */
+
+import Anthropic from '@anthropic-ai/sdk';
+import Database from 'better-sqlite3';
+
+const anthropic = new Anthropic({ 
+  apiKey: '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'
+});
+
+export async function getEnhancedRecommendations(userContext, dbPath) {
+  const db = new Database(dbPath);
+  
+  console.log('🎯 Enhanced Agent V2:', userContext);
+  
+  // Try strict match first, then broaden
+  let venues = getVenues(db, userContext, 'strict');
+  console.log(`  Strict: ${venues.length} venues`);
+  
+  if (venues.length < 5) {
+    venues = getVenues(db, userContext, 'relaxed');
+    console.log(`  Relaxed: ${venues.length} venues`);
+  }
+  
+  if (venues.length < 5) {
+    venues = getVenues(db, userContext, 'broad');
+    console.log(`  Broad: ${venues.length} venues`);
+  }
+  
+  db.close();
+  
+  // Add AI explanations
+  const venuesWithWhy = await addWhyExplanations(venues.slice(0, 12), userContext);
+  
+  return {
+    ok: true,
+    venues: venuesWithWhy,
+    count: venuesWithWhy.length,
+    level: venues.length >= 5 ? 'exact' : 'broadened'
+  };
+}
+
+function getVenues(db, ctx, level) {
+  const params = {};
+  const filters = [];
+  
+  // Always filter by city
+  params.city = `%${ctx.city.toLowerCase()}%`;
+  filters.push('LOWER(city) LIKE @city');
+  
+  // Always exclude bad venues
+  filters.push('should_exclude = 0');
+  
+  // Map user vibe to categories
+  const categoryGroups = {
+    'lounge': ['lounge', 'nightlife'],  // Lounge includes nightlife
+    'nightlife': ['nightlife', 'lounge'],  // And vice versa
+    'nightclub': ['nightlife', 'lounge'],
+    'dinner': ['dining'],
+    'brunch': ['dining'],
+    'events': ['events'],
+    'attractions': ['attraction', 'cultural', 'outdoor']
+  };
+  
+  if (level === 'strict') {
+    // Level 1: High quality + category match
+    filters.push('(viberyte_certified = 1 OR viberyte_score >= 7)');
+    
+    if (ctx.vibe) {
+      const vibe = ctx.vibe.toLowerCase();
+      const categories = categoryGroups[vibe] || [vibe];
+      const categoryFilter = categories
+        .map(cat => `category = '${cat}' OR category LIKE '${cat}|%' OR category LIKE '%|${cat}' OR category LIKE '%|${cat}|%'`)
+        .join(' OR ');
+      filters.push(`(${categoryFilter})`);
+    }
+    
+    // For cuisine, only filter if specified and not "Surprise me"
+    if (ctx.cuisine && ctx.cuisine !== 'Surprise me') {
+      params.cuisine = `%${ctx.cuisine.toLowerCase()}%`;
+      filters.push('(LOWER(cuisine) LIKE @cuisine OR LOWER(cuisine_types) LIKE @cuisine)');
+    }
+    
+  } else if (level === 'relaxed') {
+    // Level 2: Lower quality threshold
+    filters.push('viberyte_score >= 6');
+    
+    if (ctx.vibe) {
+      const vibe = ctx.vibe.toLowerCase();
+      const categories = categoryGroups[vibe] || [vibe];
+      const categoryFilter = categories
+        .map(cat => `category = '${cat}' OR category LIKE '${cat}|%' OR category LIKE '%|${cat}' OR category LIKE '%|${cat}|%'`)
+        .join(' OR ');
+      filters.push(`(${categoryFilter})`);
+    }
+    
+  } else {
+    // Level 3: Broad search
+    filters.push('viberyte_score >= 5');
+    
+    // Very loose category matching
+    if (ctx.vibe) {
+      params.vibe = `%${ctx.vibe.toLowerCase()}%`;
+      filters.push('(LOWER(category) LIKE @vibe OR LOWER(vibe_tags) LIKE @vibe OR LOWER(name) LIKE @vibe)');
+    }
+  }
+  
+  // Build ORDER BY clause - prioritize music matches without requiring them
+  let orderBy = [];
+  if (ctx.musicGenre) {
+    params.music = `%${ctx.musicGenre.toLowerCase()}%`;
+    // Prioritize venues with matching music, but don't exclude others
+    orderBy.push(`CASE 
+      WHEN LOWER(music_genres) LIKE @music THEN 0
+      WHEN music_genres IS NULL OR music_genres = '' THEN 1
+      ELSE 2 
+    END`);
+  }
+  
+  // Always sort by score and rating
+  orderBy.push('viberyte_score DESC');
+  orderBy.push('google_rating DESC');
+  
+  const sql = `
+    SELECT * FROM venues
+    WHERE ${filters.join(' AND ')}
+    ORDER BY ${orderBy.join(', ')}
+    LIMIT 30
+  `;
+  
+  console.log(`  SQL Level ${level}:`, sql.substring(0, 200));
+  return db.prepare(sql).all(params);
+}
+
+async function addWhyExplanations(venues, ctx) {
+  if (venues.length === 0) return [];
+  
+  try {
+    // Build context for AI
+    const contextStr = `User wants: ${ctx.vibe || 'venues'}${ctx.who ? ` for ${ctx.who}` : ''}${ctx.musicGenre ? ` with ${ctx.musicGenre} music` : ''}${ctx.cuisine ? ` serving ${ctx.cuisine} food` : ''}`;
+    
+    const prompt = `Given this user request: "${contextStr}"
+    
+    For each venue below, write a ONE sentence explanation of why it's a good match (max 20 words each).
+    Focus on: vibe, music (if specified), atmosphere, what makes it special.
+    
+    Venues to explain:
+    ${venues.map((v, i) => `${i+1}. ${v.name} - ${v.category}, Music: ${v.music_genres || 'varied'}, Vibe: ${v.vibe_tags || 'casual'}`).join('\n')}
+    
+    Return a JSON array with explanations in order. Example:
+    ["Perfect romantic spot with...", "Great for groups with..."]`;
+    
+    const response = await anthropic.messages.create({
+      model: 'claude-3-haiku-20240307',
+      max_tokens: 1000,
+      temperature: 0.7,
+      messages: [{ role: 'user', content: prompt }]
+    });
+    
+    const explanations = JSON.parse(response.content[0].text);
+    
+    return venues.map((v, i) => ({
+      ...v,
+      why_recommended: explanations[i] || `Great ${v.category} spot in ${v.city} with excellent atmosphere.`
+    }));
+    
+  } catch (error) {
+    console.error('AI explanation error:', error);
+    // Fallback explanations
+    return venues.map(v => ({
+      ...v,
+      why_recommended: generateFallbackExplanation(v, ctx)
+    }));
+  }
+}
+
+function generateFallbackExplanation(venue, ctx) {
+  const parts = [];
+  
+  if (venue.viberyte_certified) {
+    parts.push('Viberyte certified');
+  } else if (venue.viberyte_score >= 8) {
+    parts.push('Highly rated');
+  }
+  
+  if (ctx.musicGenre && venue.music_genres?.toLowerCase().includes(ctx.musicGenre.toLowerCase())) {
+    parts.push(`${ctx.musicGenre} music`);
+  }
+  
+  if (ctx.who === 'Date night' || ctx.who === 'Solo') {
+    parts.push('intimate atmosphere');
+  } else if (ctx.who === 'With friends' || ctx.who === 'Group outing') {
+    parts.push('great for groups');
+  }
+  
+  if (venue.vibe_tags) {
+    const tags = venue.vibe_tags.split(',').slice(0, 2).join(' and ');
+    parts.push(tags);
+  }
+  
+  return parts.length > 0 
+    ? parts.join(', ') + '.'
+    : `Popular ${venue.category} spot in ${venue.city}.`;
+}
+
+// Export for testing
+export { getVenues, generateFallbackExplanation };

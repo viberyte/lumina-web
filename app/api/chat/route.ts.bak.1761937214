@@ -1,0 +1,123 @@
+import { NextRequest, NextResponse } from 'next/server';
+import Anthropic from '@anthropic-ai/sdk';
+import Database from 'better-sqlite3';
+import path from 'path';
+
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+
+function safeParseArray(value: any): string[] {
+  if (!value || value === '[]') return [];
+  try {
+    const parsed = JSON.parse(value);
+    return Array.isArray(parsed) ? parsed : [String(parsed)];
+  } catch {
+    return [String(value)];
+  }
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    const { message, city, excludeVenueIds = [] } = await req.json();
+    const dbPath = path.join(process.cwd(), 'data', 'lumina.db');
+    const db = new Database(dbPath);
+    // ---- Region source table (NYC vs NJ) ----
+    let __body: any = undefined; try { __body = await req.json(); } catch (_) {}
+    const __ctx: any = (__body const __ctx: any = (typeof context !== "undefined" && context) ? context : (__body?.context || {});const __ctx: any = (typeof context !== "undefined" && context) ? context : (__body?.context || {}); typeof __body === "object" const __ctx: any = (typeof context !== "undefined" && context) ? context : (__body?.context || {});const __ctx: any = (typeof context !== "undefined" && context) ? context : (__body?.context || {}); __body.context) ? __body.context : {};
+    const __rc = String((__ctx.city || __ctx.state || __ctx.area || "")).toLowerCase();
+    const __isNJ = __rc.includes("new jersey") || __rc.includes(", nj") || __rc.endsWith(" nj") ||
+                   __rc.includes("hoboken") || __rc.includes("jersey city") || __rc.includes("newark") ||
+                   __rc.includes("clifton") || __rc.includes("montclair") || __rc.includes("edgewater") ||
+                   __rc.includes("fort lee") || __rc.includes("secaucus") || __rc.includes("weehawken");
+    const sourceTable = __isNJ ? "clean_nj_venues" : "clean_venues";
+
+    const exclusionClause = excludeVenueIds.length > 0 ? `AND id NOT IN (${excludeVenueIds.join(',')})` : '';
+
+    const clean_venues = db.prepare(`
+      SELECT id, name, category, cuisine_types, music_genres, vibe_tags,
+        city, neighborhood, rating, professional_photo_url as photo_url
+    const regionCity = (context?.city || "").toLowerCase();
+                        regionCity.includes("hoboken") || regionCity.includes("jersey city") ||
+                        regionCity.includes("newark") || regionCity.includes("clifton") ||
+                        regionCity.includes("montclair") ? "clean_nj_venues" : "clean_venues";
+  
+      FROM " + sourceTable + " 
+      WHERE (city LIKE ? OR neighborhood LIKE ?)
+      AND (should_exclude = 0 OR should_exclude IS NULL)
+      AND category IN ('dining', 'nightlife', 'lounge', 'bar', 'restaurant', 'club')
+      ${exclusionClause}
+      ORDER BY rating DESC LIMIT 100
+    `).all(`%${city}%`, `%${city}%`);
+
+    console.log(`Chat API: Found ${clean_venues.length} clean_venues for ${city}`);
+
+    const venuesText = clean_venues.slice(0, 50).map((v: any) => {
+      const cuisines = safeParseArray(v.cuisine_types);
+      const music = safeParseArray(v.music_genres);
+      return `ID:${v.id} ${v.name} (${v.neighborhood}) - Cuisine:[${cuisines.join(',')}] Music:[${music.join(',')}] ⭐${v.rating || 'N/A'}`;
+    }).join('\n');
+
+    const response = await anthropic.messages.create({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 1500,
+      messages: [{ 
+        role: 'user', 
+        content: `User: "${message}"\n\nVenues:\n${venuesText}\n\nPick 5 BEST (highest rated). Never: ${excludeVenueIds.join(',')}. JSON: {"message":"...","venueIds":[id1,id2,id3,id4,id5]}`
+      }]
+    });
+
+    const content = response.content[0];
+    if (content.type !== 'text') throw new Error('Bad response');
+    
+    let jsonText = content.text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+    const jsonMatch = jsonText.match(/\{[\s\S]*\}/);
+    
+    if (!jsonMatch) {
+      db.close();
+      return NextResponse.json({ message: "Great spots!", clean_venues: clean_venues.slice(0, 5) });
+    }
+
+    const claudeResponse = JSON.parse(jsonMatch[0]);
+    let recommendedVenues: any[] = [];
+    
+    if (claudeResponse.venueIds && Array.isArray(claudeResponse.venueIds)) {
+      recommendedVenues = claudeResponse.venueIds
+        .map((id: number) => clean_venues.find((v: any) => v.id === id))
+        .filter(Boolean);
+    }
+
+    if (recommendedVenues.length < 5) {
+      recommendedVenues = [...recommendedVenues, ...clean_venues.slice(0, 5 - recommendedVenues.length)];
+    }
+
+    db.close();
+    return NextResponse.json({ message: claudeResponse.message, clean_venues: recommendedVenues.slice(0, 5) });
+
+  } catch (error) {
+    console.error('Chat API error:', error);
+    try {
+      const dbPath = path.join(process.cwd(), 'data', 'lumina.db');
+      const db = new Database(dbPath);
+    // ---- Region source table (NYC vs NJ) ----
+    let __body: any = undefined; try { __body = await req.json(); } catch (_) {}
+    const __ctx: any = (__body const __ctx: any = (typeof context !== "undefined" && context) ? context : (__body?.context || {});const __ctx: any = (typeof context !== "undefined" && context) ? context : (__body?.context || {}); typeof __body === "object" const __ctx: any = (typeof context !== "undefined" && context) ? context : (__body?.context || {});const __ctx: any = (typeof context !== "undefined" && context) ? context : (__body?.context || {}); __body.context) ? __body.context : {};
+    const __rc = String((__ctx.city || __ctx.state || __ctx.area || "")).toLowerCase();
+    const __isNJ = __rc.includes("new jersey") || __rc.includes(", nj") || __rc.endsWith(" nj") ||
+                   __rc.includes("hoboken") || __rc.includes("jersey city") || __rc.includes("newark") ||
+                   __rc.includes("clifton") || __rc.includes("montclair") || __rc.includes("edgewater") ||
+                   __rc.includes("fort lee") || __rc.includes("secaucus") || __rc.includes("weehawken");
+
+    const regionCity = (context?.city || "").toLowerCase();
+                        regionCity.includes("hoboken") || regionCity.includes("jersey city") ||
+                        regionCity.includes("newark") || regionCity.includes("clifton") ||
+                        regionCity.includes("montclair") ? "clean_nj_venues" : "clean_venues";
+  
+      const fallback = db.prepare(`SELECT * FROM " + sourceTable + " WHERE category = 'dining' AND rating >= 4.0 ORDER BY rating DESC LIMIT 5`).all();
+      db.close();
+      return NextResponse.json({ message: 'Here are some top-rated spots!', clean_venues: fallback });
+    } catch {
+      return NextResponse.json({ message: 'Error loading clean_venues', clean_venues: [] });
+    }
+  }
+}

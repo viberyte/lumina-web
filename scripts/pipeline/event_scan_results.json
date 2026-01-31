@@ -1,0 +1,178 @@
+[
+  {
+    "venue": "Pura Vida Miami - Williamsburg Kent Ave",
+    "website": "https://www.puravidamiami.com/",
+    "hasEvents": false
+  },
+  {
+    "venue": "Overstory",
+    "website": "https://www.overstory-nyc.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://www.overstory-nyc.com/#events"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "The Argyle",
+    "website": "https://www.marketterestaurant.com/theargyle/",
+    "hasEvents": false
+  },
+  {
+    "venue": "Watermark",
+    "website": "https://watermarkny.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://www.watermarkny.com/Private-Corporate-Events/",
+      "https://www.watermarkny.com/Private-Corporate-Events/"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "Sub-Mission",
+    "website": "https://www.sub-mission.nyc/",
+    "hasEvents": false
+  },
+  {
+    "venue": "Paradise Club",
+    "website": "http://www.theparadiseclubnyc.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://www.eventbrite.com/e/paradise-club-presents-nude-noirs-midnight-feast-tickets-1666111116199?aff=PARADISECLUBWEBSITE",
+      "https://www.theparadiseclubnyc.com/private-events",
+      "https://www.theparadiseclubnyc.com/private-events"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "The Gatehouses",
+    "website": "https://www.kingscountydistillery.com/the-gatehouses",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://www.kingscountydistillery.com/pages/event-form",
+      "https://www.kingscountydistillery.com/pages/wedding-event-form",
+      "https://www.kingscountydistillery.com/pages/event-form"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "stagestarbackstage",
+    "website": "https://thebackstagenyc.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://www.thebackstagenyc.com/events",
+      "https://www.thebackstagenyc.com/events",
+      "https://www.thebackstagenyc.com/events"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "Baby Grand",
+    "website": "http://www.babygrandnyc.com/",
+    "hasEvents": false
+  },
+  {
+    "venue": "Bar Calico",
+    "website": "https://barcaliconyc.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://barcaliconyc.com/private-events",
+      "https://barcaliconyc.com/upcoming-events",
+      "https://barcaliconyc.com/private-events"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "Euphoria Brunch",
+    "website": "https://www.cafeeuphoria.org/",
+    "hasEvents": true,
+    "eventLinks": [],
+    "needsCustomScraper": true
+  },
+  {
+    "venue": "Lagos NYC",
+    "website": "https://www.lagosnyc.com/",
+    "hasEvents": false
+  },
+  {
+    "venue": "Golfzon Social",
+    "website": "https://golfzonsocial.com/locations/brooklyn/?utm_source=extnet&utm_medium=yext",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://golfzonsocial.com/events/",
+      "https://golfzonsocial.com/events/#event-inquiry",
+      "https://golfzonsocial.com/events/#packages"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "Chica and the Don",
+    "website": "https://www.chicadon.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://www.chicadon.com/events",
+      "https://www.chicadon.com/events",
+      "https://www.chicadon.com/events"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "2 Floors NYC Nightclub",
+    "website": "https://www.thedelancey.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://www.thedelancey.com/events",
+      "https://my.matterport.com/show/?m=6wxhLsuSUXX",
+      "https://www.thedelancey.com/events"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "Fleur Room",
+    "website": "https://moxychelsea.com/the-fleur-room/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://moxychelsea.com/meetings-and-events/",
+      "https://moxychelsea.com/calendar/",
+      "https://www.sevenrooms.com/events/thefleurroomny/booking-widget"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "Mercury Lounge",
+    "website": "http://www.mercuryeastpresents.com/mercurylounge",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://mercuryeastpresents.com/private-events/",
+      "https://mercuryeastpresents.com/calendar-mr",
+      "https://mercuryeastpresents.com/tm-event/modern-alibi/"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "The Acoustik Garden Lounge",
+    "website": "https://acoustikgardenlounge.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://acoustikgardenlounge.com/events",
+      "https://afrojamevents.eventbrite.com/",
+      "https://amapianonycparty.eventbrite.com/"
+    ],
+    "needsCustomScraper": false
+  },
+  {
+    "venue": "Mulberry St Cigars",
+    "website": "http://www.mulberrystcigars.com/",
+    "hasEvents": false
+  },
+  {
+    "venue": "kobanony",
+    "website": "https://kobanony.com/",
+    "hasEvents": true,
+    "eventLinks": [
+      "https://www.newsroomny.com/event-deck",
+      "https://media-cdn.getbento.com/accounts/76b6b09b073ff7acaeeffc630bdeb2c4/media/tXuxmhrkSTCkmMnYedTb_Lost%20in%20Paradise%20Event%20Deck%20-9.pdf"
+    ],
+    "needsCustomScraper": false
+  }
+]

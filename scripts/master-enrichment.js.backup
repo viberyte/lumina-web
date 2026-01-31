@@ -1,0 +1,482 @@
+import Database from 'better-sqlite3';
+import Anthropic from '@anthropic-ai/sdk';
+import OpenAI from 'openai';
+import axios from 'axios';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const CONFIG = {
+  GOOGLE_API_KEY: 'AIzaSyAjKkcKVNdChkwUYgQq3_IFbnUtyVMAeFI',
+  CLAUDE_API_KEY: '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',
+  OPENAI_API_KEY: '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',
+  OPENAI_MODEL: 'ft:gpt-4o-mini-2024-07-18:viberyte:lumina-nightlife-v1:Cl4g83K2',
+  ENHANCEMENT_VERSION: 'v2.0-master',
+  PHOTOS_PER_VENUE: 12,
+  BATCH_SIZE: 10,
+  PHOTO_DIR: '/opt/viberyte/lumina-web/public/venue-photos'
+};
+
+const db = new Database('/opt/viberyte/lumina-web/data/lumina.db');
+const anthropic = new Anthropic({ apiKey: CONFIG.CLAUDE_API_KEY });
+const openai = new OpenAI({ apiKey: CONFIG.OPENAI_API_KEY });
+
+if (!fs.existsSync(CONFIG.PHOTO_DIR)) {
+  fs.mkdirSync(CONFIG.PHOTO_DIR, { recursive: true });
+}
+
+function getVenuesToEnhance() {
+  console.log('🔍 Finding venues to enhance...\n');
+  
+  const venues = db.prepare(`
+    SELECT * FROM venues 
+    WHERE should_exclude = 0
+    AND (
+      last_enhanced IS NULL 
+      OR enhancement_version != ?
+      OR google_photos IS NULL
+      OR primary_vibes IS NULL
+    )
+    ORDER BY 
+      CASE WHEN city = 'New York' THEN 0 ELSE 1 END,
+      rating DESC,
+      raw_mentions_count DESC
+  `).all(CONFIG.ENHANCEMENT_VERSION);
+  
+  console.log(`✅ Found ${venues.length} venues needing enhancement`);
+  console.log(`   NYC venues: ${venues.filter(v => v.city === 'New York').length}`);
+  console.log(`   Other cities: ${venues.filter(v => v.city !== 'New York').length}\n`);
+  
+  return venues;
+}
+
+async function enrichWithGooglePlaces(venue) {
+  try {
+    console.log(`\n📍 Enriching: ${venue.name} (${venue.city})`);
+    
+    let placeId = venue.google_place_id;
+    
+    if (!placeId) {
+      const searchUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${encodeURIComponent(venue.name + ' ' + venue.address)}&inputtype=textquery&fields=place_id&key=${CONFIG.GOOGLE_API_KEY}`;
+      const searchResult = await axios.get(searchUrl);
+      
+      if (searchResult.data.candidates && searchResult.data.candidates.length > 0) {
+        placeId = searchResult.data.candidates[0].place_id;
+      } else {
+        console.log(`   ❌ Could not find on Google Places`);
+        return null;
+      }
+    }
+    
+    const detailsUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,price_level,formatted_phone_number,website,opening_hours,types,reviews,photos,editorial_summary,url&key=${CONFIG.GOOGLE_API_KEY}`;
+    
+    const response = await axios.get(detailsUrl);
+    const place = response.data.result;
+    
+    if (!place) {
+      console.log(`   ❌ No details found`);
+      return null;
+    }
+    
+    console.log(`   ✅ Rating: ${place.rating} (${place.user_ratings_total} reviews)`);
+    console.log(`   📋 Types: ${place.types?.slice(0, 3).join(', ')}`);
+    
+    if (shouldDeleteVenue(place, venue)) {
+      console.log(`   🗑️  DELETING: Not a nightlife venue`);
+      db.prepare('UPDATE venues SET should_exclude = 1, exclusion_reason = ? WHERE id = ?')
+        .run('Not nightlife venue', venue.id);
+      return { deleted: true };
+    }
+    
+    const photos = await downloadPhotos(place.photos, venue.id);
+    const menuUrl = await findMenuUrl(place.website);
+    
+    return {
+      google_place_id: placeId,
+      google_rating: place.rating,
+      google_review_count: place.user_ratings_total,
+      google_price_level: place.price_level,
+      phone: place.formatted_phone_number || venue.phone,
+      website: place.website || venue.website,
+      menu_url: menuUrl,
+      hours_json: JSON.stringify(place.opening_hours?.weekday_text || []),
+      place_types: JSON.stringify(place.types || []),
+      google_photos: JSON.stringify(photos),
+      reviews: place.reviews || []
+    };
+    
+  } catch (error) {
+    console.error(`   ❌ Error enriching ${venue.name}:`, error.message);
+    return null;
+  }
+}
+
+function shouldDeleteVenue(googlePlace, dbVenue) {
+  const rating = googlePlace.rating || 0;
+  const reviewCount = googlePlace.user_ratings_total || 0;
+  const name = dbVenue.name.toLowerCase();
+  const types = googlePlace.types || [];
+  
+  // ═══════════════════════════════════════════════════════════
+  // 🚫 EXCLUDE NON-NIGHTLIFE VENUES
+  // ═══════════════════════════════════════════════════════════
+  
+  const excludedTypes = [
+    'gym', 'school', 'doctor', 'hospital', 'dentist', 'pharmacy',
+    'spa', 'beauty_salon', 'hair_care', 'laundry', 'car_wash',
+    'gas_station', 'atm', 'bank', 'real_estate_agency', 'lawyer',
+    'insurance_agency', 'travel_agency', 'local_government_office',
+    'post_office', 'library', 'university', 'primary_school',
+    'secondary_school', 'parking', 'car_rental', 'car_repair',
+    'pet_store', 'veterinary_care', 'hardware_store', 'furniture_store',
+    'home_goods_store', 'electronics_store', 'clothing_store',
+    'shoe_store', 'jewelry_store', 'book_store', 'florist',
+    'department_store', 'supermarket', 'convenience_store',
+    'liquor_store', 'drugstore', 'movie_theater', 'bowling_alley',
+    'casino', 'amusement_park', 'aquarium', 'art_gallery', 'museum',
+    'tourist_attraction', 'stadium', 'church', 'mosque', 'synagogue',
+    'hindu_temple', 'storage', 'moving_company', 'locksmith',
+    'physiotherapist', 'accounting', 'electrician', 'plumber',
+    'roofing_contractor', 'painter'
+  ];
+  
+  // Check if venue type is excluded
+  if (types.some(type => excludedTypes.includes(type))) {
+    console.log(`   🚫 Excluded type detected: ${types.filter(t => excludedTypes.includes(t)).join(', ')}`);
+    return true;
+  }
+  
+  // ═══════════════════════════════════════════════════════════
+  // 🎓 DANCE STUDIOS & FITNESS CENTERS
+  // ═══════════════════════════════════════════════════════════
+  
+  const danceStudioKeywords = [
+    'dance studio', 'dance school', 'dance class', 'dance lesson',
+    'ballet', 'ballroom dance', 'salsa class', 'arthur murray',
+    'fred astaire', 'dance instruction', 'yoga studio', 'pilates',
+    'fitness center', 'crossfit', 'martial arts', 'karate', 'taekwondo'
+  ];
+  
+  if (danceStudioKeywords.some(keyword => name.includes(keyword))) {
+    console.log(`   🚫 Dance studio/fitness center: ${dbVenue.name}`);
+    return true;
+  }
+  
+  // ═══════════════════════════════════════════════════════════
+  // 🍔 FRANCHISE DETECTION
+  // ═══════════════════════════════════════════════════════════
+  
+  const franchises = [
+    'mcdonalds', 'chipotle', 'sweetgreen', 'cava', 'shake shack',
+    'panera', 'starbucks', 'subway', 'dunkin', 'pizza hut',
+    'dominos', 'papa johns', 'kfc', 'popeyes', 'chick-fil-a',
+    'taco bell', 'wendys', 'burger king', 'arbys', 'five guys',
+    'ihop', 'dennys', 'applebees', 'chilis', 'olive garden',
+    'red lobster', 'outback', 'pf changs', 'cheesecake factory',
+    'buffalo wild wings', 'hooters', 'fridays', 'red robin'
+  ];
+  
+  if (franchises.some(chain => name.includes(chain))) {
+    console.log(`   🚫 Franchise detected: ${dbVenue.name}`);
+    return true;
+  }
+  
+  // ═══════════════════════════════════════════════════════════
+  // ⭐ QUALITY FILTER
+  // ═══════════════════════════════════════════════════════════
+  
+  // Delete if: Low rating AND low engagement
+  if (rating < 3.2 && reviewCount < 500) {
+    console.log(`   🚫 Low quality: ${rating}⭐ with ${reviewCount} reviews`);
+    return true;
+  }
+  
+  // Keep if: High engagement (even if polarizing)
+  if (reviewCount > 1000) {
+    console.log(`   ✅ High engagement: Keeping despite ${rating}⭐`);
+    return false;
+  }
+  
+  // Keep premium spots (even with few reviews)
+  if (rating >= 4.0) {
+    return false;
+  }
+  
+  return false;
+}
+
+async function downloadPhotos(photos, venueId) {
+  if (!photos || photos.length === 0) return [];
+  
+  const downloadedPhotos = [];
+  const photosToDownload = photos.slice(0, CONFIG.PHOTOS_PER_VENUE);
+  
+  console.log(`   📸 Downloading ${photosToDownload.length} photos...`);
+  
+  for (let i = 0; i < photosToDownload.length; i++) {
+    try {
+      const photo = photosToDownload[i];
+      const photoUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=${photo.photo_reference}&key=${CONFIG.GOOGLE_API_KEY}`;
+      
+      const response = await axios.get(photoUrl, { responseType: 'arraybuffer' });
+      const filename = `venue-${venueId}-${i + 1}.jpg`;
+      const filepath = path.join(CONFIG.PHOTO_DIR, filename);
+      
+      fs.writeFileSync(filepath, response.data);
+      downloadedPhotos.push(`/venue-photos/${filename}`);
+      
+    } catch (error) {
+      console.error(`   ❌ Failed to download photo ${i + 1}`);
+    }
+  }
+  
+  console.log(`   ✅ Downloaded ${downloadedPhotos.length} photos`);
+  return downloadedPhotos;
+}
+
+async function findMenuUrl(website) {
+  if (!website) return null;
+  
+  try {
+    const menuPaths = ['/menu', '/menus', '/food-menu', '/drink-menu'];
+    
+    for (const path of menuPaths) {
+      const menuUrl = website.replace(/\/$/, '') + path;
+      try {
+        const response = await axios.head(menuUrl, { timeout: 3000 });
+        if (response.status === 200) {
+          return menuUrl;
+        }
+      } catch (e) {
+        continue;
+      }
+    }
+    
+    return website;
+  } catch (error) {
+    return website;
+  }
+}
+
+async function analyzeWithClaude(venue, reviews) {
+  try {
+    console.log(`   🤖 Claude analyzing reviews...`);
+    
+    const reviewText = reviews.slice(0, 5).map(r => r.text).join('\n\n');
+    
+    const prompt = `Analyze these Google reviews for "${venue.name}" and extract:
+
+REVIEWS:
+${reviewText}
+
+Extract the following in JSON format:
+
+{
+  "music_genres": ["afrobeats", "hip-hop", "r&b", "house", "latin", "reggaeton", "amapiano"],
+  "primary_vibes": ["upscale", "trendy", "romantic", "lively"],
+  "secondary_vibes": ["date-friendly", "instagram-worthy", "mixy", "pregame-spot"],
+  "energy_level": "calm|moderate|lively|high",
+  "favorites": ["best pasta in the city", "amazing cocktails", "must-try: spicy rigatoni"],
+  "lounge_type": "upscale-lounge|casual-lounge|hookah-lounge|rooftop-lounge|null",
+  "first_date_suitable": true/false,
+  "anniversary_suitable": true/false,
+  "girls_night_suitable": true/false,
+  "pregame_spot": true/false,
+  "late_night_spot": true/false
+}
+
+Focus on:
+- What music is mentioned? (DJs, genres, vibes)
+- What do people love? (signature dishes, drinks)
+- What's the energy? (chill, lively, high-energy, mixy)
+- Who comes here? (dates, groups, solo, celebrations)
+
+Return ONLY valid JSON.`;
+
+    const message = await anthropic.messages.create({
+      model: 'claude-3-5-sonnet-20241022',
+      max_tokens: 1500,
+      messages: [{
+        role: 'user',
+        content: prompt
+      }]
+    });
+    
+    const analysis = JSON.parse(message.content[0].text);
+    console.log(`   ✅ Claude analysis complete`);
+    
+    return analysis;
+    
+  } catch (error) {
+    console.error(`   ❌ Claude error:`, error.message);
+    return null;
+  }
+}
+
+async function classifyWithOpenAI(venue, googleData) {
+  try {
+    console.log(`   🎯 OpenAI fine-tuned classification...`);
+    
+    const completion = await openai.chat.completions.create({
+      model: CONFIG.OPENAI_MODEL,
+      messages: [{
+        role: 'user',
+        content: `Classify this venue:
+        
+Name: ${venue.name}
+Category: ${venue.category}
+Description: ${venue.description || 'N/A'}
+Rating: ${googleData.google_rating}
+Types: ${googleData.place_types}
+
+Return cuisine classification and context tags.`
+      }],
+      max_tokens: 500
+    });
+    
+    console.log(`   ✅ OpenAI classification complete`);
+    return completion.choices[0].message.content;
+    
+  } catch (error) {
+    console.error(`   ❌ OpenAI error:`, error.message);
+    return null;
+  }
+}
+
+function updateVenue(venueId, googleData, claudeAnalysis, openaiData) {
+  try {
+    const updateStmt = db.prepare(`
+      UPDATE venues SET
+        google_place_id = ?,
+        google_rating = ?,
+        phone = ?,
+        website = ?,
+        menu_url = ?,
+        hours_json = ?,
+        place_types = ?,
+        google_photos = ?,
+        google_price_level = ?,
+        primary_vibes = ?,
+        secondary_vibes = ?,
+        energy_level = ?,
+        music_genres_normalized = ?,
+        signature_items = ?,
+        lounge_type = ?,
+        first_date_suitable = ?,
+        anniversary_suitable = ?,
+        girls_night_suitable = ?,
+        pregame_spot = ?,
+        late_night_spot = ?,
+        last_enhanced = datetime('now'),
+        enhancement_version = ?
+      WHERE id = ?
+    `);
+    
+    updateStmt.run(
+      googleData.google_place_id,
+      googleData.google_rating,
+      googleData.phone,
+      googleData.website,
+      googleData.menu_url,
+      googleData.hours_json,
+      googleData.place_types,
+      googleData.google_photos,
+      googleData.google_price_level,
+      JSON.stringify(claudeAnalysis?.primary_vibes || []),
+      JSON.stringify(claudeAnalysis?.secondary_vibes || []),
+      claudeAnalysis?.energy_level || 'moderate',
+      JSON.stringify(claudeAnalysis?.music_genres || []),
+      JSON.stringify(claudeAnalysis?.favorites || []),
+      claudeAnalysis?.lounge_type,
+      claudeAnalysis?.first_date_suitable ? 1 : 0,
+      claudeAnalysis?.anniversary_suitable ? 1 : 0,
+      claudeAnalysis?.girls_night_suitable ? 1 : 0,
+      claudeAnalysis?.pregame_spot ? 1 : 0,
+      claudeAnalysis?.late_night_spot ? 1 : 0,
+      CONFIG.ENHANCEMENT_VERSION,
+      venueId
+    );
+    
+    console.log(`   ✅ Database updated\n`);
+    
+  } catch (error) {
+    console.error(`   ❌ Database error:`, error.message);
+  }
+}
+
+async function main() {
+  console.log(`
+╔═══════════════════════════════════════════════════════════╗
+║  🎯 LUMINA MASTER ENRICHMENT PIPELINE v2.0               ║
+║  Powered by: Google Places + OpenAI Fine-tuned Model     ║
+╚═══════════════════════════════════════════════════════════╝
+`);
+  
+  const venues = getVenuesToEnhance();
+  
+  if (venues.length === 0) {
+    console.log('✅ All venues already enhanced!');
+    return;
+  }
+  
+  let processed = 0;
+  let enhanced = 0;
+  let deleted = 0;
+  let failed = 0;
+  
+  for (let i = 0; i < venues.length; i++) {
+    const venue = venues[i];
+    processed++;
+    
+    console.log(`\n[${processed}/${venues.length}] Processing: ${venue.name}`);
+    
+    try {
+      const googleData = await enrichWithGooglePlaces(venue);
+      
+      if (!googleData) {
+        failed++;
+        continue;
+      }
+      
+      if (googleData.deleted) {
+        deleted++;
+        continue;
+      }
+      
+      const claudeAnalysis = googleData.reviews.length > 0 
+        ? await analyzeWithClaude(venue, googleData.reviews)
+        : null;
+      
+      const openaiData = await classifyWithOpenAI(venue, googleData);
+      
+      updateVenue(venue.id, googleData, claudeAnalysis, openaiData);
+      
+      enhanced++;
+      
+      if (i % CONFIG.BATCH_SIZE === 0 && i > 0) {
+        console.log(`\n⏸️  Batch complete. Waiting 5 seconds...\n`);
+        await new Promise(resolve => setTimeout(resolve, 5000));
+      }
+      
+    } catch (error) {
+      console.error(`❌ Failed to process ${venue.name}:`, error.message);
+      failed++;
+    }
+  }
+  
+  console.log(`
+╔═══════════════════════════════════════════════════════════╗
+║  ✅ ENRICHMENT COMPLETE                                   ║
+╠═══════════════════════════════════════════════════════════╣
+║  Processed: ${processed.toString().padEnd(43)} ║
+║  Enhanced:  ${enhanced.toString().padEnd(43)} ║
+║  Deleted:   ${deleted.toString().padEnd(43)} ║
+║  Failed:    ${failed.toString().padEnd(43)} ║
+╚═══════════════════════════════════════════════════════════╝
+`);
+}
+
+main().catch(console.error);

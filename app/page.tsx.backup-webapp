@@ -1,0 +1,713 @@
+'use client';
+import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import SplashScreen from '@/components/SplashScreen';
+import ModernCitySelector from '@/components/ModernCitySelector';
+import ExploreView from '@/components/ExploreView';
+import VenueModal from '@/components/VenueModal';
+import PreferenceSurvey from '@/components/PreferenceSurvey';
+import RecommendationsView from '@/components/RecommendationsView';
+import { Sparkles, MapPin, ChevronRight, User, Heart, Settings as SettingsIcon, LogOut, X, Edit2, Check, Music } from 'lucide-react';
+
+interface FlowContext {
+  who?: string;
+  when?: string;
+  planType?: string;
+  vibe?: string;
+  cuisine?: string;
+  afterDinner?: string;
+  musicPreference?: string;
+  timeOfDay?: string;
+  dayOfWeek?: string;
+  timestamp?: Date;
+}
+
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+  showButtons?: boolean;
+  buttonType?: string;
+  showConfirmation?: boolean;
+}
+
+export default function Home() {
+  const router = useRouter();
+  const [showSplash, setShowSplash] = useState(true);
+  const [city, setCity] = useState<string | null>(null);
+  const [state, setState] = useState<string | null>(null);
+  const [mode, setMode] = useState<'chat' | 'vibes' | 'menu'>('chat');
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [topPicks, setTopPicks] = useState<any[]>([]);
+  const [afterDinnerVenues, setAfterDinnerVenues] = useState<any[]>([]);
+  const [events, setEvents] = useState<any[]>([]);
+  const [selectedVenue, setSelectedVenue] = useState<any>(null);
+  const [conversationFlow, setConversationFlow] = useState<FlowContext>({});
+  const [showPreferenceSurvey, setShowPreferenceSurvey] = useState(false);
+  const [userPreferences, setUserPreferences] = useState<any>(null);
+  const [hasRefreshed, setHasRefreshed] = useState(false);
+  const [showRecommendations, setShowRecommendations] = useState(false);
+  
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const whoOptions = ['Just me', 'Date', 'Friends', 'Group'];
+  const whenOptions = ['Tonight', 'Tomorrow', 'This Weekend'];
+  const planTypeOptions = ['Just dinner', 'Dinner + drinks', 'Full night out'];
+  const vibeOptions = ['Dinner', 'Nightlife', 'Lounge', 'Something Unique'];
+  const cuisineOptions = ['Italian', 'Japanese', 'Soul Food', 'Caribbean', 'Mexican', 'Surprise Me'];
+  const afterDinnerOptions = ['Keep it light', 'Go to a lounge', 'Find a club', 'Check out events', 'Call it a night'];
+  const musicOptions = ['Hip-Hop', 'R&B', 'Afrobeats', 'Reggaeton', 'EDM / House', 'Open Format', "Doesn't Matter"];
+
+  useEffect(() => {
+    const savedPrefs = localStorage.getItem('lumina_preferences');
+    const hasUsedBefore = localStorage.getItem('lumina_has_used');
+    
+    if (savedPrefs) {
+      setUserPreferences(JSON.parse(savedPrefs));
+    }
+    
+    if (hasUsedBefore) {
+      setMessages([{
+        role: 'assistant',
+        content: `Welcome back! What vibe are we chasing tonight?`,
+        showButtons: true,
+        buttonType: 'who'
+      }]);
+    } else {
+      localStorage.setItem('lumina_has_used', 'true');
+      setMessages([{
+        role: 'assistant',
+        content: `Hey! I'm Lumina, your nightlife concierge. Who's joining you tonight?`,
+        showButtons: true,
+        buttonType: 'who'
+      }]);
+    }
+  }, []);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSplash(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const calculateTimeContext = (when: string) => {
+    const now = new Date();
+    let targetDate = new Date();
+    let timeOfDay = '';
+    let dayOfWeek = '';
+
+    if (when === 'Tonight') {
+      targetDate = now;
+      timeOfDay = 'evening';
+    } else if (when === 'Tomorrow') {
+      targetDate = new Date(now);
+      targetDate.setDate(targetDate.getDate() + 1);
+      timeOfDay = 'evening';
+    } else if (when === 'This Weekend') {
+      const daysUntilSaturday = (6 - now.getDay() + 7) % 7 || 7;
+      targetDate = new Date(now);
+      targetDate.setDate(targetDate.getDate() + daysUntilSaturday);
+      timeOfDay = 'night';
+    }
+
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    dayOfWeek = days[targetDate.getDay()];
+
+    return { timeOfDay, dayOfWeek, timestamp: targetDate };
+  };
+
+  const buildConfirmationSummary = (flow: FlowContext): string => {
+    const parts: string[] = [];
+    
+    parts.push("So just to confirm:");
+    
+    if (flow.who) {
+      const whoText = flow.who === 'Just me' ? "you're going **solo**" :
+                      flow.who === 'Date' ? "it's a **date night**" :
+                      flow.who === 'Friends' ? "you're going with **friends**" : "you're going with a **group**";
+      parts.push(whoText);
+    }
+    
+    if (flow.dayOfWeek && flow.timeOfDay) {
+      parts.push(`on **${flow.dayOfWeek} ${flow.timeOfDay}**`);
+    }
+    
+    if (flow.planType) {
+      const planText = flow.planType === 'Just dinner' ? "for **just dinner**" :
+                       flow.planType === 'Dinner + drinks' ? "for **dinner and drinks**" :
+                       "for a **full night out**";
+      parts.push(planText);
+    }
+    
+    if (flow.vibe === 'Dinner' && flow.cuisine) {
+      parts.push(`looking for **${flow.cuisine}** food`);
+    } else if (flow.vibe) {
+      parts.push(`with a **${flow.vibe.toLowerCase()}** vibe`);
+    }
+
+    if (flow.afterDinner && flow.afterDinner !== 'Call it a night') {
+      parts.push(`then **${flow.afterDinner.toLowerCase()}**`);
+    }
+
+    if (flow.musicPreference) {
+      parts.push(`with **${flow.musicPreference}** vibes`);
+    }
+    
+    if (city) {
+      parts.push(`in **${city}**`);
+    }
+    
+    return parts.join(', ') + '. Sound good?';
+  };
+
+  const generateRecommendations = async (flow: FlowContext) => {
+    setLoading(true);
+    try {
+      const response = await fetch('/api/lumina', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          city, 
+          flow: {
+            ...flow,
+            timeOfDay: flow.timeOfDay,
+            dayOfWeek: flow.dayOfWeek
+          }, 
+          preferences: userPreferences 
+        })
+      });
+      const data = await response.json();
+      
+      setTopPicks(data.topPicks || []);
+      setAfterDinnerVenues(data.afterDinner || []);
+      setEvents(data.events || []);
+      
+      setShowRecommendations(true);
+      
+    } catch (error) {
+      console.error('Error fetching recommendations:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const refreshVenues = async () => {
+    setHasRefreshed(true);
+    setLoading(true);
+    try {
+      const response = await fetch('/api/lumina', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          city, 
+          flow: {
+            ...conversationFlow,
+            timeOfDay: conversationFlow.timeOfDay,
+            dayOfWeek: conversationFlow.dayOfWeek
+          }, 
+          preferences: userPreferences, 
+          refresh: true 
+        })
+      });
+      const data = await response.json();
+      
+      setTopPicks(data.topPicks || []);
+      setAfterDinnerVenues(data.afterDinner || []);
+      setEvents(data.events || []);
+      
+    } catch (error) {
+      console.error('Error refreshing:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const send = async () => {
+    if (!input.trim()) return;
+    
+    setMessages(prev => [...prev, { role: 'user', content: input }]);
+    const userInput = input;
+    setInput('');
+    setLoading(true);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userInput, city, preferences: userPreferences })
+      });
+      const data = await response.json();
+      
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: data.response
+      }]);
+    } catch (error) {
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: 'Sorry, something went wrong!'
+      }]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleFlowSelection = (option: string, step: string) => {
+    setMessages(prev => [...prev, { role: 'user', content: option }]);
+    
+    if (step === 'who') {
+      setHasRefreshed(false);
+    }
+
+    let newFlow = { ...conversationFlow, [step]: option };
+    
+    if (step === 'when') {
+      const timeContext = calculateTimeContext(option);
+      newFlow = {
+        ...newFlow,
+        timeOfDay: timeContext.timeOfDay,
+        dayOfWeek: timeContext.dayOfWeek,
+        timestamp: timeContext.timestamp
+      };
+    }
+
+    if (step === 'musicPreference') {
+      const updatedPrefs = { ...userPreferences, musicPreference: option };
+      setUserPreferences(updatedPrefs);
+      localStorage.setItem('lumina_preferences', JSON.stringify(updatedPrefs));
+      
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: `Got it! I've saved ${option} to your profile. 🎵`
+      }]);
+    }
+    
+    setConversationFlow(newFlow);
+
+    let nextQuestion = '';
+    let nextButtonType = '';
+
+    if (step === 'who') {
+      nextQuestion = 'When are you planning this?';
+      nextButtonType = 'when';
+    } else if (step === 'when') {
+      nextQuestion = 'What kind of night are you thinking?';
+      nextButtonType = 'planType';
+    } else if (step === 'planType') {
+      nextQuestion = "What's the vibe?";
+      nextButtonType = 'vibe';
+    } else if (step === 'vibe') {
+      if (option === 'Dinner') {
+        nextQuestion = 'What kind of food?';
+        nextButtonType = 'cuisine';
+      } else {
+        const summary = buildConfirmationSummary(newFlow);
+        setMessages(prev => [
+          ...prev,
+          { role: 'assistant', content: summary, showConfirmation: true }
+        ]);
+        return;
+      }
+    } else if (step === 'cuisine') {
+      nextQuestion = 'What do you want to do after dinner?';
+      nextButtonType = 'afterDinner';
+    } else if (step === 'afterDinner') {
+      if (option === 'Call it a night') {
+        const summary = buildConfirmationSummary(newFlow);
+        setMessages(prev => [
+          ...prev,
+          { role: 'assistant', content: summary, showConfirmation: true }
+        ]);
+        return;
+      } else {
+        nextQuestion = 'What music do you prefer?';
+        nextButtonType = 'musicPreference';
+      }
+    } else if (step === 'musicPreference') {
+      const summary = buildConfirmationSummary(newFlow);
+      setTimeout(() => {
+        setMessages(prev => [
+          ...prev,
+          { role: 'assistant', content: summary, showConfirmation: true }
+        ]);
+      }, 500);
+      return;
+    }
+
+    if (nextButtonType) {
+      setMessages(prev => [
+        ...prev,
+        { role: 'assistant', content: nextQuestion, showButtons: true, buttonType: nextButtonType }
+      ]);
+    }
+  };
+
+  const handleConfirmation = (confirmed: boolean) => {
+    if (confirmed) {
+      setMessages(prev => [...prev, { role: 'user', content: "Yes, that's right!" }]);
+      generateRecommendations(conversationFlow);
+    } else {
+      setMessages(prev => [...prev, { role: 'user', content: "Let me change something" }]);
+      setConversationFlow({});
+      setHasRefreshed(false);
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: "No problem! Let's start fresh. Who's joining you?",
+        showButtons: true,
+        buttonType: 'who'
+      }]);
+    }
+  };
+
+  const handlePlanFromExplore = (venue: any) => {
+    setSelectedVenue(venue);
+    setMode('chat');
+    setMessages(prev => [
+      ...prev,
+      {
+        role: 'assistant',
+        content: `Great pick — "${venue.name}" has an amazing vibe! Want me to build a full night around this spot?`,
+        showButtons: true,
+        buttonType: 'planNight'
+      }
+    ]);
+  };
+
+  const handlePreferencesComplete = (preferences: any) => {
+    setUserPreferences(preferences);
+    setShowPreferenceSurvey(false);
+    localStorage.setItem('lumina_preferences', JSON.stringify(preferences));
+  };
+
+  const handleCitySelect = (selectedCity: string, selectedState: string) => {
+    setCity(selectedCity);
+    setState(selectedState);
+  };
+  
+  const handleTouchStart = (e: React.TouchEvent) => {
+    // Disable swipes when recommendations view is open
+    if (showRecommendations) return;
+    
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (showRecommendations) return;
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (showRecommendations) return;
+    
+    const swipeThreshold = 160; // Increased from 100
+    const diff = touchStartX.current - touchEndX.current;
+    const distance = Math.abs(diff);
+
+    if (distance < swipeThreshold) {
+      touchStartX.current = 0;
+      touchEndX.current = 0;
+      return;
+    }
+
+    if (mode === "chat") {
+      if (diff < -swipeThreshold) {
+        setMode("menu");
+      } else if (diff > swipeThreshold) {
+        setMode("vibes");
+      }
+    } else if (mode === "vibes") {
+      if (diff < -swipeThreshold) {
+        setMode("chat");
+      }
+    } else if (mode === "menu") {
+      if (diff > swipeThreshold) {
+        setMode("chat");
+      }
+    }
+
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
+  if (showSplash) return <SplashScreen />;
+  if (!city) return <ModernCitySelector onSelectLocation={handleCitySelect} />;
+    
+  if (mode === 'vibes') return (
+    <motion.div
+      initial={{ x: '100%', opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: '100%', opacity: 0 }}
+      transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+      className="min-h-screen"
+    >
+      <ExploreView city={city} onBack={() => setMode('chat')} onFlowExperience={handlePlanFromExplore} />
+    </motion.div>
+  );
+  
+  if (mode === 'menu') {
+    return (
+      <motion.div 
+        initial={{ x: '-100%', opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: '-100%', opacity: 0 }}
+        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        className="min-h-screen bg-black" 
+        onTouchStart={handleTouchStart} 
+        onTouchMove={handleTouchMove} 
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="px-8 pt-8 pb-6 border-b border-zinc-900">
+          <div className="flex items-center gap-3 text-zinc-500 mb-2">
+            <MapPin className="w-4 h-4" />
+            <span className="text-sm font-light">{city}</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <h1 className="text-3xl font-light text-white">Menu</h1>
+            <button onClick={() => setMode('chat')} className="p-2 hover:bg-zinc-900 rounded-full transition-all">
+              <X className="w-5 h-5 text-white" />
+            </button>
+          </div>
+        </div>
+
+        <div className="px-6 space-y-2 mt-8">
+          <button onClick={() => router.push('/profile')} className="w-full p-5 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-2xl flex items-center justify-between transition-all">
+            <div className="flex items-center gap-4">
+              <User className="w-5 h-5 text-zinc-400" />
+              <span className="text-white font-light text-lg">Profile</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-zinc-600" />
+          </button>
+
+          <button className="w-full p-5 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-2xl flex items-center justify-between transition-all">
+            <div className="flex items-center gap-4">
+              <Heart className="w-5 h-5 text-zinc-400" />
+              <span className="text-white font-light text-lg">Saved</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-zinc-600" />
+          </button>
+
+          <button onClick={() => router.push('/settings')} className="w-full p-5 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-2xl flex items-center justify-between transition-all">
+            <div className="flex items-center gap-4">
+              <SettingsIcon className="w-5 h-5 text-zinc-400" />
+              <span className="text-white font-light text-lg">Settings</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-zinc-600" />
+          </button>
+
+          <button onClick={() => setShowPreferenceSurvey(true)} className="w-full p-5 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-2xl flex items-center justify-between transition-all">
+            <div className="flex items-center gap-4">
+              <Sparkles className="w-5 h-5 text-zinc-400" />
+              <span className="text-white font-light text-lg">Preferences</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-zinc-600" />
+          </button>
+        </div>
+
+        <div className="absolute bottom-8 left-6 right-6">
+          <button className="w-full p-5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05] hover:border-red-500/30 transition-all flex items-center justify-center gap-3 group">
+            <LogOut className="w-5 h-5 text-zinc-500 group-hover:text-red-400 transition-colors" />
+            <span className="text-zinc-400 group-hover:text-red-400 font-light transition-colors">Sign Out</span>
+          </button>
+        </div>
+
+        <div className="absolute bottom-24 left-0 right-0 text-center">
+          <p className="text-zinc-700 text-xs font-light">Lumina v2.1</p>
+        </div>
+      </motion.div>
+    );
+  }
+
+  return (
+    <div className="h-screen flex flex-col bg-black" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
+      
+      <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-zinc-900 px-6 py-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-xl font-light text-white">Lumina</h1>
+            <p className="text-xs text-zinc-600">{city}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button onClick={() => setMode('vibes')} className="px-4 py-2 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+              Explore
+            </button>
+            <button onClick={() => setMode('menu')} className="p-2 bg-zinc-900 border border-zinc-800 hover:border-zinc-700 rounded-xl transition-all">
+              <User className="w-5 h-5 text-white" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex-1 overflow-y-auto px-6 py-4">
+        <div className="max-w-4xl mx-auto space-y-4 pb-20">
+          
+          {messages.map((msg, idx) => (
+            <div key={idx}>
+              <div className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} mb-3`}>
+                <div className={`max-w-[80%] ${msg.role === 'user' ? 'bg-violet-600' : 'bg-white/[0.03] backdrop-blur-xl border border-white/10'} rounded-3xl px-5 py-3 shadow-2xl`}>
+                  {msg.role === 'assistant' && (
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
+                        <Sparkles className="w-3 h-3 text-white" />
+                      </div>
+                      <span className="text-xs text-zinc-500 font-light">Lumina</span>
+                    </div>
+                  )}
+                  <p className="text-white text-sm leading-relaxed font-light" dangerouslySetInnerHTML={{ __html: msg.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+                </div>
+              </div>
+
+              {msg.showConfirmation && (
+                <div className="flex gap-3 px-4 mb-4">
+                  <button 
+                    onClick={() => handleConfirmation(true)} 
+                    className="flex-1 px-6 py-3 bg-violet-600 hover:bg-violet-500 rounded-2xl text-white font-medium transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <Check className="w-5 h-5" />
+                    Yes, that's right!
+                  </button>
+                  <button 
+                    onClick={() => handleConfirmation(false)} 
+                    className="px-6 py-3 bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-violet-500/50 rounded-2xl text-white font-light transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <Edit2 className="w-4 h-4" />
+                    Edit
+                  </button>
+                </div>
+              )}
+
+              {msg.showButtons && (
+                <div className={`flex flex-wrap gap-2 px-4 mb-4 ${msg.buttonType === 'who' ? 'grid grid-cols-2' : ''}`}>
+                  {msg.buttonType === 'who' && whoOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'who')} className="group relative overflow-hidden bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-violet-500/50 rounded-2xl p-4 transition-all duration-300">
+                      <div className="absolute inset-0 bg-gradient-to-r from-violet-600/0 via-violet-600/5 to-violet-600/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <span className="relative text-white font-light">{option}</span>
+                    </button>
+                  ))}
+
+                  {msg.buttonType === 'when' && whenOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'when')} className="px-5 py-2.5 bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-violet-500/50 rounded-full text-white text-sm font-light transition-all duration-300">
+                      {option}
+                    </button>
+                  ))}
+
+                  {msg.buttonType === 'planType' && planTypeOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'planType')} className="px-5 py-2.5 bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-violet-500/50 rounded-full text-white text-sm font-light transition-all duration-300">
+                      {option}
+                    </button>
+                  ))}
+
+                  {msg.buttonType === 'vibe' && vibeOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'vibe')} className="px-5 py-2.5 bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-violet-500/50 rounded-full text-white text-sm font-light transition-all duration-300">
+                      {option}
+                    </button>
+                  ))}
+
+                  {msg.buttonType === 'cuisine' && cuisineOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'cuisine')} className="px-5 py-2.5 bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-violet-500/50 rounded-full text-white text-sm font-light transition-all duration-300">
+                      {option}
+                    </button>
+                  ))}
+
+                  {msg.buttonType === 'afterDinner' && afterDinnerOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'afterDinner')} className="px-5 py-2.5 bg-white/[0.05] hover:bg-white/[0.08] backdrop-blur-xl border border-white/10 hover:border-violet-500/50 rounded-full text-white text-sm font-light transition-all duration-300">
+                      {option}
+                    </button>
+                  ))}
+
+                  {msg.buttonType === 'musicPreference' && musicOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'musicPreference')} className="group relative overflow-hidden px-5 py-2.5 bg-gradient-to-r from-violet-600/10 to-fuchsia-600/10 hover:from-violet-600/20 hover:to-fuchsia-600/20 backdrop-blur-xl border border-violet-500/30 hover:border-violet-500/50 rounded-full text-white text-sm font-light transition-all duration-300 flex items-center gap-2">
+                      <Music className="w-4 h-4" />
+                      {option}
+                    </button>
+                  ))}
+
+                  {msg.buttonType === 'planNight' && (
+                    <button onClick={() => {
+                      const newFlow: FlowContext = { 
+                        who: conversationFlow.who || 'Friends',
+                        planType: 'Full night out',
+                        vibe: 'Nightlife',
+                        when: 'Tonight'
+                      };
+                      const timeContext = calculateTimeContext('Tonight');
+                      newFlow.timeOfDay = timeContext.timeOfDay;
+                      newFlow.dayOfWeek = timeContext.dayOfWeek;
+                      newFlow.timestamp = timeContext.timestamp;
+                      setConversationFlow(newFlow);
+                      generateRecommendations(newFlow);
+                    }} className="px-5 py-2.5 bg-violet-600 hover:bg-violet-500 rounded-full text-white text-sm font-light transition-all duration-300">
+                      Yes, build my night!
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
+          ))}
+          
+          {loading && (
+            <div className="flex justify-start">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl px-4 py-3">
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 bg-violet-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                  <div className="w-2 h-2 bg-violet-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                  <div className="w-2 h-2 bg-violet-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div ref={messagesEndRef} />
+        </div>
+      </div>
+
+      <div className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-xl border-t border-zinc-900 p-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && send()}
+              placeholder="Ask Lumina anything..."
+              className="flex-1 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder:text-zinc-600 focus:outline-none focus:ring-1 focus:ring-violet-600"
+            />
+            <button onClick={() => send()} disabled={!input.trim() || loading} className="px-6 py-3 bg-white hover:bg-zinc-100 disabled:bg-zinc-800 disabled:text-zinc-600 text-black rounded-xl font-light transition-all">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <RecommendationsView
+        isOpen={showRecommendations}
+        onClose={() => setShowRecommendations(false)}
+        topPicks={topPicks}
+        afterDinnerVenues={afterDinnerVenues}
+        events={events}
+        flow={conversationFlow}
+        onRefresh={refreshVenues}
+        onVenueClick={setSelectedVenue}
+        hasRefreshed={hasRefreshed}
+        loading={loading}
+      />
+
+      {selectedVenue && (
+        <VenueModal venue={selectedVenue} isOpen={!!selectedVenue} onClose={() => setSelectedVenue(null)} />
+      )}
+
+      <PreferenceSurvey 
+        isOpen={showPreferenceSurvey}
+        onClose={() => setShowPreferenceSurvey(false)}
+        onComplete={handlePreferencesComplete}
+      />
+    </div>
+  );
+}

@@ -1,0 +1,13 @@
+    // Get venues in same neighborhood OR nearby
+    const allVenues: any[] = db.prepare(`
+      SELECT * FROM venues 
+      WHERE city = ? 
+      AND id != ?
+      AND should_exclude = 0
+      AND (rating >= 3.5 OR google_rating >= 3.5)
+      ORDER BY 
+        CASE WHEN neighborhood = ? THEN 0 ELSE 1 END,
+        google_rating DESC,
+        rating DESC
+      LIMIT 200
+    `).all(primaryVenue.city || 'New York', primaryVenueId, primaryVenue.neighborhood || '');

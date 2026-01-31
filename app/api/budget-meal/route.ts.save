@@ -1,0 +1,52 @@
+
+import { NextResponse } from 'next/server';
+import Database from 'better-sqlite3';
+import OpenAI from 'openai';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY || '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'
+});
+
+const dbPath = '/opt/viberyte/lumina-web/data/lumina.db';
+
+export async function POST(request: Request) {
+  try {
+    const { venueId, budget, partySize = 1, context = {} } = await request.json();
+    
+    if (!venueId || !budget) {
+      return NextResponse.json(
+        { error: 'Missing venueId or budget' },
+        { status: 400 }
+      );
+    }
+    
+    // Get venue and menu items
+    const db = new Database(dbPath);
+    const venue: any = db.prepare('SELECT * FROM venues WHERE id = ?').get(venueId);
+
+    
+    if (!venue) {
+      db.close();
+      return NextResponse.json({ error: 'Venue not found' }, { status: 404 });
+    }
+    
+    const items = db.prepare(`
+      SELECT * FROM menu_items 
+      WHERE venue_id = ?
+      ORDER BY category, price
+    `).all(venueId);
+    
+    db.close();
+    
+    if (!items || items.length === 0) {
+      return NextResponse.json({
+        error: 'no_menu',
+        message: `Menu not available yet for ${venue.name} 📋`
+      });
+    }
+    
+    // Group by category
+    const byCategory: any = {};
+    items.forEach((item: any) => {
+      const cat = item.category || 'other';
+      if (!byCategory[cat]) byCategory[cat] = [];

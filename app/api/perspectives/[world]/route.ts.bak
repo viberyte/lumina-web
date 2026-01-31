@@ -1,0 +1,210 @@
+import { NextRequest, NextResponse } from 'next/server';
+import Database from 'better-sqlite3';
+
+const dbPath = '/opt/viberyte/lumina-web/data/lumina.db';
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+interface WorldConfig {
+  key: string;
+  title: string;
+  tone: string;
+  gradient: [string, string];
+  cuisineMatchers: string[];
+  tagMatchers: string[];
+  subCuisines: { key: string; title: string; matchers: string[]; field?: string }[];
+  neighbors: string[];
+  allowedDials?: string[];
+}
+
+const WORLDS: Record<string, WorldConfig> = {
+  caribbean: { key: 'caribbean', title: 'Caribbean', tone: 'Bold flavors, music-forward dining', gradient: ['#1a1510', '#0d0a08'], cuisineMatchers: ['Caribbean', 'Jamaican', 'Haitian', 'Dominican', 'Trinidadian', 'Puerto Rican', 'Cuban'], tagMatchers: ['caribbean', 'jamaican', 'haitian', 'jerk', 'oxtail'], subCuisines: [{ key: 'jamaican', title: 'Jamaican Classics', matchers: ['jamaican', 'jerk'] }, { key: 'haitian', title: 'Haitian & Dominican', matchers: ['haitian', 'dominican'] }], neighbors: ['soul_food', 'latin'] },
+  mexican: { key: 'mexican', title: 'Mexican', tone: 'From taco counters to mezcal bars', gradient: ['#1a1008', '#0d0804'], cuisineMatchers: ['Mexican', 'Tex-Mex'], tagMatchers: ['mexican', 'taco', 'mezcal'], subCuisines: [], neighbors: ['latin', 'caribbean'] },
+  italian: { key: 'italian', title: 'Italian', tone: 'Pasta, wine, and the art of slowing down', gradient: ['#18100a', '#0a0805'], cuisineMatchers: ['Italian'], tagMatchers: ['italian', 'pasta', 'pizza'], subCuisines: [], neighbors: ['french', 'mediterranean'] },
+  japanese: { key: 'japanese', title: 'Japanese', tone: 'From quiet counters to neon-lit nights', gradient: ['#10121a', '#08080d'], cuisineMatchers: ['Japanese', 'Sushi', 'Ramen'], tagMatchers: ['japanese', 'sushi', 'ramen', 'omakase'], subCuisines: [], neighbors: ['korean', 'chinese'] },
+  mediterranean: { key: 'mediterranean', title: 'Mediterranean', tone: 'Fresh plates, shared tables', gradient: ['#0a1518', '#050a0c'], cuisineMatchers: ['Mediterranean', 'Greek', 'Lebanese', 'Turkish'], tagMatchers: ['mediterranean', 'greek', 'hummus'], subCuisines: [], neighbors: ['italian', 'french'] },
+  soul_food: { key: 'soul_food', title: 'Soul Food', tone: 'Food made with history and heart', gradient: ['#1a1510', '#0a0a08'], cuisineMatchers: ['Soul Food', 'Southern'], tagMatchers: ['soul food', 'southern', 'comfort'], subCuisines: [], neighbors: ['caribbean', 'american'] },
+  thai: { key: 'thai', title: 'Thai', tone: 'Bold flavor, comforting heat', gradient: ['#1a1208', '#0d0904'], cuisineMatchers: ['Thai'], tagMatchers: ['thai', 'pad thai', 'curry'], subCuisines: [], neighbors: ['vietnamese', 'chinese'] },
+  korean: { key: 'korean', title: 'Korean', tone: 'BBQ smoke and banchan spreads', gradient: ['#1a1015', '#0d080a'], cuisineMatchers: ['Korean', 'Korean BBQ'], tagMatchers: ['korean', 'bbq', 'kimchi'], subCuisines: [], neighbors: ['japanese', 'chinese'] },
+  chinese: { key: 'chinese', title: 'Chinese', tone: 'Dim sum carts to late-night dumplings', gradient: ['#1a1008', '#0d0804'], cuisineMatchers: ['Chinese', 'Cantonese', 'Sichuan'], tagMatchers: ['chinese', 'dim sum', 'dumpling'], subCuisines: [], neighbors: ['japanese', 'korean'] },
+  indian: { key: 'indian', title: 'Indian', tone: 'Spiced, aromatic, deeply flavorful', gradient: ['#1a1208', '#0d0904'], cuisineMatchers: ['Indian', 'Pakistani'], tagMatchers: ['indian', 'curry', 'tandoori'], subCuisines: [], neighbors: ['thai', 'mediterranean'] },
+  seafood: { key: 'seafood', title: 'Seafood', tone: 'Oysters and ocean-to-table freshness', gradient: ['#0a1520', '#050a10'], cuisineMatchers: ['Seafood'], tagMatchers: ['seafood', 'oyster', 'lobster'], subCuisines: [], neighbors: ['steakhouse', 'american'] },
+  steakhouse: { key: 'steakhouse', title: 'Steakhouse', tone: 'Dry-aged, perfectly seared', gradient: ['#1a0a08', '#0d0504'], cuisineMatchers: ['Steakhouse'], tagMatchers: ['steakhouse', 'steak'], subCuisines: [], neighbors: ['seafood', 'american'] },
+  latin: { key: 'latin', title: 'Latin American', tone: 'Passion, flavor, vibrant nights', gradient: ['#1a1008', '#0d0804'], cuisineMatchers: ['Latin American', 'Peruvian', 'Colombian', 'Brazilian'], tagMatchers: ['latin', 'peruvian', 'colombian'], subCuisines: [], neighbors: ['mexican', 'caribbean'] },
+  french: { key: 'french', title: 'French', tone: 'Bistros and buttery indulgence', gradient: ['#14101a', '#0a080d'], cuisineMatchers: ['French', 'Bistro'], tagMatchers: ['french', 'bistro'], subCuisines: [], neighbors: ['italian', 'mediterranean'] },
+  american: { key: 'american', title: 'American', tone: 'Burgers, BBQ, everything in between', gradient: ['#1a1210', '#0d0908'], cuisineMatchers: ['American', 'New American'], tagMatchers: ['american', 'burger', 'bbq'], subCuisines: [], neighbors: ['steakhouse', 'soul_food'] },
+  lounges: { key: 'lounges', title: 'Lounges', tone: 'Where the night takes shape', gradient: ['#14101a', '#0a080d'], cuisineMatchers: [], tagMatchers: ['lounge'], subCuisines: [{ key: 'upscale_lounge', title: 'Upscale Lounges', matchers: ['upscale'] }, { key: 'cocktail_lounge', title: 'Cocktail Lounges', matchers: ['cocktail', 'speakeasy'] }, { key: 'hookah', title: 'Hookah Lounges', matchers: ['hookah', 'shisha'], field: 'has_hookah' }], neighbors: ['bars', 'rooftops', 'clubs'], allowedDials: ['all', 'pregame', 'high_energy', 'upscale', 'casual', 'late_night', 'hookah'] },
+  bars: { key: 'bars', title: 'Bars', tone: 'From dive bars to craft cocktails', gradient: ['#14101a', '#0a080d'], cuisineMatchers: [], tagMatchers: ['bar'], subCuisines: [{ key: 'cocktail_bar', title: 'Cocktail Bars', matchers: ['cocktail', 'speakeasy'] }, { key: 'dive', title: 'Dive Bars', matchers: ['dive'] }, { key: 'sports', title: 'Sports Bars', matchers: ['sports'] }], neighbors: ['lounges', 'clubs'], allowedDials: ['all', 'pregame', 'high_energy', 'casual', 'late_night'] },
+  clubs: { key: 'clubs', title: 'Clubs', tone: 'When you came to move, not talk', gradient: ['#1a0812', '#0d0408'], cuisineMatchers: [], tagMatchers: ['club', 'nightclub'], subCuisines: [{ key: 'upscale_club', title: 'Upscale Clubs', matchers: ['upscale'] }, { key: 'hiphop', title: 'Hip-Hop & R&B', matchers: ['hip-hop', 'r&b'], field: 'music_genres' }, { key: 'afrobeats', title: 'Afrobeats & Caribbean', matchers: ['afrobeats', 'dancehall', 'soca'], field: 'music_genres' }, { key: 'latin', title: 'Latin Nights', matchers: ['latin', 'reggaeton', 'salsa', 'bachata'], field: 'music_genres' }, { key: 'edm', title: 'House & EDM', matchers: ['house', 'edm', 'techno', 'top-40', 'electronic'], field: 'music_genres' }], neighbors: ['lounges', 'bars'], allowedDials: ['all', 'pregame', 'late_night', 'high_energy', 'upscale'] },
+  rooftops: { key: 'rooftops', title: 'Rooftops', tone: 'City lights, good company', gradient: ['#081520', '#040a10'], cuisineMatchers: [], tagMatchers: ['rooftop'], subCuisines: [], neighbors: ['lounges', 'bars'], allowedDials: ['all', 'pregame', 'upscale', 'casual'] },
+};
+
+function safeParse(json: string | null): any { try { return json ? JSON.parse(json) : null; } catch { return null; } }
+function isTruthy(val: any): boolean { return val === 1 || val === '1' || val === true; }
+
+function matchesWorld(venue: any, config: WorldConfig): boolean {
+  // HOOKAH: Always include in lounges world
+  if (config.key === 'lounges' && isTruthy(venue.has_hookah)) return true;
+  
+  const primary = (venue.cuisine_primary || '').toLowerCase();
+  if (config.cuisineMatchers.some(c => primary.includes(c.toLowerCase()))) return true;
+  const secondary = (venue.cuisine_secondary || '').toLowerCase();
+  if (config.cuisineMatchers.some(c => secondary.includes(c.toLowerCase()))) return true;
+  const tags = safeParse(venue.cuisine_tags) || [];
+  const tagStr = (Array.isArray(tags) ? tags.join(' ') : String(tags)).toLowerCase();
+  if (config.tagMatchers.some(t => tagStr.includes(t))) return true;
+  const unified = safeParse(venue.unified_tags) || [];
+  const unifiedStr = (Array.isArray(unified) ? unified.join(' ') : String(unified)).toLowerCase();
+  if (config.tagMatchers.some(t => unifiedStr.includes(t))) return true;
+  if (config.cuisineMatchers.length === 0) {
+    const category = (venue.category || '').toLowerCase();
+    const loungeType = (venue.lounge_type || '').toLowerCase();
+    if (config.tagMatchers.some(t => category.includes(t) || loungeType.includes(t))) return true;
+  }
+  return false;
+}
+
+function matchesSubCuisine(venue: any, matchers: string[], field?: string): boolean {
+  if (field === 'has_hookah' && isTruthy(venue.has_hookah)) return true;
+  if (field === 'has_hookah' && (venue.lounge_type || '').toLowerCase().includes('hookah')) return true;
+  if (field === 'music_genres') {
+    const genres = safeParse(venue.music_genres) || [];
+    const str = (Array.isArray(genres) ? genres.join(' ') : String(genres)).toLowerCase();
+    if (matchers.some(m => str.includes(m.toLowerCase()))) return true;
+  }
+  const searchText = [venue.cuisine_primary, venue.cuisine_secondary, venue.cuisine_style, venue.lounge_type, venue.bio, JSON.stringify(safeParse(venue.unified_tags) || []), JSON.stringify(safeParse(venue.music_genres) || [])].join(' ').toLowerCase();
+  return matchers.some(m => searchText.includes(m.toLowerCase()));
+}
+
+function getPhotoUrl(venue: any): string | null {
+  const gallery = safeParse(venue.gallery_photos);
+  if (Array.isArray(gallery) && gallery.length > 0) return gallery[0];
+  const google = safeParse(venue.google_photos);
+  if (Array.isArray(google) && google.length > 0) return google[0];
+  return venue.image_url || null;
+}
+
+function bullseyeScore(v: any, config: WorldConfig): number {
+  let score = (v.viberyte_score || 0) * 2 + (v.quality_score || 0) + (v.popularity || 0) + (v.rating || 0) * 10;
+  if (config.cuisineMatchers.length === 0) {
+    score += (v.score_group_night || 0) * 1.5 + (v.late_night_spot || 0) * 20;
+    const energyBonus: Record<string, number> = { high: 15, lively: 10, medium: 5 };
+    score += energyBonus[v.energy_level] || 0;
+  } else {
+    score += (v.score_first_date || 0) * 0.5 + (v.score_group_night || 0) * 0.3;
+  }
+  return score;
+}
+
+function processVenue(venue: any): any {
+  return { id: venue.id, name: venue.name, image_url: getPhotoUrl(venue), category: venue.category, cuisine_primary: venue.cuisine_primary, cuisine_style: venue.cuisine_style, lounge_type: venue.lounge_type, neighborhood: venue.neighborhood, city: venue.city, energy_level: venue.energy_level, price_level: venue.google_price_level, dress_code: venue.dress_code, rating: venue.rating, score_first_date: venue.score_first_date || 0, score_group_night: venue.score_group_night || 0, late_night_spot: venue.late_night_spot || 0, has_hookah: venue.has_hookah || 0 };
+}
+
+function getDialConfig(dial: string, config: WorldConfig): any {
+  const dialConfigs: Record<string, any> = {
+    date_night: { title: `${config.title} · Date Night`, filter: (v: any) => (v.score_first_date || 0) > 20, sort: (a: any, b: any) => (b.score_first_date || 0) - (a.score_first_date || 0) },
+    upscale: { title: `Upscale ${config.title}`, filter: (v: any) => v.cuisine_style === 'upscale' || (v.google_price_level || 0) >= 3, sort: (a: any, b: any) => (b.google_price_level || 0) - (a.google_price_level || 0) },
+    casual: { title: `Casual ${config.title}`, filter: (v: any) => v.cuisine_style === 'casual' || v.dress_code === 'casual', sort: (a: any, b: any) => (b.quality_score || 0) - (a.quality_score || 0) },
+    late_night: { title: `Late-Night ${config.title}`, filter: (v: any) => isTruthy(v.late_night_spot), sort: (a: any, b: any) => (b.score_afterparty || 0) - (a.score_afterparty || 0) },
+    high_energy: { title: `High Energy ${config.title}`, filter: (v: any) => ['high', 'lively'].includes(v.energy_level), sort: (a: any, b: any) => bullseyeScore(b, config) - bullseyeScore(a, config) },
+    pregame: { title: `${config.title} · Pregame`, filter: (v: any) => isTruthy(v.pregame_spot) || (v.score_pregame || 0) > 50, sort: (a: any, b: any) => (b.score_pregame || 0) - (a.score_pregame || 0) },
+    hookah: { title: 'Hookah Lounges', filter: (v: any) => isTruthy(v.has_hookah) || (v.lounge_type || '').toLowerCase().includes('hookah') || (v.name || '').toLowerCase().includes('hookah'), sort: (a: any, b: any) => bullseyeScore(b, config) - bullseyeScore(a, config) },
+  };
+  const sub = config.subCuisines.find(s => s.key === dial);
+  if (sub) return { title: sub.title, filter: (v: any) => matchesSubCuisine(v, sub.matchers, sub.field), sort: (a: any, b: any) => bullseyeScore(b, config) - bullseyeScore(a, config) };
+  return dialConfigs[dial] || null;
+}
+
+function buildLensSection(venues: any[], config: WorldConfig, dialConfig: any): any[] {
+  let filtered = venues.filter(dialConfig.filter);
+  filtered.sort(dialConfig.sort);
+  filtered = filtered.slice(0, 30);
+  if (filtered.length === 0) return [];
+  return [{ key: 'lens', title: dialConfig.title, venue_count: filtered.length, venues: filtered.map(processVenue) }];
+}
+
+function buildFullSections(venues: any[], config: WorldConfig, city: string): any[] {
+  const sections: any[] = [];
+  const used = new Map<number, number>();
+  const MAX = 2;
+  const isNightlife = config.cuisineMatchers.length === 0;
+  
+  const add = (key: string, title: string, filter: (v: any) => boolean, sort?: (a: any, b: any) => number, limit = 10) => {
+    let list = venues.filter(v => (used.get(v.id) || 0) < MAX && filter(v));
+    if (sort) list.sort(sort);
+    list = list.slice(0, limit);
+    if (list.length >= 2) {
+      list.forEach(v => used.set(v.id, (used.get(v.id) || 0) + 1));
+      sections.push({ key, title, venue_count: list.length, venues: list.map(processVenue) });
+    }
+  };
+  
+  add('bullseye', `Best ${config.title} for You`, () => true, (a, b) => bullseyeScore(b, config) - bullseyeScore(a, config), 10);
+  config.subCuisines.forEach(sub => add(sub.key, sub.title, v => matchesSubCuisine(v, sub.matchers, sub.field), (a, b) => bullseyeScore(b, config) - bullseyeScore(a, config), 10));
+  
+  if (isNightlife) {
+    add('pregame', 'Great for Pregame', v => isTruthy(v.pregame_spot) || (v.score_pregame || 0) > 50, (a, b) => (b.score_pregame || 0) - (a.score_pregame || 0), 10);
+    add('late_night', 'Late Night Energy', v => isTruthy(v.late_night_spot), (a, b) => bullseyeScore(b, config) - bullseyeScore(a, config), 10);
+    add('high_energy', 'High Energy', v => ['high', 'lively'].includes(v.energy_level), (a, b) => bullseyeScore(b, config) - bullseyeScore(a, config), 10);
+  } else {
+    add('date_night', `${config.title} Date Night`, v => (v.score_first_date || 0) > 30, (a, b) => (b.score_first_date || 0) - (a.score_first_date || 0), 10);
+    add('social', 'Social & High Energy', v => ['high', 'lively'].includes(v.energy_level), (a, b) => bullseyeScore(b, config) - bullseyeScore(a, config), 10);
+    add('late_night', `Late-Night ${config.title}`, v => isTruthy(v.late_night_spot), (a, b) => bullseyeScore(b, config) - bullseyeScore(a, config), 10);
+  }
+  
+  add('casual', `Casual ${config.title}`, v => v.cuisine_style === 'casual' || v.dress_code === 'casual', (a, b) => bullseyeScore(b, config) - bullseyeScore(a, config), 10);
+  add('upscale', `Upscale ${config.title}`, v => v.cuisine_style === 'upscale' || (v.google_price_level || 0) >= 3, (a, b) => (b.google_price_level || 0) - (a.google_price_level || 0), 10);
+  
+  const primary = ['Manhattan', 'New York'];
+  if (primary.includes(city)) {
+    const outer = venues.filter(v => (used.get(v.id) || 0) < MAX && !primary.includes(v.city) && ['Brooklyn', 'Queens', 'Bronx', 'North Jersey', 'Jersey City', 'The Bronx'].includes(v.city));
+    outer.sort((a, b) => bullseyeScore(b, config) - bullseyeScore(a, config));
+    if (outer.slice(0, 10).length >= 2) sections.push({ key: 'worth_uber', title: 'Worth the Ride', venue_count: outer.slice(0, 10).length, venues: outer.slice(0, 10).map(processVenue) });
+  }
+  
+  return sections;
+}
+
+export async function GET(request: NextRequest, { params }: { params: { world: string } }) {
+  let db: any = null;
+  try {
+    const worldKey = params.world.toLowerCase();
+    const config = WORLDS[worldKey];
+    if (!config) return NextResponse.json({ error: 'World not found', available: Object.keys(WORLDS) }, { status: 404, headers: corsHeaders });
+    
+    const searchParams = request.nextUrl.searchParams;
+    const city = searchParams.get('city') || 'Manhattan';
+    const dial = searchParams.get('dial');
+    
+    db = new Database(dbPath, { readonly: true });
+    const allVenues = db.prepare(`SELECT * FROM venues WHERE should_exclude = 0 AND (city = ? OR region = ? OR city IN ('Brooklyn', 'Queens', 'Bronx', 'North Jersey', 'South Jersey', 'Jersey City', 'Manhattan', 'New York', 'The Bronx')) AND ((google_photos IS NOT NULL AND google_photos != '' AND google_photos != '[]') OR (gallery_photos IS NOT NULL AND gallery_photos != '' AND gallery_photos != '[]') OR (image_url IS NOT NULL AND image_url != '')) LIMIT 2000`).all(city, city);
+    db.close();
+    
+    const worldVenues = allVenues.filter(v => matchesWorld(v, config));
+    
+    let sections: any[], lensMode = false, lensTitle = '';
+    if (dial && dial !== 'all') {
+      const dialConfig = getDialConfig(dial, config);
+      if (dialConfig) { sections = buildLensSection(worldVenues, config, dialConfig); lensMode = true; lensTitle = dialConfig.title; }
+      else { sections = buildFullSections(worldVenues, config, city); }
+    } else { sections = buildFullSections(worldVenues, config, city); }
+    
+    const isNightlife = config.cuisineMatchers.length === 0;
+    const defaultDials = isNightlife ? ['all', 'pregame', 'late_night', 'high_energy', 'upscale', 'casual'] : ['all', 'date_night', 'upscale', 'casual', 'late_night', 'high_energy'];
+    let dials = config.allowedDials ?? defaultDials;
+    config.subCuisines.forEach(sub => { if (!dials.includes(sub.key)) dials = [...dials, sub.key]; });
+    
+    return NextResponse.json({ world: config.key, title: lensMode ? lensTitle : config.title, tone: config.tone, gradient: config.gradient, city, dial_active: dial || 'all', dials, neighbors: config.neighbors, section_count: sections.length, total_venues: worldVenues.length, sections, is_nightlife: isNightlife, lens_mode: lensMode }, { headers: corsHeaders });
+  } catch (err) {
+    console.error('[API /perspectives] Error:', err);
+    if (db) db.close();
+    return NextResponse.json({ error: 'Failed to fetch perspective' }, { status: 500, headers: corsHeaders });
+  }
+}
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: corsHeaders });
+}

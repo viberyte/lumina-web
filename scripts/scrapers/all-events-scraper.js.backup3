@@ -1,0 +1,296 @@
+import puppeteer from 'puppeteer';
+import Database from 'better-sqlite3';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DB_PATH = path.join(__dirname, '../../data/lumina.db');
+
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+const DICE_URLS = [
+  { genre: 'Amapiano', url: 'https://dice.fm/browse/new_york-5bbf4db0f06331478e9b2c59/music/party/amapiano' },
+  { genre: 'Afrobeat', url: 'https://dice.fm/browse/new_york-5bbf4db0f06331478e9b2c59/music/dj/afrobeat' },
+  { genre: 'Dancehall', url: 'https://dice.fm/browse/new_york-5bbf4db0f06331478e9b2c59/music/party/dancehall' },
+  { genre: 'House', url: 'https://dice.fm/browse/new_york-5bbf4db0f06331478e9b2c59/music/party/house' },
+  { genre: 'Hip-Hop', url: 'https://dice.fm/browse/new_york-5bbf4db0f06331478e9b2c59/music/party/hiphop' },
+  { genre: 'Latin', url: 'https://dice.fm/browse/new_york-5bbf4db0f06331478e9b2c59/music/party/latin' },
+  { genre: 'R&B', url: 'https://dice.fm/browse/new_york-5bbf4db0f06331478e9b2c59/music/party/rnb' }
+];
+
+const VENUE_CALENDARS = [
+  { name: 'Nebula NYC', url: 'https://nebulanewyork.com/events/' },
+  { name: 'Somewhere Nowhere', url: 'https://www.somewherenowherenyc.com/events' },
+  { name: 'The Delancey', url: 'https://www.thedelancey.com/events' },
+  { name: 'DL NYC', url: 'https://www.thedl-nyc.com/upcomingevents' },
+  { name: 'Dream Hospitality', url: 'https://tickets.dreamhospitalitygroup.com' }
+];
+
+class AllEventsScraper {
+  constructor() {
+    this.db = new Database(DB_PATH);
+    this.stats = { dice: 0, venues: 0, total: 0, errors: 0 };
+  }
+
+  async scrapeVenueCalendars(browser) {
+    console.log('\n🏛️ === VENUE CALENDARS SCRAPER ===\n');
+    
+    for (const venue of VENUE_CALENDARS) {
+      const page = await browser.newPage();
+      try {
+        console.log(`📅 Scraping ${venue.name}...`);
+        
+        // Set longer timeout and user agent
+        await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36');
+        await page.goto(venue.url, { 
+          waitUntil: 'domcontentloaded', 
+          timeout: 30000 
+        });
+        
+        await delay(3000);
+        
+        const events = await page.evaluate((venueName) => {
+          const results = [];
+          const eventElements = document.querySelectorAll('[class*="event"], [class*="calendar"], article, .item, .card');
+          
+          eventElements.forEach(el => {
+            const nameEl = el.querySelector('h1, h2, h3, h4, .title, [class*="title"], [class*="name"]');
+            const dateEl = el.querySelector('[class*="date"], time, .date');
+            const linkEl = el.querySelector('a[href]');
+            
+            if (nameEl && nameEl.textContent.trim().length > 3) {
+              results.push({
+                name: nameEl.textContent.trim(),
+                date: dateEl ? dateEl.textContent.trim() : null,
+                venue_name: venueName,
+                event_url: linkEl ? linkEl.href : null,
+                city: 'New York'
+              });
+            }
+          });
+          
+          return results.slice(0, 50); // Limit to 50 events per venue
+        }, venue.name);
+        
+        console.log(`   ✅ Found ${events.length} events for ${venue.name}`);
+        
+        const stmt = this.db.prepare(`
+          INSERT OR IGNORE INTO events (name, date, venue_name, city, event_url, source_type, created_at)
+          VALUES (?, ?, ?, ?, ?, 'venue-calendar', datetime('now'))
+        `);
+        
+        let added = 0;
+        for (const event of events) {
+          try {
+            const result = stmt.run(event.name, event.date, event.venue_name, event.city, event.event_url);
+            if (result.changes > 0) added++;
+          } catch (err) {
+            // Skip duplicates
+          }
+        }
+        
+        this.stats.venues += added;
+        console.log(`   💾 Added ${added} new events`);
+        
+      } catch (err) {
+        console.error(`   ❌ Error scraping ${venue.name}: ${err.message}`);
+        this.stats.errors++;
+      } finally {
+        await page.close();
+      }
+    }
+  }
+
+
+  async scrapeDiceEvents(browser) {
+    console.log('\n🎲 === DICE.FM SCRAPER (ENHANCED) ===\n');
+    
+    for (const { genre, url } of DICE_URLS) {
+      let listPage = null;
+      try {
+        console.log(`🎵 Scraping ${genre}...`);
+        
+        listPage = await browser.newPage();
+        await listPage.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36');
+        await listPage.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await delay(2000);
+        
+        const eventLinks = await listPage.evaluate(() => {
+          const links = [];
+          document.querySelectorAll('a[href*="/event/"]').forEach(a => {
+            const href = a.href;
+            if (href && !links.includes(href)) links.push(href);
+          });
+          return links.slice(0, 10); // Reduced to 10 per genre for speed
+        });
+        
+        console.log(`   Found ${eventLinks.length} event pages to scrape`);
+        await listPage.close();
+        listPage = null;
+        
+        let scrapedCount = 0;
+        for (const eventUrl of eventLinks) {
+          let detailPage = null;
+          try {
+            detailPage = await browser.newPage();
+            await detailPage.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36');
+            await detailPage.goto(eventUrl, { waitUntil: 'domcontentloaded', timeout: 15000 });
+            await delay(1000);
+            
+            const eventDetails = await detailPage.evaluate(() => {
+              const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+              let jsonLd = null;
+              
+              for (const script of scripts) {
+                try {
+                  const data = JSON.parse(script.textContent);
+                  if (data['@type'] === 'Event') {
+                    jsonLd = data;
+                    break;
+                  }
+                } catch {}
+              }
+              
+              if (!jsonLd) return null;
+              
+              let lineup = [];
+              if (jsonLd.performer) {
+                const performers = Array.isArray(jsonLd.performer) ? jsonLd.performer : [jsonLd.performer];
+                lineup = performers.map(p => p.name || p);
+              }
+              
+              let ticketPrice = null;
+              let priceRange = null;
+              if (jsonLd.offers) {
+                const offers = Array.isArray(jsonLd.offers) ? jsonLd.offers : [jsonLd.offers];
+                const prices = offers
+                  .map(o => parseFloat(o.price))
+                  .filter(p => !isNaN(p) && p > 0);
+                
+                if (prices.length > 0) {
+                  ticketPrice = Math.min(...prices);
+                  priceRange = prices.length > 1 
+                    ? `$${Math.min(...prices)} - $${Math.max(...prices)}`
+                    : `$${prices[0]}`;
+                }
+              }
+              
+              return {
+                name: jsonLd.name,
+                description: jsonLd.description,
+                venue_name: jsonLd.location?.name,
+                date: jsonLd.startDate?.split('T')[0],
+                start_datetime: jsonLd.startDate,
+                end_datetime: jsonLd.endDate,
+                door_time: jsonLd.doorTime,
+                lineup: lineup.length > 0 ? JSON.stringify(lineup) : null,
+                ticket_price: ticketPrice,
+                price_range: priceRange,
+                image_url: jsonLd.image,
+                event_url: window.location.href
+              };
+            });
+            
+            await detailPage.close();
+            detailPage = null;
+            
+            if (eventDetails) {
+              const stmt = this.db.prepare(`
+                INSERT OR REPLACE INTO events (
+                  name, description, date, venue_name, city, music_genres,
+                  start_datetime, end_datetime, door_time, lineup,
+                  ticket_price, price_range, image_url, event_url,
+                  source_type, created_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'dice', datetime('now'))
+              `);
+              
+              stmt.run(
+                eventDetails.name,
+                eventDetails.description,
+                eventDetails.date,
+                eventDetails.venue_name,
+                'New York',
+                JSON.stringify([genre]),
+                eventDetails.start_datetime,
+                eventDetails.end_datetime,
+                eventDetails.door_time,
+                eventDetails.lineup,
+                eventDetails.ticket_price,
+                eventDetails.price_range,
+                eventDetails.image_url,
+                eventDetails.event_url
+              );
+              
+              scrapedCount++;
+            }
+            
+          } catch (err) {
+            console.error(`     ⚠️ Error on event: ${err.message}`);
+          } finally {
+            if (detailPage) {
+              try { await detailPage.close(); } catch {}
+            }
+          }
+          
+          await delay(500);
+        }
+        
+        this.stats.dice += scrapedCount;
+        console.log(`   ✅ Scraped ${scrapedCount} ${genre} events with full details`);
+        
+      } catch (err) {
+        console.error(`   ❌ Error scraping ${genre}: ${err.message}`);
+        this.stats.errors++;
+      } finally {
+        if (listPage) {
+          try { await listPage.close(); } catch {}
+        }
+      }
+    }
+  }
+  async run() {
+    console.log('🚀 LUMINA ALL-EVENTS SCRAPER - Starting...\n');
+    console.log('⏰ ' + new Date().toLocaleString());
+    
+    const browser = await puppeteer.launch({
+      headless: 'new',
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-accelerated-2d-canvas',
+        '--disable-gpu'
+      ]
+    });
+    
+    try {
+      console.log('🗑️ Cleaning events older than today...');
+      const deleted = this.db.prepare("DELETE FROM events WHERE date < date('now')").run();
+      console.log(`   Removed ${deleted.changes} old events\n`);
+      
+      await this.scrapeVenueCalendars(browser);
+      await this.scrapeDiceEvents(browser);
+      
+      this.stats.total = this.stats.dice + this.stats.venues;
+      
+      console.log('\n\n✅ === SCRAPING COMPLETE ===');
+      console.log(`   Venue Calendars: ${this.stats.venues}`);
+      console.log(`   Dice Events: ${this.stats.dice}`);
+      console.log(`   TOTAL ADDED: ${this.stats.total}`);
+      console.log(`   Errors: ${this.stats.errors}`);
+      
+      const totalEvents = this.db.prepare("SELECT COUNT(*) as count FROM events WHERE date >= date('now')").get();
+      console.log(`\n📊 Total upcoming events in database: ${totalEvents.count}`);
+      
+    } catch (err) {
+      console.error('\n❌ Fatal error:', err);
+    } finally {
+      await browser.close();
+      this.db.close();
+    }
+  }
+}
+
+const scraper = new AllEventsScraper();
+scraper.run().catch(console.error);

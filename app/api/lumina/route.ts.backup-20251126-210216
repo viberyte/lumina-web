@@ -1,0 +1,110 @@
+import { NextRequest, NextResponse } from 'next/server';
+import Database from 'better-sqlite3';
+
+const dbPath = process.env.DATABASE_PATH || '/opt/viberyte/lumina-web/data/lumina.db';
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    const { city, flow, preferences, refresh } = body;
+
+    console.log('Lumina API received:', { city, flow, preferences });
+
+    const db = new Database(dbPath);
+    
+    const conditions: string[] = [];
+    const params: any[] = [];
+
+    // City filter with NYC borough handling
+    if (city) {
+      const cityLower = city.toLowerCase();
+      if (['manhattan', 'brooklyn', 'queens', 'bronx', 'staten island'].includes(cityLower)) {
+        conditions.push('(city LIKE ? OR neighborhood LIKE ?)');
+        params.push('%New York%', `%${city}%`);
+      } else {
+        conditions.push('city LIKE ?');
+        params.push(`%${city}%`);
+      }
+    }
+
+    // Check if this is a post-dinner activity (lounge, club, etc.)
+    const isPostDinner = flow?.music && (
+      flow.music.toLowerCase().includes('lounge') ||
+      flow.music.toLowerCase().includes('club') ||
+      flow.music.toLowerCase().includes('lowkey')
+    );
+
+    // Cuisine filter - ONLY apply if NOT a post-dinner activity
+    if (!isPostDinner && flow?.cuisine && flow.cuisine !== 'Surprise Me') {
+      conditions.push('(cuisine LIKE ? OR cuisine_primary LIKE ?)');
+      params.push(`%${flow.cuisine}%`, `%${flow.cuisine}%`);
+    }
+
+    // Category filter based on music choice (overrides vibe)
+    if (flow?.music) {
+      const musicLower = flow.music.toLowerCase();
+      if (musicLower.includes('lounge')) {
+        conditions.push("category LIKE '%lounge%'");
+      } else if (musicLower.includes('club')) {
+        conditions.push("(category LIKE '%nightlife%' OR category LIKE '%club%')");
+      }
+    } else if (flow?.vibe) {
+      // Only apply vibe filter if music didn't set category
+      if (flow.vibe === 'Dinner') {
+        conditions.push("category LIKE '%dining%'");
+      } else if (flow.vibe === 'Nightlife') {
+        conditions.push("(category LIKE '%nightlife%' OR category LIKE '%club%')");
+      } else if (flow.vibe === 'Lounge') {
+        conditions.push("category LIKE '%lounge%'");
+      }
+    }
+
+    const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
+
+    const query = `
+      SELECT id, name, neighborhood, cuisine, cuisine_primary,
+             category, vibe_tags, rating, price_tier,
+             professional_photos, professional_photo_url,
+             viberyte_score, address
+      FROM venues
+      ${whereClause}
+      ORDER BY viberyte_score DESC
+      LIMIT 20
+    `;
+
+    console.log('Executing query:', query);
+    console.log('With params:', params);
+
+    const venues = db.prepare(query).all(...params);
+    console.log(`Loaded ${venues.length} venues`);
+
+    // Load events - FIXED: image_url not flyer_url
+    const events = db.prepare(`
+      SELECT id, name, venue_id, start_datetime, end_datetime,
+             description, music_genre, price, image_url
+      FROM events
+      WHERE start_datetime >= datetime('now')
+      ORDER BY start_datetime ASC
+      LIMIT 20
+    `).all();
+    console.log(`Loaded ${events.length} events`);
+
+    db.close();
+
+    return NextResponse.json({
+      venues,
+      events,
+      message: venues.length > 0 
+        ? `Found ${venues.length} spots perfect for your vibe` 
+        : 'No venues found for your criteria'
+    });
+
+  } catch (error: any) {
+    console.error('Lumina API error:', error);
+    return NextResponse.json({ 
+      error: error.message,
+      venues: [],
+      events: []
+    }, { status: 500 });
+  }
+}

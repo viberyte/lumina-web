@@ -1,0 +1,105 @@
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
+import { Play } from 'lucide-react';
+
+interface OptimizedMediaProps {
+  item: { type: string; url: string };
+  index: number;
+  onClick: () => void;
+  className?: string;
+}
+
+export default function OptimizedMedia({ item, index, onClick, className = '' }: OptimizedMediaProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: '50px' }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  if (item.type === 'video') {
+    return (
+      <div
+        ref={ref}
+        className={`relative bg-gray-900 cursor-pointer group ${className}`}
+        onClick={onClick}
+      >
+        {isVisible && !hasError ? (
+          <>
+            <video
+              src={item.url}
+              className={`w-full h-full object-cover transition-opacity duration-300 ${
+                isLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              preload="metadata"
+              muted
+              playsInline
+              onLoadedData={() => setIsLoaded(true)}
+              onError={() => setHasError(true)}
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/60 transition">
+              <Play className="w-12 h-12 text-white" fill="white" />
+            </div>
+          </>
+        ) : hasError ? (
+          <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
+            Video unavailable
+          </div>
+        ) : (
+          <div className="absolute inset-0 bg-gray-800 animate-pulse" />
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      ref={ref}
+      className={`relative bg-gray-900 cursor-pointer hover:opacity-90 transition ${className}`}
+      onClick={onClick}
+    >
+      {isVisible && !hasError ? (
+        <>
+          {!isLoaded && (
+            <div className="absolute inset-0 bg-gray-800 animate-pulse" />
+          )}
+          <img
+            src={item.url}
+            alt={`Media ${index + 1}`}
+            className={`w-full h-full object-cover transition-opacity duration-300 ${
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            loading="lazy"
+            onLoad={() => setIsLoaded(true)}
+            onError={() => setHasError(true)}
+          />
+        </>
+      ) : hasError ? (
+        <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
+          Image unavailable
+        </div>
+      ) : (
+        <div className="absolute inset-0 bg-gray-800 animate-pulse" />
+      )}
+    </div>
+  );
+}

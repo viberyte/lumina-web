@@ -1,0 +1,434 @@
+'use client';
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import SplashScreen from '@/components/SplashScreen';
+import ModernCitySelector from '@/components/ModernCitySelector';
+import ExploreView from '@/components/ExploreView';
+import VenueCarousel from '@/components/venue-carousel';
+import VenueModal from '@/components/VenueModal';
+import { Sparkles, Compass, MessageSquare, Cloud, Clock, Settings, RefreshCw } from 'lucide-react';
+
+export default function Home() {
+  const [showSplash, setShowSplash] = useState(true);
+  const [city, setCity] = useState<string | null>(null);
+  const [state, setState] = useState<string | null>(null);
+  const [mode, setMode] = useState('chat');
+  const [messages, setMessages] = useState<any[]>([]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [venues, setVenues] = useState<any[]>([]);
+  const [selectedVenue, setSelectedVenue] = useState<any>(null);
+  const [currentTime, setCurrentTime] = useState('');
+  const [weather, setWeather] = useState<any>(null);
+  const [shownVenueIds, setShownVenueIds] = useState<Set<number>>(new Set());
+  const [refreshCount, setRefreshCount] = useState(0);
+  const [showSettings, setShowSettings] = useState(false);
+  
+  const [conversationFlow, setConversationFlow] = useState<{
+    step: 'initial' | 'who' | 'when' | 'vibe' | 'cuisine' | 'music' | 'complete';
+    who?: string;
+    when?: string;
+    vibe?: string;
+    cuisine?: string;
+    music?: string;
+  }>({ step: 'initial' });
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setCurrentTime(now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true }));
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (city) fetchWeather();
+  }, [city]);
+
+  const fetchWeather = async () => {
+    try {
+      const res = await fetch(`/api/weather?city=${city}`);
+      const data = await res.json();
+      setWeather(data);
+    } catch (e) {
+      console.error('Weather fetch failed:', e);
+    }
+  };
+
+  const handleLocationSelect = (selectedCity: string, selectedState: string) => {
+    setCity(selectedCity);
+    setState(selectedState);
+  };
+
+  const changeLocation = () => {
+    localStorage.removeItem('lumina_location');
+    setCity(null);
+    setState(null);
+    setMessages([]);
+    setVenues([]);
+    setShownVenueIds(new Set());
+    setRefreshCount(0);
+    setConversationFlow({ step: 'initial' });
+  };
+
+  const handleFlowSelection = (selection: string, type: 'who' | 'when' | 'vibe' | 'cuisine' | 'music') => {
+    const newFlow = { ...conversationFlow };
+    
+    if (type === 'who') {
+      newFlow.who = selection;
+      newFlow.step = 'when';
+      setMessages([
+        ...messages,
+        { role: 'user', content: selection },
+        { role: 'assistant', content: `Perfect! When are you thinking?`, showButtons: true, buttonType: 'when' }
+      ]);
+    } else if (type === 'when') {
+      newFlow.when = selection;
+      newFlow.step = 'vibe';
+      setMessages([
+        ...messages,
+        { role: 'user', content: selection },
+        { role: 'assistant', content: `Great! What kind of vibe are you looking for?`, showButtons: true, buttonType: 'vibe' }
+      ]);
+    } else if (type === 'vibe') {
+      newFlow.vibe = selection;
+      
+      if (selection === 'Dinner') {
+        newFlow.step = 'cuisine';
+        setMessages([
+          ...messages,
+          { role: 'user', content: selection },
+          { role: 'assistant', content: `What type of cuisine are you in the mood for?`, showButtons: true, buttonType: 'cuisine' }
+        ]);
+      } else if (selection === 'Lounge' || selection === 'Nightclub') {
+        newFlow.step = 'music';
+        setMessages([
+          ...messages,
+          { role: 'user', content: selection },
+          { role: 'assistant', content: `What music vibe?`, showButtons: true, buttonType: 'music' }
+        ]);
+      } else {
+        newFlow.step = 'complete';
+        setMessages([...messages, { role: 'user', content: selection }]);
+        const fullQuery = `${newFlow.who} ${newFlow.when} ${selection}`;
+        sendToAPI(fullQuery);
+      }
+    } else if (type === 'cuisine') {
+      newFlow.cuisine = selection;
+      newFlow.step = 'complete';
+      setMessages([...messages, { role: 'user', content: selection }]);
+      const fullQuery = `${newFlow.who} ${newFlow.when} ${newFlow.vibe} ${selection} cuisine`;
+      sendToAPI(fullQuery);
+    } else if (type === 'music') {
+      newFlow.music = selection;
+      newFlow.step = 'complete';
+      setMessages([...messages, { role: 'user', content: selection }]);
+      const fullQuery = `${newFlow.who} ${newFlow.when} ${newFlow.vibe} ${selection} music`;
+      sendToAPI(fullQuery);
+    }
+    
+    setConversationFlow(newFlow);
+  };
+
+  const sendToAPI = async (query: string) => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/chat', { 
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify({ 
+          message: query, 
+          city,
+          excludeVenueIds: Array.from(shownVenueIds)
+        }) 
+      });
+      const data = await res.json();
+      setMessages(m => [...m, { role: 'assistant', content: data.message }]);
+      
+      if (data.venues && data.venues.length > 0) {
+        setVenues(data.venues);
+        const newIds = new Set(shownVenueIds);
+        data.venues.forEach((v: any) => newIds.add(v.id));
+        setShownVenueIds(newIds);
+        setRefreshCount(0);
+      }
+    } catch (e) { 
+      console.error(e); 
+    }
+    setLoading(false);
+  };
+
+  const send = async (customMessage?: string) => {
+    const messageToSend = customMessage || input;
+    if (!messageToSend.trim()) return;
+    
+    setMessages([...messages, { role: 'user', content: messageToSend }]);
+    setInput('');
+    sendToAPI(messageToSend);
+  };
+
+  const refreshRecommendations = async () => {
+    if (refreshCount >= 3) {
+      setMessages(m => [...m, { 
+        role: 'assistant', 
+        content: "I've shown you all the best options! Try changing your preferences or exploring different vibes." 
+      }]);
+      return;
+    }
+
+    const lastUserMessage = messages.filter(m => m.role === 'user').pop();
+    if (!lastUserMessage) return;
+
+    setLoading(true);
+    setRefreshCount(refreshCount + 1);
+
+    try {
+      const res = await fetch('/api/chat', { 
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify({ 
+          message: lastUserMessage.content + ' (show me different options)', 
+          city,
+          excludeVenueIds: Array.from(shownVenueIds)
+        }) 
+      });
+      const data = await res.json();
+      
+      if (data.venues && data.venues.length > 0) {
+        setVenues(data.venues);
+        const newIds = new Set(shownVenueIds);
+        data.venues.forEach((v: any) => newIds.add(v.id));
+        setShownVenueIds(newIds);
+      }
+    } catch (e) { 
+      console.error(e); 
+    }
+    setLoading(false);
+  };
+
+  const startFlow = (who: string) => {
+    setConversationFlow({ step: 'when', who });
+    setMessages([
+      { role: 'user', content: who },
+      { role: 'assistant', content: `Perfect! When are you thinking?`, showButtons: true, buttonType: 'when' }
+    ]);
+  };
+
+  if (showSplash) return <SplashScreen onComplete={() => setShowSplash(false)} />;
+  if (!city) return <ModernCitySelector onSelectLocation={handleLocationSelect} />;
+  if (mode === 'explore') return <ExploreView city={city} onBack={() => setMode('chat')} onFlowExperience={setSelectedVenue} />;
+
+  return (
+    <div className="min-h-screen bg-black flex flex-col">
+      <div className="px-4 sm:px-6 py-4 border-b border-zinc-900 backdrop-blur-xl bg-black/80">
+        <div className="flex justify-between items-center max-w-7xl mx-auto gap-3">
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <div className="relative w-8 h-8 sm:w-9 sm:h-9">
+              <Image src="/lumina-logo.png" alt="Viberyte" fill className="object-contain" />
+            </div>
+            <div className="hidden sm:flex items-center gap-3 pl-3 border-l border-zinc-800">
+              <Sparkles className="w-5 h-5 text-violet-400" strokeWidth={1.5} />
+              <div>
+                <h1 className="text-base sm:text-lg text-white font-light tracking-wide">Lumina</h1>
+                <button onClick={changeLocation} className="text-xs text-zinc-600 hover:text-zinc-400 font-light transition-colors">
+                  {city}, {state}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden md:flex items-center gap-4 text-zinc-500 text-xs font-light">
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4" strokeWidth={1.5} />
+              <span>{currentTime}</span>
+            </div>
+            {weather && (
+              <div className="flex items-center gap-2">
+                <Cloud className="w-4 h-4" strokeWidth={1.5} />
+                <span>{Math.round(weather.temp)}°F</span>
+              </div>
+            )}
+          </div>
+
+          <div className="flex gap-2 flex-shrink-0">
+            <button onClick={() => setMode('chat')} className={`px-3 sm:px-4 py-2 rounded-full flex items-center gap-2 transition-all font-light text-xs sm:text-sm ${mode === 'chat' ? 'bg-white text-black' : 'bg-zinc-900 text-zinc-400 hover:bg-zinc-800 border border-zinc-800'}`}>
+              <MessageSquare className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={1.5} />
+              <span className="hidden sm:inline">Chat</span>
+            </button>
+            <button onClick={() => setMode('explore')} className={`px-3 sm:px-4 py-2 rounded-full flex items-center gap-2 transition-all font-light text-xs sm:text-sm ${mode === 'explore' ? 'bg-white text-black' : 'bg-zinc-900 text-zinc-400 hover:bg-zinc-800 border border-zinc-800'}`}>
+              <Compass className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={1.5} />
+              <span>Explore</span>
+            </button>
+            <button onClick={() => setShowSettings(true)} className="px-3 py-2 rounded-full bg-zinc-900 text-zinc-400 hover:bg-zinc-800 border border-zinc-800 transition-all">
+              <Settings className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={1.5} />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex-1 overflow-y-auto p-4 sm:p-8">
+        <div className="max-w-5xl mx-auto space-y-8">
+          {messages.length === 0 && (
+            <div className="text-center py-16 sm:py-24 space-y-10">
+              <div className="relative inline-block">
+                <div className="absolute inset-0 blur-3xl bg-violet-500/10 rounded-full"></div>
+                <Sparkles className="w-14 h-14 sm:w-16 sm:h-16 text-violet-400 relative" strokeWidth={1} />
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-3xl sm:text-4xl text-white font-extralight tracking-tight">Good evening</h2>
+                <p className="text-zinc-400 text-base sm:text-lg font-light">I'm Lumina, your personal nightlife concierge</p>
+                <p className="text-zinc-600 text-sm font-light">Who are you going with tonight?</p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto pt-12">
+                {['Date night', 'With friends', 'Solo', 'Business'].map(option => (
+                  <button key={option} onClick={() => startFlow(option)} className="relative overflow-hidden group p-6 sm:p-8 bg-white/5 hover:bg-white/10 border border-zinc-900 hover:border-zinc-800 rounded-2xl text-left transition-all backdrop-blur-sm">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 group-hover:animate-shimmer"></div>
+                    <div className="relative">
+                      <div className="text-violet-400 text-xs sm:text-sm font-light mb-2 sm:mb-3 tracking-wide">{option}</div>
+                      <div className="text-zinc-500 text-xs font-light">
+                        {option === 'Date night' && 'Intimate atmosphere'}
+                        {option === 'With friends' && 'Group experience'}
+                        {option === 'Solo' && 'Personal experience'}
+                        {option === 'Business' && 'Professional settings'}
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {messages.map((m, i) => (
+            <div key={i}>
+              <div className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'} mb-4`}>
+                <div className={`max-w-[70%] rounded-2xl px-6 py-4 ${m.role === 'user' ? 'bg-white text-black' : 'bg-zinc-900/50 text-zinc-100 border border-zinc-800/50'}`}>
+                  <p className="text-sm font-light leading-relaxed">{m.content}</p>
+                </div>
+              </div>
+              
+              {m.showButtons && m.buttonType === 'when' && (
+                <div className="flex justify-start mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {['Tonight', 'Tomorrow', 'This weekend'].map(option => (
+                      <button key={option} onClick={() => handleFlowSelection(option, 'when')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {m.showButtons && m.buttonType === 'vibe' && (
+                <div className="flex justify-start mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {['Dinner', 'Lounge', 'Nightclub', 'Events'].map(option => (
+                      <button key={option} onClick={() => handleFlowSelection(option, 'vibe')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {m.showButtons && m.buttonType === 'cuisine' && (
+                <div className="flex justify-start mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {['Italian', 'Japanese', 'Mexican', 'American', 'Asian Fusion', 'Mediterranean', 'Steakhouse'].map(option => (
+                      <button key={option} onClick={() => handleFlowSelection(option, 'cuisine')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {m.showButtons && m.buttonType === 'music' && (
+                <div className="flex justify-start mb-4">
+                  <div className="flex flex-wrap gap-2">
+                    {['Afrobeats', 'Latin', 'R&B', 'Hip-Hop', 'House', 'Live Music'].map(option => (
+                      <button key={option} onClick={() => handleFlowSelection(option, 'music')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                        {option}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+
+          {loading && (
+            <div className="flex justify-start">
+              <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-2xl px-6 py-4">
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce" style={{animationDelay:'0.2s'}}></div>
+                  <div className="w-2 h-2 bg-violet-400 rounded-full animate-bounce" style={{animationDelay:'0.4s'}}></div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {venues.length > 0 && (
+            <div className="space-y-4">
+              <VenueCarousel venues={venues} title="Your Recommendations" onFlowExperience={setSelectedVenue} />
+              
+              <div className="flex gap-3 justify-center">
+                <button onClick={() => { setMessages([]); setVenues([]); setShownVenueIds(new Set()); setRefreshCount(0); setConversationFlow({ step: 'initial' }); }} className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                  Change Vibe
+                </button>
+                
+                {refreshCount < 3 && (
+                  <button onClick={refreshRecommendations} disabled={loading} className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all flex items-center gap-2 disabled:opacity-50">
+                    <RefreshCw className="w-4 h-4" strokeWidth={1.5} />
+                    Refresh ({3 - refreshCount} left)
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="p-4 sm:p-8 border-t border-zinc-900 backdrop-blur-xl bg-black/80">
+        <div className="max-w-5xl mx-auto flex gap-3 sm:gap-4">
+          <input type="text" value={input} onChange={e => setInput(e.target.value)} onKeyPress={e => e.key === 'Enter' && send()} placeholder="Ask Lumina anything..." className="flex-1 bg-zinc-900/50 border border-zinc-800 text-white rounded-2xl px-4 sm:px-6 py-3 sm:py-4 focus:outline-none focus:ring-1 focus:ring-violet-600 placeholder:text-zinc-600 font-light text-sm" />
+          <button onClick={() => send()} disabled={loading || !input.trim()} className="px-6 sm:px-10 py-3 sm:py-4 bg-white text-black rounded-2xl font-light text-sm disabled:opacity-30 hover:bg-zinc-100 transition-all whitespace-nowrap">
+            Send
+          </button>
+        </div>
+      </div>
+
+      {showSettings && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6" onClick={() => setShowSettings(false)}>
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 max-w-lg w-full" onClick={e => e.stopPropagation()}>
+            <h2 className="text-2xl text-white font-light mb-6">How to Use Lumina</h2>
+            <div className="space-y-4 text-zinc-300 text-sm font-light">
+              <p><strong className="text-white">Quick Start:</strong> Choose who you're going with</p>
+              <p><strong className="text-white">Follow the Flow:</strong> Lumina asks when, what vibe, and cuisine/music preferences</p>
+              <p><strong className="text-white">Get Recommendations:</strong> 5 real dining/nightlife venues</p>
+              <p><strong className="text-white">Refresh:</strong> Up to 3 times for new suggestions (no duplicates)</p>
+              <p><strong className="text-white">Explore:</strong> Browse all venues and events</p>
+            </div>
+            <button onClick={() => setShowSettings(false)} className="mt-6 w-full py-3 bg-white text-black rounded-xl font-light hover:bg-zinc-100 transition-colors">
+              Got it
+            </button>
+          </div>
+        </div>
+      )}
+
+      <VenueModal venue={selectedVenue} isOpen={!!selectedVenue} onClose={() => setSelectedVenue(null)} />
+      
+      <style jsx global>{`
+        @keyframes shimmer {
+          0% { transform: translateX(-100%) skewX(-12deg); }
+          100% { transform: translateX(200%) skewX(-12deg); }
+        }
+        .animate-shimmer { animation: shimmer 3s infinite; }
+      `}</style>
+    </div>
+  );
+}

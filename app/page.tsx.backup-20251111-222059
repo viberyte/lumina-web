@@ -1,0 +1,374 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import SplashScreen from '@/components/SplashScreen';
+import ExploreView from '@/components/ExploreView';
+import SwipeableVenueCard from '@/components/SwipeableVenueCard';
+import ItineraryManager from '@/components/ItineraryManager';
+import EventCarousel from '@/components/event-carousel';
+import VenueModal from '@/components/VenueModal';
+import { Sparkles, Calendar, Compass, MapPin, RefreshCw, Send, Mic, Palette, X } from 'lucide-react';
+
+type Theme = 'dark' | 'navy' | 'light';
+
+const themes = {
+  dark: {
+    name: 'Dark Luxury',
+    bg: 'bg-black',
+    bgGradient: 'bg-gradient-to-br from-black via-zinc-900 to-black',
+    card: 'bg-zinc-900/80 backdrop-blur-xl',
+    text: 'text-white',
+    textMuted: 'text-zinc-400',
+    accent: 'from-amber-500 via-yellow-600 to-orange-500',
+    accentSolid: 'bg-amber-600',
+    border: 'border-zinc-800/50',
+    input: 'bg-zinc-900/50 border-zinc-700/50 text-white placeholder-zinc-500',
+    button: 'bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-500 hover:to-yellow-500',
+    shadow: 'shadow-amber-500/20',
+    icon: 'text-amber-500'
+  },
+  navy: {
+    name: 'Navy Elegance',
+    bg: 'bg-slate-950',
+    bgGradient: 'bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950',
+    card: 'bg-slate-900/80 backdrop-blur-xl',
+    text: 'text-slate-50',
+    textMuted: 'text-slate-400',
+    accent: 'from-blue-400 via-cyan-400 to-blue-500',
+    accentSolid: 'bg-blue-500',
+    border: 'border-slate-800/50',
+    input: 'bg-slate-900/50 border-slate-700/50 text-slate-50 placeholder-slate-500',
+    button: 'bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400',
+    shadow: 'shadow-blue-500/20',
+    icon: 'text-cyan-400'
+  },
+  light: {
+    name: 'Clean Modern',
+    bg: 'bg-stone-50',
+    bgGradient: 'bg-gradient-to-br from-stone-50 via-white to-stone-100',
+    card: 'bg-white/80 backdrop-blur-xl',
+    text: 'text-stone-900',
+    textMuted: 'text-stone-600',
+    accent: 'from-indigo-500 via-purple-500 to-indigo-600',
+    accentSolid: 'bg-indigo-600',
+    border: 'border-stone-200/50',
+    input: 'bg-white/50 border-stone-300/50 text-stone-900 placeholder-stone-400',
+    button: 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500',
+    shadow: 'shadow-indigo-500/20',
+    icon: 'text-indigo-600'
+  }
+};
+
+export default function Home() {
+  const [theme, setTheme] = useState<Theme>('dark');
+  const [showThemeMenu, setShowThemeMenu] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+  const [city, setCity] = useState<string | null>(null);
+  const [mode, setMode] = useState<'chat' | 'explore'>('chat');
+  const [messages, setMessages] = useState<any[]>([]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [venues, setVenues] = useState<any[]>([]);
+  const [currentVenueIndex, setCurrentVenueIndex] = useState(0);
+  const [showItinerary, setShowItinerary] = useState(false);
+  const [itineraryCount, setItineraryCount] = useState(0);
+  const [selectedVenue, setSelectedVenue] = useState<any>(null);
+  const [conversationFlow, setConversationFlow] = useState<any>({ step: 'location' });
+  const [isReturningUser, setIsReturningUser] = useState(false);
+  const [userName, setUserName] = useState<string>('');
+
+  const t = themes[theme];
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('lumina_theme') as Theme;
+    if (savedTheme && themes[savedTheme]) setTheme(savedTheme);
+    
+    const userData = localStorage.getItem('lumina_user');
+    const lastCity = localStorage.getItem('lumina_location');
+    
+    if (userData) {
+      const user = JSON.parse(userData);
+      setIsReturningUser(true);
+      setUserName(user.name || '');
+      
+      if (lastCity) {
+        const { city: savedCity } = JSON.parse(lastCity);
+        setCity(savedCity);
+        setConversationFlow({ step: 'who' });
+      }
+    }
+    
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+      if (!isReturningUser) {
+        setMessages([{
+          role: 'assistant',
+          content: `Hey, I'm Lumina 🌙\n\nYour friend who knows where to go. Where you at tonight?`,
+          showButtons: true,
+          buttonType: 'location'
+        }]);
+      } else {
+        const greeting = getTimeBasedGreeting(userName);
+        setMessages([{
+          role: 'assistant',
+          content: `${greeting} ${city ? `Still in ${city}?` : 'Where you at tonight?'}`,
+          showButtons: true,
+          buttonType: city ? 'location-confirm' : 'location'
+        }]);
+      }
+    }, 2000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('lumina_itineraries');
+    if (saved) {
+      const itineraries = JSON.parse(saved);
+      const tonight = itineraries['tonight'] || [];
+      setItineraryCount(tonight.length);
+    }
+  }, [showItinerary]);
+
+  const changeTheme = (newTheme: Theme) => {
+    setTheme(newTheme);
+    localStorage.setItem('lumina_theme', newTheme);
+    setShowThemeMenu(false);
+  };
+
+  const getTimeBasedGreeting = (name: string) => {
+    const hour = new Date().getHours();
+    if (hour < 12) return `Morning ${name}! ☀️`;
+    if (hour < 17) return `Hey ${name} 👋`;
+    return `What's good ${name}? 🌙`;
+  };
+
+  const handleSwipeLeft = () => {
+    if (currentVenueIndex < venues.length - 1) {
+      setCurrentVenueIndex(prev => prev + 1);
+    }
+  };
+
+  const handleSwipeRight = (venue: any) => {
+    const saved = localStorage.getItem('lumina_itineraries');
+    const itineraries = saved ? JSON.parse(saved) : {};
+    const tonight = itineraries['tonight'] || [];
+    
+    if (!tonight.find((v: any) => v.id === venue.id)) {
+      tonight.push(venue);
+      itineraries['tonight'] = tonight;
+      localStorage.setItem('lumina_itineraries', JSON.stringify(itineraries));
+      setItineraryCount(tonight.length);
+    }
+    
+    if (currentVenueIndex < venues.length - 1) {
+      setCurrentVenueIndex(prev => prev + 1);
+    }
+  };
+
+  const handleSwipeUp = (venue: any) => {
+    setSelectedVenue(venue);
+  };
+
+  const send = async (customMessage?: string) => {
+    const messageToSend = customMessage || input;
+    if (!messageToSend.trim() && !customMessage) return;
+
+    const userMessage = { role: 'user', content: messageToSend };
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
+    setLoading(true);
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: messageToSend,
+          conversationFlow,
+          city
+        })
+      });
+
+      const data = await res.json();
+
+      if (data.venues && data.venues.length > 0) {
+        setVenues(data.venues);
+        setCurrentVenueIndex(0);
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          content: data.message || `Found ${data.venues.length} perfect spots for you! ✨`,
+          showVenues: true
+        }]);
+      } else {
+        setMessages(prev => [...prev, {
+          role: 'assistant',
+          content: data.message || 'Let me help you find something perfect!'
+        }]);
+      }
+
+      if (data.conversationFlow) {
+        setConversationFlow(data.conversationFlow);
+      }
+
+      if (data.city) {
+        setCity(data.city);
+        localStorage.setItem('lumina_location', JSON.stringify({ city: data.city }));
+      }
+    } catch (error) {
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: 'Oops! Something went wrong. Try again?'
+      }]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (showSplash) {
+    return <SplashScreen onComplete={() => setShowSplash(false)} />;
+  }
+
+  return (
+    <div className={`min-h-screen ${t.bgGradient} transition-all duration-500`}>
+      <div className="max-w-md mx-auto h-screen flex flex-col relative">
+        
+        {/* Header */}
+        <div className={`${t.card} ${t.border} border-b px-6 py-4 flex items-center justify-between shadow-lg`}>
+          <div className="flex items-center gap-3">
+            <Sparkles className={`w-6 h-6 ${t.icon}`} />
+            <h1 className={`text-xl font-bold ${t.text} tracking-tight`}>Lumina</h1>
+          </div>
+          
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowThemeMenu(!showThemeMenu)}
+              className={`p-2.5 ${t.card} ${t.border} border rounded-xl hover:scale-105 transition-transform ${t.shadow} shadow-lg`}
+              title="Change theme"
+            >
+              <Palette className={`w-5 h-5 ${t.icon}`} />
+            </button>
+            
+            {itineraryCount > 0 && (
+              <button
+                onClick={() => setShowItinerary(true)}
+                className={`flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r ${t.accent} text-white rounded-xl text-sm font-semibold shadow-lg ${t.shadow} hover:scale-105 transition-transform`}
+              >
+                <Calendar className="w-4 h-4" />
+                <span>{itineraryCount}</span>
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Theme Selector */}
+        {showThemeMenu && (
+          <div className={`absolute top-20 right-6 ${t.card} ${t.border} border rounded-2xl shadow-2xl ${t.shadow} z-50 p-2 w-56 animate-in slide-in-from-top-2`}>
+            <div className={`${t.textMuted} text-xs font-semibold uppercase tracking-wider px-3 py-2`}>
+              Choose Theme
+            </div>
+            {(Object.keys(themes) as Theme[]).map((themeName) => (
+              <button
+                key={themeName}
+                onClick={() => changeTheme(themeName)}
+                className={`w-full text-left px-4 py-3 rounded-xl transition-all ${
+                  theme === themeName 
+                    ? `bg-gradient-to-r ${themes[themeName].accent} text-white font-semibold shadow-md` 
+                    : `${t.textMuted} hover:${t.card} hover:${t.text}`
+                }`}
+              >
+                {themes[themeName].name}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Main Content */}
+        <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+          {/* Messages */}
+          {messages.map((msg, idx) => (
+            <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`max-w-[80%] px-5 py-3 rounded-2xl ${
+                msg.role === 'user' 
+                  ? `bg-gradient-to-r ${t.accent} text-white shadow-lg ${t.shadow}` 
+                  : `${t.card} ${t.text} ${t.border} border shadow-md`
+              }`}>
+                <p className="whitespace-pre-wrap text-sm leading-relaxed">{msg.content}</p>
+              </div>
+            </div>
+          ))}
+
+          {/* Venue Cards */}
+          {venues.length > 0 && currentVenueIndex < venues.length && (
+            <div className="relative h-[500px]">
+              {venues.slice(currentVenueIndex, currentVenueIndex + 3).map((venue, idx) => (
+                <div
+                  key={venue.id}
+                  className="absolute inset-0"
+                  style={{
+                    zIndex: 3 - idx,
+                    transform: `scale(${1 - idx * 0.05}) translateY(${idx * 10}px)`,
+                    opacity: idx === 0 ? 1 : 0.5
+                  }}
+                >
+                  <SwipeableVenueCard
+                    venue={venue}
+                    onSwipeLeft={idx === 0 ? handleSwipeLeft : () => {}}
+                    onSwipeRight={idx === 0 ? handleSwipeRight : () => {}}
+                    onSwipeUp={idx === 0 ? handleSwipeUp : () => {}}
+                    isActive={idx === 0}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {loading && (
+            <div className="flex justify-center">
+              <div className={`w-8 h-8 border-3 ${t.border} border-t-transparent rounded-full animate-spin`} />
+            </div>
+          )}
+        </div>
+
+        {/* Input Bar */}
+        <div className={`${t.card} ${t.border} border-t px-4 py-4 shadow-2xl`}>
+          <div className="flex gap-3">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && send()}
+              placeholder="Ask Lumina anything..."
+              className={`flex-1 ${t.input} rounded-2xl px-6 py-3.5 focus:outline-none focus:ring-2 ${theme === 'dark' ? 'focus:ring-amber-500' : theme === 'navy' ? 'focus:ring-cyan-400' : 'focus:ring-indigo-500'} transition-all text-sm ${t.shadow} shadow-inner`}
+              disabled={loading}
+            />
+            <button
+              onClick={() => send()}
+              disabled={loading || !input.trim()}
+              className={`p-3.5 rounded-2xl bg-gradient-to-r ${t.button} text-white shadow-lg ${t.shadow} hover:scale-105 disabled:opacity-50 disabled:hover:scale-100 transition-transform`}
+            >
+              <Send className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Modals */}
+      {selectedVenue && (
+        <VenueModal
+          venue={selectedVenue}
+          isOpen={!!selectedVenue}
+          onClose={() => setSelectedVenue(null)}
+        />
+      )}
+
+      {showItinerary && (
+        <ItineraryManager
+          isOpen={showItinerary}
+          onClose={() => setShowItinerary(false)}
+          onShare={() => {}}
+        />
+      )}
+    </div>
+  );
+}

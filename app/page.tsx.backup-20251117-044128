@@ -1,0 +1,745 @@
+'use client';
+import { useState, useEffect, useRef } from 'react';
+import SplashScreen from '@/components/SplashScreen';
+import ModernCitySelector from '@/components/ModernCitySelector';
+import ExploreView from '@/components/ExploreView';
+import VenueCarousel from '@/components/venue-carousel';
+import EventCarousel from '@/components/event-carousel';
+import VenueModal from '@/components/VenueModal';
+import PreferenceSurvey from '@/components/PreferenceSurvey';
+import EnhancedPreferenceSurvey from '@/components/EnhancedPreferenceSurvey';
+import FlowDetailView from '@/components/FlowDetailView';
+import { Sparkles, MessageCircle, RefreshCw, MapPin, ChevronRight, Lock, Zap, User, Heart, Settings, BookOpen, LogOut, X, ArrowRight } from 'lucide-react';
+
+export default function Home() {
+  const [showSplash, setShowSplash] = useState(true);
+  const [city, setCity] = useState<string | null>(null);
+  const [state, setState] = useState<string | null>(null);
+  const [mode, setMode] = useState<'chat' | 'vibes' | 'settings'>('chat');
+  const [messages, setMessages] = useState<any[]>([]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [venues, setVenues] = useState<any[]>([]);
+  const [events, setEvents] = useState<any[]>([]);
+  const [selectedVenue, setSelectedVenue] = useState<any>(null);
+  const [flows, setFlows] = useState<any>(null);
+  const [selectedFlow, setSelectedFlow] = useState<any>(null);
+  const [showFlowDetail, setShowFlowDetail] = useState(false);
+  const [conversationFlow, setConversationFlow] = useState<any>({ step: 'who' });
+  const [showPreferenceSurvey, setShowPreferenceSurvey] = useState(false);
+  const [showEnhancedSurvey, setShowEnhancedSurvey] = useState(false);
+  const [userPreferences, setUserPreferences] = useState<any>(null);
+  const [hasRefreshed, setHasRefreshed] = useState(false);
+  
+  // Swipe detection
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  useEffect(() => {
+    const savedPrefs = localStorage.getItem('lumina_preferences');
+    const hasUsedBefore = localStorage.getItem('lumina_has_used');
+    
+    if (savedPrefs) {
+      setUserPreferences(JSON.parse(savedPrefs));
+    }
+    
+    // Auto-start conversation for all users
+    if (hasUsedBefore) {
+      // Returning users
+      setMessages([{
+        role: 'assistant',
+        content: `Welcome back! What vibe are we chasing tonight?`,
+        showButtons: true,
+        buttonType: 'who'
+      }]);
+    } else {
+      // First-time users - mark as used and start
+      localStorage.setItem('lumina_has_used', 'true');
+      setMessages([{
+        role: 'assistant',
+        content: `Hey! I'm Lumina, your nightlife concierge. Who's joining you tonight?`,
+        showButtons: true,
+        buttonType: 'who'
+      }]);
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = e.touches[0].clientX; // Initialize to same position
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const swipeThreshold = 100; // Increased from 50 to 100
+    const diff = touchStartX.current - touchEndX.current;
+    const distance = Math.abs(diff);
+
+    // Only trigger if actual swipe movement occurred
+    if (distance < swipeThreshold) {
+      touchStartX.current = 0;
+      touchEndX.current = 0;
+      return; // Not a swipe, just a tap
+    }
+
+    if (mode === "chat") {
+      // Swipe left → Settings
+      if (diff < -swipeThreshold) {
+        setMode("settings");
+      }
+      // Swipe right → Vibes
+      else if (diff > swipeThreshold) {
+        setMode("vibes");
+      }
+    } else if (mode === "vibes") {
+      // Swipe right → back to Chat
+      if (diff < -swipeThreshold) {
+        setMode("chat");
+      }
+    } else if (mode === "settings") {
+      // Swipe left → back to Chat
+      if (diff > swipeThreshold) {
+        setMode("chat");
+      }
+    }
+
+  const handleButtonSelection = async (selection: string, type: string) => {
+    const newFlow = { ...conversationFlow };
+    
+    if (type === 'who') {
+      newFlow.who = selection;
+      newFlow.step = 'when';
+      setMessages([
+        ...messages,
+        { role: 'user', content: selection },
+        { role: 'assistant', content: `Perfect! When are you thinking?`, showButtons: true, buttonType: 'when' }
+      ]);
+    } else if (type === 'when') {
+      newFlow.when = selection;
+      newFlow.step = 'vibe';
+      setMessages([
+        ...messages,
+        { role: 'user', content: selection },
+        { role: 'assistant', content: `Great! What kind of vibe are you looking for?`, showButtons: true, buttonType: 'vibe' }
+      ]);
+    } else if (type === 'vibe') {
+      newFlow.vibe = selection;
+      
+      if (selection === 'Events') {
+        newFlow.step = 'complete';
+        setMessages([...messages, { role: 'user', content: selection }]);
+        setConversationFlow(newFlow);
+        
+        setLoading(true);
+        fetch(`/api/events?city=${city}`)
+          .then(res => res.json())
+          .then(data => {
+            if (data.events && data.events.length > 0) {
+              setEvents(data.events);
+              setMessages(m => [...m, { 
+                role: 'assistant', 
+                content: `Found ${data.events.length} upcoming events in ${city}!` 
+              }]);
+            } else {
+              setMessages(m => [...m, { 
+                role: 'assistant', 
+                content: "No upcoming events found. Check back soon!" 
+              }]);
+            }
+            setLoading(false);
+          });
+        return;
+      } else if (selection === 'Dinner') {
+        newFlow.step = 'cuisine';
+        setMessages([
+          ...messages,
+          { role: 'user', content: selection },
+          { role: 'assistant', content: `What type of cuisine are you in the mood for?`, showButtons: true, buttonType: 'cuisine' }
+        ]);
+      } else if (selection === 'Lounge' || selection === 'Nightclub') {
+        newFlow.step = 'complete';
+        newFlow.musicGenre = selection === 'Nightclub' ? 'Hip-Hop' : 'R&B';
+        setMessages([...messages, { role: 'user', content: selection }]);
+        await getRecommendations({ ...newFlow, city });
+      } else {
+        newFlow.step = 'complete';
+        setMessages([...messages, { role: 'user', content: selection }]);
+        await getRecommendations({ ...newFlow, city });
+      }
+    } else if (type === 'cuisine') {
+      newFlow.cuisine = selection;
+      newFlow.step = 'afterdinner';
+      setMessages([
+        ...messages,
+        { role: 'user', content: selection },
+        { role: 'assistant', content: `Perfect! What would you like to do after dinner?`, showButtons: true, buttonType: 'afterdinner' }
+      ]);
+    } else if (type === 'afterdinner') {
+      newFlow.afterDinner = selection;
+      newFlow.step = 'complete';
+      setMessages([...messages, { role: 'user', content: selection }]);
+      await getRecommendations({ ...newFlow, city });
+    }
+    
+    setConversationFlow(newFlow);
+  };
+
+  const generateFlows = async () => {
+    if (!userPreferences) {
+      setShowPreferenceSurvey(true);
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const res = await fetch('/api/flows', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          city: city,
+          who_with: conversationFlow.who,
+          when: conversationFlow.when,
+          vibe: conversationFlow.vibe,
+          cuisine: conversationFlow.cuisine,
+          music: conversationFlow.afterDinner
+        })
+      });
+      
+      const data = await res.json();
+      
+      if (data.ok && data.flows) {
+        const limitedFlows = {
+          topPick: data.flows.topPick,
+          alternatives: data.flows.alternatives.slice(0, 2),
+          quickOptions: []
+        };
+        setFlows(limitedFlows);
+        setMessages(m => [...m, { 
+          role: 'assistant', 
+          content: `Perfect! I've curated 3 complete flow experiences for you.`,
+          showFlows: true
+        }]);
+      } else {
+        setMessages(m => [...m, { 
+          role: 'assistant', 
+          content: `Hmm, couldn't generate flows. Error: ${data.error || 'Unknown'}` 
+        }]);
+      }
+    } catch (error: any) {
+      console.error('Flow generation error:', error);
+      setMessages(m => [...m, { 
+        role: 'assistant', 
+        content: `Something went wrong: ${error.message}` 
+      }]);
+    }
+    setLoading(false);
+  };
+
+  const getRecommendations = async (context: any) => {
+    setLoading(true);
+    setHasRefreshed(false);
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ context })
+      });
+      const data = await res.json();
+      
+      if (data.ok && data.venues?.length > 0) {
+        setVenues(data.venues.slice(0, 6));
+        setMessages(m => [...m, { 
+          role: 'assistant', 
+          content: `Here are ${Math.min(6, data.venues.length)} perfect spots for you!`,
+          showVenues: true
+        }]);
+      } else {
+        setMessages(m => [...m, { 
+          role: 'assistant', 
+          content: "Hmm, no spots matching that vibe rn. Try something else?" 
+        }]);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setMessages(m => [...m, { 
+        role: 'assistant', 
+        content: "Something went wrong. Try again?" 
+      }]);
+    }
+    setLoading(false);
+  };
+
+  const refreshVenues = async () => {
+    setHasRefreshed(true);
+    await getRecommendations({ ...conversationFlow, city });
+  };
+
+  const send = async (customMessage?: string) => {
+    const messageToSend = customMessage || input;
+    if (!messageToSend.trim()) return;
+    
+    setMessages([...messages, { role: 'user', content: messageToSend }]);
+    setInput('');
+    setLoading(true);
+    
+    try {
+      const brainRes = await fetch('/api/lumina', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: messageToSend, city })
+      });
+      
+      const brainData = await brainRes.json();
+      
+      if (brainData.ok) {
+        const newFlow = { ...conversationFlow };
+        if (brainData.vibe) newFlow.vibe = brainData.vibe;
+        if (brainData.music) newFlow.musicGenre = brainData.music;
+        if (brainData.cuisine) newFlow.cuisine = brainData.cuisine;
+        if (brainData.who) newFlow.who = brainData.who;
+        
+        setMessages(m => [...m, { role: 'assistant', content: brainData.response }]);
+        
+        if (newFlow.vibe && newFlow.who) {
+          getRecommendations({ ...newFlow, city });
+        }
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+    
+    setLoading(false);
+  };
+
+  const startNewSearch = () => {
+    setVenues([]);
+    setEvents([]);
+    setFlows(null);
+    setSelectedFlow(null);
+    setShowFlowDetail(false);
+    setMessages([]);
+    setHasRefreshed(false);
+    setConversationFlow({ step: 'who' });
+    setMessages([{
+      role: 'assistant',
+      content: `Hey! Who's joining you tonight?`,
+      showButtons: true,
+      buttonType: 'who'
+    }]);
+  };
+
+  const selectFlow = (flow: any) => {
+    setSelectedFlow(flow);
+    setShowFlowDetail(true);
+  };
+
+  const handlePreferencesComplete = (preferences: any) => {
+    setUserPreferences(preferences);
+    localStorage.setItem('lumina_preferences', JSON.stringify(preferences));
+    
+    setTimeout(() => {
+      generateFlows();
+    }, 500);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('lumina_preferences');
+    localStorage.removeItem('lumina_location');
+    localStorage.removeItem('lumina_has_used');
+    setUserPreferences(null);
+    setCity(null);
+    setState(null);
+    setMode('chat');
+    setMessages([]);
+  };
+
+  if (showSplash) return <SplashScreen onComplete={() => setShowSplash(false)} />;
+  if (!city) return <ModernCitySelector onSelectLocation={(c, s) => { setCity(c); setState(s); }} />;
+  if (mode === 'vibes') return <ExploreView city={city} onBack={() => setMode('chat')} onFlowExperience={setSelectedVenue} />;
+
+  const whoOptions = ['Solo', 'Date night', 'With friends', 'Group outing', 'Business'];
+  const whenOptions = ['Tonight', 'Tomorrow', 'This weekend'];
+  const vibeOptions = ['Dinner', 'Lounge', 'Nightclub', 'Brunch', 'Events'];
+  const cuisineOptions = ['Italian', 'Japanese', 'Mexican', 'Caribbean', 'American', 'Soul Food', 'French', 'Surprise me'];
+  const afterDinnerOptions = [
+    'Drinks & Live Music',
+    'Rooftop Bar',
+    'Dessert & Coffee',
+    'Lounge Vibes',
+    'Hit a Party',
+    'Just Keep It Chill'
+  ];
+
+  // Sophisticated Settings Sidebar Component
+  const SettingsSidebar = () => (
+    <div className="fixed inset-0 z-50 flex">
+      {/* Overlay */}
+      <div 
+        className="absolute inset-0 bg-black/70 backdrop-blur-md"
+        onClick={() => setMode('chat')}
+      />
+      
+      {/* Sidebar */}
+      <div className="relative w-80 bg-black/95 backdrop-blur-xl border-r border-zinc-800/50 flex flex-col">
+        {/* Header */}
+        <div className="p-6 border-b border-zinc-800/50">
+          <div className="flex items-center justify-between mb-2">
+            <div>
+              <h2 className="text-xl font-light text-white tracking-wide">Account</h2>
+              <p className="text-zinc-500 text-xs mt-0.5">{city}</p>
+            </div>
+            <button
+              onClick={() => setMode('chat')}
+              className="p-2 hover:bg-white/5 rounded-lg transition-colors"
+            >
+              <X className="w-4 h-4 text-zinc-500" />
+            </button>
+          </div>
+        </div>
+
+        {/* Menu Items */}
+        <div className="flex-1 overflow-y-auto p-6">
+          <div className="space-y-1">
+            <button
+              onClick={() => {
+                setMode('chat');
+                // Navigate to profile page (to be built)
+              }}
+              className="w-full flex items-center justify-between p-4 rounded-lg hover:bg-white/5 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <User className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
+                <span className="text-white font-light">Profile</span>
+              </div>
+              <ArrowRight className="w-4 h-4 text-zinc-600 group-hover:text-zinc-400 transition-colors" />
+            </button>
+
+            <button
+              onClick={() => {
+                setMode('chat');
+                // Navigate to saved venues (to be built)
+              }}
+              className="w-full flex items-center justify-between p-4 rounded-lg hover:bg-white/5 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <Heart className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
+                <span className="text-white font-light">Saved</span>
+              </div>
+              <ArrowRight className="w-4 h-4 text-zinc-600 group-hover:text-zinc-400 transition-colors" />
+            </button>
+
+            <button
+              onClick={() => {
+                setMode('chat');
+                setShowPreferenceSurvey(true);
+              }}
+              className="w-full flex items-center justify-between p-4 rounded-lg hover:bg-white/5 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <Settings className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
+                <span className="text-white font-light">Preferences</span>
+              </div>
+              <ArrowRight className="w-4 h-4 text-zinc-600 group-hover:text-zinc-400 transition-colors" />
+            </button>
+
+            <div className="border-t border-zinc-800/50 my-4" />
+
+            <button
+              onClick={() => {
+                setMode('chat');
+                // Show guide modal (to be built)
+              }}
+              className="w-full flex items-center justify-between p-4 rounded-lg hover:bg-white/5 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <BookOpen className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
+                <span className="text-white font-light">Guide</span>
+              </div>
+              <ArrowRight className="w-4 h-4 text-zinc-600 group-hover:text-zinc-400 transition-colors" />
+            </button>
+          </div>
+        </div>
+
+        {/* Logout Button */}
+        <div className="p-6 border-t border-zinc-800/50">
+          <button
+            onClick={handleLogout}
+            className="w-full flex items-center justify-center gap-3 p-3 rounded-lg border border-zinc-800/50 hover:bg-red-950/20 hover:border-red-900/50 transition-all group"
+          >
+            <LogOut className="w-4 h-4 text-zinc-500 group-hover:text-red-400 transition-colors" />
+            <span className="text-zinc-400 font-light group-hover:text-red-400 transition-colors">Sign Out</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div 
+      className="min-h-screen bg-black flex flex-col"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      {/* Settings Sidebar Overlay */}
+      {mode === 'settings' && <SettingsSidebar />}
+
+      <div className="sticky top-0 z-10 bg-black/80 backdrop-blur-xl border-b border-zinc-900">
+        <div className="px-4 sm:px-6 py-4">
+          <div className="flex justify-between items-center max-w-7xl mx-auto">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-full flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h1 className="text-white text-xl font-light">Lumina</h1>
+                <p className="text-zinc-500 text-xs">{city}</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-2">
+              <button 
+                onClick={() => setMode('settings')}
+                className="p-2 hover:bg-zinc-900 rounded-full transition-colors"
+                title="Settings"
+              >
+                <User className="w-5 h-5 text-zinc-400" />
+              </button>
+              <button onClick={startNewSearch} className="p-2 hover:bg-zinc-900 rounded-full transition-colors">
+                <RefreshCw className="w-5 h-5 text-zinc-400" />
+              </button>
+              <button onClick={() => { localStorage.removeItem('lumina_location'); setCity(null); setState(null); }} className="p-2 hover:bg-zinc-900 rounded-full transition-colors" title="Change Location">
+                <MapPin className="w-5 h-5 text-zinc-400" />
+              </button>
+              <button 
+                onClick={() => setMode('vibes')} 
+                className="p-2 hover:bg-zinc-900 rounded-full transition-colors"
+                title="Vibes"
+              >
+                <Sparkles className="w-5 h-5 text-violet-400" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex-1 overflow-y-auto pb-32">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+          {messages.map((msg, idx) => (
+            <div key={idx}>
+              <div className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div className={`max-w-[80%] rounded-2xl px-4 py-3 ${
+                  msg.role === 'user' 
+                    ? 'bg-white text-black' 
+                    : 'bg-zinc-900 text-white border border-zinc-800'
+                }`}>
+                  {msg.content}
+                </div>
+              </div>
+
+              {msg.showButtons && msg.buttonType === 'who' && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {whoOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'who')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {msg.showButtons && msg.buttonType === 'when' && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {whenOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'when')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {msg.showButtons && msg.buttonType === 'vibe' && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {vibeOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'vibe')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {msg.showButtons && msg.buttonType === 'cuisine' && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {cuisineOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'cuisine')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {msg.showButtons && msg.buttonType === 'afterdinner' && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {afterDinnerOptions.map(option => (
+                    <button key={option} onClick={() => handleFlowSelection(option, 'afterdinner')} className="px-4 py-2 bg-white/5 hover:bg-white/10 border border-zinc-800 hover:border-zinc-700 rounded-xl text-white text-sm font-light transition-all">
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {msg.showFlows && flows && (
+                <div className="mt-6 space-y-4">
+                  <div>
+                    <h3 className="text-zinc-400 text-sm mb-3 flex items-center gap-2">
+                      <Sparkles className="w-4 h-4" />
+                      Top Pick For You
+                    </h3>
+                    <button
+                      onClick={() => selectFlow(flows.topPick)}
+                      className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl p-4 text-left hover:shadow-2xl transition-all group"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h4 className="text-white font-semibold text-lg mb-1">{flows.topPick.title}</h4>
+                          <p className="text-white/80 text-sm">{flows.topPick.reasoning}</p>
+                        </div>
+                        <ChevronRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </button>
+                  </div>
+
+                  {flows.alternatives && flows.alternatives.length > 0 && (
+                    <div>
+                      <h3 className="text-zinc-400 text-sm mb-3">Alternative Flows</h3>
+                      <div className="space-y-2">
+                        {flows.alternatives.map((flow: any, i: number) => (
+                          <button
+                            key={i}
+                            onClick={() => selectFlow(flow)}
+                            className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-4 text-left hover:border-violet-500 transition-all group"
+                          >
+                            <div className="flex items-center justify-between">
+                              <div>
+                                <h4 className="text-white font-medium mb-1">{flow.title}</h4>
+                                <p className="text-zinc-400 text-sm">{flow.reasoning}</p>
+                              </div>
+                              <ChevronRight className="w-4 h-4 text-zinc-500 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          ))}
+
+          {loading && (
+            <div className="flex justify-start">
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl px-4 py-3">
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 bg-violet-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                  <div className="w-2 h-2 bg-violet-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                  <div className="w-2 h-2 bg-violet-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {venues.length > 0 && (
+            <div>
+              <VenueCarousel venues={venues} title="Your Recommendations" onFlowExperience={setSelectedVenue} />
+              
+              <div className="mt-4 flex justify-center">
+                <button
+                  onClick={refreshVenues}
+                  disabled={hasRefreshed}
+                  className="px-6 py-2 bg-zinc-900 border border-zinc-800 hover:border-violet-500 text-white rounded-xl text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center gap-2"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  {hasRefreshed ? 'Refreshed' : 'Show Me More'}
+                </button>
+              </div>
+
+              <div className="mt-6">
+                {!userPreferences ? (
+                  <button
+                    onClick={() => setShowPreferenceSurvey(true)}
+                    className="w-full py-5 bg-zinc-900 border-2 border-zinc-800 rounded-2xl relative overflow-hidden group"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zinc-700/20 to-transparent" />
+                    <div className="relative flex flex-col items-center justify-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <Lock className="w-5 h-5 text-zinc-600" />
+                        <span className="text-zinc-500 font-bold text-xl">Flow Me</span>
+                      </div>
+                      <p className="text-zinc-600 text-xs">Set preferences to unlock multi-stop experiences</p>
+                    </div>
+                  </button>
+                ) : (
+                  <button
+                    onClick={generateFlows}
+                    disabled={loading}
+                    className="w-full py-5 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl relative overflow-hidden group animate-pulse hover:animate-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:translate-x-full transition-transform duration-1000" />
+                    <div className="relative flex flex-col items-center justify-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <Zap className="w-6 h-6 text-white" />
+                        <span className="text-white font-bold text-2xl">Flow Me</span>
+                      </div>
+                      <p className="text-white/90 text-sm">Create your perfect night</p>
+                    </div>
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+
+          {events.length > 0 && (
+            <EventCarousel events={events} title="Upcoming Events" />
+          )}
+        </div>
+      </div>
+
+      <div className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-xl border-t border-zinc-900 p-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && send()}
+              placeholder="Ask Lumina anything..."
+              className="flex-1 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder:text-zinc-600 focus:outline-none focus:ring-1 focus:ring-violet-600"
+            />
+            <button
+              onClick={() => send()}
+              disabled={!input.trim() || loading}
+              className="px-6 py-3 bg-white hover:bg-zinc-100 disabled:bg-zinc-800 disabled:text-zinc-600 text-black rounded-xl font-light transition-all"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {selectedVenue && (
+        <VenueModal venue={selectedVenue} isOpen={!!selectedVenue} onClose={() => setSelectedVenue(null)} />
+      )}
+
+      <PreferenceSurvey 
+        isOpen={showPreferenceSurvey}
+        onClose={() => setShowPreferenceSurvey(false)}
+        onComplete={handlePreferencesComplete}
+      />
+
+      <FlowDetailView
+        flow={selectedFlow}
+        isOpen={showFlowDetail}
+        onClose={() => setShowFlowDetail(false)}
+      />
+    </div>
+  );
+}

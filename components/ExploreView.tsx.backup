@@ -1,0 +1,669 @@
+'use client';
+import { useState, useEffect } from 'react';
+import { ArrowLeft, Sparkles, MapPin, Star, Calendar, Music, ExternalLink, ChevronLeft } from 'lucide-react';
+
+interface ExploreViewProps {
+  city: string;
+  onBack: () => void;
+  onFlowExperience: (venue: any) => void;
+}
+
+interface Category {
+  id: string;
+  title: string;
+  subtitle: string;
+  venues: any[];
+}
+
+interface EventCategory {
+  id: string;
+  title: string;
+  subtitle: string;
+  events: any[];
+}
+
+export default function ExploreView({ city: initialCity, onBack, onFlowExperience }: ExploreViewProps) {
+  const [mainTab, setMainTab] = useState<'dining' | 'lounges' | 'events'>('dining');
+  const [selectedCuisine, setSelectedCuisine] = useState<string | null>(null);
+  const [selectedEventGenre, setSelectedEventGenre] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [venues, setVenues] = useState<any[]>([]);
+  const [events, setEvents] = useState<any[]>([]);
+  const [selectedCity, setSelectedCity] = useState(initialCity);
+
+  const cities = ['New York', 'Manhattan', 'Brooklyn', 'Queens', 'New Jersey', 'Newark', 'Jersey City'];
+
+  useEffect(() => {
+    loadData();
+  }, [selectedCity]);
+
+  const loadData = async () => {
+    setLoading(true);
+    try {
+      let cityQuery = selectedCity;
+      if (selectedCity === 'New York') {
+        cityQuery = 'New York,Manhattan,Brooklyn,Queens';
+      }
+      
+      const venuesRes = await fetch(`/api/venues?city=${cityQuery}`);
+      const venuesData = await venuesRes.json();
+      setVenues(venuesData.venues || []);
+
+      const eventsRes = await fetch(`/api/events?city=${cityQuery}`);
+      const eventsData = await eventsRes.json();
+      setEvents(eventsData.events || []);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+    setLoading(false);
+  };
+
+  const parseVibes = (vibes: any): string[] => {
+    if (!vibes) return [];
+    if (typeof vibes === 'string') {
+      try {
+        const parsed = JSON.parse(vibes);
+        if (Array.isArray(parsed)) return parsed;
+      } catch {
+        return vibes.split(',').map(v => v.trim());
+      }
+    }
+    return [];
+  };
+
+  const hasVibe = (venue: any, vibe: string) => {
+    const vibes = parseVibes(venue.vibe_tags);
+    return vibes.some(v => v.toLowerCase().includes(vibe.toLowerCase()));
+  };
+
+  const hasEventTag = (event: any, tag: string) => {
+    const tags = parseVibes(event.tags);
+    return tags.some(t => t.toLowerCase().includes(tag.toLowerCase()));
+  };
+
+  const mainCuisines = [
+    { id: 'soul', label: 'Soul Food', keywords: ['soul', 'southern'] },
+    { id: 'italian', label: 'Italian', keywords: ['italian'] },
+    { id: 'mexican', label: 'Mexican', keywords: ['mexican', 'tex-mex', 'latin american'] },
+    { id: 'american', label: 'American', keywords: ['american', 'bar food', 'steakhouse'] },
+    { id: 'caribbean', label: 'Caribbean', keywords: ['caribbean', 'jamaican'] },
+    { id: 'seafood', label: 'Seafood', keywords: ['seafood'] },
+    { id: 'japanese', label: 'Japanese', keywords: ['japanese', 'sushi'] },
+    { id: 'french', label: 'French', keywords: ['french'] },
+    { id: 'pizza', label: 'Pizza', keywords: ['pizza'] },
+    { id: 'brunch', label: 'Brunch Spots', keywords: ['brunch'] },
+  ];
+
+  const loungeTypes = [
+    { id: 'business', label: 'Business Lounges', vibe: 'professional' },
+    { id: 'date', label: 'Date Night', vibe: 'romantic' },
+    { id: 'upscale', label: 'Upscale Vibes', vibe: 'upscale' },
+    { id: 'hookah', label: 'Hookah Lounges', vibe: 'hookah' },
+    { id: 'rooftop', label: 'Rooftop Lounges', vibe: 'rooftop' },
+    { id: 'live-music', label: 'Live Music', vibe: 'live music' },
+    { id: 'solo', label: 'Solo-Friendly', vibe: 'solo' },
+    { id: 'trendy', label: 'Trendy Spots', vibe: 'trendy' },
+  ];
+
+  const eventGenres = [
+    { id: 'afrobeat', label: 'Afrobeat & Amapiano', keywords: ['afrobeat', 'amapiano'] },
+    { id: 'hiphop', label: 'Hip-Hop & R&B', keywords: ['hip-hop', 'r&b', 'rnb'] },
+    { id: 'house', label: 'House & Tech House', keywords: ['house', 'tech house'] },
+    { id: 'latin', label: 'Latin & Reggaeton', keywords: ['latin', 'reggaeton'] },
+    { id: 'dancehall', label: 'Dancehall & Reggae', keywords: ['dancehall', 'reggae'] },
+    { id: 'nightlife', label: 'Nightlife', keywords: ['nightlife'] },
+    { id: 'lgbtq', label: 'LGBTQ+ Events', keywords: ['lgbtq'] },
+  ];
+
+  const getVenuesByCuisine = (cuisineId: string) => {
+    const cuisine = mainCuisines.find(c => c.id === cuisineId);
+    if (!cuisine) return [];
+    
+    return venues.filter(v => {
+      if (!v.cuisine) return false;
+      const venueCuisine = v.cuisine.toLowerCase();
+      return cuisine.keywords.some(kw => venueCuisine.includes(kw));
+    });
+  };
+
+  const getLoungesByType = (typeId: string) => {
+    const type = loungeTypes.find(t => t.id === typeId);
+    if (!type) return [];
+    
+    return venues.filter(v => {
+      const isLounge = v.category?.includes('lounge') || v.category?.includes('nightlife');
+      const hasVibeMatch = hasVibe(v, type.vibe) || v.name?.toLowerCase().includes(type.vibe);
+      return isLounge && hasVibeMatch;
+    });
+  };
+
+  const getEventsByGenre = (genreId: string) => {
+    const genre = eventGenres.find(g => g.id === genreId);
+    if (!genre) return [];
+    
+    return events.filter(e => {
+      if (!e.music_genre) return false;
+      const eventGenre = e.music_genre.toLowerCase();
+      return genre.keywords.some(kw => eventGenre.includes(kw));
+    });
+  };
+
+  const getSubCategories = (cuisineId: string): Category[] => {
+    const cuisineVenues = getVenuesByCuisine(cuisineId);
+    const cuisine = mainCuisines.find(c => c.id === cuisineId);
+    
+    const categories: Category[] = [
+      {
+        id: 'trendy',
+        title: `Trendy ${cuisine?.label}`,
+        subtitle: 'Instagram-worthy, modern vibes',
+        venues: cuisineVenues.filter(v => hasVibe(v, 'trendy') || hasVibe(v, 'modern') || v.price_tier <= 2)
+      },
+      {
+        id: 'upscale',
+        title: `Upscale ${cuisine?.label}`,
+        subtitle: 'Dress code, white tablecloth',
+        venues: cuisineVenues.filter(v => hasVibe(v, 'upscale') || hasVibe(v, 'sophisticated') || v.price_tier >= 3)
+      },
+      {
+        id: 'date',
+        title: `Date Night ${cuisine?.label}`,
+        subtitle: 'Romantic, intimate',
+        venues: cuisineVenues.filter(v => hasVibe(v, 'romantic') || hasVibe(v, 'intimate') || hasVibe(v, 'date'))
+      },
+      {
+        id: 'brunch',
+        title: `${cuisine?.label} Brunch`,
+        subtitle: 'Bottomless mimosas',
+        venues: cuisineVenues.filter(v => hasVibe(v, 'brunch') || v.cuisine?.toLowerCase().includes('brunch'))
+      },
+      {
+        id: 'late-night',
+        title: `Late Night ${cuisine?.label}`,
+        subtitle: 'Open past midnight',
+        venues: cuisineVenues.filter(v => hasVibe(v, 'late') || hasVibe(v, 'night'))
+      },
+      {
+        id: 'lounge',
+        title: `${cuisine?.label} Lounges`,
+        subtitle: 'Food + lounge vibes',
+        venues: cuisineVenues.filter(v => v.category?.includes('lounge') || v.category?.includes('nightlife'))
+      },
+      {
+        id: 'all',
+        title: `All ${cuisine?.label} Spots`,
+        subtitle: 'Everything we got',
+        venues: cuisineVenues
+      }
+    ].filter(cat => cat.venues.length > 0);
+
+    return categories;
+  };
+
+  const getEventSubCategories = (genreId: string): EventCategory[] => {
+    const genreEvents = getEventsByGenre(genreId);
+    const genre = eventGenres.find(g => g.id === genreId);
+    
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    
+    const weekEnd = new Date(today);
+    weekEnd.setDate(weekEnd.getDate() + 7);
+
+    const categories: EventCategory[] = [
+      {
+        id: 'tonight',
+        title: `${genre?.label} Tonight`,
+        subtitle: 'Happening now',
+        events: genreEvents.filter(e => {
+          if (!e.date) return false;
+          const eventDate = new Date(e.date);
+          return eventDate.toDateString() === today.toDateString();
+        })
+      },
+      {
+        id: 'tomorrow',
+        title: `${genre?.label} Tomorrow`,
+        subtitle: 'Plan ahead',
+        events: genreEvents.filter(e => {
+          if (!e.date) return false;
+          const eventDate = new Date(e.date);
+          return eventDate.toDateString() === tomorrow.toDateString();
+        })
+      },
+      {
+        id: 'weekend',
+        title: `${genre?.label} This Weekend`,
+        subtitle: 'Friday - Sunday',
+        events: genreEvents.filter(e => {
+          if (!e.date) return false;
+          const eventDate = new Date(e.date);
+          const day = eventDate.getDay();
+          return (day === 5 || day === 6 || day === 0) && eventDate >= today && eventDate <= weekEnd;
+        })
+      },
+      {
+        id: 'upscale',
+        title: `Upscale ${genre?.label}`,
+        subtitle: 'VIP tables, dress code',
+        events: genreEvents.filter(e => hasEventTag(e, 'upscale') || hasEventTag(e, 'vip'))
+      },
+      {
+        id: 'upcoming',
+        title: `Upcoming ${genre?.label}`,
+        subtitle: 'Next 30 days',
+        events: genreEvents.filter(e => {
+          if (!e.date) return false;
+          const eventDate = new Date(e.date);
+          const monthEnd = new Date(today);
+          monthEnd.setDate(monthEnd.getDate() + 30);
+          return eventDate >= today && eventDate <= monthEnd;
+        })
+      },
+      {
+        id: 'all',
+        title: `All ${genre?.label} Events`,
+        subtitle: 'Everything we got',
+        events: genreEvents
+      }
+    ].filter(cat => cat.events.length > 0);
+
+    return categories;
+  };
+
+  const getHomepageCategories = (): Category[] => {
+    const categories: Category[] = [];
+    
+    mainCuisines.forEach(cuisine => {
+      const subs = getSubCategories(cuisine.id);
+      subs.slice(0, 2).forEach(sub => categories.push(sub));
+    });
+
+    return categories;
+  };
+
+  const getHomepageLoungeCategories = (): Category[] => {
+    return loungeTypes.map(type => ({
+      id: type.id,
+      title: type.label,
+      subtitle: 'Curated vibes',
+      venues: getLoungesByType(type.id).slice(0, 20)
+    })).filter(cat => cat.venues.length > 0);
+  };
+
+  const getHomepageEventCategories = (): EventCategory[] => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    const weekEnd = new Date(today);
+    weekEnd.setDate(weekEnd.getDate() + 7);
+
+    return [
+      {
+        id: 'tonight',
+        title: 'Tonight',
+        subtitle: 'Happening now',
+        events: events.filter(e => {
+          if (!e.date) return false;
+          const eventDate = new Date(e.date);
+          return eventDate.toDateString() === today.toDateString();
+        })
+      },
+      {
+        id: 'afrobeat',
+        title: 'Afrobeat & Amapiano',
+        subtitle: 'Hottest African parties',
+        events: getEventsByGenre('afrobeat')
+      },
+      {
+        id: 'hiphop',
+        title: 'Hip-Hop & R&B',
+        subtitle: 'Urban nightlife',
+        events: getEventsByGenre('hiphop')
+      },
+      {
+        id: 'house',
+        title: 'House & Tech House',
+        subtitle: 'Electronic vibes',
+        events: getEventsByGenre('house')
+      },
+      {
+        id: 'latin',
+        title: 'Latin & Reggaeton',
+        subtitle: 'Bachata, Salsa, Reggaeton',
+        events: getEventsByGenre('latin')
+      },
+      {
+        id: 'weekend',
+        title: 'This Weekend',
+        subtitle: 'Friday - Sunday',
+        events: events.filter(e => {
+          if (!e.date) return false;
+          const eventDate = new Date(e.date);
+          const day = eventDate.getDay();
+          return (day === 5 || day === 6 || day === 0) && eventDate >= today && eventDate <= weekEnd;
+        })
+      },
+      {
+        id: 'upscale',
+        title: 'Upscale Nightlife',
+        subtitle: 'VIP tables, dress code',
+        events: events.filter(e => hasEventTag(e, 'upscale') || hasEventTag(e, 'vip'))
+      }
+    ].filter(cat => cat.events.length > 0);
+  };
+
+  const formatEventDate = (dateStr: string) => {
+    if (!dateStr) return 'Date TBA';
+    const date = new Date(dateStr);
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    
+    if (date.toDateString() === today.toDateString()) return 'Tonight';
+    if (date.toDateString() === tomorrow.toDateString()) return 'Tomorrow';
+    
+    return date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  };
+
+  const VenueRow = ({ category }: { category: Category }) => {
+    if (!category.venues || category.venues.length === 0) return null;
+
+    return (
+      <div className="mb-8">
+        <div className="mb-4 px-4">
+          <h2 className="text-white text-xl font-semibold">{category.title}</h2>
+          <p className="text-zinc-500 text-sm">{category.subtitle}</p>
+        </div>
+        <div className="flex gap-4 overflow-x-auto scrollbar-hide px-4 pb-2">
+          {category.venues.slice(0, 20).map((venue: any) => (
+            <button
+              key={venue.id}
+              onClick={() => onFlowExperience(venue)}
+              className="group flex-shrink-0 w-64 bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800/50 hover:border-violet-500/50 transition-all hover:shadow-xl"
+            >
+              <div className="aspect-[16/10] bg-zinc-800 relative overflow-hidden">
+                {venue.photo_url ? (
+                  <img 
+                    src={venue.photo_url} 
+                    alt={venue.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900">
+                    <Sparkles className="w-8 h-8 text-zinc-700" />
+                  </div>
+                )}
+                
+                {venue.viberyte_certified === 1 && (
+                  <div className="absolute top-2 right-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-xs px-2 py-1 rounded-full font-medium shadow-lg">
+                    CERTIFIED
+                  </div>
+                )}
+              </div>
+
+              <div className="p-3">
+                <h3 className="text-white font-semibold text-sm line-clamp-1">{venue.name}</h3>
+                <div className="flex items-center justify-between mt-1">
+                  <p className="text-zinc-400 text-xs">{venue.neighborhood || venue.city}</p>
+                  {venue.rating && (
+                    <div className="flex items-center gap-1">
+                      <Star className="w-3 h-3 fill-yellow-500 text-yellow-500" />
+                      <span className="text-white text-xs font-medium">{venue.rating}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const EventRow = ({ category }: { category: EventCategory }) => {
+    if (!category.events || category.events.length === 0) return null;
+
+    return (
+      <div className="mb-8">
+        <div className="mb-4 px-4">
+          <h2 className="text-white text-xl font-semibold">{category.title}</h2>
+          <p className="text-zinc-500 text-sm">{category.subtitle}</p>
+        </div>
+        <div className="flex gap-4 overflow-x-auto scrollbar-hide px-4 pb-2">
+          {category.events.slice(0, 20).map((event: any) => (
+            <div
+              key={event.id}
+              className="group flex-shrink-0 w-72 bg-zinc-900/50 rounded-2xl overflow-hidden border border-zinc-800/50 hover:border-violet-500/50 transition-all hover:shadow-2xl relative"
+            >
+              {/* Shimmer Effect */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
+              
+              {event.image_url && (
+                <div className="aspect-[16/9] bg-zinc-800 relative overflow-hidden">
+                  <img src={event.image_url} alt={event.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-2 right-2 bg-violet-600 text-white text-xs px-2 py-1 rounded-lg font-medium backdrop-blur-sm">
+                    {formatEventDate(event.date)}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
+              )}
+              
+              <div className="p-4">
+                <h3 className="text-white font-semibold text-sm line-clamp-1 mb-2 group-hover:text-violet-300 transition-colors">{event.name}</h3>
+                
+                <div className="space-y-1.5 mb-3">
+                  {event.venue_name && (
+                    <div className="flex items-center gap-2 text-zinc-400 text-xs">
+                      <MapPin className="w-3 h-3" />
+                      <span className="line-clamp-1">{event.venue_name}</span>
+                    </div>
+                  )}
+                  
+                  {event.music_genre && (
+                    <div className="flex items-center gap-2 text-violet-400 text-xs">
+                      <Music className="w-3 h-3" />
+                      <span className="font-medium">{event.music_genre}</span>
+                    </div>
+                  )}
+                </div>
+                
+                {event.ticket_url && (
+                  <a 
+                    href={event.ticket_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 w-full px-3 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-xl text-xs font-medium hover:shadow-lg hover:scale-105 transition-all"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Get Tickets
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-black">
+      <div className="sticky top-0 z-20 bg-black/80 backdrop-blur-xl border-b border-zinc-900">
+        <div className="p-4">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-3">
+              {(selectedCuisine || selectedEventGenre) ? (
+                <button onClick={() => { setSelectedCuisine(null); setSelectedEventGenre(null); }} className="p-2 hover:bg-zinc-900 rounded-xl transition-all">
+                  <ChevronLeft className="w-5 h-5 text-zinc-400" />
+                </button>
+              ) : (
+                <button onClick={onBack} className="p-2 hover:bg-zinc-900 rounded-xl transition-all">
+                  <ArrowLeft className="w-5 h-5 text-zinc-400" />
+                </button>
+              )}
+              <div>
+                <h1 className="text-2xl text-white font-light">
+                  {selectedCuisine 
+                    ? mainCuisines.find(c => c.id === selectedCuisine)?.label || 'Explore'
+                    : selectedEventGenre
+                    ? eventGenres.find(g => g.id === selectedEventGenre)?.label || 'Events'
+                    : 'Explore'}
+                </h1>
+                <p className="text-zinc-500 text-sm">{selectedCity}</p>
+              </div>
+            </div>
+            
+            <select 
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.target.value)}
+              className="bg-white text-black text-sm px-4 py-2 rounded-xl font-medium focus:outline-none"
+            >
+              {cities.map(c => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="flex gap-2 mb-4">
+            <button
+              onClick={() => { setMainTab('dining'); setSelectedCuisine(null); setSelectedEventGenre(null); }}
+              className={`flex-1 px-4 py-3 rounded-xl text-sm font-light transition-all ${
+                mainTab === 'dining' 
+                  ? 'bg-white text-black' 
+                  : 'bg-zinc-900 text-zinc-400 border border-zinc-800'
+              }`}
+            >
+              Dining
+            </button>
+            <button
+              onClick={() => { setMainTab('lounges'); setSelectedCuisine(null); setSelectedEventGenre(null); }}
+              className={`flex-1 px-4 py-3 rounded-xl text-sm font-light transition-all ${
+                mainTab === 'lounges' 
+                  ? 'bg-white text-black' 
+                  : 'bg-zinc-900 text-zinc-400 border border-zinc-800'
+              }`}
+            >
+              Lounges
+            </button>
+            <button
+              onClick={() => { setMainTab('events'); setSelectedCuisine(null); setSelectedEventGenre(null); }}
+              className={`flex-1 px-4 py-3 rounded-xl text-sm font-light transition-all ${
+                mainTab === 'events' 
+                  ? 'bg-white text-black' 
+                  : 'bg-zinc-900 text-zinc-400 border border-zinc-800'
+              }`}
+            >
+              Events ({events.length})
+            </button>
+          </div>
+
+          {!selectedCuisine && !selectedEventGenre && mainTab === 'dining' && (
+            <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
+              {mainCuisines.map(cuisine => {
+                const count = getVenuesByCuisine(cuisine.id).length;
+                if (count === 0) return null;
+                return (
+                  <button
+                    key={cuisine.id}
+                    onClick={() => setSelectedCuisine(cuisine.id)}
+                    className="px-4 py-2.5 bg-zinc-900 text-white rounded-xl text-sm font-light whitespace-nowrap border border-zinc-800 hover:border-violet-500 transition-all"
+                  >
+                    {cuisine.label} ({count})
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {!selectedCuisine && !selectedEventGenre && mainTab === 'lounges' && (
+            <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
+              {loungeTypes.map(type => {
+                const count = getLoungesByType(type.id).length;
+                if (count === 0) return null;
+                return (
+                  <button
+                    key={type.id}
+                    onClick={() => setSelectedCuisine(type.id)}
+                    className="px-4 py-2.5 bg-zinc-900 text-white rounded-xl text-sm font-light whitespace-nowrap border border-zinc-800 hover:border-violet-500 transition-all"
+                  >
+                    {type.label} ({count})
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {!selectedCuisine && !selectedEventGenre && mainTab === 'events' && (
+            <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
+              {eventGenres.map(genre => {
+                const count = getEventsByGenre(genre.id).length;
+                if (count === 0) return null;
+                return (
+                  <button
+                    key={genre.id}
+                    onClick={() => setSelectedEventGenre(genre.id)}
+                    className="px-4 py-2.5 bg-zinc-900 text-white rounded-xl text-sm font-light whitespace-nowrap border border-zinc-800 hover:border-violet-500 transition-all"
+                  >
+                    {genre.label} ({count})
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="py-6">
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <div className="w-12 h-12 border-2 border-white border-t-transparent rounded-full animate-spin" />
+          </div>
+        ) : mainTab === 'events' && !selectedEventGenre ? (
+          <div>
+            {getHomepageEventCategories().map(category => (
+              <EventRow key={category.id} category={category} />
+            ))}
+          </div>
+        ) : mainTab === 'events' && selectedEventGenre ? (
+          <div>
+            {getEventSubCategories(selectedEventGenre).map(category => (
+              <EventRow key={category.id} category={category} />
+            ))}
+          </div>
+        ) : selectedCuisine && mainTab === 'dining' ? (
+          <div>
+            {getSubCategories(selectedCuisine).map(category => (
+              <VenueRow key={category.id} category={category} />
+            ))}
+          </div>
+        ) : selectedCuisine && mainTab === 'lounges' ? (
+          <div>
+            <VenueRow category={{
+              id: selectedCuisine,
+              title: loungeTypes.find(t => t.id === selectedCuisine)?.label || 'Lounges',
+              subtitle: 'Curated lounges for your vibe',
+              venues: getLoungesByType(selectedCuisine)
+            }} />
+          </div>
+        ) : mainTab === 'dining' ? (
+          <div>
+            {getHomepageCategories().map((category, idx) => (
+              <VenueRow key={`${category.id}-${idx}`} category={category} />
+            ))}
+          </div>
+        ) : mainTab === 'lounges' ? (
+          <div>
+            {getHomepageLoungeCategories().map(category => (
+              <VenueRow key={category.id} category={category} />
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </div>
+  );
+}

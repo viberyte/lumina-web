@@ -1,0 +1,206 @@
+import { NextResponse } from 'next/server';
+import OpenAI from 'openai';
+import Database from 'better-sqlite3';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
+
+const FINE_TUNED_MODEL = 'ft:gpt-4o-mini-2024-07-18:viberyte:lumina-nightlife-v1:Cl4g83K2';
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
+// Button options for interactive questions
+const QUESTION_OPTIONS = {
+  persona: ["👥 Solo", "👫 Date Night", "🎉 Friends", "🎂 Birthday", "💼 Business"],
+  time: ["🌆 Evening (7-9pm)", "🌙 Late Night (10pm+)", "☀️ Brunch/Lunch"],
+  primaryChoice: ["🍽️ Dinner", "🍸 Drinks/Lounge", "🎵 Events", "🥂 Brunch"],
+  energyLevel: ["😌 Chill & Cozy", "✨ Good Vibes", "🔥 High Energy"],
+  dressCode: ["👕 Casual", "👔 Smart Casual", "🎩 Upscale"],
+  occasion: ["🌃 Casual Night", "💝 Special Occasion", "🎊 Turn Up"]
+};
+
+const LUMINA_SYSTEM_PROMPT = `You are Lumina, a warm nightlife concierge AI.
+
+CRITICAL FLOW RULE:
+- ALWAYS start in "conversational" mode to gather context through questions
+- ONLY output "deliver_multi_stop" when you have sufficient context (min 3 of 5: persona, primaryChoice, time, energyLevel, occasion)
+- NEVER guess missing details - ask interactive questions first
+
+Response format:
+{
+  "action": "conversational" | "deliver_multi_stop" | "clarify",
+  "response": "Your message",
+  "questionType": "persona" | "time" | "primaryChoice" | "energyLevel" | "dressCode" | "occasion" | null,
+  "extractedContext": { ... }
+}
+
+When asking questions, set questionType so the UI can show interactive buttons.
+
+CONTEXT GATHERING PRIORITY:
+1. First ask: "Who are you going with?" → questionType: "persona"
+2. Then ask: "What are you in the mood for?" → questionType: "primaryChoice"  
+3. Then ask: "What time?" → questionType: "time"
+4. Then ask: "What's the vibe?" → questionType: "energyLevel"
+5. Optional: "Dress code?" → questionType: "dressCode"
+
+Once you have 3+ context pieces → action: "deliver_multi_stop"
+
+Examples:
+
+User: "Plan my night"
+{
+  "action": "conversational",
+  "response": "I'd love to help! Who are you going with tonight?",
+  "questionType": "persona",
+  "extractedContext": {}
+}
+
+User: "Date night"  
+{
+  "action": "conversational",
+  "response": "Perfect! What are you in the mood for?",
+  "questionType": "primaryChoice",
+  "extractedContext": { "persona": "date_night", "groupSize": 2 }
+}
+
+User: "Dinner"
+{
+  "action": "conversational", 
+  "response": "Nice! What time are you thinking?",
+  "questionType": "time",
+  "extractedContext": { "persona": "date_night", "primaryChoice": "dinner", "groupSize": 2 }
+}
+
+User: "Evening around 7pm"
+{
+  "action": "conversational",
+  "response": "Got it! More chill or upscale energy?",
+  "questionType": "energyLevel",
+  "extractedContext": { "persona": "date_night", "primaryChoice": "dinner", "time": "dinner", "groupSize": 2 }
+}
+
+User: "Chill and cozy"
+{
+  "action": "deliver_multi_stop",
+  "response": "Perfect! Let me build you the ideal date night...",
+  "questionType": null,
+  "extractedContext": { 
+    "persona": "date_night", 
+    "primaryChoice": "dinner", 
+    "time": "dinner",
+    "energyLevel": "chill",
+    "groupSize": 2,
+    "dressCode": "smart-casual",
+    "occasion": "casual-night"
+  }
+}
+
+CRITICAL: Always respond with valid JSON only. No markdown.`;
+
+function findVenue(venueName: string): any | null {
+  try {
+    const db = new Database('/opt/viberyte/lumina-web/data/lumina.db');
+    const venue = db.prepare(`
+      SELECT id, name, category, vibe_tags, music_genres
+      FROM venues 
+      WHERE LOWER(name) LIKE LOWER(?)
+      LIMIT 1
+    `).get(`%${venueName}%`);
+    db.close();
+    return venue || null;
+  } catch (error) {
+    console.error('Database error:', error);
+    return null;
+  }
+}
+
+export async function POST(request: Request) {
+  try {
+    const { messages, sessionContext } = await request.json();
+    
+    if (!messages || !Array.isArray(messages)) {
+      return NextResponse.json(
+        { error: 'Invalid messages format' },
+        { status: 400, headers: corsHeaders }
+      );
+    }
+    
+    console.log('💬 Chat request:', messages.length, 'messages');
+    console.log('📋 Session context:', sessionContext);
+    
+    const conversationMessages = [
+      { role: 'system' as const, content: LUMINA_SYSTEM_PROMPT },
+      ...messages
+    ];
+
+    const completion = await openai.chat.completions.create({
+      model: FINE_TUNED_MODEL,
+      messages: conversationMessages,
+      temperature: 0.7,
+      max_tokens: 400,
+      response_format: { type: "json_object" }
+    });
+    
+    const responseText = completion.choices[0].message.content || '{}';
+    console.log('🤖 Raw response:', responseText);
+    
+    let parsedResponse;
+    try {
+      parsedResponse = JSON.parse(responseText);
+    } catch (parseError) {
+      console.error('JSON parse error:', parseError);
+      parsedResponse = {
+        action: 'conversational',
+        response: "I'd love to help! Who are you going with tonight?",
+        questionType: 'persona',
+        extractedContext: {}
+      };
+    }
+
+    // Add button options based on questionType
+    if (parsedResponse.questionType && QUESTION_OPTIONS[parsedResponse.questionType]) {
+      parsedResponse.options = QUESTION_OPTIONS[parsedResponse.questionType];
+    }
+
+    // Handle reference venue if mentioned
+    if (parsedResponse.extractedContext?.referenceVenue) {
+      const venue = findVenue(parsedResponse.extractedContext.referenceVenue);
+      if (venue) {
+        console.log('✅ Found reference venue:', venue.name);
+        parsedResponse.extractedContext.referenceVenueData = {
+          id: venue.id,
+          name: venue.name,
+          category: venue.category,
+          vibe_tags: venue.vibe_tags,
+          music_genres: venue.music_genres,
+        };
+      }
+    }
+    
+    console.log('✅ Parsed response:', parsedResponse);
+    
+    return NextResponse.json(parsedResponse, { headers: corsHeaders });
+    
+  } catch (error: any) {
+    console.error('❌ Chat error:', error);
+    return NextResponse.json(
+      { 
+        action: 'conversational',
+        response: "I'd love to help! Who are you going with tonight?",
+        questionType: 'persona',
+        options: QUESTION_OPTIONS.persona,
+        extractedContext: {}
+      },
+      { status: 500, headers: corsHeaders }
+    );
+  }
+}

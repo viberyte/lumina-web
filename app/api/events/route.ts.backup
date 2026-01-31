@@ -1,0 +1,54 @@
+export const dynamic = "force-dynamic";
+import { NextRequest, NextResponse } from "next/server";
+import Database from 'better-sqlite3';
+import path from 'path';
+
+// CORS headers
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+export async function OPTIONS(req: NextRequest) {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
+export async function GET(req: NextRequest) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const city = searchParams.get('city') || 'Manhattan';
+    const genre = searchParams.get('genre');
+    const date = searchParams.get('date');
+    const trending = searchParams.get('trending');
+
+    const dbPath = path.join(process.cwd(), 'data', 'lumina.db');
+    const db = new Database(dbPath);
+
+    let query = 'SELECT * FROM events WHERE city = ?';
+    const params: any[] = [city];
+
+    if (genre) {
+      query += ' AND genre = ?';
+      params.push(genre);
+    }
+
+    if (date) {
+      query += ' AND date = ?';
+      params.push(date);
+    }
+
+    query += ' ORDER BY date ASC';
+
+    const events = db.prepare(query).all(...params);
+    db.close();
+
+    return NextResponse.json({ events }, { headers: corsHeaders });
+  } catch (error: any) {
+    console.error('Events API error:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch events', message: error.message },
+      { status: 500, headers: corsHeaders }
+    );
+  }
+}

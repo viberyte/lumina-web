@@ -1,0 +1,551 @@
+import { NextResponse } from 'next/server';
+const MULTI_STOP_ENABLED = true; // flip to true when ready
+import OpenAI from 'openai';
+import Database from 'better-sqlite3';
+import referee, { ArcVenue, RefereeContext, PersonaType } from '../../../lib/referee';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
+
+const FINE_TUNED_MODEL = 'ft:gpt-4o-mini-2024-07-18:viberyte:lumina-nightlife-v1:Cl4g83K2';
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
+const QUESTION_OPTIONS: Record<string, string[]> = {
+  persona: ["Solo", "Date Night", "Friends", "Birthday", "Business"],
+  time: ["Evening (7-9pm)", "Late Night (10pm+)", "Brunch/Lunch"],
+  primaryChoice: ["Dinner", "Drinks", "Events", "Full Night"],
+  energyLevel: ["Chill & Cozy", "Good Vibes", "High Energy"],
+  cuisine: ["Italian", "Japanese", "Steakhouse", "Seafood", "Mexican"],
+  occasion: ["Casual Night", "Special Occasion", "Turn Up"]
+};
+
+const CUISINES = ['italian', 'japanese', 'mexican', 'seafood', 'steakhouse', 'sushi', 'thai', 'indian', 'chinese', 'french', 'korean', 'mediterranean', 'american', 'greek', 'spanish', 'vietnamese'];
+
+// ============================================
+// PERSONA DETECTION
+// ============================================
+function detectPersona(message: string, sessionContext: any): { persona: PersonaType; confidence: 'high' | 'medium' | 'low' } {
+  const m = message.toLowerCase();
+  const contextPersona = sessionContext?.persona;
+  
+  if (m.includes('aesthetic') || m.includes('photo') || m.includes('instagram') || m.includes('fancy') || m.includes('impressive')) {
+    return { persona: 'curator', confidence: 'high' };
+  }
+  if (m.includes('low-key') || m.includes('lowkey') || m.includes('simple') || m.includes('clean') || m.includes('quiet') || m.includes('chill')) {
+    return { persona: 'minimalist', confidence: 'high' };
+  }
+  if (m.includes('conversation') || m.includes('talk') || m.includes('jazz') || m.includes('wine bar') || m.includes('intimate')) {
+    return { persona: 'intellectual', confidence: 'high' };
+  }
+  if (m.includes('energy') || m.includes('buzzing') || m.includes('fun') || m.includes('vibe') || m.includes('scene')) {
+    return { persona: 'socialite', confidence: 'high' };
+  }
+  if (m.includes('hidden') || m.includes('local') || m.includes('secret') || m.includes('speakeasy') || m.includes('underground')) {
+    return { persona: 'insider', confidence: 'high' };
+  }
+  if (m.includes('surprise') || m.includes('anything') || m.includes('whatever') || m.includes('adventure')) {
+    return { persona: 'wildcard', confidence: 'high' };
+  }
+  if (m.includes('date') || m.includes('romantic') || m.includes('impress')) {
+    return { persona: 'minimalist', confidence: 'medium' };
+  }
+  if (m.includes('friends') || m.includes('group') || m.includes('birthday') || m.includes('celebration')) {
+    return { persona: 'socialite', confidence: 'medium' };
+  }
+  
+  return { persona: contextPersona || 'default', confidence: 'low' };
+}
+
+// ============================================
+// INTENT RESOLUTION
+// ============================================
+interface ResolvedIntent {
+  primaryChoice: 'dinner' | 'drinks' | 'events' | 'full_night' | null;
+  cuisine: string | null;
+  shouldDeliver: boolean;
+  confidence: 'high' | 'medium' | 'low';
+  persona: PersonaType;
+  occasion: string | null;
+}
+
+function resolveIntent(message: string, sessionContext: any): ResolvedIntent {
+  // Energy level selection = ready to deliver
+  const energyLevels = ['high energy', 'chill & cozy', 'chill and cozy', 'good vibes', 'chill', 'relaxed', 'turn up'];
+  const selectedEnergy = energyLevels.some(e => message.toLowerCase().includes(e));
+  if (selectedEnergy && sessionContext?.primaryChoice) {
+    const { persona } = detectPersona(message, sessionContext);
+    return { primaryChoice: sessionContext.primaryChoice, cuisine: sessionContext.cuisine || null, shouldDeliver: true, confidence: 'high', persona, occasion: sessionContext?.occasion || null };
+  }
+
+  const m = message.toLowerCase().trim();
+  const { persona } = detectPersona(message, sessionContext);
+  
+  let occasion: string | null = sessionContext?.occasion || null;
+  if (m.includes('date')) occasion = 'date';
+  if (m.includes('friends')) occasion = 'friends';
+  if (m.includes('birthday')) occasion = 'birthday';
+  if (m.includes('solo') || m.includes('alone')) occasion = 'solo';
+  if (m.includes('business') || m.includes('client')) occasion = 'business';
+  
+  const foundCuisine = CUISINES.find(c => m.includes(c));
+  if (foundCuisine) {
+    return { primaryChoice: 'dinner', cuisine: foundCuisine, shouldDeliver: true, confidence: 'high', persona, occasion };
+  }
+  
+  if (m.includes('drinks') || m.includes('bar') || m.includes('lounge') || m.includes('rooftop') || m.includes('cocktail')) {
+    return { primaryChoice: 'drinks', cuisine: null, shouldDeliver: true, confidence: 'high', persona, occasion };
+  }
+  
+  if (m.includes('dinner') || m.includes('eat') || m.includes('food') || m.includes('hungry')) {
+    return { primaryChoice: 'dinner', cuisine: null, shouldDeliver: false, confidence: 'high', persona, occasion };
+  }
+  
+  if (m.includes('event') || m.includes('party') || m.includes('club') || m.includes('afrobeats') || m.includes('concert')) {
+    return { primaryChoice: 'events', cuisine: null, shouldDeliver: true, confidence: 'high', persona, occasion };
+  }
+  
+  if (m.includes('plan my night') || m.includes('full night') || m.includes('whole night')) {
+    return { primaryChoice: 'full_night', cuisine: null, shouldDeliver: false, confidence: 'medium', persona, occasion };
+  }
+  
+  if (sessionContext?.primaryChoice === 'dinner' && !sessionContext?.cuisine) {
+    const possibleCuisine = CUISINES.find(c => m.includes(c));
+    if (possibleCuisine) {
+      return { primaryChoice: 'dinner', cuisine: possibleCuisine, shouldDeliver: true, confidence: 'high', persona, occasion };
+    }
+  }
+  
+  return {
+    primaryChoice: sessionContext?.primaryChoice || null,
+    cuisine: sessionContext?.cuisine || null,
+    shouldDeliver: false,
+    confidence: 'low',
+    persona,
+    occasion
+  };
+}
+
+// ============================================
+// VENUE FETCHER (Raw candidates - Referee validates after)
+// ============================================
+function getRawCandidates(context: any, city: string): { safe: ArcVenue[]; elevated: ArcVenue[]; wildcard: ArcVenue[] } | null {
+  let db: any = null;
+  try {
+    db = new Database('/opt/viberyte/lumina-web/data/lumina.db');
+    
+    const primaryChoice = context.primaryChoice || 'dinner';
+    const cuisine = context.cuisine;
+    
+    let primaryCategory = 'restaurant';
+    if (primaryChoice === 'dinner' || cuisine) primaryCategory = 'restaurant';
+    else if (primaryChoice === 'drinks') primaryCategory = 'lounge';
+    else if (primaryChoice === 'events') primaryCategory = 'club';
+    
+    let cuisineFilter = '';
+    if (cuisine) {
+      cuisineFilter = `AND (LOWER(cuisine_types) LIKE '%${cuisine.toLowerCase()}%' OR LOWER(cuisine_primary) LIKE '%${cuisine.toLowerCase()}%' OR LOWER(cuisine) LIKE '%${cuisine.toLowerCase()}%')`;
+    }
+    
+    // SAFE candidates
+    const safeQuery = `
+      SELECT id, name, category, neighborhood, cuisine_types, cuisine_primary, vibe_tags, 
+             rating, price_tier, image_url, professional_photo_url, google_photos, address, acoustic_band, friction_score,
+             gatekeeper_status, conversation_level, photo_op_priority, latitude, longitude,
+             peak_friction_hour, dwell_time_avg, last_call_vibe, momentum_risk_score
+      FROM venues 
+      WHERE category = '${primaryCategory}' ${cuisineFilter}
+        AND city IN ('Manhattan', 'New York', 'Brooklyn', 'Queens')
+        AND (image_url IS NOT NULL OR professional_photo_url IS NOT NULL)
+        AND should_exclude = 0
+      ORDER BY rating DESC, RANDOM()
+      LIMIT 5
+    `;
+    console.log('🔍 Safe Query:', safeQuery);
+    const safeRaw = db.prepare(safeQuery).all() as any[];
+    console.log('🍣 Safe results:', safeRaw.map(v => v.name + ' - ' + v.cuisine_primary));
+    
+    if (safeRaw.length === 0) {
+      db.close();
+      return null;
+    }
+    
+    const excludeIds = safeRaw.map(v => v.id);
+    const excludePlaceholder = excludeIds.map(() => '?').join(',');
+    
+    // ELEVATED candidates
+    const elevatedQuery = `
+      SELECT id, name, category, neighborhood, vibe_tags, rating, price_tier, image_url, professional_photo_url, google_photos, 
+             address, acoustic_band, friction_score, gatekeeper_status, conversation_level,
+             photo_op_priority, latitude, longitude, peak_friction_hour, dwell_time_avg,
+             last_call_vibe, momentum_risk_score
+      FROM venues 
+      WHERE category IN ('lounge', 'bar')
+        AND city IN ('Manhattan', 'New York', 'Brooklyn', 'Queens')
+        AND id NOT IN (${excludePlaceholder})
+        AND (image_url IS NOT NULL OR professional_photo_url IS NOT NULL)
+        AND should_exclude = 0
+      ORDER BY rating DESC, RANDOM()
+      LIMIT 4
+    `;
+    const elevatedRaw = db.prepare(elevatedQuery).all(...excludeIds) as any[];
+    
+    // WILDCARD candidates
+    const wildcardQuery = `
+      SELECT id, name, category, neighborhood, vibe_tags, rating, price_tier, image_url, professional_photo_url, google_photos,
+             address, acoustic_band, friction_score, gatekeeper_status, conversation_level,
+             photo_op_priority, latitude, longitude, peak_friction_hour, dwell_time_avg,
+             last_call_vibe, momentum_risk_score
+      FROM venues 
+      WHERE category = 'club'
+        AND city IN ('Manhattan', 'New York', 'Brooklyn', 'Queens')
+        AND id NOT IN (${excludePlaceholder})
+        AND (image_url IS NOT NULL OR professional_photo_url IS NOT NULL)
+        AND should_exclude = 0
+      ORDER BY RANDOM()
+      LIMIT 4
+    `;
+    const wildcardRaw = db.prepare(wildcardQuery).all(...excludeIds) as any[];
+    
+    db.close();
+    
+    // Convert to ArcVenue format
+    const safe: ArcVenue[] = safeRaw.slice(0, 3).map((v, i) => ({
+      ...v,
+      stop: i,
+      role: 'safe' as const,
+      ai_reasoning: i === 0 ? 'Top pick for your night' : `Great ${cuisine || 'spot'} in ${v.neighborhood || 'the area'}`
+    }));
+    
+    const elevated: ArcVenue[] = elevatedRaw.slice(0, 2).map((v, i) => ({
+      ...v,
+      stop: i,
+      role: 'elevated' as const,
+      ai_reasoning: `Elevated second stop – ${v.category} vibes`
+    }));
+    
+    const wildcard: ArcVenue[] = wildcardRaw.slice(0, 2).map((v, i) => ({
+      ...v,
+      stop: i,
+      role: 'wildcard' as const,
+      ai_reasoning: `Late night wildcard – if the night keeps going`
+    }));
+    
+    return { safe, elevated, wildcard };
+    
+  } catch (error) {
+    console.error('❌ Database error:', error);
+    if (db) db.close();
+    return null;
+  }
+}
+
+// ============================================
+// AI FALLBACK
+// ============================================
+const LUMINA_SYSTEM_PROMPT = `You are Lumina, a nightlife concierge with confident, warm energy. Think: your coolest friend who always knows the spot.
+
+PERSONALITY:
+- Confident but not cocky
+- Warm, not bubbly
+- Millennial energy (25-38 vibe)
+- Short, punchy responses
+- Use "got you" not "certainly"
+- Sparingly use 💜 (max once)
+- NEVER say "certainly", "absolutely", "I'd be delighted", "wonderful"
+
+RESPONSE FORMAT (valid JSON only):
+{
+  "response": "Your message",
+  "questionType": "cuisine" | "persona" | "time" | "energyLevel" | null
+}
+
+RULES:
+- If user says "dinner" → ask cuisine. questionType: "cuisine", response: "dinner - I got you! 💜 What kind of food?"
+- If unclear what they want → ask primaryChoice. questionType: "primaryChoice"
+- Keep it to 1-2 sentences max
+- Never over-explain`;
+
+async function getAIResponse(userMessage: string, sessionContext: any): Promise<{ response: string; questionType: string | null }> {
+  try {
+    const messages = [
+      { role: 'system' as const, content: LUMINA_SYSTEM_PROMPT },
+      ...(sessionContext?.history || []).slice(-4),
+      { role: 'user' as const, content: userMessage }
+    ];
+
+    const completion = await openai.chat.completions.create({
+      model: FINE_TUNED_MODEL,
+      messages,
+      temperature: 0.6,
+      max_tokens: 150,
+      response_format: { type: "json_object" }
+    });
+    
+    const text = completion.choices[0].message.content || '{}';
+    const parsed = JSON.parse(text);
+    
+    return {
+      response: parsed.response || "What are you feeling tonight?",
+      questionType: parsed.questionType || null
+    };
+  } catch (error) {
+    console.error('AI error:', error);
+    return {
+      response: "What are you feeling tonight?",
+      questionType: 'primaryChoice'
+    };
+  }
+}
+
+// ============================================
+// RESPONSE GENERATION (Persona-aware, post-Referee)
+// ============================================
+function generateResponseText(intent: ResolvedIntent, refereeResult: any): string {
+  const { persona } = intent;
+  const { hiddenTiers, pivotMessage } = refereeResult;
+  
+  // Base responses by persona
+  const personaResponses: Record<PersonaType, string> = {
+    curator: `Curated this just for you – looks matter tonight...`,
+    minimalist: `Kept it clean and low-key – here's your night...`,
+    intellectual: `Good conversation starts here – your night awaits...`,
+    socialite: `Energy's right tonight – here's how to play it...`,
+    insider: `Off the beaten path – only the real ones know these...`,
+    wildcard: `Let's see where the night takes you...`,
+    default: `Here's a few ways to play the night...`,
+  };
+  
+  let response = personaResponses[persona] || personaResponses.default;
+  
+  // Append pivot message if tiers were hidden
+  if (pivotMessage && hiddenTiers.length > 0 && hiddenTiers.length < 3) {
+    response = `${response}\n\n${pivotMessage}`;
+  }
+  
+  return response;
+}
+
+// ============================================
+// MAIN HANDLER
+// ============================================
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    const { message, messages, city, sessionContext = {} } = body;
+    
+    const userMessage = message || (messages && messages[messages.length - 1]?.content);
+    
+    if (!userMessage) {
+      return NextResponse.json({ error: 'No message provided' }, { status: 400, headers: corsHeaders });
+    }
+    
+    console.log('💬 Message:', userMessage);
+    console.log('📋 Context:', JSON.stringify(sessionContext));
+    
+    // ========== DELIVERY LOCK ==========
+    if (sessionContext?.delivered === true) {
+      return NextResponse.json({
+        response: "Want to tweak this or explore something else?",
+        options: ["Start Over", "Different Cuisine", "Add Drinks"],
+        sessionContext
+      }, { headers: corsHeaders });
+    }
+    
+    // ========== INTENT RESOLUTION ==========
+    const intent = resolveIntent(userMessage, sessionContext);
+    console.log('🎯 Intent:', JSON.stringify(intent));
+    
+    // ========== FAST-PATH DELIVERY ==========
+    if (intent.shouldDeliver && intent.confidence === 'high') {
+      // Feature gate
+      if (!MULTI_STOP_ENABLED) {
+        return NextResponse.json({
+          response: "Multi-stop planning is coming soon! For now, explore venues on the Home and Explore tabs.",
+          options: QUESTION_OPTIONS.primaryChoice,
+          sessionContext: { ...sessionContext, persona: intent.persona }
+        }, { headers: corsHeaders });
+      }
+      console.log('⚡ Fast-path delivery | Persona:', intent.persona);
+      
+      // Step 1: Get raw candidates from DB
+      const rawCandidates = getRawCandidates(
+        { primaryChoice: intent.primaryChoice, cuisine: intent.cuisine },
+        city || 'Manhattan'
+      );
+      
+      if (rawCandidates) {
+        // Step 2: Build Referee context
+        const now = new Date();
+        const refereeContext: RefereeContext = {
+          persona: intent.persona,
+          occasion: intent.occasion || 'default',
+          hour: now.getHours(),
+          dayOfWeek: now.getDay(),
+          city: city || 'Manhattan'
+        };
+        
+        console.log('🎭 Referee context:', JSON.stringify(refereeContext));
+        
+        // Step 3: Run Referee validation + repair
+        const refereeResult = referee.refereeCheck(rawCandidates, refereeContext);
+        
+        console.log('✅ Referee result:', {
+          safeValid: refereeResult.safe.valid,
+          safeScore: refereeResult.safe.score,
+          elevatedValid: refereeResult.elevated.valid,
+          elevatedScore: refereeResult.elevated.score,
+          wildcardValid: refereeResult.wildcard.valid,
+          wildcardScore: refereeResult.wildcard.score,
+          hiddenTiers: refereeResult.hiddenTiers,
+          recommendedTier: refereeResult.recommendedTier
+        });
+        
+        // Step 4: Build response with Referee-approved arcs only
+        const validMultiStop: any = {
+          anchorVenue: refereeResult.safe.arc?.[0] 
+            ? { id: refereeResult.safe.arc[0].id, name: refereeResult.safe.arc[0].name }
+            : null,
+          anchorSource: 'lumina',
+          safe: refereeResult.safe.valid ? refereeResult.safe.arc : [],
+          elevated: refereeResult.elevated.valid ? refereeResult.elevated.arc : [],
+          wildcard: refereeResult.wildcard.valid ? refereeResult.wildcard.arc : [],
+        };
+        
+        // Check if we have at least one valid tier
+        const hasValidTier = refereeResult.safe.valid || refereeResult.elevated.valid || refereeResult.wildcard.valid;
+        
+        // BYPASS: If Referee rejects all tiers, return raw candidates directly
+        if (!hasValidTier && rawCandidates) {
+          console.log('⚠️ Referee rejected all - bypassing with raw candidates');
+          console.log('📦 Raw candidates safe:', rawCandidates.safe?.length, rawCandidates.safe?.map(v => v.name));
+          const label = intent.cuisine || intent.primaryChoice || 'perfect';
+          
+          const formatVenue = (v: any) => ({
+            venue: {
+              id: v.id,
+              name: v.name,
+              neighborhood: v.neighborhood,
+              cuisine: v.cuisine_primary || v.category,
+              photo: (() => { try { if (v.google_photos) { const p = typeof v.google_photos === "string" ? JSON.parse(v.google_photos) : v.google_photos; if (p && p[0]) return "https://lumina.viberyte.com" + p[0]; } return v.professional_photo_url || v.image_url; } catch(e) { return v.professional_photo_url || v.image_url; } })(),
+              rating: v.rating,
+              price_tier: v.price_tier,
+              address: v.address
+            },
+            reasoning: v.ai_reasoning || `Great ${label} spot`,
+            travelTime: 'Nearby',
+            confidence: 0.7
+          });
+          
+          const bypassMultiStop = {
+            anchorVenue: rawCandidates.safe[0] ? { id: rawCandidates.safe[0].id, name: rawCandidates.safe[0].name } : null,
+            anchorSource: 'lumina',
+            safe: rawCandidates.safe.map(formatVenue),
+            elevated: rawCandidates.elevated.map(formatVenue),
+            wildcard: rawCandidates.wildcard.map(formatVenue),
+          };
+          
+          return NextResponse.json({
+            response: `Here are some ${label} spots for tonight! 🎉`,
+            multiStop: bypassMultiStop,
+            planExplanation: `Your ${label} night awaits`,
+            options: [],
+            sessionContext: { ...sessionContext, primaryChoice: intent.primaryChoice, cuisine: intent.cuisine, persona: intent.persona, occasion: intent.occasion, delivered: true }
+          }, { headers: corsHeaders });
+        }
+        
+        if (hasValidTier) {
+          const label = intent.cuisine || intent.primaryChoice || 'perfect';
+          const responseText = generateResponseText(intent, refereeResult);
+          
+          return NextResponse.json({
+            response: responseText,
+            multiStop: validMultiStop,
+            multiStopMeta: {
+              recommendedTier: refereeResult.recommendedTier,
+              confidence: intent.confidence,
+              persona: intent.persona,
+              scores: {
+                safe: refereeResult.safe.score,
+                elevated: refereeResult.elevated.score,
+                wildcard: refereeResult.wildcard.score
+              },
+              hiddenTiers: refereeResult.hiddenTiers
+            },
+            planExplanation: `Your ${label} night awaits`,
+            pivotMessage: refereeResult.pivotMessage,
+            options: [],
+            sessionContext: {
+              ...sessionContext,
+              primaryChoice: intent.primaryChoice,
+              cuisine: intent.cuisine,
+              persona: intent.persona,
+              occasion: intent.occasion,
+              delivered: true,
+              history: [
+                ...(sessionContext?.history || []),
+                { role: 'user', content: userMessage },
+                { role: 'assistant', content: responseText }
+              ]
+            }
+          }, { headers: corsHeaders });
+        }
+      }
+    }
+    
+    // ========== DINNER WITHOUT CUISINE → ASK ==========
+    if (intent.primaryChoice === 'dinner' && !intent.cuisine) {
+      return NextResponse.json({
+        response: "dinner - I got you! 💜\n\nWhat kind of food?",
+        options: QUESTION_OPTIONS.cuisine,
+        sessionContext: {
+          ...sessionContext,
+          primaryChoice: 'dinner',
+          persona: intent.persona,
+          occasion: intent.occasion,
+          history: [
+            ...(sessionContext?.history || []),
+            { role: 'user', content: userMessage },
+            { role: 'assistant', content: "dinner - I got you! 💜 What kind of food?" }
+          ]
+        }
+      }, { headers: corsHeaders });
+    }
+    
+    // ========== AI FALLBACK ==========
+    console.log('🤖 Falling back to AI');
+    const aiResponse = await getAIResponse(userMessage, sessionContext);
+    
+    return NextResponse.json({
+      response: aiResponse.response,
+      options: aiResponse.questionType ? QUESTION_OPTIONS[aiResponse.questionType] || [] : [],
+      sessionContext: {
+        ...sessionContext,
+        persona: intent.persona,
+        occasion: intent.occasion,
+        history: [
+          ...(sessionContext?.history || []),
+          { role: 'user', content: userMessage },
+          { role: 'assistant', content: aiResponse.response }
+        ]
+      }
+    }, { headers: corsHeaders });
+    
+  } catch (error: any) {
+    console.error('❌ Error:', error);
+    return NextResponse.json({
+      response: "What are you feeling tonight?",
+      options: QUESTION_OPTIONS.primaryChoice,
+      sessionContext: {}
+    }, { status: 500, headers: corsHeaders });
+  }
+}

@@ -1,0 +1,1427 @@
+Private pasta and cocktail party|30A|dining|eliana_theitaliana|
+Tipsy Mule Bar|30A|dining|tipsymulebar|
+Piazza di Roma|Aberdeen|dining||
+Limoncello at Piazza di Roma|Aberdeen Township|dining|limoncello_atpiazzadiroma|4.8
+The Golden Skillet|Ajax|dining||
+Kith Treats|All US|dining|kithtreats|
+Heirloom Kitchen|Asbury Park|dining|heirloom_kitchen|
+The Saint Laurent Social Club|Asbury Park|dining|thestlaurentsocialclub|
+Agenda Astoria|Astoria|nightlife||
+Home of Astoria|Astoria|dining|nightlife|entertainment|homeofastoria|
+Kam Rai Thai|Astoria|dining||
+Macoletta|Astoria|dining|macolettaastoria|
+Pig Beach BBQ|Astoria|dining|pigbeachqueens|
+Pig Beach Queens|Astoria|dining|pig_beach_queens|
+Smoke and Mirrors|Astoria|nightlife|smokeandmirrors_astoria|
+South Beach|Astoria|nightlife|southbeachnewyork|
+Steinway Astoria|Astoria|nightlife||
+The best hookah place|Astoria|nightlife||
+Tipsy Scoop|Astoria|dining|tipsyscoopnyc|
+Zen Astoria|Astoria|dining|zen_astoria|
+hookah place|Astoria|nightlife||
+vida.nyc|Astoria|dining|vida.nyc|
+Moe's|Atlanta|dining||
+Paradox Lounge|Atlanta|nightlife||
+Habeebi’s Soul Food|Atlantic City|dining|habeebis.ac|
+Kelsey’s AC|Atlantic City|dining||
+Kelsey’s Soul Food AC|Atlantic City|dining||
+The Balcony|Atlantic City|nightlife||
+Desnudo Coffee|Austin|dining|desnudocoffee|
+Juniper|Austin|dining|juniperaustin|
+Powder Room|Austin|nightlife|powderroomatx|
+Summer House on Music Lane|Austin|dining|summerhouseonmusiclane|
+Feed Ya Soul|Avenel|dining||
+Pops & Poosh|Baldwin|dining|popsandpoosh|
+Food Town (Baofu Market Store)|Baoding City|dining||
+Koi Pond Restaurant|Baoding City|dining||
+El Xiringuito de la Barceloneta|Barcelona|dining||
+La Boqueria Market|Barcelona|dining||
+La Papa|Barcelona|dining||
+Quimet y Quimet|Barcelona|dining||
+Suru Bar|Barcelona|dining||
+the5vesoul|Barcelona|dining|the5vesoul|
+Hills of Herat|Basking Ridge|dining|hillsofherat.br|
+American On J|Bayonne|dining|americanonj|
+Americano|Bayonne|dining||
+Ms Wandas|Bayonne|dining||
+Kyuramen|Bayside|dining|kyuramen.official|
+Offgrid's Cafe|Bayside|dining|offgrids_cafe|
+The Roundhouse|Beacon|dining||
+2 Chix Brunch|Bedstuy|dining|2chixbrunch|
+Beyond Soul|Belleville|dining||
+Tony's Tacos|Belleville|dining|tonystacosofficial|4.7
+Xaman Room Speakeasy|Belleville|nightlife||
+CHEESSTEAKS|Belmar|dining||
+DJais|Belmar|nightlife|not specified|
+Kaya’s Kitchen|Belmar|dining||
+Pink Cabana|Belmar|dining|pinkcabanabelmar|
+Prestige Sunday Brunch|Bengaluru|dining|nightlife|prestigesundaybrunch|4.8
+Roca|Berlin|dining||4.1
+Roca|Berlin|dining||4.1
+Roca|Berlin|dining||4.1
+Dandelion|Big Indian|dining||
+Alam Restaurant|Birmingham|dining||
+Blue Steel Pizza Company|Bloomfield|dining|bluesteelpizzacompany|4.6
+Casa de Flora Bar Luxury Cafe|Bloomfield|dining||
+Crabs on the Way|Bloomfield|dining||4.5
+Grove Grill|Bloomfield|dining||
+The Grove Grill|Bloomfield|dining||
+Pauli’s|Boston|dining||
+Di Fara|Brick|dining||
+Boogie Down Food Hall|Bronx|dining||
+CEA-LOS - CAFE|Bronx|dining||
+Calabria Pork Store|Bronx|dining|calabriaporkstorebx|
+Casa della Mozzarella|Bronx|dining|casadellamozzarella|
+Castle Hill Ave|Bronx|dining||
+Code Red|Bronx|dining|coderednyc_|
+Egidio Pastry Shop|Bronx|dining|egidiopastryshop|
+Grounds Donut House|Bronx|dining|grounds_bx|
+Juici Patties|Bronx|dining|juicipatties_us|
+Madonia Bakery|Bronx|dining|madoniabakery|
+Morris Park Ave|Bronx|dining||
+Roberto's Restaurant|Bronx|dining|robertos_restaurant|
+Shaking Crab|Bronx|dining|shakingcrab.bronx|
+Taco Tuesday|Bronx|dining||
+Vogue Restaurant Lounge|Bronx|dining|nightlife|lounge||
+Wing Wednesday|Bronx|dining||
+1140 Utica Ave|Brooklyn|dining||
+198 Rogers Ave|Brooklyn|dining||
+24hr soul food spot|Brooklyn|dining||
+333 Lounge|Brooklyn|nightlife|333.lounge|4.2
+4am Bar Lounge|Brooklyn|nightlife|@4ambarlounge|
+Aura Cocina|Brooklyn|dining|auracocina|
+BAP'S|Brooklyn|dining||
+BKLYN CATERERS|Brooklyn|dining||
+Bamboo Walk|Brooklyn|dining||
+Bars and Delis|Brooklyn|dining||
+Bellas Brooklyn|Brooklyn|dining|bellasbrooklyn|
+Bklyn Caterers|Brooklyn|dining||
+Black Nile Food Truck|Brooklyn|dining||
+Black Nile Pickup/Delivery|Brooklyn|dining||
+Black Nile Seafood & Soul Food Halal Restaurant|Brooklyn|dining||
+Bohemia|Brooklyn|dining|bohemia.brooklyn|
+Breuklyn Tequila|Brooklyn|nightlife||
+Brooklyn Chckn 'N' Lbstr|Brooklyn|dining||
+Brooklyn Chckn N Lbstr|Brooklyn|dining||
+Brooklyn Chckn n Lbstr|Brooklyn|dining||
+Brooklyn Chicken and Waffles|Brooklyn|dining|brooklynchcknlbstr|
+CZEN Restaurant|Brooklyn|dining||
+Cafe 20 Grams|Brooklyn|dining|cafe20grams|
+Charm Bar|Brooklyn|dining|charmbarbk|
+Cheese Plate Queen|Brooklyn|dining|cheeseplatequeen|4.9
+Cloudy Donuts|Brooklyn|dining|cloudydonuts|
+Coda|Brooklyn|dining|coda.hotels|
+Continent|Brooklyn|dining|continentbrooklyn|
+Cupcakes After Dark|Brooklyn|dining|cupcakesafterdarkny|4.7
+D Garden|Brooklyn|dining|nightlife|d_gardenbk|
+Dave and Busters|Brooklyn|entertainment||4.2
+Dekalb Market Hall|Brooklyn|dining||
+Djon Djon|Brooklyn|dining|djondjon.bk|
+Dope Cafe|Brooklyn|dining|n7f_brooklyn|
+Dreams of Sugar|Brooklyn|dining||
+EXOTIC EATS NYC|Brooklyn|dining||
+Eko|Brooklyn|dining|ekorestaurantnyc|
+Elite Williamsburg|Brooklyn|dining|elitewilliamsburg|
+Fandi Mata|Brooklyn|dining||
+Farmer in the Deli|Brooklyn|dining|farmerdeli1|
+Father & Son Soul Food Catering|Brooklyn|dining||
+Father & Sons Soul Food Catering|Brooklyn|dining|fathersonsoulfoodcatering|
+Father and Son Soul Food Catering|Brooklyn|dining||
+Forma Pasta Factory|Brooklyn|dining|formapasta|
+Fornino Pizza|Brooklyn|dining|forninopizza|4.6
+GG’s Fish & Chips|Brooklyn|dining||
+Golfzon Social|Brooklyn|nightlife|golfzon_social|
+HAAM Caribbean Plant Cuisine|Brooklyn|dining||4.7
+Harriet's|Brooklyn|dining|harrietsbk|
+Hey Taco Cocina|Brooklyn|dining|heytacocina|
+Hudson Table|Brooklyn|dining|hudsontablebk|
+Häagen-Dazs|Brooklyn|dining|haagendazs_us|
+Ichiran|Brooklyn|dining|ichiran_ny|
+Jack's Dining Room|Brooklyn|dining||
+KFRI Event|Brooklyn|nightlife|KFRI.Eventbrite.com|4.5
+Katie O's|Brooklyn|dining||
+Katie O's Soul Food|Brooklyn|dining||
+Lakou Cafe|Brooklyn|dining|lakoucafe|4.5
+Lazy Sundaes|Brooklyn|dining||4.6
+Le Chai|Brooklyn|dining|lechaibk|
+Leah's Cucina|Brooklyn|dining|leahscucina|4.2
+Little Oaxaca|Brooklyn|dining||
+Living Room Sushi Steak|Brooklyn|dining|livingroomsushisteak|4.5
+Lobo Cafe|Brooklyn|dining||4.4
+OhBoy|Brooklyn|dining|ohboy.bk|
+Osteria Brooklyn|Brooklyn|dining|osteriabrooklyn|
+Prime 623|Brooklyn|dining|prime623__|
+Psarakis|Brooklyn|dining|psarakinyc|
+Pura Vida Miami - Williamsburg Kent Ave|Brooklyn|dining|puravidamiamiwilliamsburgkentave|
+Razzan|Brooklyn|dining|razzanj|4.3
+Red Crab Brooklyn|Brooklyn|dining|redcrabbrooklyn|
+Red Hook Winery|Brooklyn|dining|redhookwinery|
+Rockaway Gourmet Deli|Brooklyn|dining|rockawaygourmetdeli|
+SOUL FOOD & SLIDERS|Brooklyn|dining||
+Set Lounge NYC|Brooklyn|nightlife|setloungenyc|4.3
+Shaka Club|Brooklyn|nightlife|shaka_club|4.8
+ShopRite|Brooklyn|dining|ShopRiteStores|4.3
+ShopRite|Brooklyn|dining|shopritestores|4.3
+Sisters Spot|Brooklyn|dining||4.3
+Skywise Lounge|Brooklyn|nightlife|skywiselounge|4.4
+Slutty Vegan|Brooklyn|dining|sluttyveganatl|
+Smorgasburg|Brooklyn|dining|@smorgasburg|
+Smorgasburg Prospect Park|Brooklyn|dining|smorgasburg|
+Sofia and Grace Cookie Co.|Brooklyn|dining||
+Solo Scoop Creamery|Brooklyn|dining|soloscoopcreamery|5.0
+Soul Food NJ|Brooklyn|dining||4.8
+Spices and Slices|Brooklyn|dining|spicesandslicesbklyn|
+Stop & Shop|Brooklyn|dining|stopandshop|4.1
+Superior Ingredients|Brooklyn|nightlife||
+Tabu|Brooklyn|dining|tabu.bk|
+Taste of Heaven|Brooklyn|dining||
+The Acoustik Garden Lounge|Brooklyn|nightlife||
+The Empanada Spot|Brooklyn|dining|theempanadaspot_williamsburg|
+The Gatehouses|Brooklyn|nightlife|thegatehouses|4.7
+The Love Lounge|Brooklyn|nightlife||4.6
+The Love Lounge|Brooklyn|nightlife||4.6
+The Polar Lounge|Brooklyn|nightlife||
+The Simpson|Brooklyn|dining||
+The Simpson Restaurant & Bar|Brooklyn|dining|thesimpsonbk|
+The Soul Spot|Brooklyn|dining||
+The Suite Restaurant|Brooklyn|dining|thesuiterestaurant|4.4
+Top Tier Catering|Brooklyn|dining||
+Top Tier II Catering|Brooklyn|dining||
+Topaze Restaurant|Brooklyn|dining|topazerestaurant|3.9
+Veras|Brooklyn|dining||
+Vera’s Soul Food|Brooklyn|dining||
+Villa Bate Alba|Brooklyn|dining|villabatealba|4.6
+Vinnie's Pizzeria|Brooklyn|dining|vinniespanpizza|4.5
+Viva Toro|Brooklyn|dining|vivatoro|
+Woodland|Brooklyn|dining||
+Woodzzy Bar & Outdoor Lounge|Brooklyn|nightlife||
+Yummys Restaurant|Brooklyn|dining||
+atti.nyc|Brooklyn|dining|atti.nyc|
+best soul food spot|Brooklyn|dining||4.8
+bkbeso|Brooklyn|dining|bkbeso|
+bun.haus|Brooklyn|dining|bun.haus|
+chefdupreeofficial|Brooklyn|dining|chefdupreeofficial|
+grottobk|Brooklyn|dining|grottobk|
+guesthouse265|Brooklyn|dining|guesthouse265|
+level.restaurant|Brooklyn|dining|level.restaurant|
+prestige_restaurant_lounge|Brooklyn|dining|nightlife|lounge|prestige_restaurant_lounge|4.3
+the_little_black_box22|Brooklyn|dining|the_little_black_box22|
+theboozery|Brooklyn|dining|theboozery|
+unknown|Brooklyn|dining|none|
+Crossing Vineyards|Bucks County|dining|crossingvineyards|
+Nektar Wine Bar|Bucks County|dining|nektarwinebar|
+Vault Brewing|Bucks County|dining|vaultbrewing|
+Heavens Countertop|Buffalo|dining||
+The Grub Plug|Buffalo|dining||
+Forever Thai|Bushwick|dining|foreverthaibushwick|
+Calandra's|Caldwell|dining|calandras|
+il Vecchio Cafe|Caldwell|dining|calandrasbakery|
+Bookers Lounge|Camden|nightlife||
+Kheese|Camden|dining||
+Kings Men LLC|Camden|dining||
+Krack & Kheese|Camden|dining||
+Steven Soul Food|Camden|dining||
+Taco Loco|Camden|dining|mytacoloco|
+Tony and Ruth's Steaks|Camden|dining||
+Monai Soulfood|Carteret|dining||
+Monai soulfood|Carteret|dining||
+Monai's|Carteret|dining||4.1
+Monai’s Soul Food Restaurant|Carteret|dining||
+Ou La|Carteret|dining||
+Amazin Taste|Central NJ|dining||
+Bistro Cherry Hill|Cherry Hill|dining||
+Boiling House|Cherry Hill|dining||
+Crab Cakes|Cherry Hill|dining||
+New Restaurant|Cherry Hill|dining||
+Shangri-La|Cherry Hill|dining||
+Shangri-La Chill|Cherry Hill|dining||
+Tuscana|Cherry Hill|dining||
+bistro cherry hill|Cherry Hill|dining||
+HANGRY CLUCK|Chicago|dining||
+Hangry Cluck|Chicago|dining||
+Lou Malnati's|Chicago|dining|loumalnatis|
+Prova|Chicago|dining||
+Star Tavern|City of Orange|dining|star_tavern|4.5
+Teppanya|Clark|dining||
+Lumpy’s BBQ|Clementon|dining||
+Bogeys|Clifton|dining||4.4
+Bubamara Cafe|Clifton|dining||
+Cafe Bubamara|Clifton|dining||
+Damasco Cafe NJ|Clifton|dining||
+Damascus Cafe|Clifton|dining||
+Glowzoola|Clifton|nightlife||
+Kanoon|Clifton|dining||
+La Bonita|Clifton|dining||
+Made in Miami|Clifton|dining||
+Tommy’s|Clifton|dining||
+Yasmeen|Clifton|dining||
+exact venue name|Clifton|dining||
+wahizzaclifton|Clifton|dining|wahizzaclifton|
+Cityview Rooftop Lounge and Event Space|College Point|nightlife||
+Kelsey’s AC|Columbus|dining||
+Kelsey’s Ac|Columbus|dining||
+Lex Living Life|Cranford|dining|lex.livinglifee|
+The Deluxe Way|Cranford|dining||
+Urban Burger Cranford|Cranford|dining|urbanburgercranford|
+Pluto Lounge|Crown Heights|nightlife|pluto_lounge_|
+Italian restaurant|DC|dining||
+El Rincon Tapatio|Dallas|dining||
+El Rincon de Patio|Dallas|dining||
+Hattie B’s|Dallas|dining||
+TK's Surf and Turf|Denver|dining||
+The Works|Denver|dining||
+Dawson's Soul Food|Deptford|dining||
+Umi Deptford|Deptford|dining||
+Umideptford|Deptford|dining||
+3BK Dubai|Dubai|dining||
+Nuser-et|Dubai|dining||
+Los Bandoleros Tacos|East Brunswick|dining||
+Bostwick's Chowder House|East Hampton|dining|bostwickschowderhouse|
+Grindstone Donuts|East Hampton|dining|grindstonedonuts|
+Sisi Restaurant|East Hampton|dining|sisirestaurant|
+Pietro's Pizzeria East Meadow|East Meadow|dining|pietros_pizzeria_east_meadow|
+O Cook Shop|East Orange|dining||
+Tasha’s Caribbean & Soul Food Cuisine|East Orange|dining||
+Tasha’s Carribean & Soul Food Cuisine|East Orange|dining||
+Caffe Roma|East Rutherford|dining|cafferomaeastrutherford|
+Jarana|East Rutherford|dining||
+Joe C's|East Rutherford|dining||
+Joe C’s|East Rutherford|dining||
+Sakai|East Rutherford|dining||
+Sports Bar|East Rutherford|nightlife||
+sports bar|East Rutherford|nightlife||
+venhuenyc|East Village|dining|venhuenyc|
+Don Coqui|Edgewater|dining||
+Don Coqui Edgewater|Edgewater|dining|nightlife|lounge||
+Life After Restaurant & Lounge|Edgewater|dining|nightlife|lounge||
+Mitsuwa Marketplace|Edgewater|dining|mitsuwa_marketplace|
+Addy’s BBQ|Edison|dining||
+Clo Coffee|Edison|dining|clocoffeeco|
+H Mart|Edison|dining|hmartofficial|
+Kura Sushi|Edison|dining|kurasushi_usa|
+Wus Fish House|Edison|dining||
+NJ Pier 73|Elizabeth|dining||4.5
+PIER 73 BAR & LOUNGE|Elizabeth|dining||4.5
+CALEDERA|Englewood|dining||
+CALEDERA at Vida Garden|Englewood|dining||
+Llama House|Englewood|dining||
+czenenglewood|Englewood|dining|czenenglewood|
+El Charro Costeño|Ewing|dining||
+The Big Easy|Ewing|dining||
+Ruocco's Restaurant|Fairfield|dining|ruoccosrestaurantnj|
+Tall Oaks Brew|Farmingdale|dining|talloaksbrew|4.5
+Woody’s Roadside Tavern|Farmingdale|dining|woodys_roadside1|
+Oui Cocktail Lounge|Flatbush|nightlife||
+Ganhoo BBQ|Flushing|dining|ganhoo_bbq|
+Prime Steakhouse|Flushing|dining|nightlife|lounge|primemetsteakhouse|
+Spot Dessert Bar|Flushing|dining|spotdessertbar|
+The Cast Iron Pot|Flushing|dining|thecastironpot|
+Mighty Quinn's BBQ|Forest Hills|dining|mightyquinnsqueens|4.3
+Casablanca Cafe|Fort Lauderdale|dining|casablancacafeftlauderdale|
+Jet Runway Café|Fort Lauderdale|dining|jetrunwaycafe|
+Moxie's|Fort Lauderdale|dining|moxiesusa|
+Nube Rooftop|Fort Lauderdale|dining|nube_rooftop|
+Temple Street Eatery|Fort Lauderdale|dining|templestreeteatery|
+El Asadero|Fort Lee|dining|elasaderofortlee|
+Otter Fine Sushi & Beyond|Fort Lee|dining||
+Wawa|Frankfurt am Main|dining|wawa|4.3
+Andaaz|Franklin Park|dining||
+Aarzu|Freehold|dining||
+Charkol|Freehold|dining||
+Da Rosario Ristorante|Freehold|dining|darosarionj|4.5
+Backyard Barbeque|Freeport|dining|backyard_barbeque_|
+Bleu Island Restaurant|Freeport|dining|bleuislandrestaurant|
+Slices on the Mile|Freeport|dining|slices_onthemile|
+やおきパン|Fukuoka|dining||
+やぐら|Fukuoka|dining||
+今屋のハンバーガー|Fukuoka|dining||
+King Bar by David Burke|Garden City|dining||
+The Red Salt Room|Garden City|dining||
+The Rose Room|Garden City|nightlife||
+Pastrami Grill Bistro|Garfield|dining||
+Maria Station Cafe|Gloucester City|dining||
+MDRD|Grand Rapids|dining||
+Juicy Birds|Greektown|dining||
+Greek Kitchen|Greenpoint|dining|greek_kitchen_bk|
+Paula's Soul Food Cafe|Hackensack|dining||
+Paula’s Soul Food|Hackensack|dining||
+Paula’s Soul Food Cafe|Hackensack|dining||
+Jersey Kebab|Haddon Township|dining||
+Wonder|Hamburg|dining|wonder|5.0
+Rats Restaurant|Hamilton|dining||
+rats restaurant|Hamilton|dining||
+Henri's Hotts BBQ|Hammonton|dining||
+Baked Cravings|Harlem|dining|bakedcravingsny|
+Jacob Soul Food Restaurant|Harlem|dining||
+Lighthouse Fish Market|Harlem|dining|lighthousefishmarket|
+Little Street Lounge|Harlem|dining|littlestreetlounge|
+Mama Pearl's Kitchen|Harlem|dining||
+Panda|Harlem|dining|panda.harlem|
+Pixiee Meals|Harlem|dining||
+Positive Vibes Cafe|Harlem|dining|positivevibescafe_nyc|
+Soul Food Restaurant|Harlem|dining||
+Soul Food in Harlem|Harlem|dining||
+Sylvia’s|Harlem|dining||
+The Best SoulFood In Harlem|Harlem|dining||
+Lounge on Long Island|Hempstead|nightlife|richvibezonly_|
+Tikka Charcoal Grill|Hicksville|dining|tikka_charcoal_grill|4.7
+hillside nj|Hillside|dining||
+Boiler Room|Hoboken|nightlife||
+Carlos Bakery|Hoboken|dining|carlosbakery|
+Hoboken|Hoboken|nightlife||
+Pier 13|Hoboken|dining|pier13hoboken|
+Aloha Krab|Hollis|dining|alohakrab|
+Patricias|Holmdel|dining||
+Black Shamrock Tavern|Honolulu|dining||
+Ground Level Lounge|Honolulu|nightlife||
+SEASIDE LOUNGEHTX|Houston|nightlife||
+Viola and Agnes|Houston|dining||
+se7enhtx|Houston|dining||
+Jives Cafe|Howell|dining|jives_cafe|
+drift|Hutchinson Island|dining|drifthutchinson|
+Kaikai Farm|Indiantown|dining|kaikaifarm|
+Big G Jamaican|Irvington|dining||
+Bobby Wong’s|Irvington|dining||
+Chef Teekay|Irvington|dining||
+Chefteekay|Irvington|dining||
+Irvington|Irvington|dining||
+Marlos|Irvington|nightlife||
+Mangia|Jackson|dining|mangia.nj|
+Fabrika|Jackson Heights|dining|fabrikany|
+Bora Bora|Jamaica|dining|borabora_us|
+Lovell’s Guiding Light|Jamaica|nightlife|lovellsguidinglight|
+best soul food spot|Jamaica|dining||
+Queens Soulfood Caterers|Jamaica Queens|dining||
+Thumkaa|Jamesburg|dining||
+Brownstone Pancake Factory|Jersey|dining|brownstone_pancake_factory|
+Carolyn’s Soul Food|Jersey City|dining||
+Gabriella's|Jersey City|dining|gabriellas.nj|
+Granny's Spot|Jersey City|dining||
+Halftime Grill|Jersey City|dining||
+Hudson & Co. Bar & Grill|Jersey City|dining||
+Latitude Zero Restaurant|Jersey City|dining|latitudezerorestaurant|
+Malatown|Jersey City|dining|malatown_ny_jc|4.9
+Meximodo|Jersey City|dining||
+NJ restaurant|Jersey City|dining||4.2
+Rooftop at Exchange Place|Jersey City|dining||
+Tavern A Veranda|Jersey City|dining|tavernaveranda|
+The Ashford|Jersey City|nightlife||
+one of my favorite NJ restaurants|Jersey City|dining||4.2
+Pixiee Meals|Jonesboro|dining||
+The Crabpae|Kenilworth|dining||
+Space Ping Pong NYC|Koreatown|nightlife|spacepingpongnyc|
+Chocolate Dip|LES|dining|chocolatedip.les|
+Chez Alice|Lambertville|dining|chezalicelambertville|
+Under the Moon|Lambertville|dining|underthemoonlambertville_|
+Conway Social Club|Lancaster|dining|conwaysocialclub|
+Spring House Beer|Lancaster|dining|springhousebeer|
+Blue Seafood Restaurant Bar|Laurelton|dining|bluseafoodrestaurantbar|
+Blended Flavors|Linden|dining||4.3
+Blended Flavors|Linden|dining||
+Don Tequila|Lindenwold|dining||
+Don Tequila Restaurant|Lindenwold|dining||
+Willy’s Munch Gourmet|Little Ferry|dining||
+Ball and Chain|Little Havana|dining||
+A Mother's Touch|Livingston|dining||
+A Mothers Touch|Livingston|dining||
+A Mother’s Touch|Livingston|dining||4.2
+A Mother’s Touch|Livingston|dining||
+Turano's Pizza Kitchen|Livingston|dining|turanospizzakitchen|4.1
+Pin𝐤 𝐋𝕖๓Ỗภ𝓪𝓭ｅ Lounge|London|nightlife|pinklemonadelounge|
+Pin𝐤 𝐋𝕖๓Ỗภ𝓪𝓭𝓮 Lounge|London|nightlife||
+Pin𝐤 𝐋𝕖๕Ỗภ𝓪𝓭ｅ Lounge|London|nightlife||
+Pin𝐤 𝐋𝕖๕Ỗภ𝓪𝓭𝓮|London|nightlife||
+Pin𝐤 𝐋𝕖๕Ỗภ𝓪𝓭𝓮 Lounge|London|nightlife||
+Smoke and Pepper|London|dining||
+Genova Pizza|Long Beach|dining||4.5
+nightmareonbeechst|Long Beach|dining|nightmareonbeechst|
+Angie's Soul House|Long Island|dining||
+Brasas|Long Island|dining||
+Brooklyn Wing House|Long Island|dining|brooklynwinghouse|
+Harmony Vineyards|Long Island|dining|harmonyvineyards|
+Juniper at the Vanderbilt|Long Island|dining|juniperatthevanderbilt|
+Sexy Crab|Long Island|dining|sexycrabnewyork|
+Soul Food Spot|Long Island|dining||
+The Cook's Studio|Long Island|dining|thecooksstudio|4.9
+The Monster Crab|Long Island|dining|themonstercrab|
+The Sunset Club at Tappen|Long Island|dining|thesunsetclubattappen|
+jadeeatery|Long Island|dining|jadeeatery|
+30th Ave|Long Island City|dining||
+Crepe House|Long Island City|dining|CrepeHouseNYC|
+Kakes|Long Island City|dining|kakesnyc|
+Lighthouse Rooftop|Long Island City|dining|lighthouserooftop|
+Partake|Long Island City|dining|nightlife|lounge|partakeinnyc|
+Record Room|Long Island City|nightlife||
+extrabutter|Long Island City|dining|extrabutter|
+theinfamouslic|Long Island City|nightlife|theinfamouslic|
+Hiroshi|Los Altos|dining||
+APL BBQ|Los Angeles|dining|adamperrylang|
+Casa Vega|Los Angeles|dining||
+Shirafù Kirchberg|Luxembourg|dining||
+La Lupa|Manalapan|dining||
+Ralph’s Coffee|Manhasset|dining|ralphscoffee|
+1803|Manhattan|dining|1803nyc|
+2 Floors NYC Nightclub|Manhattan|nightlife||
+21 Greenpoint|Manhattan|dining||
+230 Fifth Rooftop|Manhattan|nightlife||
+2331 12th Avenue|Manhattan|dining||
+30th Ave|Manhattan|dining||
+318 Lafayette|Manhattan|dining||
+420 Bar Lounge|Manhattan|dining||
+8 Bit Bites|Manhattan|dining|8bitbitesusa|4.5
+A Hidden Gem|Manhattan|nightlife||
+Aakosha|Manhattan|dining||
+Aakosha Bentley|Manhattan|dining||
+Ainsworth NYC|Manhattan|dining|@ainsworthnyc|3.9
+Alpha Astoria|Manhattan|dining|alphaastoria|
+Amy Ruth's|Manhattan|dining||
+Angelina’s|Manhattan|dining|angelinabakerynyc|
+Aperol Spritz Bar|Manhattan|nightlife||
+Aqua Boil NYC|Manhattan|dining|aquaboilnyc|
+Arca Restaurant|Manhattan|dining|arcarestaurantnj|4.5
+Arlo Nomad Diner|Manhattan|dining||
+Arlo Nomad Rooftop|Manhattan|dining||
+Atlantic Restaurant|Manhattan|dining||4.5
+Atlantic Restaurant|Manhattan|dining||4.5
+Atlantic Restaurant|Manhattan|dining||4.5
+Atomo Beanless Coffee|Manhattan|dining|atomocoffee|
+Au Cheval|Manhattan|dining|auchevalnyc|
+Aunt Jake's|Manhattan|dining|aunt.jakes|4.5
+Aura 57|Manhattan|nightlife||
+Aura Lounge|Manhattan|nightlife||4.3
+Avant Garden|Manhattan|dining||
+Ayzan NYC|Manhattan|dining|ayzanyc|
+BLVD Bistro|Manhattan|dining|blvdbistro|
+Baby Grand|Manhattan|nightlife|babygrandnyc|4.7
+Baby Grand LES|Manhattan|nightlife||4.9
+Baccarat Hotel|Manhattan|dining|baccarathotel|
+Backstage|Manhattan|nightlife||
+Baires Grill|Manhattan|dining||
+Baji Baji|Manhattan|dining|bajibaji_nyc|
+Bartley Dunne's|Manhattan|nightlife|bartleydunnes|
+Basquiat Bar|Manhattan|nightlife||
+Beast and Butterflies|Manhattan|dining|beastandbutterfliesnyc|
+Beetle House|Manhattan|nightlife|beetlehousenyc|
+Best New Fried Chicken Restaurant|Manhattan|dining||4.9
+Big Apple Brunch|Manhattan|dining|bigapplebrunch|
+Black Nile|Manhattan|dining||
+Black Nile|Manhattan|dining||
+Black Nile Seafood & Soul Food Halal Restaurant|Manhattan|dining||
+Blend Lounge NYC|Manhattan|nightlife|blendloungenyc|
+Blossom's Soul Food Fusion|Manhattan|dining||
+Blossom's Soul Food Fusion|Manhattan|dining||
+Blossoms Soul Food Fusion|Manhattan|dining||
+Bogey's|Manhattan|dining||4.4
+Bourbon Steak|Manhattan|dining|bourbonsteaknyc|4.6
+Brooklyn Square Pizza|Manhattan|dining|brooklynsquarepizza|4.7
+Brunch for the People|Manhattan|dining||
+Buffalo’s|Manhattan|dining||4.6
+Cacao Bar|Manhattan|dining|mariebelleofficial|
+Carnegie Deli|Manhattan|dining||
+Castle Hill Ave|Manhattan|dining||
+Cauldron Chicken|Manhattan|dining|cauldronchicken|4.6
+Cello’s Pizzeria|Manhattan|dining||
+Cello’s Pizzeria|Manhattan|dining||
+Central Park Boathouse|Manhattan|dining|nycboathouse|
+Champagne Problems|Manhattan|nightlife|champagneproblemsnyc|3.5
+Cheeky Sandwiches|Manhattan|dining|cheekysandwiches|
+Chica and the Don|Manhattan|dining|chicaandthedon|
+Chinese Restaurant|Manhattan|dining||4.8
+Chinese restaurant|Manhattan|dining||4.8
+Chinese restaurant|Manhattan|dining||4.8
+Christmas Bar|Manhattan|nightlife||
+Ciao & Cello|Manhattan|dining|ciaoandcello|4.5
+Citi Field|Manhattan|entertainment|citifield|4.6
+City Vineyard|Manhattan|dining|cityvineyardnyc|
+City Vineyards|Manhattan|dining||
+Claw Daddy's|Manhattan|dining|clawdaddysnyc|4.3
+Cobblefish|Manhattan|dining|cobblefish_nyc|
+Coco Social|Manhattan|dining|cocusocial|
+Cold Stone Creamery|Manhattan|dining|coldstonecreamery|
+Cover Restaurant|Manhattan|dining|coverestaurantnyc|
+Crave Cheers NYC|Manhattan|dining|nightlife|lounge|cravecheersnyc|
+Crepe House|Manhattan|dining|crepehousenyc|
+Cubby’s 1 1/2|Manhattan|dining||4.8
+Cucina Palermo|Manhattan|dining|cucinapalermo_rita|4.9
+Cuts and Slices|Manhattan|dining|cutsandslicesnyc|
+Datz Deli|Manhattan|dining||
+Deli Boyz|Manhattan|dining||
+Deli boyz|Manhattan|dining||
+Drink Up|Manhattan|nightlife||
+Drink Up NYC|Manhattan|nightlife||
+Drink Up in NYC|Manhattan|nightlife||
+Dyckman St|Manhattan|dining||
+Dyckman St|Manhattan|dining||
+Eataly Flatiron|Manhattan|dining||
+Eatatcooks.com|Manhattan|dining||4.5
+El Rio Grande|Manhattan|dining|elriograndenyc|
+Electric Shuffle|Manhattan|nightlife|electricshuffleusa|
+Euphoria Brunch|Manhattan|dining|euphoriabrunch|
+Everdene|Manhattan|dining|EverdeneNYC|
+FIELDTRIP|Manhattan|dining||
+Fairytale Lounge|Manhattan|nightlife||
+Fairytale Lounge|Manhattan|nightlife||
+Fig 19|Manhattan|nightlife|fig19nyc|
+Fleur Room|Manhattan|nightlife|fleurroomny|
+Flippers Pancakes|Manhattan|dining|flippersus|
+Fornino|Manhattan|dining||4.6
+Fried Catfish|Manhattan|dining||
+Fried Catfish Today|Manhattan|dining||
+Frosty's Holiday Bar|Manhattan|nightlife|frostysnewyork|
+Funny Face Bakery|Manhattan|dining|@funnyfacebakery|
+Fushimi Group Times Square|Manhattan|dining|fushimigroup|
+Game Bar|Manhattan|nightlife|not mentioned|4.3
+Gitano NYC|Manhattan|dining|gitano.nyc|
+Gnocchi on the Go|Manhattan|dining|gnocchi_on_the_go|
+Golden Diner|Manhattan|dining||
+Golden Girls Kitchen|Manhattan|dining|goldengirlskitchen|
+Gooeyond Inside|Manhattan|dining|gooeyondinside|4.1
+Granny's Spot|Manhattan|dining||4.4
+Granny’s Spot|Manhattan|dining||4.4
+Gyukaku|Manhattan|dining|gyukakujbbq|
+H0L0|Manhattan|nightlife||
+Harbor New York City|Manhattan|dining|harbornewyorkcity|
+Havana Social|Manhattan|dining|havanasocialnyc|
+Heineken Riverdeck|Manhattan|dining||4.5
+Hey Thai|Manhattan|dining|heythai127|
+HeyTea|Manhattan|dining|heytea.usa|4.7
+Hibachiomakase|Manhattan|dining|@hibachiomakase|
+Highball|Manhattan|dining||
+Honey Fried Chicken|Manhattan|dining||
+Hotel Hennes NYC|Manhattan|dining||
+I Got Balls|Manhattan|dining|igotballs_nyc|
+Il Mulino|Manhattan|dining|ilmulinonyc|
+Infused Ice Cream Spot|Manhattan|dining||
+Itakitchen|Manhattan|dining|itakitchenny|
+Jerk House Caribbean|Manhattan|dining||
+Jewel Thief|Manhattan|nightlife|jewelthiefnomad|
+Kam Rai|Manhattan|dining||4.9
+Karla Restaurant|Manhattan|dining||4.8
+Kebabwala|Manhattan|dining||4.0
+King's Hawaiian|Manhattan|dining|kingshawaiian|4.6
+Kjun|Manhattan|dining||
+Kona Big Wave|Manhattan|dining|konabigwave|4.3
+Kyma Hudson Yards|Manhattan|dining|kymahudsonyards|
+Kyuramen|Manhattan|dining|kyuramen.nyc|4.6
+La Caverna|Manhattan|dining|lacavernanyc|
+La Cubana|Manhattan|dining||4.0
+La Cubana|Manhattan|dining||4.0
+Lacubana|Manhattan|dining||4.3
+Lagos NYC|Manhattan|dining|lagosnyc|
+Lama Cafe|Manhattan|dining|lamacarenanyc|
+Lamia's Fish Market|Manhattan|dining|lamiasfishmarket|4.0
+Liberty Bistro|Manhattan|dining|libertybistronyc|
+Lillie's Victorian|Manhattan|dining|lilliesvictorian|
+Little Charlie NYC|Manhattan|dining|littlecharlinyc|
+Little Italy|Manhattan|dining||
+Little Italy|Manhattan|dining||
+Little Sister|Manhattan|nightlife||
+Little Sister Lounge|Manhattan|nightlife||
+Little Sister lounge|Manhattan|nightlife||
+Lori Jayne|Manhattan|dining|lorijaynebk|4.7
+Lucy's Sausage|Manhattan|dining|lucysausage|
+Luv Pizza|Manhattan|dining|luvpizzanyc|
+L’Adresse American Bistro|Manhattan|dining|ladressenyc|
+M Social|Manhattan|dining|nightlife||
+Maison Close|Manhattan|dining||
+Mama Taco|Manhattan|dining|mamataconyc|
+Margaritaville Times Square|Manhattan|dining|margaritavilletimessquare|
+McDonald’s Popup|Manhattan|dining||3.1
+Meduza Mediterrania|Manhattan|dining|meduzamediterrania|
+Mercury Lounge|Manhattan|nightlife||
+Metropolis|Manhattan|dining||
+Mezze on the River|Manhattan|dining|mezzeontheriver|4.3
+Mi Alma|Manhattan|dining|nightlife||
+Mickey Spillane|Manhattan|nightlife||
+Mickey Spillane's|Manhattan|nightlife||
+Mikiya New York|Manhattan|dining|mikiyanewyork|
+Milano Market|Manhattan|dining|milanomarketnyc|
+Mission Ceviche|Manhattan|dining||
+Miznon NYC|Manhattan|dining|miznon_nyc|
+Moho Mexican Grill|Manhattan|dining|mohomexicangrill|
+Mojito by David Burke|Manhattan|dining||
+Mom's Spaghetti|Manhattan|dining|@momsspaghettidetroit|
+Morris Park Ave|Manhattan|dining||
+Ms. Kim's|Manhattan|nightlife|ms.kims.nyc|
+Mulberry St Cigars|Manhattan|nightlife|mulberrystcigars|
+Mulberry Street Bar|Manhattan|nightlife|mulberrystbar|
+Murphy's|Manhattan|dining|murphysnewyork|
+Murray’s Cheese Shop|Manhattan|dining||
+Mustrd Restaurant|Manhattan|dining||4.9
+Mustrd Restaurant|Manhattan|dining||4.9
+My fav bar|Manhattan|nightlife||
+NJ location|Manhattan|dining||
+NY Willy Wall|Manhattan|nightlife|nywillywall|
+NYC Kitchen|Manhattan|dining||
+Negril|Manhattan|dining|negrilbk|
+New Star Deli|Manhattan|dining||4.3
+Nico’s Restaurant|Manhattan|dining||4.3
+Oh WE TALKING OXTAILS|Manhattan|dining||
+Oscar Wilde|Manhattan|dining||
+Oxtails|Manhattan|dining||
+Paletas Morelia|Manhattan|dining|paletasmorelia|4.9
+Palma Verde|Manhattan|dining||
+Panda Harlem|Manhattan|dining|@panda.harlem|
+Paninoteca|Manhattan|dining||4.8
+Pappas|Manhattan|dining|nightlife|pappasnewyork|
+Partake NYC|Manhattan|dining||
+Patty Palace|Manhattan|dining||4.2
+Peak Restaurant & Bar|Manhattan|dining||
+Pera Soho|Manhattan|dining||
+Pho|Manhattan|dining||4.7
+Pier 17 Roof|Manhattan|dining||
+Pier I Cafe|Manhattan|dining|piericafe|
+Pixiee Meals|Manhattan|dining||
+Prestige Lounge|Manhattan|nightlife|prestigelounge.nyc|
+Prime39|Manhattan|dining||
+Prince Street Pizza|Manhattan|dining|princestreetpizza|
+Public Hotel|Manhattan|nightlife||
+Raf's|Manhattan|dining|rafsnewyork|
+Ramen and Saki|Manhattan|dining||
+Rasta Pasta|Manhattan|dining||
+Record Room|Manhattan|nightlife||
+Record Room NYC|Manhattan|nightlife||
+Red Hook|Manhattan|dining||
+Red Lobster|Manhattan|dining|redlobster|4.3
+Rnb Brunch Sundays NJ|Manhattan|dining||4.8
+Room 100|Manhattan|dining|room100bk|
+Ruby Crab|Manhattan|dining|rubycrabny|
+Sake No Hana|Manhattan|dining|sakenohana|
+San Sabino|Manhattan|dining||
+Sandbar Rooftop|Manhattan|dining|sandbarrooftop|
+Sangenaro|Manhattan|dining|sangennaronyc|
+Scarr’s Pizza|Manhattan|dining||
+Seamore's|Manhattan|dining|seamores|4.4
+Semicolon Cafe|Manhattan|dining|semicolon_cafe|
+Shawnae’s House|Manhattan|dining||
+Shawnae’s House|Manhattan|dining||
+Skinny's Cantina on the Hudson|Manhattan|dining|skinnyscantinaonthehudson|
+Skywise Lounge|Manhattan|nightlife||
+SmashBurger|Manhattan|dining||
+SneakyLinks|Manhattan|nightlife|frevonyc|
+Soul City|Manhattan|dining||
+Soul Food|Manhattan|dining||
+Soul N The Hole|Manhattan|dining||
+Soul N The Hole|Manhattan|dining||
+Soul N The Hole|Manhattan|dining||
+Speakeasy|Manhattan|nightlife||
+Spicy Village|Manhattan|dining||
+Spin|Manhattan|dining|nightlife|wearespin|
+Spritz|Manhattan|dining|spritznewyork|
+Sticky Catfish|Manhattan|dining||4.7
+Stretch the Mozz|Manhattan|dining|stretchthemozz|
+Stuffed Ice Cream|Manhattan|dining|stuffedicecreamnyc|
+Sub-Mission|Manhattan|dining|submissionnyc|5.0
+Sunday Morning Cinnamon Rolls|Manhattan|dining|sundaymorningcinnamonrolls|
+Sylvia’s Restaurant|Manhattan|dining||
+Søul|Manhattan|dining||
+Søul Mac|Manhattan|dining||
+T Lounge NYC|Manhattan|nightlife||
+T-Squared Social|Manhattan|dining|nightlife|entertainment|tsquared.social.ny|
+TS Bar|Manhattan|nightlife||
+TWA Lounge|Manhattan|nightlife||
+Table For Two|Manhattan|dining||
+Taqueria El Chato|Manhattan|dining||4.7
+Taste of Heaven|Manhattan|dining||
+Taste of Seafood|Manhattan|dining|taste.of.seafood|
+Tavern on the Green|Manhattan|dining||
+Tavern on the Green|Manhattan|dining||
+Ten 11|Manhattan|nightlife||
+Thai Diner|Manhattan|dining|thaidiner|
+The 40/40 Club|Manhattan|nightlife|the4040club|
+The Boom Room|Manhattan|nightlife||
+The Box NYC|Manhattan|nightlife||
+The Chai Spot|Manhattan|dining|thechaispotnyc|
+The Chelsea House NYC|Manhattan|dining|thechelseahousenyc|
+The City Is Ours NYC|Manhattan|nightlife||
+The Cronut Stand|Manhattan|dining|thecronutstand|
+The Fine Wine Experience NYC|Manhattan|dining||
+The Fleur Room|Manhattan|nightlife||
+The Girliest Cafe|Manhattan|dining||4.4
+The Greens|Manhattan|dining||
+The Grid|Manhattan|dining||
+The Guesthouse Bistro & Bar|Manhattan|dining||4.3
+The Highlight Room|Manhattan|nightlife|thehighlightroomnyc|
+The Lost Draft|Manhattan|dining|thelostdraft|
+The Plaza Hotel|Manhattan|dining||
+The Ready Rooftop|Manhattan|nightlife|thereadyrooftop|3.6
+The Tyger|Manhattan|dining|thetygernyc|
+The Vault|Manhattan|dining|nightlife|lounge||4.7
+The Vixen Of Soul Food|Manhattan|dining||
+The Vixen Of Soul Food|Manhattan|dining||
+Three Peaks Lodge|Manhattan|dining||4.8
+Time Out Market|Manhattan|dining|timeoutmarketunionsquare|4.5
+Tipsy Scoop|Manhattan|dining|tipsyscoop|
+Topokki Witch|Manhattan|dining|topokki_witch|4.8
+Unnamed Venue|Manhattan|dining||
+Urban Cove|Manhattan|dining||
+VIV Thai|Manhattan|dining|vivthainyc|
+Van Leeuwen|Manhattan|dining||
+Verano NYC|Manhattan|dining|veranonyc|
+Watermark|Manhattan|dining||4.3
+Wicked on Broadway|Manhattan|entertainment||4.9
+Wontonissimo|Manhattan|dining|wontonissimo|
+Woodland’s|Manhattan|dining||
+Yavali NYC|Manhattan|dining|yavalionyc|
+Zoi|Manhattan|dining||
+apastabar|Manhattan|dining|apastabar|4.3
+bee.lounge|Manhattan|nightlife|bee.lounge|4.6
+best Healthy Restaurant|Manhattan|dining||4.7
+coremg Movay Brunch|Manhattan|dining|coremg|4.7
+eatprettyues|Manhattan|dining|eatprettyues|
+ikon.newyork|Manhattan|dining|nightlife|lounge|ikon.newyork|4.2
+industrykitchen|Manhattan|dining|industrykitchen|
+kobanony|Manhattan|dining|kobanony|
+lelenyc|Manhattan|dining|nightlife|lounge|lelenyc|4.3
+melaninmimosasbrunch|Manhattan|dining|melaninmimosasbrunch|
+newest and best soul food|Manhattan|dining||4.3
+nychookahlounge|Manhattan|nightlife||
+restaurant|Manhattan|dining|sveta.nyc|
+selfup|Manhattan|dining|selfup|4.8
+sisters spot|Manhattan|dining||4.5
+speakeasy|Manhattan|nightlife||
+stagestarbackstage|Manhattan|nightlife|stagestarbackstage|4.8
+tablefortwonyc|Manhattan|dining|tablefortwonyc|4.5
+thecityisoursnyc|Manhattan|nightlife||
+thekitsby|Manhattan|dining|thekitsby|5.0
+unknown|Manhattan|dining||
+unknown poké bowl restaurant|Manhattan|dining||
+unknown poké bowl restaurant|Manhattan|dining||
+unknown restaurant|Manhattan|dining||
+CRABBAE|Maplewood|dining||
+Sweet Chili Oxtails|Maplewood|dining||
+Garage Grill|Marlboro|dining||4.4
+Sette Marlboro|Marlboro|dining|settemarlboro|
+Source Brewing|Marlboro|dining|sourcebrewing|
+Bacha Coffee|Marrakech|dining|bachacoffee|
+Comptoir Darna|Marrakech|dining|comptoirdarna|
+Spaghetti Eddie|Meadowlands|dining||
+Newyork lounge|Mekelle|nightlife||
+The #1 cheese steak in south jersey|Merchantville|dining||
+Social Corner|Merrick|nightlife|social.corner|
+Life at Cais|Metuchen|dining|lifeatcais|
+Mangia Toscano|Metuchen|dining|mangia_toscano|
+Bob’s Diner|Mexico City|dining||4.4
+Cardinal Casa de Café|Mexico City|dining||
+Citizen Rooftop|Mexico City|nightlife||4.2
+Expendio de Maíz|Mexico City|dining|exp_maiz|4.2
+Handshake Speakeasy|Mexico City|nightlife||4.4
+La Gruta|Mexico City|dining||4.3
+Panadería Rosetta|Mexico City|dining||4.5
+Tacos El Don|Mexico City|dining||
+Undercover Snacks|Mexico City|dining|undercoversnacks|
+Ball and Chain|Miami|dining||
+Café Bastille|Miami|dining|@cafebastillemiami|
+Eataly|Miami|dining|eatalynyc|
+Joia Beach|Miami|dining||
+Miami Soul Food|Miami|dining||
+Nikki Beach|Miami|dining||
+Santa Tequila|Miami|dining|santotequila|
+Tropezón|Miami|dining|@tropezonmiami|
+YOTEL|Miami|dining|yotel|
+Macchialina|Miami Beach|dining|@macchialina|
+Strawberry Moon|Miami Beach|dining|@strawberrymoon|
+Lovely’s|Miami Gardens|dining||
+Wonder|Middletown|dining|@wonder|
+RIPOSO Coffee Roasters|Middletown Township|dining|riposocoffeeroasters|4.7
+Jack's Surf Turf|Millburn-Short Hills|dining|jackssurfturf|
+Unwined Boutique|Millburn-Short Hills|dining|unwined_boutique|
+7th Street Burger|Mineola|dining|7thstreetburgernyc|4.4
+The Rex Burger and Lobster|Mineola|dining|therexburgerandlobster|
+Mad Bird|Mississauga|dining||
+Osteria Francescana|Modena|dining||
+Jasper Stone|Monroe|dining||
+Jasper Stone Italian Steakhouse|Monroe Township|dining||
+Luigino's Parmigiana|Montclair|dining||
+Mattarello Bakery|Montclair|dining|mattarellobakery|4.5
+Roosters|Montclair|dining||
+Seoul Bistro|Montclair|dining||
+Sweet T’s Southern Eatery|Montclair|dining||
+seoul bistro|Montclair|dining||
+Shangai|Montevideo|dining||
+Coniglio's|Morristown|dining|coniglios|4.4
+Rey Sol Coffee|Morristown|dining|reysolcoffee|
+The Union Firehouse|Mount Holly|nightlife||4.6
+Wynwood|Multiple Locations|nightlife||
+The Hub Murray Hill|Murray Hill|dining|thehubmurrayhill|
+A Mother’s Touch|NJ|dining||
+Beneduce Vineyards|NJ|dining|beneducevineyards|
+Beyond Soul Food|NJ|dining||
+Jerkies|NJ|dining||
+Kpot|NJ|dining||
+Matera's on the Park|NJ|dining|materasonpark|
+PIER 73 BAR & LOUNGE|NJ|dining||
+Pina's Kitchen|NJ|dining|pinaskitchen__|
+Renault Winery Resort|NJ|dining|renaultwineryresort|
+Sprinkle Me Up Bakery|NJ|dining|sprinklemeupbakery|
+Sticky Catfish|NJ|dining||
+Sugar on the Rim|NJ|nightlife|sugarontherimnj|
+The Cannoli Shop NJ|NJ|dining|thecannolishopnj|
+Top Pot|NJ|dining||
+best soul food spot|NJ|dining||
+newest and best soul food|NJ|dining||
+Bars on Broadway|Nashville|nightlife||
+Hattie B's Hot Chicken|Nashville|dining|hattiebs|
+White Limousine Nashville|Nashville|nightlife|whitelimozeennash|
+Café Boulud Baha Mar|Nassau|dining|cafebouludbaha|
+Grand Hyatt|Nassau|dining||3.9
+Marcus Baha Mar|Nassau|dining|marcusbahamar|
+Marcus Cooks|Nassau|dining|marcuscooks|4.2
+Rosewood|Nassau|dining||4.7
+SLS|Nassau|dining||4.3
+Sapodilla Restaurant|Nassau|dining|sapodillarestaurant|
+Ms. Barbara's|Neptune|dining||
+Park Social|Neptune|dining|parksocial_nj|
+Bittersweet|Neversink|dining||
+Foster Supply Hospitality|Neversink|dining|fostersupplyhospitality|
+Domi Soul Fusion|New Brunswick|dining||
+Sakana|New Brunswick|dining||
+domi soul fusion|New Brunswick|dining||
+Frank Pepe Pizzeria|New Haven|dining|frankpepepizza|
+Sally's Apizza|New Haven|dining|sallysapizza|
+Carrello di Cannoli|New Jersey|dining|carrellodicannoli|
+Casa Ragazzini|New Jersey|dining|casaragazzinj|
+Great Soul Food Spot|New Jersey|dining||
+Great soul food spot|New Jersey|dining||
+Moka Cafe|New Jersey|dining|mymokafe|
+NJ Pier 73|New Jersey|dining||
+Rnb Brunch Sundays|New Jersey|dining||
+Rnb Brunch Sundays NJ|New Jersey|dining||
+Soul Food in New Jersey|New Jersey|dining||
+best Healthy Restaurant|New Jersey|dining||
+Noma Social|New Rochelle|dining||
+12 Matcha|New York City|dining|12.matcha|
+1803 NYC|New York City|dining||
+230 Fifth|New York City|dining||
+53 Restaurant|New York City|dining||
+A.R.T Nomad|New York City|dining||
+Ainsworth|New York City|dining|theainsworth|3.9
+Aitana|New York City|dining|aitananyc|
+Aliya Cocktail Den at Hotel Indigo|New York City|dining||
+Ambra|New York City|dining|ambranyc|
+AnnTremet|New York City|dining||
+AperiBar|New York City|dining||
+Apotheke Nomad|New York City|dining||
+Aqua Boil|New York City|dining||
+Aquarelle|New York City|dining|aquarellenyc|
+Artesano|New York City|dining|artesanony|
+Artisano Peruvian Cuisine|New York City|dining||
+Awesome Hibachi|New York City|dining|awesomehibachi|
+Ayza|New York City|dining||
+Ayza Wine & Chocolate Bar|New York City|dining||
+Azul On The Rooftop|New York City|dining||
+Baccarat Hotel New York|New York City|dining|baccarathotels|
+Baires Grill|New York City|dining|bairesgrill|
+Bar Après|New York City|nightlife||
+Bar Blondeau|New York City|dining||
+Bar Calico|New York City|dining|barcaliconyc|
+Bar Cima|New York City|dining||
+Bar Primi|New York City|dining||
+Bar Sprezzatura|New York City|dining|BarSprezzaturaNYC|
+Bateaux Dinner Cruise|New York City|dining|citycruises|4.5
+Beast & Butterflies|New York City|dining||
+Bello and Angelo|New York City|dining|belloandangelopizza|
+Berimbau Brazilian Cuisine|New York City|dining|berimbau_nyc|
+Birdland Jazz Club|New York City|nightlife||
+Black Nile|New York City|dining||
+Blossom's Soul Food Fusion|New York City|dining||
+Book Club Bar|New York City|dining||
+Brett’s Deli|New York City|dining|brettsdeli|
+Butler Bakery|New York City|dining||
+Butterdose Cafe|New York City|dining|butterdosenyc|
+Cadence|New York City|dining|cadence.newyork|
+Cafe Carmellini|New York City|dining||
+Cafe Otto|New York City|dining||
+Candle Cafe|New York City|dining|candlecafe|
+Cantina|New York City|dining||
+Capital One Café - 59th & Lex|New York City|dining|capitalonecafe|
+Casa Bond|New York City|dining||
+Cathedrale|New York City|dining||
+Cecconi’s Dumbo|New York City|dining|cecconisrestaurants|
+Cecconi’s specifically at the Dumbo location|New York City|dining||
+Champion Pizza|New York City|dining|championpizza|
+Chelsea Market|New York City|dining|chelseamarketny|4.6
+Clemente Bar|New York City|nightlife|theclementebar|
+Crazy Pizza|New York City|dining||
+Daintree|New York City|dining||
+Dear Irving On Hudson|New York City|dining||
+Din Tai Fung|New York City|dining|dintaifungusa|4.3
+Django Jazz|New York City|nightlife||
+Docks Off 5th|New York City|dining||
+Dumbo House|New York City|nightlife||
+Dutch Fred’s|New York City|dining|dutchfreds|4.5
+Eataly|New York City|dining|eatalynewyorkcity|
+Eataly Flatiron|New York City|dining||
+Ebi-Ayo Supper Club|New York City|dining|ebiayosupperclub|
+Ebi-ayo Supper|New York City|dining||
+Ebi-ayo Supper Club|New York City|dining||
+El Nico|New York City|dining||
+Electric Shuffle|New York City|nightlife||
+Eleven Madison Park|New York City|dining|elevenmadisonpark|
+Essex|New York City|dining||
+Everdene|New York City|dining||
+Everdene at The Virgin Hotels|New York City|dining|everdenenyc|
+Faena|New York City|dining|nightlife|faenanewyork|3.9
+Feste|New York City|dining|Resy|
+File Gumbo Bar|New York City|dining||
+File Gumbo Louisiana Style Cuisine|New York City|dining||
+Forma Pasta Factory|New York City|dining||
+Frosty’s|New York City|dining||
+Fumo|New York City|dining||
+Gallow Green|New York City|dining||
+Ghirardelli Chocolate & Ice Cream Shop|New York City|dining|ghirardelli|
+Grand Banks|New York City|dining|grandbanksnyc|
+Grand Brasserie|New York City|dining||
+Grandma’s Home|New York City|dining||
+Grinchy’s at Roberta’s|New York City|dining||
+HAAM Caribbean Plant Cuisine|New York City|dining|healthyasamotha|
+Highlight Room|New York City|dining||
+Huset|New York City|dining||
+ISHQ|New York City|dining|ishqnyc|
+Industry Kitchen|New York City|dining||
+JBF Platform|New York City|dining|platformbtjbf|
+Jaffa Cocktail & Raw Bar|New York City|dining||
+Jalao|New York City|dining|jalaonyc|
+Jasmine’s Caribbean Cuisine|New York City|dining||
+Jerk House Caribbean|New York City|dining||
+Kaizen|New York City|dining||
+Khaosan|New York City|dining|khaosan_nyc|
+La Barca Cantina|New York City|dining||
+La Boca|New York City|dining||0.0
+Ladurée|New York City|dining||
+Laserwolf|New York City|dining||
+Le Basque|New York City|dining|lebasquenyc|
+Le Petit|New York City|dining||
+Level Restaurant|New York City|dining||
+Lighthouse Rooftop|New York City|dining||
+Lily of The Valley Afternoon Tea|New York City|dining||
+Limusina|New York City|dining|limusinanyc|4.5
+Lion’s Milk|New York City|dining||
+Little Sister Lounge|New York City|nightlife||
+Lohi|New York City|dining||
+Loreley Restaurant|New York City|dining||
+Los Tacos No. 1|New York City|dining|lostacos1|4.7
+Lost In Paradise|New York City|dining||
+Lower East Side|New York City|dining||0.0
+Magaritaville Resort|New York City|dining||
+Maison Close|New York City|dining||
+Majorelle|New York City|dining|majorelleny|
+Malibu Farm|New York City|dining||
+Maman|New York City|dining||
+Manhatta|New York City|dining||
+Mariebelle Chocolate Experience|New York City|dining||
+Market Table|New York City|dining|marketterestaurant|4.5
+Medusa Mediterranean Cuisine|New York City|dining||
+Meili|New York City|dining|meiliwilliamsburg|
+Metropolis|New York City|dining|metropolisbymarcus|
+Mezze on the River|New York City|dining||
+Mian Kitchen|New York City|dining|miankitchen|
+Mia’s Cocina|New York City|dining||
+Mighty Quinn’s|New York City|dining|mightyquinnsbbq|
+Milk + Roses|New York City|dining||
+Minuto Bauli|New York City|dining|minutobauli|
+Mira|New York City|dining|miranyc34|
+Miss Nellie’s Victorian Theme Restaurant|New York City|dining|missnelliesnyc|
+Miss Yolo’s Tacos|New York City|dining|missyolostacos|
+Mission Ceviche|New York City|dining||
+Moka Matcha|New York City|dining|mokamatchacafe|
+Momoya|New York City|dining|momoyasoho|
+Monarch Rooftop|New York City|dining||
+Morton’s Steakhouse|New York City|dining|mortonssteak|
+Motek|New York City|dining|MotekNYC|4.9
+Musaek|New York City|nightlife|musaek.nyc|
+Mysttik Masaala|New York City|dining|mysttikmasaala|
+Native Harlem|New York City|dining|native125th|
+Nerai|New York City|dining|nerainyc|
+Nikki’s Kitchen|New York City|dining||
+ONE Dine|New York City|dining|onedinenyc|
+Old Fashion Café|New York City|dining|oldfashioncafenyc|
+Ollie|New York City|dining||
+Olly Olly Market|New York City|dining||
+One40 Rooftop|New York City|dining|one40rooftop|
+Ophelia|New York City|dining||
+Ophelia Lounge|New York City|dining||
+Overstory|New York City|nightlife|overstory|4.2
+PPL|New York City|dining||
+Palate & Palette|New York City|dining||
+Palm Court|New York City|dining||
+Palm Court at The Plaza Hotel|New York City|dining||
+Panorama Room|New York City|dining||
+Papillon Bistro & Bar|New York City|dining||
+Paradise Club|New York City|nightlife|paradiseclubnyc|3.5
+Passerine|New York City|dining|passerinenyc|
+Pastasole|New York City|dining|pastasole|
+Patridge Bistro & Bar|New York City|dining||
+Plantshed SoHo|New York City|dining||
+Plowshares Coffee|New York City|dining||
+Point Seven|New York City|dining||
+Point Seven Seafood Focused Restaurant|New York City|dining|pointsevennyc|
+Polly’s Speakeasy|New York City|nightlife|pollysnyc|
+Popup Bagels|New York City|dining|popupbagels|4.5
+Porter House|New York City|dining||
+Portrait Bar|New York City|dining||
+Postcard Bakery|New York City|dining||
+Puttery|New York City|entertainment|putterynewyorkcity|4.5
+Ras Plant Vegan Ethiopian Cuisine|New York City|dining|rasplantbased|
+Refinery Rooftop|New York City|dining||
+River Cafe|New York City|dining||
+Rolfs German Restaurant|New York City|dining||
+Rory’s Rooftop Bar|New York City|dining|rorysrooftop|
+Sahola Coffee|New York City|dining||
+Saint Lounge NYC|New York City|nightlife||
+Sake No Hana|New York City|dining||
+Shirokuro|New York City|dining||
+Smoke Jazz Club & Supper Club|New York City|nightlife||
+Somewhere Nowhere|New York City|dining||
+Somewhere Nowhere Rooftop|New York City|nightlife||
+Somewhere Nowhere Rooftop at Renaissance NY|New York City|dining||
+Soul N The Hole|New York City|dining||
+Spicy Moon|New York City|dining||
+Spicymoon Vegan Szechuan Cuisine|New York City|dining|spicymoonnyc|
+Spin Flatiron|New York City|entertainment||4.6
+Spyglass Rooftop|New York City|dining||
+Stout NYC|New York City|dining||
+Strip Steakhouse Speakeasy|New York City|dining|striphouseofficial|4.5
+Sullaluna|New York City|dining|sullaluna.nyc|
+Sushi & Bento by Mr Lim|New York City|dining|sushiandbentobymrlim|
+Sushi Suite 1001|New York City|dining||
+Sweet Cats|New York City|dining||
+Sweet Moment|New York City|dining||
+TAN New York City|New York City|dining|tannewyorkcity|
+Tadhana|New York City|dining|tadhana_nyc|
+Tarallucci e Vino|New York City|dining||
+Temple Court inside Beekman Hotel|New York City|dining||
+The Argyle|New York City|nightlife|theargylenyc|5.0
+The Atelier Jolie|New York City|dining||
+The Baazar at The Ritz Carlton|New York City|dining||
+The Bazaar by Jose Andres|New York City|dining|bazaarbyjose|
+The Boom Room|New York City|nightlife||
+The Cabinet|New York City|dining||
+The Common|New York City|dining|thecommonbrooklyn|
+The Common Park Slope|New York City|dining|thecommonparkslope|
+The Corner Store|New York City|dining|thecornerstore|
+The Django|New York City|nightlife|thedjangonyc|
+The Flatiron Room Murray Hill|New York City|nightlife||
+The Garden at The Standard, East Village|New York City|dining|thestandardeastvillage|
+The Hairy Lemon|New York City|dining||
+The Laduree|New York City|dining|laudree|
+The Living Room|New York City|nightlife||4.3
+The Monkey Cup|New York City|dining||
+The Nines|New York City|dining||
+The Ready Rooftop|New York City|dining||
+The Roof at Public Hotel|New York City|dining||
+The Royal Palms Shuffleboard|New York City|nightlife||
+The Skylark Rooftop Bar|New York City|nightlife|theskylarknyc|
+Time Out Market New York|New York City|dining|timeoutnewyork|
+Tucci|New York City|dining|tuccinyc|
+Twenty Three Grand|New York City|dining|twentythreegrand|
+Twin Tails|New York City|dining|twintails_nyc|
+UNLISTED|New York City|nightlife||
+UNTITLED|New York City|dining|untitledfreemanalley|
+Urban Backyard|New York City|dining||
+Vanderbilt Market|New York City|dining|hfmarketsny|
+Vert Frais|New York City|dining||
+Vert Frais Japanese Eatery|New York City|dining||
+Vinile Chophouse|New York City|dining|vinilechophouse|
+Vintage Green|New York City|dining|vintagegreen.nyc|
+Vinyl Steakhouse|New York City|dining|vinylsteakhouse|
+Virgin Hotels|New York City|dining|virginhotelsnyc|
+Wabi Nori|New York City|dining||
+Westlight|New York City|nightlife||
+Westmoreland|New York City|dining|frickcollection|
+Wonderland Bar|New York City|dining|wonderlandbarnyc|
+Wonderland Cocktail Bar|New York City|nightlife||
+Ye’s Apothecary|New York City|dining|yesapothecary|
+Yingtao|New York City|dining||
+Yum Yubu|New York City|dining|_yumyubu|
+Zuma|New York City|dining|zumanewyork|
+47 Edison Pl|Newark|nightlife||
+Beyond Soul Food|Newark|dining||4.3
+Beyond Soul Restaurant|Newark|dining||
+Blueberry Café|Newark|dining||
+City Lounge|Newark|nightlife||
+Ikoyi Restaurant & Lounge|Newark|dining||4.3
+Ikoyi Restaurant and Lounge|Newark|dining|nightlife|lounge||4.3
+Jersey & Co Gelato|Newark|dining|jerseyandco.gelato|
+Madre & Son Soulfood Cafe|Newark|dining||
+Madre & Son Soulfood Café|Newark|dining||
+Madre and Son|Newark|dining||4.5
+Neighborhood Favorites|Newark|dining||
+OMG Resteraunt|Newark|dining||
+Pixiee Meals|Newark|dining||
+The Good Eats Experience|Newark|dining||
+The Patio on Sussex|Newark|dining||
+The Yard|Newark|dining||
+Town Bar + Kitchen|Newark|dining||
+citylounge|Newark|nightlife||
+southern restaurant|Newark|dining||
+G & H Deli|Newburgh|dining||
+KYU|NoHo|dining|kyurestaurants|
+blackbarnrestaurant|NoMAD|dining|blackbarnrestaurant|
+A Guyanese-Chinese restaurant|North Baldwin|dining||4.3
+Guyanese-Chinese restaurant|North Baldwin|dining||
+Blazin Chicken & Gyro|North Bergen|dining||
+Sandwichitos|North Bergen|dining||
+Kanoon|North Brunswick|dining||
+Rev Rail Co|North Creek|dining|revrailco|4.8
+Amazing Taste|North Plainfield|dining||
+Emilio's Woodfire Pizza|Nutley|dining|emilios_woodfirepizza|4.8
+Locurcio Family Markets|Nutley|dining|locurcio_family_markets|
+Tramonto's Pizza|Ocean Township|dining|tramontospizza|4.8
+The Sauce Oceanport|Oceanport|dining|thesauceoceanport|
+2831 Long Beach Rd|Oceanside|dining||
+Seafood Mania Boil|Oceanside|dining|seafoodmaniaboil|3.8
+Angelina's Kitchen|Old Bridge|dining|angelinaskitchennj|
+Il Nido|Old Bridge|dining|ilnidonj|
+Madison Modern|Old Bridge|dining|madison_modern|
+ORA FreeStyle Italian|Oradell|dining||
+Ora|Oradell|dining||
+Twenty Pho Hour|Orlando|dining||
+The Green Lounge|Paramus|nightlife||
+Allard|Paris|dining||
+Bar Les Ambassadeurs|Paris|dining||
+Brasserie Flottes|Paris|dining||
+Breizh Cafe|Paris|dining||
+Cafe Carette|Paris|dining||
+Cafe Laperouse|Paris|dining||
+Cafe de l’Homme|Paris|dining||
+Carette|Paris|dining||
+Chez Janou|Paris|dining||
+Cinq Mars|Paris|dining||
+Derriere|Paris|dining||
+La Renommee|Paris|dining||
+Laduree Carrousel du Lourve|Paris|dining||
+Le Procope|Paris|dining||
+Le Tout|Paris|dining||
+Le Voltaire|Paris|dining||
+Les Jules Verne|Paris|dining||
+L’Avant Comptoir de la Terre|Paris|dining||
+Marius et Janette|Paris|dining||
+Robert et Louise|Paris|dining||
+Stohrer|Paris|dining||
+Stella's|Park Slope|dining|stellas_caribbean|
+Lotus Rooftop|Passaic|nightlife||
+Al Basha|Paterson|dining|eatalbasha|
+Bocaditos|Paterson|dining||
+DR Pica Pollo|Paterson|dining||
+Mancora Lounge|Paterson|nightlife|mancora_lounge_nj|
+Mancora lounge|Paterson|nightlife||
+Taj|Paterson|dining||
+Tiff's Soul Food|Paterson|dining||
+Dawson's Soul Food|Pennsauken|dining||
+Wings & Bang Bang Tots|Pennsauken|dining||
+Mars Kitchen|Pennsgrove|dining||
+Chef 2 The Max Food Truck|Philadelphia|dining||
+Cocina Mexicana|Philadelphia|dining||
+Fallin Off The Bone|Philadelphia|dining||
+Prime Fusion Afro Grill and Lounge|Philadelphia|dining||
+Norsdale Phoenicia|Phoenicia|dining|norsdale_phoenicia|
+Lin's Grand Buffet|Phoenix|dining||
+Lin’s Grand Buffet|Phoenix|dining||
+South Jersey’s BEST breakfast spot|Pine Hill|dining||
+Bojangles|Piscataway|dining||
+Moodz Co.|Pittsburgh|dining||4.4
+Moodz Co.|Pittsburgh|dining||4.4
+Sky Cafe|Pittstown|dining|skycafepittstownnj|
+Dirty Taco and Tequila|Port Washington|dining|dirtytacoandtequila|4.5
+Agricola Eatery|Princeton|dining|agricolaeatery|
+Mediterra Restaurant Princeton|Princeton|dining|mediterrarestaurantprinceton|
+_mamannyc_|Princeton|dining|_mamannyc_|
+787 Coffee|Puerto Rico|dining|787coffee|
+Agenda Astoria|Queens|nightlife||
+Atlantic Bakery|Queens|dining|atlanticbakerycorp|
+Blend lounge|Queens|nightlife||
+Caribbean Soul NYC|Queens|dining|caribbeansoulnyc|
+Casa Flores|Queens|dining|casaflorestapas|4.5
+Cascade Jerk|Queens|dining|cascadejerk|
+Chew the Fat|Queens|dining||
+Cream Ridgewood|Queens|dining|cream_ridgewood|
+Cugini's Pizzeria|Queens|dining|cuginispizzerianj|4.6
+Delicious Soul Food|Queens|dining||
+Epic Lounge|Queens|nightlife|epiclounge12|
+Exotic Eats NYC|Queens|dining||
+Fabrika|Queens|dining|fabrika.ny|
+Heat Kitchen|Queens|dining|heat_kitchen|4.2
+Impulse Lounge|Queens|nightlife|impulseloungenyc|
+Izakaya Nana|Queens|dining|izakayanana|4.6
+Little Guyana Restaurant and Lounge|Queens|dining|nightlife|lounge||
+Mayahuel|Queens|dining||
+Meli's Pizzeria|Queens|dining|melispizzaco|4.7
+Mon Amour Café|Queens|dining|monamourcoffeewine|4.0
+Q102 Pool Hall|Queens|nightlife|q102poolhall|
+Queens Juici Patties|Queens|dining||4.0
+Queens Night Market|Queens|dining|queensnightmarket|
+Queens Soul Food Caterers|Queens|dining||
+Queens Soul Food and Caterers|Queens|dining||
+Rollin' Heroes|Queens|dining|rollin_heros|
+Saucey Pizza Bar|Queens|dining|sauceypizzabar|5.0
+Smash House Queens|Queens|dining|smashhousequeens|
+Soul City|Queens|dining||
+Soul City Taste Test|Queens|dining||
+Soul Food|Queens|dining||
+The Attic|Queens|nightlife|theattic_flushing_|
+The Chickin Box|Queens|dining|thechickinbox|4.2
+The Green Grump Christmas Pop Up Bar|Queens|nightlife||
+The Rooftop|Queens|dining||
+Toledo Cafe|Queens|dining|toledocafee|4.2
+Tropical Jerk|Queens|dining|tropicaljerk|3.8
+True Flavors Roti Shop|Queens|dining|trueflavors1|
+Uncle Louie's Pizza|Queens|dining|uncle_louies_pizza|4.8
+Underground Lounge|Queens|nightlife||
+WTF Sushi|Queens|dining|wtf_sushi_nyc|
+Zen lounge|Queens|nightlife||4.6
+Zen lounge|Queens|nightlife||4.6
+latino_bites|Queens|dining|latino_bites|4.6
+skiiisntees|Queens|dining|skiiisntees|4.6
+Tootsies Everything Waffle|Quinby|dining||4.7
+Tootsies Everything Waffle|Quinby|dining||4.7
+Chicken Box|Rahway|dining||
+Cook's Kitch'n|Rahway|dining||
+Cook's KitchN|Rahway|dining||
+Cook's Kitchen|Rahway|dining||
+Cookskitchn|Rahway|dining||
+Eatatcooks|Rahway|dining||4.1
+Ramsey Farmers Market|Ramsey|dining|ramseyfarmersmarket|
+Fleur De Mer|Red Bank|dining|fleurdemernj|
+Taliercio's|Red Bank|dining|taliercios|
+The Melting Pot|Redbank|dining|themeltingpot_redbank|
+Cantina 46|Ridgefield|dining||
+Cantina46NJ|Ridgefield|dining||
+Cantina46NJ|Ridgefield|dining||4.6
+Lula NJ|Ridgewood|dining||
+De Lorenzo's Tomato Pies|Robbinsville Township|dining|delorenzos_tomato_pies|4.6
+El Asadero Mexican Grill|Rochelle Park|dining|elasaderomexicangrillrochelle|
+Panorama Room|Roosevelt Island|dining||
+157 E Westfield Ave|Roselle Park|dining||
+Unnamed Restaurant|Roselle Park|dining||
+Red Hot Mammas|Royal Leamington Spa|dining||4.7
+Dasheene|Saint Lucia|dining||
+Omelet House|San Diego|dining||
+Omelette House|San Diego|dining||
+No Basic SF|San Francisco|nightlife||
+The Addy's BBQ|Sayreville|dining||
+Berkeley Cut|Seaside Heights|dining|berkeley_cut|
+Haute Dulce|Secaucus|dining||
+Chai Qahwah Lounge|Selden|dining||
+Eataly New Jersey|Short Hills|dining|eatalynewjersey|
+Jack's Surf Turf|Short Hills|dining||
+Albariño|Shrewsbury|dining||
+SicklervilleSoul|Sicklerville|dining||
+Victoria’s Kitchen|Sicklerville|dining||
+The Apartment|SoHo|nightlife||
+the Apartment|SoHo|nightlife||
+the otter soho|SoHo|dining|theottersoho|
+Mom's Spaghetti|Soho|dining|momsspaghettidetroit|
+Brunch by DeMartino|Somerville|dining|brunchbydemartino|4.6
+Pink Pistachio Cafe|Somerville|dining||
+Prima Pizza Kitchen|Somerville|dining|primapizzakitchen|4.4
+Amano Pizza Inc|South Amboy|dining|amano_pizza_inc|4.5
+Amazing Taste|South Bound Brook|dining||
+Best Mexican restaurant|South Jersey|dining||
+Clean Plate Preps|South Jersey|dining||
+Clean Plate Preps NJ|South Jersey|dining||
+Kitchen 519|South Jersey|dining||
+Sherron’s Soul Secrets|South Jersey|dining||
+Saker World Class Bakery|South Plainfield|dining||
+Shinjuku Station Sushi Bar|South Plainfield|dining||
+Shinjuku Station Sushi Bar US|South Plainfield|dining||
+Harpers Southampton|Southampton|dining||
+Student Prince|Springfield|dining|student_prince|
+Hookah Lounge|St. Louis|nightlife||
+Kouzina|Stamford|dining|kouzinataverna|
+Angelina's Kitchen|Staten Island|dining|angelinaskitchenny|4.3
+Ariemma's Italian Deli|Staten Island|dining|ariemmasitaliandeli|
+Honey Fried Chicken|Staten Island|dining||
+Lee's Tavern|Staten Island|dining|leestavern|
+Piece of Cake NYC|Staten Island|dining|pieceacakenyc|
+Shaw-nae’s House|Staten Island|dining||
+Shawna's House|Staten Island|dining||
+Shawnae's House|Staten Island|dining||
+Søul Mac|Staten Island|dining||
+International Kabab House|Stone Mountain|dining||
+Secret Tea Room at Reeves Reed Arboretum|Summit|dining||
+Surf City Bar|Surf City|nightlife|surfcitybar|
+Hens and Honey Shoppe|Swedesboro|dining||
+Rise N Shine|Syracuse|dining|risenshinediner|
+809 Lounge Restaurant & Sport Bar|Tampa|dining|nightlife|lounge||
+Angora Mediterranean|Teaneck|dining||
+Sauced Up|Teaneck|dining||
+Sauced Up NJ|Teaneck|dining||3.8
+Sweet T’s Southern Eatery|Teaneck|dining||
+Zina’s Steakhouse|Teaneck|dining||
+Colima Taqueria|The Bronx|dining|colimataqueria|
+Flamez Cuisine|The Bronx|dining|flamez_cuisine|
+Flourish|The Bronx|dining|flourishbx_|
+Inine Bistro|The Bronx|dining|ininebistro|4.3
+Travesias NYC|The Bronx|dining|travesiasnyc|
+dripsnyc|The Bronx|dining|dripsnyc|
+Ahuevo Cafe|Tolleson|dining||
+Ana’s Hotspot|Toronto|dining||
+Jinya Ramen Bar|Totowa|dining|jinyaramenbar|
+Big Easy of Downtown Trenton|Trenton|dining||
+Gloria Boyd Soul Food|Trenton|dining||
+Infinity Lounge|Trenton|nightlife||
+Jean’s Kitchen|Trenton|dining||
+Royal Cakes & Cafe|Trenton|dining||
+Soul Food Sunday|Trenton|dining||
+Sweet Chili Swing Platter|Trenton|dining||
+Tracey's Kitchen|Trenton|dining||
+Tracey’s Kitchen|Trenton|dining||
+Tracey’s Kitchen|Trenton|dining||4.4
+Unnamed Restaurant|Trenton|dining||
+Unnamed Soul Food Restaurant|Trenton|dining||
+Hibachi Omakase|Tri-State area|dining|hibachiomakase|
+O Lounge|Tyson's Corner|dining||
+O lounge|Tyson’s|nightlife||
+Fried Crispy Chicken|Union|dining||
+H&S SoulFood|Union|dining||
+H&S Soulfood|Union|dining||
+Union Bar and Restaurant|Union|dining||
+Chef Gucci|Union City|dining||
+SMAC kitchen|Union City|dining||
+Le Chalet|Upstate New York|dining||
+Nico’s Restaurant|Utah|dining||
+Hidden Soul Food Restaurant|Vineland|dining||
+Taste Buds Soul Food|Vineland|dining||
+Girl with a grill|Voorhees Township|dining||4.3
+Shaking Crab|Washington|dining|shakingcrab.wp|
+Legacy Bar & Grill|Washington Heights|dining|legacynewyorkcity|
+Italian restaurant|Washington, DC|dining||
+Wagyu Steak|Weehawken|dining||
+bluonthehudson|Weehawken Township|dining|bluonthehudson|4.4
+favorite NJ restaurant|Weehawken Township|dining||4.5
+The Shed|Westbury|dining||
+Hear & There|Williamsburg|dining|hearandthereny|
+Lilli Star|Williamsburg|dining|lillistarbk|
+Limosneros|Williamsburg|dining|limosnerosnyc|
+Mac Shack|Williamsburg|dining|macshackny|
+Sushi On Me|Williamsburg|dining|sushionmenyc|
+The Cellar 42|Williamsburg|dining|thecellar_42|
+bkbackyardbar|Williamsburg|nightlife|bkbackyardbar|
+made21_barlounge|Williamsburg|nightlife|made21_barlounge|
+The Concourse Club|Wood-Ridge|dining|nightlife|lounge||4.1
+Sole Food|Woodbridge|dining||
+Sole Food BBQ|Woodbridge|dining||
+Strickland's Steakhouse|Woodbridge|dining|stricklandssteakhouse|
+Volpe Ristorante at The Fox Hollow|Woodbury|dining||4.6
+Yardley Ice House|Yardley|dining|yardleyicehouse|
+Fire steak en vis restaurant|Zolder-Boekt|dining||
+Baldor Specialty Foods|city|dining|baldorfood|
+Blue Bottle Coffee|city|dining|bluebottle|
+Steady Hand Cafe|city|dining|steadyhandcafe|
+Tang by Mr. Sun|city|dining|tangbymr.sun|
+Koi|city name (from caption)|dining|koirestaurants|
+Lekkaburger|city name (from caption)|dining|lekkaburger|
+exact venue name|city name (from content)|dining||
+hillside nj|hillside|dining||
+Uncrustables|n/a|dining|uncrustables|
+gbluxurycupcakes|n/a|dining|gbluxurycupcakes|
+Angelo's Pizzeria|north Jersey|dining|angelonispizzeria|
+Palazzone 1960|north Jersey|dining|palazzone_1960|
+The Pasta Shop|north Jersey|dining|the.pasta.shop|
+Bingo Loco|not specified|nightlife|bingo.loco|
+UMX Dining|not specified|dining|umxdining|
+that dinner spot|south jersey|dining||
+やおきパン|福岡|dining||
+やぐら|福岡|dining||
+今屋のハンバーガー|福岡|dining||
