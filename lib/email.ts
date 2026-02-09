@@ -108,3 +108,45 @@ export async function sendTicketEmail(
     return false;
   }
 }
+
+export async function sendClaimConfirmation(to: string, data: { name: string; businessName: string; partnerId: number }) {
+  try {
+    const client = getResend();
+    if (!client) { console.warn('Resend not configured, skipping claim email'); return false; }
+
+    await client.emails.send({
+      from: 'Lumina <hello@viberyte.com>',
+      to,
+      subject: 'Welcome to Lumina, ' + data.businessName + '!',
+      html: '<div style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 500px; margin: 0 auto; background: #0a0a0f; padding: 40px 30px; border-radius: 16px;">' +
+        '<div style="text-align: center; margin-bottom: 32px;"><div style="font-size: 14px; font-weight: 700; color: #a78bfa; letter-spacing: 2px;">LUMINA</div></div>' +
+        '<h1 style="color: #ffffff; font-size: 24px; font-weight: 800; text-align: center; margin-bottom: 8px;">Page Claimed!</h1>' +
+        '<p style="color: #9ca3af; font-size: 15px; text-align: center; margin-bottom: 32px;">' + data.businessName + ' is now live on Lumina.</p>' +
+        '<div style="background: rgba(139,92,246,0.08); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 20px; margin-bottom: 24px;">' +
+          '<div style="color: #a78bfa; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Your Login Info</div>' +
+          '<div style="color: #e5e7eb; font-size: 14px; margin-bottom: 6px;"><strong>Email:</strong> ' + to + '</div>' +
+          '<div style="color: #e5e7eb; font-size: 14px;"><strong>Password:</strong> The one you just set</div>' +
+        '</div>' +
+        '<div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; margin-bottom: 24px;">' +
+          '<div style="color: #9ca3af; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">What You Can Do</div>' +
+          '<div style="color: #d1d5db; font-size: 13px; line-height: 2;">' +
+            '&#10003; Create and promote events<br>&#10003; Set up bottle service &amp; table bookings<br>&#10003; Manage guest lists<br>&#10003; Track analytics &amp; revenue<br>&#10003; Message customers directly' +
+          '</div>' +
+        '</div>' +
+        '<div style="text-align: center; margin-bottom: 24px;">' +
+          '<a href="https://apps.apple.com/app/lumina-nightlife/id6739197728" style="display: inline-block; padding: 14px 40px; background: linear-gradient(135deg, #7c3aed, #a855f7); border-radius: 12px; color: #ffffff; font-size: 15px; font-weight: 700; text-decoration: none;">Download Lumina App</a>' +
+        '</div>' +
+        '<div style="text-align: center; margin-bottom: 16px;">' +
+          '<a href="https://lumina.viberyte.com/partner/' + data.partnerId + '" style="color: #a78bfa; font-size: 13px; text-decoration: none;">View your page &#8594;</a>' +
+        '</div>' +
+        '<hr style="border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 24px 0;" />' +
+        '<p style="color: #6b7280; font-size: 11px; text-align: center; line-height: 1.6;">0% platform fees &middot; You keep 100% of payments<br>Questions? Reply to this email.<br><br>Lumina by Viberyte</p>' +
+      '</div>',
+    });
+    console.log('Claim email sent to ' + to);
+    return true;
+  } catch (error) {
+    console.error('Claim email failed:', error);
+    return false;
+  }
+}

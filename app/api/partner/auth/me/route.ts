@@ -22,9 +22,24 @@ function getToken(request: NextRequest): string | null {
   return null;
 }
 
-// Define tier permissions
+// Define tier permissions — matches DB tiers: claimed, starter, spotlight, elite
 const TIER_PERMISSIONS = {
   claimed: {
+    can_create_events: true,
+    can_edit_profile: true,
+    can_view_analytics: false,
+    can_create_specials: false,
+    can_manage_bookings: false,
+    can_manage_tables: false,
+    can_use_door_system: false,
+    can_stripe_connect: false,
+    events_sync_to_explore: true,
+    specials_featured: false,
+    next_stop_priority: false,
+    max_events_per_month: 5,
+    analytics_depth: 'none'
+  },
+  starter: {
     can_create_events: true,
     can_edit_profile: true,
     can_view_analytics: true,
@@ -39,7 +54,7 @@ const TIER_PERMISSIONS = {
     max_events_per_month: 10,
     analytics_depth: 'basic'
   },
-  marketing: {
+  spotlight: {
     can_create_events: true,
     can_edit_profile: true,
     can_view_analytics: true,
@@ -54,7 +69,7 @@ const TIER_PERMISSIONS = {
     max_events_per_month: 50,
     analytics_depth: 'detailed'
   },
-  premium: {
+  elite: {
     can_create_events: true,
     can_edit_profile: true,
     can_view_analytics: true,
@@ -189,26 +204,23 @@ export async function GET(request: NextRequest) {
     // Upgrade recommendations
     const upgrade_prompts = [];
     if (tier === 'claimed') {
-      if (claimedVenues.length > 0) {
-        upgrade_prompts.push({
-          feature: 'bookings',
-          message: 'Upgrade to Marketing ($20/mo) to accept table reservations',
-          cta: 'Enable Bookings'
-        });
-      }
-      if (stats.nextStopImpressions > 10) {
-        upgrade_prompts.push({
-          feature: 'priority',
-          message: `You got ${stats.nextStopImpressions} Next Stop recommendations! Upgrade for 3x priority placement`,
-          cta: 'Boost Visibility'
-        });
-      }
-    } else if (tier === 'marketing') {
+      upgrade_prompts.push({
+        feature: 'analytics',
+        message: 'Upgrade to Spotlight ($25/mo) for analytics and featured placement',
+        cta: 'Get Spotlight'
+      });
+    } else if (tier === 'starter') {
+      upgrade_prompts.push({
+        feature: 'bookings',
+        message: 'Upgrade to Spotlight ($25/mo) for bookings and featured specials',
+        cta: 'Enable Bookings'
+      });
+    } else if (tier === 'spotlight') {
       if (stats.weekBookings > 5) {
         upgrade_prompts.push({
           feature: 'tables',
-          message: 'Upgrade to Premium ($50/mo) for full table management + door system',
-          cta: 'Unlock Pro Features'
+          message: 'Upgrade to Elite ($44.99/mo) for full table management + door system',
+          cta: 'Go Elite'
         });
       }
     }
@@ -238,9 +250,10 @@ export async function GET(request: NextRequest) {
       permissions,
       upgrade_prompts,
       features: {
-        claimed: tier === 'claimed' ? null : 'You have full access',
-        marketing: tier === 'marketing' || tier === 'premium' ? null : 'Upgrade for featured specials + bookings',
-        premium: tier === 'premium' ? null : 'Upgrade for table management + door system'
+        claimed: 'Basic listing + events',
+        starter: tier === 'starter' || tier === 'spotlight' || tier === 'elite' ? 'Unlocked' : 'Upgrade for analytics',
+        spotlight: tier === 'spotlight' || tier === 'elite' ? 'Unlocked' : 'Upgrade for bookings + featured placement',
+        elite: tier === 'elite' ? 'Full access unlocked' : 'Upgrade for table management + door system'
       }
     });
   } catch (error: any) {

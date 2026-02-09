@@ -44,6 +44,7 @@ export async function GET(
       SELECT 
         pe.id, pe.title, pe.event_date, pe.event_time, pe.genre,
         pe.description, pe.sections, pe.packages, pe.image_url, pe.status,
+        pe.on_explore, pe.ticket_url,
         pv.name as venue_name, pv.id as venue_id
       FROM partner_events pe
       LEFT JOIN partner_venues pv ON pe.venue_id = pv.id
@@ -62,7 +63,15 @@ export async function GET(
       ORDER BY price ASC
     `).all(eventId) as any[];
 
-    return NextResponse.json({ event, packages });
+    // Compute display_status
+    const today = new Date().toISOString().split('T')[0];
+    const display_status = event.event_date < today ? 'past' 
+      : event.event_date === today ? 'live' : 'upcoming';
+
+    return NextResponse.json({ 
+      event: { ...event, display_status }, 
+      packages 
+    });
   } catch (error: any) {
     console.error('Event fetch error:', error);
     return NextResponse.json({ error: 'Failed to fetch event' }, { status: 500 });
@@ -96,14 +105,26 @@ export async function PUT(
     }
 
     const body = await request.json();
-    const { title, event_date, event_time, genre, description, packages } = body;
+    const { title, event_date, event_time, genre, description, packages, image_url, on_explore, ticket_url } = body;
 
-    // Update event
-    db.prepare(`
-      UPDATE partner_events 
-      SET title = ?, event_date = ?, event_time = ?, genre = ?, description = ?, updated_at = datetime('now')
-      WHERE id = ?
-    `).run(title, event_date, event_time, genre, description, eventId);
+    // Only update fields that are provided
+    const updates: string[] = [];
+    const values: any[] = [];
+    
+    if (title !== undefined) { updates.push('title = ?'); values.push(title); }
+    if (event_date !== undefined) { updates.push('event_date = ?'); values.push(event_date); }
+    if (event_time !== undefined) { updates.push('event_time = ?'); values.push(event_time); }
+    if (genre !== undefined) { updates.push('genre = ?'); values.push(genre); }
+    if (description !== undefined) { updates.push('description = ?'); values.push(description); }
+    if (image_url !== undefined) { updates.push('image_url = ?'); values.push(image_url); }
+    if (on_explore !== undefined) { updates.push('on_explore = ?'); values.push(on_explore); }
+    if (ticket_url !== undefined) { updates.push('ticket_url = ?'); values.push(ticket_url); }
+    
+    if (updates.length > 0) {
+      updates.push("updated_at = datetime('now')");
+      values.push(eventId);
+      db.prepare(`UPDATE partner_events SET ${updates.join(', ')} WHERE id = ?`).run(...values);
+    }
 
     // Update packages if provided
     if (packages && Array.isArray(packages)) {
@@ -125,6 +146,11 @@ export async function PUT(
           pkg.maxGuests || pkg.max_guests || 6
         );
       }
+    }
+
+    // Also update packages JSON on the event record
+    if (packages && Array.isArray(packages)) {
+      db.prepare(`UPDATE partner_events SET packages = ? WHERE id = ?`).run(JSON.stringify(packages), eventId);
     }
 
     return NextResponse.json({ success: true });

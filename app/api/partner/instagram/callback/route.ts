@@ -118,6 +118,18 @@ export async function GET(request: NextRequest) {
       ) VALUES (?, ?, datetime('now', '+60 days'), ?, ?)
     `).run(partnerId, accessToken, profile.id, profile.username);
 
+    // Auto-sync Instagram content (pull photos, reels, stories)
+    try {
+      const syncRes = await fetch('https://lumina.viberyte.com/api/partner/instagram/sync', {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer ' + accessToken },
+      });
+      const syncData = await syncRes.json();
+      console.log('Auto-sync result:', syncData);
+    } catch (syncErr) {
+      console.error('Auto-sync failed (non-blocking):', syncErr);
+    }
+
     // Redirect back to app with success
     const message = existingVenue 
       ? `claimed_venue&venue=${encodeURIComponent(existingVenue.name)}`

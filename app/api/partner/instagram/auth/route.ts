@@ -44,9 +44,9 @@ export async function GET(request: NextRequest) {
     // Scopes for Instagram Business API
     const scopes = [
       'instagram_business_basic',
-      'instagram_business_manage_messages',
-      'instagram_business_manage_comments',
-      'instagram_business_content_publish',
+
+
+
     ].join(',');
 
     const authUrl = `https://www.instagram.com/oauth/authorize?` +

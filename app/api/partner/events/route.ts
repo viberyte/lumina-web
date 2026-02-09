@@ -51,7 +51,29 @@ export async function GET(request: NextRequest) {
     `).all(partnerId) as any[];
     db.close();
 
-    return NextResponse.json({ events });
+    // Compute real-time display status based on date
+    const now = new Date();
+    const today = now.toISOString().split('T')[0]; // YYYY-MM-DD
+
+    const enrichedEvents = events.map((event: any) => {
+      const eventDate = event.event_date; // YYYY-MM-DD
+      let display_status: string;
+
+      if (eventDate < today) {
+        display_status = 'past';
+      } else if (eventDate === today) {
+        display_status = 'live';
+      } else {
+        display_status = 'upcoming';
+      }
+
+      return {
+        ...event,
+        display_status,
+      };
+    });
+
+    return NextResponse.json({ events: enrichedEvents });
   } catch (error: any) {
     console.error('Events fetch error:', error);
     return NextResponse.json({ error: 'Failed to fetch events' }, { status: 500 });
@@ -71,7 +93,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { venue_id, title, event_date, event_time, genre, description, sections, packages, image_url } = body;
+    const { venue_id, title, event_date, event_time, genre, description, sections, packages, image_url, is_recurring, recurrence_days, recurrence_type, recurrence_end_date, event_category, special_tags, price_note, city, venue_name_cache } = body;
 
     if (!title || !event_date) {
       return NextResponse.json({ error: 'Title and date required' }, { status: 400 });
@@ -97,9 +119,11 @@ export async function POST(request: NextRequest) {
     const result = db.prepare(`
       INSERT INTO partner_events (
         partner_id, venue_id, title, event_date, event_time, 
-        genre, description, sections, packages, image_url, status
+        genre, description, sections, packages, image_url, status,
+        is_recurring, recurrence_days, recurrence_type, recurrence_end_date,
+        event_category, special_tags, price_note, city, venue_name_cache, on_explore
       )
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published')
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
     `).run(
       partnerId,
       venue_id || null,
@@ -110,7 +134,16 @@ export async function POST(request: NextRequest) {
       description || null,
       sections ? JSON.stringify(sections) : null,
       packages ? JSON.stringify(packages) : null,
-      image_url || null
+      image_url || null,
+      is_recurring ? 1 : 0,
+      recurrence_days ? JSON.stringify(recurrence_days) : null,
+      recurrence_type || 'weekly',
+      recurrence_end_date || null,
+      event_category || 'nightlife',
+      special_tags ? JSON.stringify(special_tags) : null,
+      price_note || null,
+      city || null,
+      venue_name_cache || null
     );
 
     const eventId = result.lastInsertRowid;

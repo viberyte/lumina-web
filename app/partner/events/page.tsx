@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
-import { LayoutDashboard, CalendarDays, Sparkles, BarChart3, Settings, Plus, X, Users, Eye, Music, Clock, MapPin, ChevronRight, Home, Building2, Trash2, Check } from 'lucide-react';
+import { LayoutDashboard, CalendarDays, Sparkles, BarChart3, Settings, Plus, X, Users, Eye, Music, Clock, MapPin, ChevronRight, Home, Building2, Trash2, Check, Share2, Copy, Link2 } from 'lucide-react';
 
 const NAV_ITEMS = [
   { name: 'Dashboard', href: '/partner/dashboard', icon: LayoutDashboard },
@@ -232,6 +232,22 @@ export default function PartnerEventsPage() {
     return (h % 12 || 12) + ':' + m.toString().padStart(2, '0') + (h >= 12 ? ' PM' : ' AM');
   };
 
+  const generateNightLink = (event: Event) => {
+    const slug = event.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return `https://lumina.viberyte.com/e/${slug}-${event.id}`;
+  };
+
+  const copyNightLink = async (event: Event, e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    const url = generateNightLink(event);
+    try {
+      await navigator.clipboard.writeText(url);
+      toast.success('NightLink copied!', { style: { background: '#18181b', color: '#fff', border: 'none' }, icon: '🔗' });
+    } catch {
+      toast.error('Failed to copy', { style: { background: '#18181b', color: '#fff', border: 'none' } });
+    }
+  };
+
   const homeVenue = venues.find(v => v.isHome);
 
   const SidebarNav = () => (
@@ -359,6 +375,10 @@ export default function PartnerEventsPage() {
                       <Eye size={12} />
                       <span>{event.views} views</span>
                     </div>
+                    <button onClick={(e) => copyNightLink(event, e)} className="ml-auto flex items-center gap-1.5 text-xs text-zinc-500 hover:text-white transition-colors bg-zinc-800/50 hover:bg-zinc-800 px-3 py-1.5 rounded-lg">
+                      <Link2 size={12} />
+                      <span>NightLink</span>
+                    </button>
                   </div>
                 </motion.div>
               ))}
@@ -613,6 +633,22 @@ export default function PartnerEventsPage() {
                 </div>
               </div>
               
+              {/* NightLink Share */}
+              <div className="bg-zinc-800/30 rounded-2xl p-5 mb-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-sm font-medium text-white">NightLink</h3>
+                  <Share2 size={14} className="text-zinc-500" />
+                </div>
+                <div className="flex items-center gap-2 bg-zinc-800/50 rounded-xl px-4 py-3 mb-3">
+                  <Link2 size={14} className="text-zinc-500 flex-shrink-0" />
+                  <span className="text-xs text-zinc-400 truncate flex-1">{generateNightLink(selectedEvent)}</span>
+                </div>
+                <button onClick={() => copyNightLink(selectedEvent)} className="w-full bg-white text-black py-3 rounded-xl text-sm font-medium hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2">
+                  <Copy size={14} />
+                  Copy NightLink
+                </button>
+              </div>
+
               <div className="space-y-3">
                 <button className="w-full bg-zinc-800 text-white py-3.5 rounded-xl text-sm font-medium hover:bg-zinc-700 transition-colors">Edit Event</button>
                 <button onClick={() => { setEvents(events.filter(e => e.id !== selectedEvent.id)); setSelectedEvent(null); toast('Event deleted', { style: { background: '#18181b', color: '#71717a', border: 'none' } }); }} className="w-full text-red-400/80 hover:text-red-400 py-2 text-sm font-medium transition-colors">Delete Event</button>
