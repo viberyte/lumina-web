@@ -102,7 +102,7 @@ export default function SettingsPage() {
 
         {/* Version Info */}
         <div className="mt-8 text-center">
-          <p className="text-zinc-600 text-xs">Lumina v2.0</p>
+          <p className="text-zinc-600 text-xs">Viberyte v2.0</p>
           <p className="text-zinc-700 text-xs mt-1">© 2025 Viberyte</p>
         </div>
       </div>

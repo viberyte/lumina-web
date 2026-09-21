@@ -101,7 +101,7 @@ function SignupContent() {
       {/* Header */}
       <header className="px-5 py-4">
         <Link href="/" className="text-lg font-semibold tracking-tight">
-          Lumina <span className="text-zinc-600 font-normal text-sm">Partner</span>
+          Viberyte <span className="text-zinc-600 font-normal text-sm">Partner</span>
         </Link>
       </header>
 

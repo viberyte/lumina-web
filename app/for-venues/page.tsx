@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'For Venues & Promoters - Lumina',
-  description: 'Grow your venue with Lumina. Table bookings, guest lists, and event promotion.',
+  title: 'For Venues & Promoters - Viberyte',
+  description: 'Grow your venue with Viberyte. Table bookings, guest lists, and event promotion.',
 };
 
 export default function ForVenuesPage() {
@@ -219,7 +219,7 @@ export default function ForVenuesPage() {
       {/* CTA */}
       <section className="py-24 px-6 border-t border-white/5 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to grow your venue?</h2>
-        <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">Join hundreds of venues already using Lumina to fill their tables.</p>
+        <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">Join hundreds of venues already using Viberyte to fill their tables.</p>
         <Link href="/partner" className="inline-flex items-center bg-white text-black px-10 py-5 rounded-full font-semibold text-lg hover:bg-gray-100 transition">
           Start Your Free Trial
         </Link>
@@ -228,7 +228,7 @@ export default function ForVenuesPage() {
       {/* Footer */}
       <footer className="border-t border-white/5 py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-gray-500 text-sm">{new Date().getFullYear()} Lumina by Viberyte</div>
+          <div className="text-gray-500 text-sm">{new Date().getFullYear()} Viberyte by Viberyte</div>
           <div className="flex gap-8 text-gray-500 text-sm">
             <Link href="/support" className="hover:text-white transition">Support</Link>
             <Link href="/privacy" className="hover:text-white transition">Privacy</Link>

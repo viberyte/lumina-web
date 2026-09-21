@@ -194,7 +194,7 @@ export async function GET(request: NextRequest) {
         CASE 
           WHEN dm.sender_type = 'customer' THEN u.name
           WHEN dm.sender_type = 'partner' THEN p.business_name
-          WHEN dm.sender_type = 'system' THEN 'Lumina'
+          WHEN dm.sender_type = 'system' THEN 'Viberyte'
         END as sender_name,
         CASE 
           WHEN dm.sender_type = 'customer' THEN u.instagram_handle

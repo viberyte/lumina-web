@@ -138,7 +138,7 @@ export async function GET(request: NextRequest) {
               📍 {venueName}
             </div>
 
-            {/* Lumina Branding */}
+            {/* Viberyte Branding */}
             <div
               style={{
                 fontSize: 28,

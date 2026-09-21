@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: { params: { shareCode: string
   const data = await getPlan(params.shareCode);
   
   if (!data) {
-    return { title: 'Plan Not Found | Lumina' };
+    return { title: 'Plan Not Found | Viberyte' };
   }
   
   const { plan, items } = data;
@@ -98,14 +98,14 @@ export async function generateMetadata({ params }: { params: { shareCode: string
   const description = `${stopCount} ${stopCount === 1 ? 'stop' : 'stops'} planned${plan.is_tonight ? ' for tonight' : ''}`;
   
   return {
-    title: `${plan.emoji} ${plan.name} | Lumina`,
+    title: `${plan.emoji} ${plan.name} | Viberyte`,
     description,
     openGraph: {
       title: `${plan.emoji} ${plan.name}`,
       description,
       url: `https://lumina.viberyte.com/plan/${params.shareCode}`,
       images: items[0]?.venue_photo ? [items[0].venue_photo] : [],
-      siteName: 'Lumina',
+      siteName: 'Viberyte',
     },
     twitter: {
       card: 'summary_large_image',
@@ -221,7 +221,7 @@ export default async function SharedPlanPage({ params }: { params: { shareCode: 
           href="https://apps.apple.com/app/lumina"
           className="block w-full max-w-lg mx-auto bg-gradient-to-r from-purple-500 to-purple-700 text-white text-center py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform"
         >
-          Get Lumina - Plan Your Night
+          Get Viberyte - Plan Your Night
         </a>
       </div>
     </div>

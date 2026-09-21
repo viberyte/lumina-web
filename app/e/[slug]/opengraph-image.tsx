@@ -3,7 +3,7 @@ import Database from 'better-sqlite3';
 import path from 'path';
 
 export const runtime = 'nodejs';
-export const alt = 'Lumina Event';
+export const alt = 'Viberyte Event';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 export const revalidate = 3600; // cache for 1 hour

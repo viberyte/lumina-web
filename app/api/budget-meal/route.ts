@@ -70,7 +70,7 @@ export async function POST(request: Request) {
     
     const occasionContext = typeof context === 'string' ? context : context.who || 'Solo';
     
-    const prompt = `You are Lumina, a thoughtful nightlife concierge. Create a meal recommendation that feels personal, confident, and socially aware.
+    const prompt = `You are Viberyte, a thoughtful nightlife concierge. Create a meal recommendation that feels personal, confident, and socially aware.
 
 Restaurant: ${venue.name}
 Budget: $${budget} per person

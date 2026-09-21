@@ -121,14 +121,14 @@ function getAvatar(partner: any, galleryPhotos: string[]): string | null {
 export async function generateMetadata({ params }: PartnerPageProps): Promise<Metadata> {
   const { id } = await params;
   const partner = getPartner(parseInt(id));
-  if (!partner) return { title: 'Not Found | Lumina' };
+  if (!partner) return { title: 'Not Found | Viberyte' };
 
   const displayName = partner.business_name || partner.venue_name || partner.name;
   const location = partner.venue_city ? `${partner.venue_city}, ${partner.venue_state}` : '';
 
   return {
-    title: `${displayName} | Lumina`,
-    description: partner.bio || `Discover events at ${displayName}${location ? ` in ${location}` : ''}. Book tables and join guest lists on Lumina.`,
+    title: `${displayName} | Viberyte`,
+    description: partner.bio || `Discover events at ${displayName}${location ? ` in ${location}` : ''}. Book tables and join guest lists on Viberyte.`,
     openGraph: {
       title: displayName,
       description: partner.bio || `Events & nightlife at ${displayName}`,
@@ -556,7 +556,7 @@ export default async function PartnerProfilePage({ params }: PartnerPageProps) {
         {/* CTA */}
         <div style={{ textAlign: 'center', padding: '32px 0 48px' }}>
           <a href="https://apps.apple.com/app/lumina" style={{ display: 'inline-block', padding: '16px 40px', background: 'linear-gradient(135deg, #7c3aed, #a855f7)', borderRadius: 16, color: '#fff', textDecoration: 'none', fontSize: 16, fontWeight: 700, letterSpacing: '-0.01em' }}>
-            Open in Lumina
+            Open in Viberyte
           </a>
           <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.25)', marginTop: 12 }}>Plan nights, not searches.</p>
         </div>
@@ -564,7 +564,7 @@ export default async function PartnerProfilePage({ params }: PartnerPageProps) {
 
       {/* Footer */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '20px 0', textAlign: 'center' }}>
-        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', margin: 0 }}>Powered by <span style={{ color: 'rgba(255,255,255,0.4)' }}>Lumina</span></p>
+        <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', margin: 0 }}>Powered by <span style={{ color: 'rgba(255,255,255,0.4)' }}>Viberyte</span></p>
       </div>
     </div>
   );

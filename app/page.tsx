@@ -4,7 +4,7 @@ import MobileNav from './landing/MobileNav';
 import AnimatedSections from './landing/AnimatedSections';
 
 export const metadata = {
-  title: 'Lumina - AI-Powered Nightlife Concierge',
+  title: 'Viberyte - AI-Powered Nightlife Concierge',
   description: 'Plan your entire night in seconds.',
 };
 
@@ -71,7 +71,7 @@ export default function HomePage() {
         <div className="relative w-full max-w-sm mx-auto transition-transform duration-500 hover:-translate-y-2">
           <Image 
             src="/images/app/home.png" 
-            alt="Lumina App - Home Screen" 
+            alt="Viberyte App - Home Screen" 
             width={390}
             height={780}
             priority
@@ -92,7 +92,7 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-full bg-violet-500/20 flex items-center justify-center mx-auto mb-4">
                 <span className="text-violet-400 font-bold">1</span>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Tell Lumina your vibe</h3>
+              <h3 className="text-lg font-semibold mb-2">Tell Viberyte your vibe</h3>
               <p className="text-gray-400 text-sm">Date night, group outing, solo adventure - just describe what you want.</p>
             </div>
             <div className="p-6">
@@ -121,7 +121,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5 py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-gray-500 text-sm">{new Date().getFullYear()} Lumina by Viberyte</div>
+          <div className="text-gray-500 text-sm">{new Date().getFullYear()} Viberyte by Viberyte</div>
           <div className="flex gap-8 text-gray-500 text-sm">
             <Link href="/contact" className="hover:text-white transition">Contact</Link>
             <Link href="/support" className="hover:text-white transition">Support</Link>

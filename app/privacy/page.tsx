@@ -5,7 +5,7 @@ export default function PrivacyPage() {
       <p><em>Last Updated: December 11, 2025</em></p>
       
       <h2>1. Information We Collect</h2>
-      <p>Lumina collects the following information:</p>
+      <p>Viberyte collects the following information:</p>
       <ul>
         <li><strong>Account Information:</strong> Name, email, and authentication credentials</li>
         <li><strong>Profile Data:</strong> City, preferences, and saved venues/events</li>
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
       <p>We use essential cookies for authentication and preferences. No third-party tracking cookies.</p>
       
       <h2>7. Children's Privacy</h2>
-      <p>Lumina is not intended for users under 18. We do not knowingly collect data from minors.</p>
+      <p>Viberyte is not intended for users under 18. We do not knowingly collect data from minors.</p>
       
       <h2>8. Changes to This Policy</h2>
       <p>We may update this policy. Continued use constitutes acceptance of changes.</p>

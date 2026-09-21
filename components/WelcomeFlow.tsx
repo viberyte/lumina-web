@@ -92,7 +92,7 @@ export default function WelcomeFlow({ onCitySelect }: WelcomeFlowProps) {
             className="w-20 h-20 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-full mx-auto mb-6"
           />
           <h1 className="text-5xl md:text-6xl font-light text-white mb-4 tracking-tight">
-            Welcome to Lumina
+            Welcome to Viberyte
           </h1>
           <p className="text-xl text-zinc-400 font-light">
             Your personal nightlife concierge

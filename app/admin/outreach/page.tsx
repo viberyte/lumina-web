@@ -9,9 +9,9 @@ const STATUS_COLORS: Record<string, string> = {
 };
 
 const DM_TEMPLATES: Record<string, string> = {
-  initial: "Hey {name}! We built a free page for you on Lumina - it shows your vibe, photos, hours, and lets fans book tables directly.\n\nCheck it out: {url}\n\nClaim it for free to manage your events and bookings. No fees, you keep 100%",
-  nightlife: "Hey {name}! We curated a page for you on Lumina - the nightlife concierge app.\n\nYour page: {url}\n\nIt already has your photos, hours, and vibe. Claim it free to add events, bottle service, and guest lists.",
-  restaurant: "Hey {name}! We featured you on Lumina - the dining and nightlife discovery app.\n\nYour page: {url}\n\nIt shows your photos, hours, and vibe tags. Claim it free to promote specials and events.",
+  initial: "Hey {name}! We built a free page for you on Viberyte - it shows your vibe, photos, hours, and lets fans book tables directly.\n\nCheck it out: {url}\n\nClaim it for free to manage your events and bookings. No fees, you keep 100%",
+  nightlife: "Hey {name}! We curated a page for you on Viberyte - the nightlife concierge app.\n\nYour page: {url}\n\nIt already has your photos, hours, and vibe. Claim it free to add events, bottle service, and guest lists.",
+  restaurant: "Hey {name}! We featured you on Viberyte - the dining and nightlife discovery app.\n\nYour page: {url}\n\nIt shows your photos, hours, and vibe tags. Claim it free to promote specials and events.",
   followup: "Hey {name}! Just checking if you saw the page we built for you - {url}\n\nTakes 30 seconds to claim. Free event management + booking tools.",
 };
 
@@ -70,7 +70,7 @@ export default function OutreachDashboard() {
     return (
       <div style={{ minHeight: '100vh', background: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: '-apple-system, sans-serif' }}>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 20, padding: 40, width: 340, textAlign: 'center' }}>
-          <h1 style={{ color: '#fff', fontSize: 24, fontWeight: 800, marginBottom: 8 }}>Lumina Outreach</h1>
+          <h1 style={{ color: '#fff', fontSize: 24, fontWeight: 800, marginBottom: 8 }}>Viberyte Outreach</h1>
           <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 14, marginBottom: 24 }}>Enter admin key</p>
           <input type="password" value={keyInput} onChange={e => setKeyInput(e.target.value)} onKeyDown={e => { if (e.key === 'Enter' && keyInput === ADMIN_KEY) setAuthed(true); }} placeholder="Admin key" style={{ width: '100%', padding: '14px 16px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 12, color: '#fff', fontSize: 15, outline: 'none', boxSizing: 'border-box' as const, marginBottom: 16 }} />
           <button onClick={() => { if (keyInput === ADMIN_KEY) setAuthed(true); }} style={{ width: '100%', padding: '14px', background: 'linear-gradient(135deg, #7c3aed, #a855f7)', border: 'none', borderRadius: 12, color: '#fff', fontSize: 15, fontWeight: 700, cursor: 'pointer' }}>Enter</button>

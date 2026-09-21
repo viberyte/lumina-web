@@ -38,7 +38,7 @@ export default function ClaimSuccessContent() {
         
         <h1 className="text-2xl font-semibold text-white mb-2">Page Claimed!</h1>
         <p className="text-zinc-400 mb-2">
-          Welcome to Lumina{name ? `, ${decodeURIComponent(name)}` : ''}.
+          Welcome to Viberyte{name ? `, ${decodeURIComponent(name)}` : ''}.
         </p>
         <p className="text-zinc-500 text-sm mb-8">
           Your page is now live. Download the app to manage events, bookings, and more.
@@ -48,11 +48,11 @@ export default function ClaimSuccessContent() {
           onClick={openDashboard}
           className="w-full bg-gradient-to-r from-orange-500 to-pink-500 text-white font-medium py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
         >
-          Download Lumina App <ChevronRight size={18} />
+          Download Viberyte App <ChevronRight size={18} />
         </button>
         
         <p className="text-xs text-zinc-600 mt-6">
-          Log in with the same email and password • Powered by Lumina
+          Log in with the same email and password • Powered by Viberyte
         </p>
       </motion.div>
     </div>

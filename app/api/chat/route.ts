@@ -353,7 +353,7 @@ export async function POST(request: Request) {
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: `You are Lumina, a warm nightlife expert for ${city}. Keep responses under 3 sentences. One emoji max.` },
+        { role: 'system', content: `You are Viberyte, a warm nightlife expert for ${city}. Keep responses under 3 sentences. One emoji max.` },
         { role: 'user', content: message },
       ],
     });

@@ -425,7 +425,7 @@ export default function NightLinkClient({ event }: { event: EventData }) {
           </div>
           <div style={{ flex: 1 }}>
             <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', margin: '0 0 2px', fontWeight: 500 }}>Get the full experience</p>
-            <p style={{ fontSize: '16px', fontWeight: 700, margin: 0, color: '#fff' }}>Lumina Nightlife</p>
+            <p style={{ fontSize: '16px', fontWeight: 700, margin: 0, color: '#fff' }}>Viberyte Nightlife</p>
             <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', margin: '2px 0 0' }}>Discover venues · Plan your night</p>
           </div>
           <div style={{ padding: '8px 18px', background: '#fff', borderRadius: '100px', flexShrink: 0 }}>

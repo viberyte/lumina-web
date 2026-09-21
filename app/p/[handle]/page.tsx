@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { handle: string } 
   if (!promoter) return { title: 'Not Found' };
 
   return {
-    title: `${promoter.business_name || promoter.instagram_handle} | Lumina`,
+    title: `${promoter.business_name || promoter.instagram_handle} | Viberyte`,
     description: `Book events with ${promoter.business_name || promoter.instagram_handle}`,
     openGraph: {
       title: promoter.business_name || promoter.instagram_handle,
@@ -215,7 +215,7 @@ export default async function PromoterProfilePage({ params }: { params: { handle
       {/* Footer */}
       <div className="px-6 py-8 border-t border-zinc-800/50">
         <p className="text-center text-xs text-zinc-600">
-          Powered by <span className="text-zinc-400">Lumina</span>
+          Powered by <span className="text-zinc-400">Viberyte</span>
         </p>
       </div>
     </div>

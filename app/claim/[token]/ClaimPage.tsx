@@ -39,7 +39,7 @@ export default function ClaimPage({ partner, events, token }: { partner: any; ev
 
         {/* Features */}
         <div style={{ marginTop: 32, padding: 20, borderRadius: 16, background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.2)' }}>
-          <h2 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 16px', color: '#a78bfa' }}>Your page is live on Lumina</h2>
+          <h2 style={{ fontSize: 18, fontWeight: 700, margin: '0 0 16px', color: '#a78bfa' }}>Your page is live on Viberyte</h2>
           <p style={{ fontSize: 14, color: '#d4d4d8', lineHeight: 1.6, margin: 0 }}>Instagram photos auto-populate your page. Your reels show in Recent Vibes. Post and manage events. Accept bookings. Get analytics. Shareable NightLinks for every event.</p>
         </div>
 
@@ -77,8 +77,8 @@ export default function ClaimPage({ partner, events, token }: { partner: any; ev
         {step === 'success' ? (
           <div style={{ marginTop: 40, textAlign: 'center', padding: '32px 0' }}>
             <h2 style={{ fontSize: 24, fontWeight: 800, margin: '0 0 8px' }}>Page Claimed!</h2>
-            <p style={{ fontSize: 15, color: '#a1a1aa', margin: '0 0 24px' }}>Download Lumina to manage your events and bookings.</p>
-            <a href='https://apps.apple.com/app/lumina-nightlife/id6738979697' style={{ display: 'inline-block', padding: '14px 32px', borderRadius: 12, background: '#fff', color: '#000', fontSize: 16, fontWeight: 700, textDecoration: 'none' }}>Download Lumina</a>
+            <p style={{ fontSize: 15, color: '#a1a1aa', margin: '0 0 24px' }}>Download Viberyte to manage your events and bookings.</p>
+            <a href='https://apps.apple.com/app/lumina-nightlife/id6738979697' style={{ display: 'inline-block', padding: '14px 32px', borderRadius: 12, background: '#fff', color: '#000', fontSize: 16, fontWeight: 700, textDecoration: 'none' }}>Download Viberyte</a>
           </div>
         ) : null}
 

@@ -5,14 +5,14 @@ export default function TermsPage() {
       <p><em>Last Updated: December 11, 2025</em></p>
       
       <h2>1. Acceptance of Terms</h2>
-      <p>By accessing Lumina, you agree to these Terms of Service. If you disagree, do not use the service.</p>
+      <p>By accessing Viberyte, you agree to these Terms of Service. If you disagree, do not use the service.</p>
       
       <h2>2. Service Description</h2>
-      <p>Lumina is an AI-powered nightlife concierge providing venue recommendations, event discovery, and personalized nightlife planning.</p>
+      <p>Viberyte is an AI-powered nightlife concierge providing venue recommendations, event discovery, and personalized nightlife planning.</p>
       
       <h2>3. User Accounts</h2>
       <ul>
-        <li>You must be 18+ to use Lumina</li>
+        <li>You must be 18+ to use Viberyte</li>
         <li>You are responsible for account security</li>
         <li>One account per person</li>
         <li>Accurate information required</li>
@@ -37,7 +37,7 @@ export default function TermsPage() {
       </ul>
       
       <h2>6. Intellectual Property</h2>
-      <p>Lumina's code, design, and AI models are proprietary. Venue data is aggregated from public sources and credited appropriately.</p>
+      <p>Viberyte's code, design, and AI models are proprietary. Venue data is aggregated from public sources and credited appropriately.</p>
       
       <h2>7. Payments & Refunds</h2>
       <ul>
@@ -55,7 +55,7 @@ export default function TermsPage() {
       </ul>
       
       <h2>9. Limitation of Liability</h2>
-      <p>Lumina is not liable for:</p>
+      <p>Viberyte is not liable for:</p>
       <ul>
         <li>Experiences at third-party venues</li>
         <li>Injuries, losses, or damages incurred</li>

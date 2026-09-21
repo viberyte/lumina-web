@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { city, flow, preferences, refresh } = body;
 
-    console.log('Lumina API received:', { city, flow, preferences });
+    console.log('Viberyte API received:', { city, flow, preferences });
 
     const db = new Database(dbPath);
     
@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error: any) {
-    console.error('Lumina API error:', error);
+    console.error('Viberyte API error:', error);
     return NextResponse.json({ 
       error: error.message,
       topPicks: [],

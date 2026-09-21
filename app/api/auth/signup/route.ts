@@ -73,13 +73,13 @@ async function sendVerificationEmail(email: string, name: string, code: string) 
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Lumina <noreply@lumina.viberyte.com>',
+        from: 'Viberyte <noreply@lumina.viberyte.com>',
         to: email,
-        subject: 'Verify your Lumina account',
+        subject: 'Verify your Viberyte account',
         html: `
           <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 40px;">
-              <h1 style="font-size: 28px; font-weight: 700; color: #000; margin: 0;">Lumina</h1>
+              <h1 style="font-size: 28px; font-weight: 700; color: #000; margin: 0;">Viberyte</h1>
               <p style="color: #666; margin-top: 8px;">Your nightlife concierge</p>
             </div>
             
@@ -100,7 +100,7 @@ async function sendVerificationEmail(email: string, name: string, code: string) 
             <hr style="border: none; border-top: 1px solid #eee; margin: 32px 0;" />
             
             <p style="color: #999; font-size: 12px; text-align: center;">
-              © ${new Date().getFullYear()} Lumina by Viberyte
+              © ${new Date().getFullYear()} Viberyte by Viberyte
             </p>
           </div>
         `

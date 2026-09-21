@@ -3,8 +3,8 @@ import Image from 'next/image';
 import InstagramFlowSection from './InstagramFlowSection';
 
 export const metadata = {
-  title: 'Lumina for Business - Venues & Promoters',
-  description: 'Grow your nightlife business with Lumina. Table management, bookings, and payments.',
+  title: 'Viberyte for Business - Venues & Promoters',
+  description: 'Grow your nightlife business with Viberyte. Table management, bookings, and payments.',
 };
 
 const APP_STORE_URL = 'https://apps.apple.com/app/lumina';
@@ -71,7 +71,7 @@ export default function ForBusinessPage() {
         <div className="relative w-full max-w-4xl mx-auto transition-transform duration-500 hover:-translate-y-2">
           <Image 
             src="/images/partner/dashboard.png" 
-            alt="Lumina Partner Dashboard" 
+            alt="Viberyte Partner Dashboard" 
             width={1200}
             height={800}
             priority
@@ -117,10 +117,10 @@ export default function ForBusinessPage() {
       {/* Gradient Divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      {/* Why Lumina Wins - Before/After */}
+      {/* Why Viberyte Wins - Before/After */}
       <section className="relative z-10 py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-10">Why teams switch to Lumina</h3>
+          <h3 className="text-2xl font-bold text-center mb-10">Why teams switch to Viberyte</h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="p-6">
               <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center mx-auto mb-4">
@@ -128,7 +128,7 @@ export default function ForBusinessPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </div>
-              <h4 className="font-semibold mb-2">Before Lumina</h4>
+              <h4 className="font-semibold mb-2">Before Viberyte</h4>
               <p className="text-gray-500 text-sm">DMs, spreadsheets, missed payments, no-shows</p>
             </div>
             <div className="p-6">
@@ -137,7 +137,7 @@ export default function ForBusinessPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h4 className="font-semibold mb-2">With Lumina</h4>
+              <h4 className="font-semibold mb-2">With Viberyte</h4>
               <p className="text-gray-400 text-sm">Centralized bookings, automated payments, deposit protection</p>
             </div>
             <div className="p-6">
@@ -165,7 +165,7 @@ export default function ForBusinessPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Everything you need to run your night</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">From table setup to payment collection, Lumina handles the heavy lifting.</p>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">From table setup to payment collection, Viberyte handles the heavy lifting.</p>
           </div>
 
           {/* Feature 1 - Table Setup */}
@@ -203,7 +203,7 @@ export default function ForBusinessPage() {
               <div className="transition-transform duration-500 hover:-translate-y-2">
                 <Image 
                   src="/images/partner/table-setup.png" 
-                  alt="Lumina Table Setup" 
+                  alt="Viberyte Table Setup" 
                   width={500}
                   height={600}
                   className="w-full max-w-md drop-shadow-2xl rounded-xl"
@@ -218,7 +218,7 @@ export default function ForBusinessPage() {
               <div className="transition-transform duration-500 hover:-translate-y-2">
                 <Image 
                   src="/images/partner/booking.png" 
-                  alt="Lumina Booking Management" 
+                  alt="Viberyte Booking Management" 
                   width={500}
                   height={600}
                   className="w-full max-w-md drop-shadow-2xl rounded-xl"
@@ -291,7 +291,7 @@ export default function ForBusinessPage() {
               <div className="transition-transform duration-500 hover:-translate-y-2">
                 <Image 
                   src="/images/partner/split-payment.png" 
-                  alt="Lumina Split Payments" 
+                  alt="Viberyte Split Payments" 
                   width={500}
                   height={600}
                   className="w-full max-w-md drop-shadow-2xl rounded-xl"
@@ -513,7 +513,7 @@ export default function ForBusinessPage() {
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
           </svg>
           <p className="text-xl md:text-2xl text-gray-300 italic mb-6 leading-relaxed">
-            "Lumina helped us streamline bookings and eliminate payment confusion on busy weekends. Our no-show rate dropped significantly."
+            "Viberyte helped us streamline bookings and eliminate payment confusion on busy weekends. Our no-show rate dropped significantly."
           </p>
           <div className="text-gray-500">NYC Lounge Manager</div>
         </div>
@@ -545,7 +545,7 @@ export default function ForBusinessPage() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5 py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-gray-500 text-sm">{new Date().getFullYear()} Lumina by Viberyte</div>
+          <div className="text-gray-500 text-sm">{new Date().getFullYear()} Viberyte by Viberyte</div>
           <div className="flex gap-8 text-gray-500 text-sm">
             <Link href="/support" className="hover:text-white transition">Support</Link>
             <Link href="/privacy" className="hover:text-white transition">Privacy</Link>

@@ -47,7 +47,7 @@ export default function AccountSettingsPage() {
           <div className="divide-y divide-white/5">
             <div className="px-5 py-3.5">
               <label className="text-zinc-500 text-[12px] block mb-1.5">Full Name</label>
-              <input disabled={!editMode} defaultValue="Lumina Member" className="w-full bg-transparent text-white text-[14px] disabled:opacity-70 outline-none" />
+              <input disabled={!editMode} defaultValue="Viberyte Member" className="w-full bg-transparent text-white text-[14px] disabled:opacity-70 outline-none" />
             </div>
             <div className="px-5 py-3.5">
               <label className="text-zinc-500 text-[12px] block mb-1.5">Username</label>

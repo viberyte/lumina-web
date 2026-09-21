@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Contact Us - Lumina',
-  description: 'Get in touch with the Lumina team.',
+  title: 'Contact Us - Viberyte',
+  description: 'Get in touch with the Viberyte team.',
 };
 
 export default function ContactPage() {
@@ -31,7 +31,7 @@ export default function ContactPage() {
         <div className="max-w-2xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
           <p className="text-gray-400 text-xl mb-12">
-            Have questions about Lumina? Want to partner with us? We'd love to hear from you.
+            Have questions about Viberyte? Want to partner with us? We'd love to hear from you.
           </p>
 
           {/* Contact Card */}
@@ -58,7 +58,7 @@ export default function ContactPage() {
               className="bg-white/[0.03] border border-white/5 rounded-xl p-6 hover:bg-white/[0.05] transition text-left"
             >
               <h3 className="font-semibold mb-2">For Venues & Promoters</h3>
-              <p className="text-gray-500 text-sm">Learn how Lumina can grow your business</p>
+              <p className="text-gray-500 text-sm">Learn how Viberyte can grow your business</p>
             </Link>
             <Link 
               href="/support" 
@@ -74,7 +74,7 @@ export default function ContactPage() {
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5 py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-gray-500 text-sm">{new Date().getFullYear()} Lumina by Viberyte</div>
+          <div className="text-gray-500 text-sm">{new Date().getFullYear()} Viberyte by Viberyte</div>
           <div className="flex gap-8 text-gray-500 text-sm">
             <Link href="/support" className="hover:text-white transition">Support</Link>
             <Link href="/privacy" className="hover:text-white transition">Privacy</Link>

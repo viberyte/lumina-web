@@ -2,13 +2,13 @@
 import { useState, useEffect } from 'react';
 import { MapPin, Sparkles, Info, ChevronRight } from 'lucide-react';
 
-interface LuminaGreetingProps {
+interface ViberyteGreetingProps {
   onReady: (location: string) => void;
   isReturningUser: boolean;
   userName?: string;
 }
 
-export default function LuminaGreeting({ onReady, isReturningUser, userName }: LuminaGreetingProps) {
+export default function ViberyteGreeting({ onReady, isReturningUser, userName }: ViberyteGreetingProps) {
   const [step, setStep] = useState<'greeting' | 'location' | 'ready'>('greeting');
   const [location, setLocation] = useState<string | null>(null);
   const [detecting, setDetecting] = useState(false);
@@ -19,7 +19,7 @@ export default function LuminaGreeting({ onReady, isReturningUser, userName }: L
     const name = userName || '';
     
     if (!isReturningUser) {
-      return "Hey, I'm Lumina 🌙✨";
+      return "Hey, I'm Viberyte 🌙✨";
     }
     
     if (hour < 12) return `Early bird! What's good ${name}?`;

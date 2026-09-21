@@ -40,7 +40,7 @@ export default function ProfilePage() {
             <User className="w-7 h-7 text-white" />
           </div>
           <div>
-            <h2 className="text-white text-[17px] font-semibold">Lumina Member</h2>
+            <h2 className="text-white text-[17px] font-semibold">Viberyte Member</h2>
             <p className="text-zinc-500 text-[13px] mt-0.5">Member since Nov 2025</p>
           </div>
         </div>

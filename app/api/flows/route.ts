@@ -68,7 +68,7 @@ export async function POST(request: Request) {
       vibeTags: e.vibe_tags
     }));
 
-    const prompt = `You are Lumina, a nightlife concierge creating evening flows for ${city}.
+    const prompt = `You are Viberyte, a nightlife concierge creating evening flows for ${city}.
 
 User Context:
 - Who: ${who_with}

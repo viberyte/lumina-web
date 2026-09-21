@@ -98,7 +98,7 @@ export default function EnginesDiagram() {
         ))}
       </div>
 
-      {/* Center Lumina Logo */}
+      {/* Center Viberyte Logo */}
       <div 
         className={`absolute left-1/2 -translate-x-1/2 bottom-0 transition-all duration-1000 ${
           isVisible && activeIndex >= engines.length - 1 ? 'opacity-100 scale-100' : 'opacity-0 scale-50'

@@ -66,7 +66,7 @@ export default function ClaimPage() {
         <div style={{ fontSize: 48, marginBottom: 16 }}>&#x2705;</div>
         <h1 style={{ color: '#fff', fontSize: 24, fontWeight: 800, marginBottom: 8 }}>{partner?.business_name || 'This page'}</h1>
         <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 15, marginBottom: 24 }}>This page has already been claimed. If this is your venue, log in to manage it.</p>
-        <a href="https://apps.apple.com/app/lumina-nightlife/id6739197728" style={{ display: 'inline-block', padding: '14px 32px', background: 'linear-gradient(135deg, #7c3aed, #a855f7)', borderRadius: 14, color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none' }}>Open Lumina App</a>
+        <a href="https://apps.apple.com/app/lumina-nightlife/id6739197728" style={{ display: 'inline-block', padding: '14px 32px', background: 'linear-gradient(135deg, #7c3aed, #a855f7)', borderRadius: 14, color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none' }}>Open Viberyte App</a>
       </div>
     </div>
   );
@@ -135,7 +135,7 @@ export default function ClaimPage() {
 
         <button onClick={handleClaim} disabled={submitting} style={{ width: '100%', padding: '16px', background: submitting ? 'rgba(139,92,246,0.3)' : 'linear-gradient(135deg, #7c3aed, #a855f7)', border: 'none', borderRadius: 14, color: '#fff', fontSize: 16, fontWeight: 700, cursor: submitting ? 'default' : 'pointer', marginBottom: 16 }}>{submitting ? 'Claiming...' : 'Claim This Page'}</button>
 
-        <p style={{ textAlign: 'center' as const, fontSize: 12, color: 'rgba(255,255,255,0.25)', lineHeight: 1.5 }}>By claiming, you confirm you are authorized to manage this venue. These credentials will be your login for the Lumina app.</p>
+        <p style={{ textAlign: 'center' as const, fontSize: 12, color: 'rgba(255,255,255,0.25)', lineHeight: 1.5 }}>By claiming, you confirm you are authorized to manage this venue. These credentials will be your login for the Viberyte app.</p>
 
         {/* Features */}
         <div style={{ marginTop: 32, padding: '20px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 16 }}>

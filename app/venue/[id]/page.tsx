@@ -28,14 +28,14 @@ export async function generateMetadata({ params }: VenuePageProps): Promise<Meta
   const venue = getVenue(params.id) as any;
 
   if (!venue) {
-    return { title: 'Venue Not Found | Lumina' };
+    return { title: 'Venue Not Found | Viberyte' };
   }
 
   const ogImageUrl = `https://lumina.viberyte.com/api/og/venue?id=${params.id}`;
 
   return {
-    title: `${venue.name} - ${venue.neighborhood} | Lumina`,
-    description: `${venue.cuisine || 'Nightlife'} in ${venue.neighborhood}, ${venue.city}. Discover the vibe on Lumina.`,
+    title: `${venue.name} - ${venue.neighborhood} | Viberyte`,
+    description: `${venue.cuisine || 'Nightlife'} in ${venue.neighborhood}, ${venue.city}. Discover the vibe on Viberyte.`,
     openGraph: {
       title: venue.name,
       description: `${venue.neighborhood} • ${venue.city}`,
@@ -115,14 +115,14 @@ export default function VenuePage({ params }: VenuePageProps) {
 
         <div className="mt-16 text-center">
           <Link href="https://apps.apple.com/app/lumina" className="inline-block px-12 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-lg font-semibold hover:from-purple-500 hover:to-pink-500 transition transform hover:scale-105">
-            Open in Lumina
+            Open in Viberyte
           </Link>
           <p className="text-gray-400 mt-4">Plan nights, not searches.</p>
         </div>
       </div>
 
       <div className="border-t border-gray-800 mt-20 py-8 text-center text-gray-500 text-sm">
-        <p>Powered by Lumina</p>
+        <p>Powered by Viberyte</p>
       </div>
     </div>
   );

@@ -111,7 +111,7 @@ export default function ClaimPageClient({ token, venue }: Props) {
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Sparkles size={18} className="text-white" />
-            <span className="text-white font-medium text-sm">Your Lumina page is ready</span>
+            <span className="text-white font-medium text-sm">Your Viberyte page is ready</span>
           </div>
           <button onClick={() => setShowVerify(true)} className="bg-white text-black text-sm font-semibold px-4 py-1.5 rounded-full hover:bg-zinc-100 transition-colors">Claim Now</button>
         </div>
@@ -177,7 +177,7 @@ export default function ClaimPageClient({ token, venue }: Props) {
 
         {/* Benefits */}
         <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-zinc-800 rounded-2xl p-6 mb-8">
-          <h2 className="text-lg font-semibold text-white mb-2">What you get with Lumina</h2>
+          <h2 className="text-lg font-semibold text-white mb-2">What you get with Viberyte</h2>
           <p className="text-zinc-500 text-sm mb-5">{tagline}</p>
           <div className="space-y-4">
             {benefits.map(({ icon: Icon, text }, i) => (
@@ -193,7 +193,7 @@ export default function ClaimPageClient({ token, venue }: Props) {
 
         {/* Social Proof */}
         <div className="text-center py-6 border-t border-b border-zinc-800 mb-8">
-          <p className="text-zinc-500 text-sm mb-2">Join 100+ venues already on Lumina</p>
+          <p className="text-zinc-500 text-sm mb-2">Join 100+ venues already on Viberyte</p>
           <div className="flex items-center justify-center gap-1">
             {[1,2,3,4,5].map(i => <Star key={i} size={16} className="text-yellow-500 fill-yellow-500" />)}
           </div>

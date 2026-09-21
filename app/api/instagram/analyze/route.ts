@@ -17,7 +17,7 @@ export async function OPTIONS() {
   return NextResponse.json({}, { headers: corsHeaders });
 }
 
-const ANALYSIS_PROMPT = `You are a nightlife intelligence analyst for Lumina. Extract structured facts from Instagram content.
+const ANALYSIS_PROMPT = `You are a nightlife intelligence analyst for Viberyte. Extract structured facts from Instagram content.
 
 LAYER 1 - VIBE & CONTEXT SIGNALS:
 - energy_level: low/medium/high

@@ -107,7 +107,7 @@ export default function PreferenceSurvey({ isOpen, onClose, onComplete }: Prefer
             <div className="space-y-6">
               <div>
                 <h3 className="text-white text-lg font-semibold mb-2">How old are you?</h3>
-                <p className="text-zinc-400 text-sm mb-4">Must be 18+ to use Lumina</p>
+                <p className="text-zinc-400 text-sm mb-4">Must be 18+ to use Viberyte</p>
                 <input
                   type="number"
                   value={preferences.age}

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: TripPageProps): Promise<Metad
   const trip = await getTrip(params.id);
 
   if (!trip) {
-    return { title: 'Trip Not Found | Lumina' };
+    return { title: 'Trip Not Found | Viberyte' };
   }
 
   const ogImageUrl = `https://lumina.viberyte.com/api/og/trip?id=${params.id}`;
@@ -32,11 +32,11 @@ export async function generateMetadata({ params }: TripPageProps): Promise<Metad
   const venueText = venueCount === 1 ? '1 place' : `${venueCount} places`;
 
   return {
-    title: `${trip.name} - ${venueText} | Lumina`,
+    title: `${trip.name} - ${venueText} | Viberyte`,
     description: `Check out this curated nightlife experience with ${venueText}.`,
     openGraph: {
       title: trip.name,
-      description: `${venueText} • Curated on Lumina`,
+      description: `${venueText} • Curated on Viberyte`,
       images: [{ url: ogImageUrl, width: 1200, height: 630, alt: trip.name }],
       type: 'website',
       url: `https://lumina.viberyte.com/trip/${params.id}`,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: TripPageProps): Promise<Metad
     twitter: {
       card: 'summary_large_image',
       title: trip.name,
-      description: `${venueText} • Curated on Lumina`,
+      description: `${venueText} • Curated on Viberyte`,
       images: [ogImageUrl],
     },
   };
@@ -119,7 +119,7 @@ export default async function TripPage({ params }: TripPageProps) {
 
       {/* Footer */}
       <div className="border-t border-gray-800 mt-20 py-8 text-center text-gray-500 text-sm">
-        <p>Powered by Lumina</p>
+        <p>Powered by Viberyte</p>
       </div>
     </div>
   );

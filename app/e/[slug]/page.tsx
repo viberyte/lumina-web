@@ -79,13 +79,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = event.description || `${event.title} at ${event.venue_name}`;
 
   return {
-    title: `${event.title} | Lumina`,
+    title: `${event.title} | Viberyte`,
     description,
     openGraph: {
       title: event.title,
       description,
       type: 'website',
-      siteName: 'Lumina',
+      siteName: 'Viberyte',
     },
     twitter: {
       card: 'summary_large_image',

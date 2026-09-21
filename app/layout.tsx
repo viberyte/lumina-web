@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lumina.viberyte.com"),
-  title: "Lumina - Your Nightlife Concierge",
+  title: "Viberyte - Your Nightlife Concierge",
   description: "Discover the perfect spots for any vibe",
 };
 

@@ -48,7 +48,7 @@ async function parseWithAI(query: string): Promise<AIIntent | null> {
   if (!OPENAI_API_KEY) return null;
 
   try {
-    const systemPrompt = `You are Lumina's nightlife AI. Parse user search queries and extract structured intent.
+    const systemPrompt = `You are Viberyte's nightlife AI. Parse user search queries and extract structured intent.
 
 Return JSON only:
 {
@@ -373,7 +373,7 @@ export async function GET(request: NextRequest) {
   const startTime = Date.now();
   
   try {
-    console.log('🔍 Lumina AI Search:', query);
+    console.log('🔍 Viberyte AI Search:', query);
     
     let intent: any;
     let aiUsed = false;

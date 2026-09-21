@@ -8,7 +8,7 @@ export default function SupportPage() {
       fontFamily: 'system-ui, -apple-system, sans-serif'
     }}>
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-        <h1 style={{ fontSize: '32px', marginBottom: '24px' }}>Lumina Support</h1>
+        <h1 style={{ fontSize: '32px', marginBottom: '24px' }}>Viberyte Support</h1>
         
         <p style={{ color: '#a1a1aa', lineHeight: '1.6', marginBottom: '32px' }}>
           Need help? We're here for you. Reach out and we'll get back to you as soon as possible.
@@ -28,7 +28,7 @@ export default function SupportPage() {
         
         <div style={{ backgroundColor: '#18181b', padding: '24px', borderRadius: '12px' }}>
           <h2 style={{ fontSize: '18px', marginBottom: '12px' }}>FAQs</h2>
-          <p style={{ color: '#a1a1aa', marginBottom: '12px' }}><strong>How do I plan a night?</strong><br/>Open the Chat tab and tell Lumina what you're looking for.</p>
+          <p style={{ color: '#a1a1aa', marginBottom: '12px' }}><strong>How do I plan a night?</strong><br/>Open the Chat tab and tell Viberyte what you're looking for.</p>
           <p style={{ color: '#a1a1aa', marginBottom: '12px' }}><strong>How does Budget for Me work?</strong><br/>On any venue page, tap "Budget for me" and enter your budget. Our AI will recommend the perfect meal.</p>
           <p style={{ color: '#a1a1aa', margin: 0 }}><strong>What cities are supported?</strong><br/>Currently NYC metro area including Manhattan, Brooklyn, Queens, and New Jersey.</p>
         </div>

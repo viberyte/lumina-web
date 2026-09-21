@@ -84,7 +84,7 @@ export default function PrivacyPage() {
             <h3 className="text-red-400 text-[15px] font-medium">Delete All Data</h3>
           </div>
           <div className="p-5">
-            <p className="text-zinc-400 text-[13px] mb-3">Permanently remove all your data from Lumina</p>
+            <p className="text-zinc-400 text-[13px] mb-3">Permanently remove all your data from Viberyte</p>
             <button className="w-full py-3 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 rounded-2xl text-red-400 text-[14px] font-medium transition-colors">
               Delete All My Data
             </button>

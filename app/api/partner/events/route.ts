@@ -203,7 +203,7 @@ export async function POST(request: NextRequest) {
         upgradeMessage = "Your event is live! Upgrade to Marketing ($20/mo) to add booking links and track performance.";
       }
     } else {
-      upgradeMessage = "Event saved! Connect your Instagram to claim your venue and get your events on Lumina's Explore page.";
+      upgradeMessage = "Event saved! Connect your Instagram to claim your venue and get your events on Viberyte's Explore page.";
     }
 
     db.close();

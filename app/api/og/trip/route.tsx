@@ -160,7 +160,7 @@ export async function GET(request: NextRequest) {
               </div>
             )}
 
-            {/* Lumina Branding */}
+            {/* Viberyte Branding */}
             <div
               style={{
                 fontSize: 28,

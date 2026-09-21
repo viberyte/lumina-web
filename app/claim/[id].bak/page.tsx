@@ -127,7 +127,7 @@ export default function ClaimVenuePage() {
             <Building2 className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-2xl font-semibold text-white mb-2">Claim Your Venue</h1>
-          <p className="text-zinc-400">Take control of your presence on Lumina</p>
+          <p className="text-zinc-400">Take control of your presence on Viberyte</p>
         </div>
       </div>
 
@@ -254,7 +254,7 @@ export default function ClaimVenuePage() {
           <ul className="space-y-3">
             {[
               'Edit your venue photos, description & hours',
-              'Post events directly to Lumina',
+              'Post events directly to Viberyte',
               'Accept table bookings & reservations',
               'View analytics on profile views & saves',
               'Connect Instagram for automatic content sync',

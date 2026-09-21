@@ -387,7 +387,7 @@ function generateVibeSets(venues: any[], context: any, usedIds: number[]): any[]
 
 // ==================== AI REASONING ====================
 async function generateReasoning(stop: any, context: any): Promise<string> {
-  const prompt = `You're Lumina, a warm nightlife concierge. Explain in 2-3 sentences why ${stop.venue.name} is perfect for this ${context.persona} ${context.primaryChoice || 'evening'}.
+  const prompt = `You're Viberyte, a warm nightlife concierge. Explain in 2-3 sentences why ${stop.venue.name} is perfect for this ${context.persona} ${context.primaryChoice || 'evening'}.
 
 Context:
 - Persona: ${context.persona}

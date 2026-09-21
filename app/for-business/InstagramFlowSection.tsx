@@ -22,7 +22,7 @@ export default function InstagramFlowSection() {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Post on Instagram. We do the rest.</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Lumina automatically scans your Instagram posts and creates events for you - flyers, captions, and dates included. No manual entry required.
+            Viberyte automatically scans your Instagram posts and creates events for you - flyers, captions, and dates included. No manual entry required.
           </p>
         </div>
 
@@ -80,12 +80,12 @@ export default function InstagramFlowSection() {
             </div>
           </div>
 
-          {/* Right Side - Lumina Explore */}
+          {/* Right Side - Viberyte Explore */}
           <div className="flex justify-center">
             <div className={`transition-all duration-700 ${step >= 1 ? 'opacity-100 translate-y-0' : 'opacity-30 translate-y-8'}`}>
               <Image 
                 src="/images/partner/explore.png" 
-                alt="Lumina Explore Page" 
+                alt="Viberyte Explore Page" 
                 width={400}
                 height={800}
                 className="w-full max-w-sm drop-shadow-2xl rounded-xl"
@@ -118,7 +118,7 @@ export default function InstagramFlowSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <span className="text-sm font-medium">Live on Lumina</span>
+            <span className="text-sm font-medium">Live on Viberyte</span>
           </div>
         </div>
 

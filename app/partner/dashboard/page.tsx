@@ -113,7 +113,7 @@ export default function PartnerDashboardPage() {
   const SidebarNav = () => (
     <aside className="fixed left-0 top-0 bottom-0 w-64 bg-black hidden md:flex flex-col z-20">
       <div className="p-6 pb-8">
-        <Link href="/" className="text-lg font-semibold tracking-tight text-white">Lumina <span className="text-zinc-600 font-normal text-sm">Partner</span></Link>
+        <Link href="/" className="text-lg font-semibold tracking-tight text-white">Viberyte <span className="text-zinc-600 font-normal text-sm">Partner</span></Link>
       </div>
       <nav className="flex-1 px-3">
         <div className="space-y-1">
@@ -169,7 +169,7 @@ export default function PartnerDashboardPage() {
 
       <header className="md:hidden fixed top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-xl">
         <div className="flex items-center justify-between px-5 py-4">
-          <Link href="/" className="text-lg font-semibold tracking-tight text-white">Lumina</Link>
+          <Link href="/" className="text-lg font-semibold tracking-tight text-white">Viberyte</Link>
           <button onClick={handleLogout} className="text-zinc-500 text-sm">Sign Out</button>
         </div>
       </header>

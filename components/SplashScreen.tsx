@@ -26,11 +26,11 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
         <div className="relative">
           <div className="absolute inset-0 blur-2xl bg-violet-500/30 rounded-full"></div>
           <div className="relative w-28 h-28 mx-auto">
-            <Image src="/lumina-logo.png" alt="Lumina" fill className="object-contain drop-shadow-2xl" />
+            <Image src="/lumina-logo.png" alt="Viberyte" fill className="object-contain drop-shadow-2xl" />
           </div>
         </div>
         <div className="text-center space-y-3">
-          <h1 className="text-6xl font-extralight text-white tracking-wider">Lumina</h1>
+          <h1 className="text-6xl font-extralight text-white tracking-wider">Viberyte</h1>
           <p className="text-lg text-zinc-400 font-light tracking-wide">Your Personal Nightlife Concierge</p>
         </div>
         <div className="text-center pt-16 space-y-2">

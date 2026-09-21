@@ -25,7 +25,7 @@ export default function AnimatedSections({ appStoreUrl }: { appStoreUrl: string 
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20 reveal">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Everything you need for the perfect night</h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">From finding the vibe to planning the entire evening, Lumina handles it all.</p>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">From finding the vibe to planning the entire evening, Viberyte handles it all.</p>
           </div>
 
           {/* Feature 1 - Continue the Night */}
@@ -36,7 +36,7 @@ export default function AnimatedSections({ appStoreUrl }: { appStoreUrl: string 
               </div>
               <h3 className="text-3xl md:text-4xl font-bold mb-6">Dinner to drinks, seamlessly planned</h3>
               <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                Don't let the night end early. After dinner, Lumina suggests the perfect next stop based on your vibe, location, and what's happening nearby.
+                Don't let the night end early. After dinner, Viberyte suggests the perfect next stop based on your vibe, location, and what's happening nearby.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center gap-3">
@@ -63,7 +63,7 @@ export default function AnimatedSections({ appStoreUrl }: { appStoreUrl: string 
               <div className="transition-transform duration-500 hover:-translate-y-2">
                 <Image 
                   src="/images/app/continue-night.png" 
-                  alt="Lumina Continue the Night" 
+                  alt="Viberyte Continue the Night" 
                   width={390}
                   height={780}
                   className="w-full max-w-xs drop-shadow-2xl"
@@ -78,7 +78,7 @@ export default function AnimatedSections({ appStoreUrl }: { appStoreUrl: string 
               <div className="transition-transform duration-500 hover:-translate-y-2">
                 <Image 
                   src="/images/app/dining.png" 
-                  alt="Lumina Dining Explorer" 
+                  alt="Viberyte Dining Explorer" 
                   width={390}
                   height={780}
                   className="w-full max-w-xs drop-shadow-2xl"
@@ -124,7 +124,7 @@ export default function AnimatedSections({ appStoreUrl }: { appStoreUrl: string 
               </div>
               <h3 className="text-3xl md:text-4xl font-bold mb-6">Dine within your budget</h3>
               <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                Set your budget and party size. Lumina finds the perfect meal options that fit - no surprises when the check comes.
+                Set your budget and party size. Viberyte finds the perfect meal options that fit - no surprises when the check comes.
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-center gap-3">
@@ -151,7 +151,7 @@ export default function AnimatedSections({ appStoreUrl }: { appStoreUrl: string 
               <div className="transition-transform duration-500 hover:-translate-y-2">
                 <Image 
                   src="/images/app/budget.png" 
-                  alt="Lumina Budget Meal Finder" 
+                  alt="Viberyte Budget Meal Finder" 
                   width={390}
                   height={780}
                   className="w-full max-w-xs drop-shadow-2xl"
@@ -193,7 +193,7 @@ export default function AnimatedSections({ appStoreUrl }: { appStoreUrl: string 
       {/* CTA Section */}
       <section className="relative z-10 py-24 px-6 text-center reveal">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready for better nights?</h2>
-        <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">Join thousands planning smarter nights with Lumina.</p>
+        <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">Join thousands planning smarter nights with Viberyte.</p>
         <a 
           href={appStoreUrl}
           className="inline-flex items-center gap-3 bg-white text-black px-10 py-5 rounded-full font-semibold text-lg hover:bg-gray-100 transition hover:scale-[1.02] active:scale-[0.98]"

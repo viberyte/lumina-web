@@ -253,7 +253,7 @@ export default function PartnerEventsPage() {
   const SidebarNav = () => (
     <aside className="fixed left-0 top-0 bottom-0 w-64 bg-black hidden md:flex flex-col z-20">
       <div className="p-6 pb-8">
-        <Link href="/" className="text-lg font-semibold tracking-tight text-white">Lumina <span className="text-zinc-600 font-normal text-sm">Partner</span></Link>
+        <Link href="/" className="text-lg font-semibold tracking-tight text-white">Viberyte <span className="text-zinc-600 font-normal text-sm">Partner</span></Link>
       </div>
       <nav className="flex-1 px-3">
         <div className="space-y-1">
