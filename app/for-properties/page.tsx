@@ -50,18 +50,8 @@ export default function ForPropertiesPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-8 items-center">
             <div className="text-center">
-              <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-8 inline-block">
-                <div className="w-48 h-48 bg-white/[0.06] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-center">
-                    <p className="text-violet-400 text-xs font-medium tracking-widest uppercase mb-2">Viberyte</p>
-                    <div className="w-28 h-28 bg-white/10 rounded-lg flex items-center justify-center">
-                      <svg className="w-16 h-16 text-white/20" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-500 text-[10px] mt-2">Scan to discover</p>
-                  </div>
-                </div>
+              <div className="rounded-2xl overflow-hidden inline-block shadow-2xl shadow-violet-500/10">
+                <img src="/images/qr-card-hotel.png" alt="Viberyte QR card on a hotel front desk" className="w-72 h-auto" />
               </div>
               <p className="text-gray-500 text-sm mt-4">Branded QR card at your front desk</p>
             </div>
