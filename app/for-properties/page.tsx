@@ -37,7 +37,7 @@ export default function ForPropertiesPage() {
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
             A complimentary digital concierge for hotels, boutique properties and luxury residential buildings. Guests scan a QR code and instantly access curated dining, nightlife and experiences nearby. No app download required.
           </p>
-          <a href="#get-started" className="inline-flex items-center justify-center bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition hover:scale-[1.02] active:scale-[0.98]">
+          <a href="/request-qr" className="inline-flex items-center justify-center bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition hover:scale-[1.02] active:scale-[0.98]">
             Get Your Complimentary Guest Page
           </a>
         </div>

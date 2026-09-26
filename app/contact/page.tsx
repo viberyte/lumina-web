@@ -39,7 +39,7 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Hotels and Properties</h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">Interested in bringing Viberyte to your hotel, boutique property or residential building? We will build your guest experience page and ship QR cards at no cost.</p>
-            <a href="mailto:info@viberyte.com?subject=Viberyte%20for%20our%20property&body=Property%20name%3A%20%0AProperty%20type%3A%20%0ACity%3A%20%0AYour%20name%3A%20%0A" className="inline-flex items-center gap-2 text-violet-400 text-sm hover:text-violet-300 transition">Get started <span aria-hidden="true">&rarr;</span></a>
+            <a href="/request-qr" className="inline-flex items-center gap-2 text-violet-400 text-sm hover:text-violet-300 transition">Request QR cards <span aria-hidden="true">&rarr;</span></a>
           </div>
           <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-8 hover:border-violet-500/30 transition-all duration-300">
             <div className="w-10 h-10 bg-violet-500/10 rounded-lg flex items-center justify-center mb-4">
