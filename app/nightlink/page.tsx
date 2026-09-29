@@ -17,7 +17,6 @@ export default function NightLinkPage() {
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
           <Link href="/" className="text-2xl font-bold tracking-tight text-white">VIBERYTE</Link>
           <div className="hidden md:flex gap-10 items-center">
-            <Link href="/nightlink" className="text-white text-sm">NightLink</Link>
             <Link href="/for-properties" className="text-gray-400 hover:text-white transition text-sm">For Properties</Link>
             <Link href="/contact" className="text-gray-400 hover:text-white transition text-sm">Contact</Link>
             <Link href="/partner/login" className="text-gray-400 hover:text-white transition text-sm">Partner Login</Link>
@@ -119,7 +118,6 @@ export default function NightLinkPage() {
       <footer className="border-t border-white/5 py-12 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div><p className="text-white font-bold text-lg">VIBERYTE</p><p className="text-gray-500 text-sm mt-1">Curated discovery for dining, nightlife and experiences.</p></div>
-          <div className="flex gap-8 text-sm text-gray-500"><Link href="/nightlink" className="hover:text-white transition">NightLink</Link><Link href="/for-properties" className="hover:text-white transition">For Properties</Link><Link href="/contact" className="hover:text-white transition">Contact</Link><Link href="/privacy" className="hover:text-white transition">Privacy</Link><Link href="/terms" className="hover:text-white transition">Terms</Link></div>
           <p className="text-gray-600 text-xs">© {new Date().getFullYear()} Viberyte LLC</p>
         </div>
       </footer>

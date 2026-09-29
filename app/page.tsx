@@ -17,7 +17,6 @@ export default function HomePage() {
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
           <Link href="/" className="text-2xl font-bold tracking-tight text-white">VIBERYTE</Link>
           <div className="hidden md:flex gap-10 items-center">
-            <Link href="/nightlink" className="text-gray-400 hover:text-white transition text-sm">NightLink</Link>
             <Link href="/for-properties" className="text-gray-400 hover:text-white transition text-sm">For Properties</Link>
             <Link href="/contact" className="text-gray-400 hover:text-white transition text-sm">Contact</Link>
             <Link href="/partner/login" className="text-gray-400 hover:text-white transition text-sm">Partner Login</Link>
@@ -110,9 +109,6 @@ export default function HomePage() {
               <p className="text-gray-400 leading-relaxed text-sm">
                 Your venue deserves more than a listing. NightLink gives restaurants, lounges and nightlife venues a shareable digital storefront with events, menus and bookings.
               </p>
-              <Link href="/nightlink" className="inline-flex items-center gap-2 text-violet-400 text-sm mt-5 hover:text-violet-300 transition">
-                Claim yours <span aria-hidden="true">&rarr;</span>
-              </Link>
             </div>
           </div>
         </div>
@@ -182,7 +178,6 @@ export default function HomePage() {
             <p className="text-gray-500 text-sm mt-1">Curated discovery for dining, nightlife and experiences.</p>
           </div>
           <div className="flex gap-8 text-sm text-gray-500">
-            <Link href="/nightlink" className="hover:text-white transition">NightLink</Link>
             <Link href="/for-properties" className="hover:text-white transition">For Properties</Link>
             <Link href="/contact" className="hover:text-white transition">Contact</Link>
             <Link href="/privacy" className="hover:text-white transition">Privacy</Link>
