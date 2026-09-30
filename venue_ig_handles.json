@@ -1,0 +1,878 @@
+[
+  {
+    "id": 11,
+    "name": "230 Fifth Rooftop Bar",
+    "handle": "230fifthrooftop",
+    "website": "http://www.230-fifth.com/"
+  },
+  {
+    "id": 56,
+    "name": "3 Dollar Bill",
+    "handle": "3dollarbillbk",
+    "website": "https://3dollarbillbk.com/"
+  },
+  {
+    "id": 193,
+    "name": "99 Scott Studio",
+    "handle": "99scott_",
+    "website": "http://www.99scott.com/"
+  },
+  {
+    "id": 143,
+    "name": "A10",
+    "handle": "a10kitchen",
+    "website": "https://a10kitchen.com/"
+  },
+  {
+    "id": 221,
+    "name": "Adobo Mexican Grill",
+    "handle": "eatadobomexicangrill",
+    "website": "https://www.adobomexicangrill.com/"
+  },
+  {
+    "id": 216,
+    "name": "Alfie's Kitchen & Craft Beer Bar",
+    "handle": "alfiesnyc",
+    "website": "http://www.alfiesnyc.com/"
+  },
+  {
+    "id": 153,
+    "name": "Alice",
+    "handle": "alicerestaurantnyc",
+    "website": "http://www.alicenyc.com/"
+  },
+  {
+    "id": 230,
+    "name": "Amaru Bar",
+    "handle": "amarupisco",
+    "website": "http://www.amarubar.com/"
+  },
+  {
+    "id": 103,
+    "name": "Amber Room",
+    "handle": "amberroomnyc",
+    "website": "https://www.amberroomnyc.com/"
+  },
+  {
+    "id": 80,
+    "name": "Aqua Roma | New York",
+    "handle": "aquaromanewyork",
+    "website": "https://aqua-nyc.com/aqua-roma/?utm_source=gbp&utm_medium=organic&utm_campaign=gbp-website"
+  },
+  {
+    "id": 224,
+    "name": "Arno",
+    "handle": "arnoristorantenyc",
+    "website": "http://www.arnoristorante.com/"
+  },
+  {
+    "id": 203,
+    "name": "Arthur's Tavern",
+    "handle": "arthurstavern_nyc",
+    "website": "https://arthurstavern.nyc/"
+  },
+  {
+    "id": 184,
+    "name": "Avenue Sky Lounge",
+    "handle": "avenueny",
+    "website": "https://taogroup.com/venues/avenue-sky-lounge-edge-hudson-yards-new-york/"
+  },
+  {
+    "id": 89,
+    "name": "Ayah Restaurant",
+    "handle": "ayahrestaurant",
+    "website": "https://www.ayahrestaurant.com/"
+  },
+  {
+    "id": 212,
+    "name": "BONAO RESTAURANT",
+    "handle": "bonaorestaurant",
+    "website": "https://www.bonaorestaurant.com/"
+  },
+  {
+    "id": 26,
+    "name": "Bar Revival",
+    "handle": "barrevivalnyc",
+    "website": "https://www.barrevivalnyc.com/"
+  },
+  {
+    "id": 160,
+    "name": "BarDough",
+    "handle": "bardoughnyc",
+    "website": "https://www.bardoughnyc.com/"
+  },
+  {
+    "id": 227,
+    "name": "Barbam NYC",
+    "handle": "squarespace",
+    "website": "https://www.barbamnyc.com/"
+  },
+  {
+    "id": 84,
+    "name": "Beatbox",
+    "handle": "playbeatbox",
+    "website": "https://www.playbeatbox.com/"
+  },
+  {
+    "id": 157,
+    "name": "Becco",
+    "handle": "becconyc",
+    "website": "http://www.becco-nyc.com/"
+  },
+  {
+    "id": 162,
+    "name": "Bella Union",
+    "handle": "bellaunionnyc",
+    "website": "http://www.bellaunionnyc.com/"
+  },
+  {
+    "id": 83,
+    "name": "Blue Note",
+    "handle": "bluenotenyc",
+    "website": "https://www.bluenotejazz.com/nyc/"
+  },
+  {
+    "id": 188,
+    "name": "Bowery Meat Company",
+    "handle": "bowerymeatcompany",
+    "website": "http://www.bowerymeatcompany.com/"
+  },
+  {
+    "id": 232,
+    "name": "Brooklyn Chop House Steakhouse Downtown NYC",
+    "handle": "brooklynchophouse",
+    "website": "https://www.brooklynchophouse.com/"
+  },
+  {
+    "id": 117,
+    "name": "Brooklyn Chop House Steakhouse Times Square",
+    "handle": "brooklynchophouse",
+    "website": "https://www.brooklynchophouse.com/location/times-square/"
+  },
+  {
+    "id": 79,
+    "name": "Buddakan",
+    "handle": "buddakannyc",
+    "website": "https://www.buddakannyc.com/?utm_source=GoogleBusinessProfile&utm_medium=Website&utm_campaign=MapLabs"
+  },
+  {
+    "id": 179,
+    "name": "Cafe Erzulie",
+    "handle": "cafe.erzulie",
+    "website": "https://www.cafeerzulie.com/"
+  },
+  {
+    "id": 93,
+    "name": "Cath\u00e9drale",
+    "handle": "cathedralenewyork",
+    "website": "https://taogroup.com/venues/cathedrale-new-york/"
+  },
+  {
+    "id": 64,
+    "name": "Cave",
+    "handle": "cavelounge",
+    "website": "http://www.cavebrooklyn.com/"
+  },
+  {
+    "id": 111,
+    "name": "Cecconi's DUMBO",
+    "handle": "cecconisrestaurants",
+    "website": "http://cecconisdumbo.com/?utm_source=google&utm_medium=organic&utm_campaign=googlemybusiness"
+  },
+  {
+    "id": 128,
+    "name": "Cellar Dog",
+    "handle": "cellardognyc",
+    "website": "http://cellar.dog/"
+  },
+  {
+    "id": 147,
+    "name": "Chi Restaurant & Bar",
+    "handle": "chi_restaurant_bar",
+    "website": "https://chirestaurantnyc.com/"
+  },
+  {
+    "id": 180,
+    "name": "Coffee Project New York",
+    "handle": "coffeeprojectny",
+    "website": "http://www.coffeeprojectny.com/"
+  },
+  {
+    "id": 177,
+    "name": "Comedy In Harlem",
+    "handle": "comedyinharlem",
+    "website": "http://www.comedyinharlem.com/"
+  },
+  {
+    "id": 113,
+    "name": "Connect Astoria",
+    "handle": "connect.astoria",
+    "website": "https://connectastoriany.com/"
+  },
+  {
+    "id": 92,
+    "name": "Crazy Pizza",
+    "handle": "crazypizza.us",
+    "website": "https://crazypizza.com/new-york-city/"
+  },
+  {
+    "id": 196,
+    "name": "Da Andrea Chelsea",
+    "handle": "daandreanyc",
+    "website": "https://www.daandreanyc.com/"
+  },
+  {
+    "id": 146,
+    "name": "Da Nico",
+    "handle": "danicoristorante",
+    "website": "https://danicoristorante.com/"
+  },
+  {
+    "id": 133,
+    "name": "Daisy's Diner & Bar",
+    "handle": "daisys_diner_and_bar_brooklyn",
+    "website": "http://daisysdinerandbar.com/"
+  },
+  {
+    "id": 123,
+    "name": "Dead Letter No. 9",
+    "handle": "no9nyc",
+    "website": "https://www.deadletterno9.com/"
+  },
+  {
+    "id": 144,
+    "name": "Dig Inn",
+    "handle": "diginn",
+    "website": "https://www.diginn.com/"
+  },
+  {
+    "id": 209,
+    "name": "Din Tai Fung",
+    "handle": "dintaifungusa",
+    "website": "https://dtf.com/en/locations/new-york"
+  },
+  {
+    "id": 7,
+    "name": "Do Not Disturb",
+    "handle": "donotdisturb.ny",
+    "website": "http://www.dnd-nyc.com/"
+  },
+  {
+    "id": 195,
+    "name": "Don Angie",
+    "handle": "donangienyc",
+    "website": "http://donangie.com/"
+  },
+  {
+    "id": 170,
+    "name": "Drift BK Restaurant & Lounge",
+    "handle": "driftloungebk",
+    "website": "http://www.driftbklounge.com/"
+  },
+  {
+    "id": 15,
+    "name": "Duomo51",
+    "handle": "duomo51nyc",
+    "website": "http://www.duomo51.com/"
+  },
+  {
+    "id": 161,
+    "name": "Dutch Fred's",
+    "handle": "dutchfreds",
+    "website": "http://dutchfreds.com/"
+  },
+  {
+    "id": 213,
+    "name": "Eccolo Italian Restaurant",
+    "handle": "eccolonyc",
+    "website": "https://eccolonyc.com/"
+  },
+  {
+    "id": 52,
+    "name": "Ellen's Stardust Diner",
+    "handle": "ellensstardust",
+    "website": "https://www.ellensstardustdiner.com/"
+  },
+  {
+    "id": 50,
+    "name": "Emily",
+    "handle": "pizzalovesemily",
+    "website": "https://www.pizzalovesemily.com/"
+  },
+  {
+    "id": 175,
+    "name": "Empanada Mama LES",
+    "handle": "empanadamamanyc",
+    "website": "https://www.empanadamama.com/lower-east-side-location"
+  },
+  {
+    "id": 35,
+    "name": "Essex",
+    "handle": "essexrestaurant.nyc",
+    "website": "https://www.essexnyc.com/"
+  },
+  {
+    "id": 156,
+    "name": "Forsythia NYC",
+    "handle": "forsythia_nyc",
+    "website": "http://forsythianyc.com/"
+  },
+  {
+    "id": 31,
+    "name": "Gaia Restaurant",
+    "handle": "gaia_nyc_",
+    "website": "https://www.gaiarestaurant.com/"
+  },
+  {
+    "id": 102,
+    "name": "Gitano NYC",
+    "handle": "gitano",
+    "website": "https://www.gitano.com/nyc/?utm_source=google&utm_medium=cpc&utm_campaign=gitano-nyc-business-profile"
+  },
+  {
+    "id": 222,
+    "name": "Golden Diner",
+    "handle": "goldendinerny",
+    "website": "http://www.goldendinerny.com/"
+  },
+  {
+    "id": 107,
+    "name": "Harbor NYC Rooftop",
+    "handle": "harbornewyorkcity",
+    "website": "https://www.harbornewyorkcity.com/"
+  },
+  {
+    "id": 168,
+    "name": "Haswell Green's",
+    "handle": "haswellgreensnyc",
+    "website": "https://haswellgreens.com/"
+  },
+  {
+    "id": 134,
+    "name": "Have & Meyer",
+    "handle": "haveandmeyer",
+    "website": "http://haveandmeyer.com/"
+  },
+  {
+    "id": 152,
+    "name": "House of Yes",
+    "handle": "houseofyesnyc",
+    "website": "http://houseofyes.org/"
+  },
+  {
+    "id": 218,
+    "name": "Hutong New York",
+    "handle": "hutongnyc",
+    "website": "https://www.hutong-nyc.com/?utm_source=gbp&utm_medium=organic&utm_campaign=gbp-website"
+  },
+  {
+    "id": 194,
+    "name": "IKON NEW YORK",
+    "handle": "ikon.newyork",
+    "website": "https://www.ikonnyc.com/"
+  },
+  {
+    "id": 124,
+    "name": "Ichiran",
+    "handle": "ichiran_ny",
+    "website": "https://www.ichiranusa.com/location/ichiran-midtown/"
+  },
+  {
+    "id": 61,
+    "name": "Il Cantinori",
+    "handle": "il_cantinori_restaurant",
+    "website": "http://www.ilcantinori.com/"
+  },
+  {
+    "id": 141,
+    "name": "Industry Kitchen",
+    "handle": "industrykitchen",
+    "website": "https://industry-kitchen.com/"
+  },
+  {
+    "id": 187,
+    "name": "Isla & Co - Lower East Side",
+    "handle": "islaandco",
+    "website": "https://www.isla-co.com/les"
+  },
+  {
+    "id": 208,
+    "name": "Keens Steakhouse",
+    "handle": "keenssteakhouse",
+    "website": "http://www.keens.com/"
+  },
+  {
+    "id": 100,
+    "name": "LALYN",
+    "handle": "wix",
+    "website": "http://www.lalynnyc.com/"
+  },
+  {
+    "id": 130,
+    "name": "Lagos TSQ",
+    "handle": "lagosnyc",
+    "website": "https://www.lagosnyc.com/"
+  },
+  {
+    "id": 90,
+    "name": "Laissez Faire",
+    "handle": "laissezfaire.nyc",
+    "website": "https://laissezfaire.nyc/"
+  },
+  {
+    "id": 229,
+    "name": "Listen Brooklyn",
+    "handle": "listenbrooklyn",
+    "website": "https://listenbrooklyn.com/"
+  },
+  {
+    "id": 228,
+    "name": "Lost in Paradise Rooftop",
+    "handle": "lostinparadiserooftop",
+    "website": "https://www.lostinparadiserooftop.com/"
+  },
+  {
+    "id": 49,
+    "name": "Love's Club",
+    "handle": "lovesclubnyc",
+    "website": "http://lovesclubnyc.com/"
+  },
+  {
+    "id": 182,
+    "name": "Lucky Charlie",
+    "handle": "luckycharliebk",
+    "website": "http://www.luckycharliebk.com/"
+  },
+  {
+    "id": 198,
+    "name": "L\u00c9L\u00c9",
+    "handle": "lelenyc",
+    "website": "https://lelenyc.com/"
+  },
+  {
+    "id": 217,
+    "name": "Madeline's",
+    "handle": "madelinesnyc",
+    "website": "https://www.madelinesnyc.com/"
+  },
+  {
+    "id": 158,
+    "name": "Magic Hour Rooftop Bar & Lounge",
+    "handle": "magichourny",
+    "website": "http://moxytimessquare.com/dining/magic-hour-rooftop-bar-lounge/"
+  },
+  {
+    "id": 29,
+    "name": "Marquee New York",
+    "handle": "marqueeny",
+    "website": "https://taogroup.com/venues/marquee-new-york/"
+  },
+  {
+    "id": 171,
+    "name": "Medium Rare",
+    "handle": "mediumrare_restaurant",
+    "website": "https://www.mediumrarerestaurant.com/"
+  },
+  {
+    "id": 54,
+    "name": "Midnight Spaghetti",
+    "handle": "eatmidnightspaghetti",
+    "website": "http://eatmidnightspaghetti.com/"
+  },
+  {
+    "id": 22,
+    "name": "Mira Mediterranean & Hookah Lounge",
+    "handle": "miranyc34",
+    "website": "https://miranyc34.com/"
+  },
+  {
+    "id": 30,
+    "name": "Monkey Bar",
+    "handle": "monkeybar_ny",
+    "website": "https://nycmonkeybar.com/"
+  },
+  {
+    "id": 101,
+    "name": "Morton's The Steakhouse",
+    "handle": "mortonssteak",
+    "website": "https://www.mortons.com/location/mortons-the-steakhouse-new-york-ny-manhattan/"
+  },
+  {
+    "id": 57,
+    "name": "Narkara",
+    "handle": "o1",
+    "website": "https://www.narkaranyc.com/"
+  },
+  {
+    "id": 167,
+    "name": "Nizza",
+    "handle": "nizzanyc",
+    "website": "https://nizzanyc.com/"
+  },
+  {
+    "id": 181,
+    "name": "Nowadays",
+    "handle": "nowadaysnyc",
+    "website": "http://nowadays.nyc/"
+  },
+  {
+    "id": 173,
+    "name": "Nubeluz",
+    "handle": "nubeluzbyjose",
+    "website": "https://www.nubeluzbyjose.com/"
+  },
+  {
+    "id": 104,
+    "name": "OUT OF ORDINARY",
+    "handle": "outofordinary.nyc",
+    "website": "https://www.ooonewyork.com/"
+  },
+  {
+    "id": 82,
+    "name": "One if by Land, Two if by Sea",
+    "handle": "oneifbylandnyc",
+    "website": "http://www.oneifbyland.com/"
+  },
+  {
+    "id": 55,
+    "name": "Oscar Wilde",
+    "handle": "oscarwildenyc",
+    "website": "http://oscarwildenyc.com/"
+  },
+  {
+    "id": 165,
+    "name": "Osteria 57",
+    "handle": "osteria57",
+    "website": "http://www.osteria57.com/"
+  },
+  {
+    "id": 169,
+    "name": "P.S. Kitchen",
+    "handle": "pskitchennyc",
+    "website": "https://www.ps-kitchen.com/"
+  },
+  {
+    "id": 16,
+    "name": "PHD Rooftop Lounge at Dream Downtown",
+    "handle": "phdrooftopny",
+    "website": "https://taogroup.com/venues/phd-lounge-new-york/"
+  },
+  {
+    "id": 112,
+    "name": "Pacha New York",
+    "handle": "pachaofficialnyc",
+    "website": "https://www.pacha-nyc.com/"
+  },
+  {
+    "id": 234,
+    "name": "Palma",
+    "handle": "palmanyc",
+    "website": "https://www.palmanyc.com/"
+  },
+  {
+    "id": 164,
+    "name": "Peak with Priceless Restaurant & Bar",
+    "handle": "peakhudsonyards",
+    "website": "https://taogroup.com/venues/peak-restaurant-edge-new-york/"
+  },
+  {
+    "id": 86,
+    "name": "Peasant",
+    "handle": "peasantnyc",
+    "website": "http://www.peasantnyc.com/"
+  },
+  {
+    "id": 163,
+    "name": "Penny",
+    "handle": "penny_newyork",
+    "website": "http://penny-nyc.com/"
+  },
+  {
+    "id": 159,
+    "name": "Playoffs Sport Lounge",
+    "handle": "playoffsny",
+    "website": "https://www.playoffsnyc.com/"
+  },
+  {
+    "id": 120,
+    "name": "Quality Meats",
+    "handle": "qualitymeats_",
+    "website": "http://qualitymeatsnyc.com/"
+  },
+  {
+    "id": 33,
+    "name": "Rampoldi",
+    "handle": "rampoldinewyork",
+    "website": "https://rampoldinyc.com/"
+  },
+  {
+    "id": 106,
+    "name": "Record Room",
+    "handle": "recordroom",
+    "website": "https://www.recordroomlic.com/"
+  },
+  {
+    "id": 81,
+    "name": "Rosa's At Park",
+    "handle": "rosasatpark",
+    "website": "http://rosaatpark.com/"
+  },
+  {
+    "id": 145,
+    "name": "Sake No Hana",
+    "handle": "sakenohana",
+    "website": "https://taogroup.com/venues/sake-no-hana-new-york/"
+  },
+  {
+    "id": 2,
+    "name": "Sei Less",
+    "handle": "seilessnyc",
+    "website": "https://www.seiless.com/"
+  },
+  {
+    "id": 47,
+    "name": "Serendipity 3 - Times Square",
+    "handle": "serendipity3nyc",
+    "website": "https://serendipity3.com/"
+  },
+  {
+    "id": 178,
+    "name": "Shoo Shoo East",
+    "handle": "shooshoo_nyc",
+    "website": "https://www.shooshoonyc.com/"
+  },
+  {
+    "id": 118,
+    "name": "Sirrah",
+    "handle": "sirrahnewyork",
+    "website": "http://sirrahny.com/"
+  },
+  {
+    "id": 71,
+    "name": "Sky Wise Lounge",
+    "handle": "skywiselounge",
+    "website": "http://www.skywiselounge.com/"
+  },
+  {
+    "id": 119,
+    "name": "Soda Club",
+    "handle": "overthrowhospitality",
+    "website": "https://www.overthrowhospitality.com/"
+  },
+  {
+    "id": 99,
+    "name": "Solas",
+    "handle": "solasbarnyc",
+    "website": "http://solasbar.com/"
+  },
+  {
+    "id": 185,
+    "name": "Soothr",
+    "handle": "soothr_nyc",
+    "website": "http://soothrnyc.com/"
+  },
+  {
+    "id": 191,
+    "name": "Superbueno",
+    "handle": "superbuenonyc",
+    "website": "http://www.superbuenonyc.com/"
+  },
+  {
+    "id": 48,
+    "name": "TAB\u00da - Williamsburg",
+    "handle": "tabu.bk",
+    "website": "http://tabubk.com/"
+  },
+  {
+    "id": 95,
+    "name": "THE PENTHOUSE",
+    "handle": "thepenthouseny",
+    "website": "http://www.thepenthouseny.com/"
+  },
+  {
+    "id": 149,
+    "name": "TOKIODELIC",
+    "handle": "tokiodelic_official",
+    "website": "https://tokiodelic.com/"
+  },
+  {
+    "id": 210,
+    "name": "Take Care",
+    "handle": "takecare.newyork",
+    "website": "https://www.takecare.nyc/"
+  },
+  {
+    "id": 219,
+    "name": "Tarallucci e Vino Upper West Side",
+    "handle": "taralluccinyc",
+    "website": "https://www.taralluccievino.net/upper-west-side-location"
+  },
+  {
+    "id": 204,
+    "name": "The Carnegie Club",
+    "handle": "thecarnegieclubnyc",
+    "website": "http://www.carnegie-club.com/"
+  },
+  {
+    "id": 132,
+    "name": "The Concord NYC",
+    "handle": "theconcord.nyc",
+    "website": "https://www.theconcordnyc.com/"
+  },
+  {
+    "id": 183,
+    "name": "The Cutting Room",
+    "handle": "cuttingroomnyc",
+    "website": "http://thecuttingroomnyc.com/"
+  },
+  {
+    "id": 88,
+    "name": "The Delancey Rooftop",
+    "handle": "thedelancey",
+    "website": "https://www.thedelancey.com/"
+  },
+  {
+    "id": 108,
+    "name": "The Django",
+    "handle": "thedjangonyc",
+    "website": "http://www.thedjangonyc.com/"
+  },
+  {
+    "id": 148,
+    "name": "The Duplex",
+    "handle": "theduplex_nyc",
+    "website": "https://www.theduplex.com/"
+  },
+  {
+    "id": 190,
+    "name": "The Eighth",
+    "handle": "theeighthnyc",
+    "website": "https://theeighth.nyc/"
+  },
+  {
+    "id": 151,
+    "name": "The Munchies",
+    "handle": "placejoys",
+    "website": "https://the-munchies.shop/"
+  },
+  {
+    "id": 142,
+    "name": "The Red Lion | NYC",
+    "handle": "redlionnyc",
+    "website": "http://redlionnyc.com/"
+  },
+  {
+    "id": 122,
+    "name": "The Red Pavilion",
+    "handle": "redpavilionbk",
+    "website": "https://theredpavilion.com/"
+  },
+  {
+    "id": 135,
+    "name": "The River Caf\u00e9",
+    "handle": "therivercafe",
+    "website": "https://www.rivercafe.com/"
+  },
+  {
+    "id": 109,
+    "name": "The Sultan Room",
+    "handle": "thesultanroom",
+    "website": "http://thesultanroom.com/"
+  },
+  {
+    "id": 174,
+    "name": "The Three Monkeys",
+    "handle": "thethreemonkeysbarnyc",
+    "website": "http://thethreemonkeysbar.com/"
+  },
+  {
+    "id": 231,
+    "name": "The Tyger",
+    "handle": "thetygernyc",
+    "website": "http://www.thetygernyc.com/"
+  },
+  {
+    "id": 63,
+    "name": "Tiki Chick",
+    "handle": "tikichickworld",
+    "website": "https://www.tikichick.com/"
+  },
+  {
+    "id": 155,
+    "name": "Toloache",
+    "handle": "toloachenyc",
+    "website": "http://toloachenyc.com/"
+  },
+  {
+    "id": 115,
+    "name": "Tosokchon NYC",
+    "handle": "tosokchon_nyc",
+    "website": "https://www.tosokchonnyc.com/"
+  },
+  {
+    "id": 91,
+    "name": "Unveiled New York",
+    "handle": "unveiled_nyc",
+    "website": "http://unveilednewyork.com/"
+  },
+  {
+    "id": 137,
+    "name": "VIDA SteakHouse NYC",
+    "handle": "vida.nyc",
+    "website": "http://www.vidasteakhouse.com/"
+  },
+  {
+    "id": 116,
+    "name": "Verlaine",
+    "handle": "verlainenyc",
+    "website": "http://www.verlainenyc.com/"
+  },
+  {
+    "id": 87,
+    "name": "Watermark",
+    "handle": "watermarkny",
+    "website": "https://watermarkny.com/"
+  },
+  {
+    "id": 200,
+    "name": "Webster Hall",
+    "handle": "websterhall",
+    "website": "https://www.websterhall.com/"
+  },
+  {
+    "id": 197,
+    "name": "Westlight",
+    "handle": "westlightnyc",
+    "website": "https://www.westlightnyc.com/menus/"
+  },
+  {
+    "id": 74,
+    "name": "Wildcard Bar",
+    "handle": "wildcardbar.nyc",
+    "website": "https://wildcardbar.nyc/"
+  },
+  {
+    "id": 110,
+    "name": "ZEN",
+    "handle": "zenloungenyc",
+    "website": "https://zenloungenyc.com/"
+  },
+  {
+    "id": 207,
+    "name": "Zama Omakase",
+    "handle": "zamaomakase.ny",
+    "website": "https://www.zamaomakase.com/"
+  },
+  {
+    "id": 67,
+    "name": "Zinc Bar",
+    "handle": "zincbar",
+    "website": "https://www.zincbar.com/"
+  },
+  {
+    "id": 205,
+    "name": "Zou Zou\u2019s",
+    "handle": "zouzousnyc",
+    "website": "http://www.zouzousnyc.com/"
+  }
+]
