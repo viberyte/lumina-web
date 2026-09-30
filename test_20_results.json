@@ -1,0 +1,2425 @@
+[
+  {
+    "name": "Blue Note",
+    "address": "131 W 3rd St, New York, NY 10012",
+    "category": "Live music venue",
+    "rating": 4.2,
+    "price": null,
+    "creators": 3,
+    "evidence_count": 3,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "tourist_must_see",
+          "confidence": 0.6,
+          "source": "model_knowledge"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "chill",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "intimate",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "sophisticated",
+          "confidence": 0.7,
+          "source": "model_knowledge"
+        }
+      ],
+      "music": [
+        {
+          "name": "jazz",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "live_band",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "live_music",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "late_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "main_event",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "cocktail_stop",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "music_lovers",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "tourists",
+          "confidence": 0.6,
+          "source": "model_knowledge"
+        }
+      ],
+      "energy": {
+        "level": "medium",
+        "confidence": 0.7,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Blue Note is well-known for its jazz performances, making it a popular choice for date nights and music lovers. The vibe is intimate and chill, supported by TikTok evidence.",
+      "known_venue": true
+    },
+    "violations": [
+      "features:intimate_dining"
+    ],
+    "sources": {
+      "observed": 3,
+      "inferred": 8,
+      "model_knowledge": 5
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Peasant",
+    "address": "194 Elizabeth St, New York, NY 10012",
+    "category": "Italian restaurant",
+    "rating": 4.5,
+    "price": null,
+    "creators": 3,
+    "evidence_count": 3,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "birthday",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "cozy",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "romantic",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "intimate",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "background_music",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "wine_focused",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "private_dining",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "brunch",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "friend_groups",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "foodies",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_low",
+        "confidence": 0.6,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Peasant is highlighted as a romantic and cozy spot, ideal for date nights and intimate gatherings, supported by multiple TikTok posts.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 4,
+      "inferred": 11
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Laissez Faire",
+    "address": "10 Theatre Alley, New York, NY 10038",
+    "category": "Cocktail bar",
+    "rating": 4,
+    "price": null,
+    "creators": 2,
+    "evidence_count": 2,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "after_work",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "guys_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "energetic",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "fun",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "trendy",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "rnb",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "afrobeats",
+          "confidence": 0.7,
+          "source": "observed"
+        },
+        {
+          "name": "dj_sets",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "dance_floor",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "craft_cocktails",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "late_night",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "weekend_only",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "cocktail_stop",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "main_event",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "nightlife_crowd",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "music_lovers",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "high",
+        "confidence": 0.7,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Laissez Faire is known for its vibrant nightlife and music events, making it a popular choice for energetic gatherings and parties.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "inferred": 15,
+      "observed": 2
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "LIMITED",
+    "overall_quality": "GOOD"
+  },
+  {
+    "name": "Monkey Bar",
+    "address": "60 E 54th St, New York, NY 10022",
+    "category": "American restaurant",
+    "rating": 4.5,
+    "price": null,
+    "creators": 2,
+    "evidence_count": 3,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "after_work",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "lively",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "cozy",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "trendy",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "background_music",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "outdoor_seating",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "craft_cocktails",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "late_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "friend_groups",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_high",
+        "confidence": 0.6,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Monkey Bar is recognized for its lively atmosphere and is a popular choice for date nights and casual gatherings, as evidenced by TikTok posts.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 3,
+      "inferred": 11
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Village Vanguard",
+    "address": "178 7th Ave S, New York, NY 10014",
+    "category": "Jazz club",
+    "rating": 4.6,
+    "price": null,
+    "creators": 2,
+    "evidence_count": 2,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "solo_dining",
+          "confidence": 0.7,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "first_date",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "intimate",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "chill",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "sophisticated",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "jazz",
+          "confidence": 1.0,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "live_band",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        }
+      ],
+      "features": [
+        {
+          "name": "live_music",
+          "confidence": 1.0,
+          "source": "model_knowledge"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "late_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "standalone",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "first_stop",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "music_lovers",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_low",
+        "confidence": 0.7,
+        "source": "model_knowledge"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Village Vanguard is a well-known jazz club with an intimate atmosphere, ideal for couples and music lovers. The TikTok evidence supports its reputation as a top jazz venue.",
+      "known_venue": true
+    },
+    "violations": [
+      "features:intimate_seating"
+    ],
+    "sources": {
+      "model_knowledge": 9,
+      "inferred": 7
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "LIMITED",
+    "overall_quality": "GOOD"
+  },
+  {
+    "name": "Gitano NYC",
+    "address": "89 South St, New York, NY 10038",
+    "category": "Mexican restaurant",
+    "rating": 4.5,
+    "price": null,
+    "creators": 4,
+    "evidence_count": 4,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "group_dinner",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "birthday",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "casual_hangout",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "energetic",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "trendy",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "fun",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "background_music",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "dj_sets",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "waterfront",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "outdoor_seating",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "craft_cocktails",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "happy_hour_time",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "cocktail_stop",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "friend_groups",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "cocktail_enthusiasts",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_high",
+        "confidence": 0.8,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Gitano NYC is a vibrant waterfront restaurant known for group gatherings and celebrations, supported by multiple TikTok posts highlighting its atmosphere and features.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 6,
+      "inferred": 12
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "EXCELLENT",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "PHD Rooftop Lounge at Dream Downtown",
+    "address": "355 W 16th St, New York, NY 10011",
+    "category": "Night club",
+    "rating": 3.1,
+    "price": null,
+    "creators": 3,
+    "evidence_count": 4,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "birthday",
+          "confidence": 0.7,
+          "source": "observed"
+        },
+        {
+          "name": "guys_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "lively",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "energetic",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "trendy",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "hiphop",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "dj_sets",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "bottle_service",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "rooftop",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "dance_floor",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "late_night",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "weekend_only",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "main_event",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "pregame",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "nightlife_crowd",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "cocktail_enthusiasts",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "high",
+        "confidence": 0.8,
+        "source": "model_knowledge"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "PHD Rooftop Lounge is a popular nightlife destination known for its energetic atmosphere and hip hop music, making it ideal for celebrations and group outings.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 1,
+      "inferred": 10,
+      "model_knowledge": 6
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "The Django",
+    "address": "The Roxy Hotel, Cellar Level, 2 6th Ave, New York, NY 10013",
+    "category": "Jazz club",
+    "rating": 4.1,
+    "price": null,
+    "creators": 4,
+    "evidence_count": 4,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "solo_dining",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "romantic",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "chill",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "sophisticated",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "jazz",
+          "confidence": 1.0,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "live_band",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        }
+      ],
+      "features": [
+        {
+          "name": "live_music",
+          "confidence": 1.0,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "private_dining",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "late_night",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "standalone",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "first_stop",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "music_lovers",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_low",
+        "confidence": 0.7,
+        "source": "model_knowledge"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "The Django is a well-regarded jazz club known for its romantic ambiance and live music, making it a great choice for date nights and intimate gatherings.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "model_knowledge": 7,
+      "inferred": 9
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "LIMITED",
+    "overall_quality": "GOOD"
+  },
+  {
+    "name": "The Sultan Room",
+    "address": "234 Starr St, Brooklyn, NY 11237",
+    "category": "Night club",
+    "rating": 4.5,
+    "price": null,
+    "creators": 3,
+    "evidence_count": 5,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "after_work",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "guys_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "girls_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "bachelor_bachelorette",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "energetic",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "lively",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "fun",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "buzzy",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "afrobeats",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "dancehall",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "amapiano",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "rnb",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "dance_floor",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "live_music",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "dj",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        }
+      ],
+      "time": [
+        {
+          "name": "late_night",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "weekend_only",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "main_event",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "pregame",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "nightlife_crowd",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "music_lovers",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "friend_groups",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "high",
+        "confidence": 0.9,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "The Sultan Room is known for its vibrant Afrobeats and R&B parties, making it a popular spot for nightlife and celebrations.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "inferred": 16,
+      "observed": 3,
+      "model_knowledge": 4
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "LIMITED",
+    "overall_quality": "GOOD"
+  },
+  {
+    "name": "Cecconi's DUMBO",
+    "address": "55 Water St, Brooklyn, NY 11201",
+    "category": "Restaurant",
+    "rating": 4,
+    "price": null,
+    "creators": 3,
+    "evidence_count": 3,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "special_occasion",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "romantic",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "elegant",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "cozy",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "background_music",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "no_music",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "waterfront",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "outdoor_seating",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "instagrammable",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "brunch",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "standalone",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "special_occasion_seekers",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "foodies",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_low",
+        "confidence": 0.7,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Cecconi's DUMBO is recognized for its romantic atmosphere and stunning views, making it ideal for date nights and special occasions.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 2,
+      "inferred": 13,
+      "model_knowledge": 3
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Pacha New York",
+    "address": "140 Stewart Ave, Brooklyn, NY 11237",
+    "category": "Night club",
+    "rating": 3.9,
+    "price": null,
+    "creators": 3,
+    "evidence_count": 3,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "after_work",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "guys_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "energetic",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "lively",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "fun",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "house",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "dj_sets",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "dance_floor",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "dj",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        }
+      ],
+      "time": [
+        {
+          "name": "late_night",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "weekend_only",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "main_event",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "pregame",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "nightlife_crowd",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "music_lovers",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "friend_groups",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "high",
+        "confidence": 0.9,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Pacha New York is well-known for its house music scene and vibrant nightlife, making it a hotspot for energetic gatherings.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "inferred": 11,
+      "observed": 2,
+      "model_knowledge": 4
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "LIMITED",
+    "overall_quality": "GOOD"
+  },
+  {
+    "name": "Marquee New York",
+    "address": "289 10th Ave, New York, NY 10001",
+    "category": "Night club",
+    "rating": 2.9,
+    "price": null,
+    "creators": 2,
+    "evidence_count": 3,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "birthday",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "guys_night",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "energetic",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "lively",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "fun",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "hiphop",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "dj_sets",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "dance_floor",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "bottle_service",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "late_night",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "weekend_only",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "main_event",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "pregame",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "nightlife_crowd",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "friend_groups",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "cocktail_enthusiasts",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "very_high",
+        "confidence": 0.9,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Marquee New York is recognized for its high-energy hip hop scene and is a popular choice for celebrations and nightlife.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "inferred": 13,
+      "observed": 1,
+      "model_knowledge": 3
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "LIMITED",
+    "overall_quality": "GOOD"
+  },
+  {
+    "name": "The Concord NYC",
+    "address": "92 Ludlow St, New York, NY 10002",
+    "category": "Night club",
+    "rating": 4,
+    "price": null,
+    "creators": 2,
+    "evidence_count": 2,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "celebration",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "bachelor_bachelorette",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "guys_night",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "girls_night",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "after_work",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "energetic",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "lively",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "trendy",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "reggaeton",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "latin",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "dj_sets",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "dance_floor",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "bottle_service",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "outdoor_seating",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "late_night",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "weekend_only",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "main_event",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "pregame",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "nightlife_crowd",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "friend_groups",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "cocktail_enthusiasts",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "high",
+        "confidence": 0.9,
+        "source": "observed"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "The venue is known for its vibrant nightlife and Latin music, making it ideal for celebrations and group outings.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 6,
+      "inferred": 15
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "EXCELLENT",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Smalls Jazz Club",
+    "address": "183 W 10th St, New York, NY 10014",
+    "category": "Jazz club",
+    "rating": 4.6,
+    "price": null,
+    "creators": 3,
+    "evidence_count": 3,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "solo_dining",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "intimate",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "chill",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "romantic",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "jazz",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "live_band",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "background_music",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "live_music",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "private_dining",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "happy_hour_time",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "standalone",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "music_lovers",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "foodies",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_low",
+        "confidence": 0.8,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "The venue is celebrated for its intimate jazz performances, making it a perfect spot for romantic evenings.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 3,
+      "inferred": 15
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "House of Yes",
+    "address": "2 Wyckoff Ave, Brooklyn, NY 11237",
+    "category": "Event venue",
+    "rating": 4.5,
+    "price": null,
+    "creators": 1,
+    "evidence_count": 1,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "group_dinner",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "energetic",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "fun",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "trendy",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "no_music",
+          "confidence": 0.6,
+          "source": "inferred"
+        },
+        {
+          "name": "live_band",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "outdoor_seating",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "instagrammable",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "late_night",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "main_event",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "cocktail_stop",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "friend_groups",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "cocktail_enthusiasts",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_high",
+        "confidence": 0.7,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "The venue is known for its vibrant atmosphere and is popular for group outings and celebrations.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 1,
+      "inferred": 15
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Zou Zou\u2019s",
+    "address": "385 9th Ave Suite 85, New York, NY 10001",
+    "category": "Mediterranean restaurant",
+    "rating": 4.4,
+    "price": null,
+    "creators": 1,
+    "evidence_count": 1,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "bachelor_bachelorette",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "group_dinner",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "upscale",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "cozy",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "trendy",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "background_music",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "no_music",
+          "confidence": 0.5,
+          "source": "inferred"
+        }
+      ],
+      "features": [
+        {
+          "name": "private_dining",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "instagrammable",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "brunch",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "standalone",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "friend_groups",
+          "confidence": 0.7,
+          "source": "inferred"
+        },
+        {
+          "name": "cocktail_enthusiasts",
+          "confidence": 0.6,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium",
+        "confidence": 0.6,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "The venue is well-suited for upscale gatherings and celebrations, particularly for bachelorette parties.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "observed": 1,
+      "inferred": 15
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Buddakan",
+    "address": "75 9th Ave, New York, NY 10011",
+    "category": "Restaurant",
+    "rating": 4.4,
+    "price": null,
+    "creators": 2,
+    "evidence_count": 2,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "birthday",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "romantic",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "intimate",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "upscale",
+          "confidence": 0.7,
+          "source": "model_knowledge"
+        }
+      ],
+      "music": [
+        {
+          "name": "no_music",
+          "confidence": 0.6,
+          "source": "model_knowledge"
+        }
+      ],
+      "features": [
+        {
+          "name": "private_dining",
+          "confidence": 0.7,
+          "source": "model_knowledge"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "special_occasion_seekers",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium",
+        "confidence": 0.7,
+        "source": "model_knowledge"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Buddakan is known for its romantic and upscale atmosphere, making it ideal for date nights and celebrations. The TikTok evidence supports its intimate vibe.",
+      "known_venue": true
+    },
+    "violations": [
+      "features:candlelit"
+    ],
+    "sources": {
+      "observed": 2,
+      "inferred": 6,
+      "model_knowledge": 4
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Soda Club",
+    "address": "95 Avenue A, New York, NY 10009",
+    "category": "Restaurant",
+    "rating": 4.6,
+    "price": null,
+    "creators": 1,
+    "evidence_count": 1,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "date_night",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "cozy",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "intimate",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "no_music",
+          "confidence": 0.6,
+          "source": "model_knowledge"
+        }
+      ],
+      "features": [],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "couples",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "foodies",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium_low",
+        "confidence": 0.6,
+        "source": "model_knowledge"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Soda Club is highlighted for its cozy atmosphere and candlelit dinners, making it suitable for intimate occasions like date nights.",
+      "known_venue": true
+    },
+    "violations": [
+      "features:candlelit"
+    ],
+    "sources": {
+      "observed": 2,
+      "inferred": 5,
+      "model_knowledge": 2
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  },
+  {
+    "name": "Quality Meats",
+    "address": "57 W 58th St, New York, NY 10019",
+    "category": "American restaurant",
+    "rating": 4.5,
+    "price": null,
+    "creators": 1,
+    "evidence_count": 1,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "business_dinner",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "celebration",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "upscale",
+          "confidence": 0.9,
+          "source": "model_knowledge"
+        },
+        {
+          "name": "sophisticated",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "no_music",
+          "confidence": 0.6,
+          "source": "model_knowledge"
+        }
+      ],
+      "features": [
+        {
+          "name": "private_dining",
+          "confidence": 0.7,
+          "source": "model_knowledge"
+        }
+      ],
+      "time": [
+        {
+          "name": "dinner",
+          "confidence": 0.8,
+          "source": "model_knowledge"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "dinner_anchor",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "business",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "couples",
+          "confidence": 0.7,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "medium",
+        "confidence": 0.7,
+        "source": "model_knowledge"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Quality Meats is recognized for its upscale dining experience, making it suitable for business dinners and celebrations.",
+      "known_venue": true
+    },
+    "violations": [],
+    "sources": {
+      "inferred": 6,
+      "model_knowledge": 4
+    },
+    "profile_quality": "GOOD",
+    "discovery_quality": "LIMITED",
+    "overall_quality": "GOOD"
+  },
+  {
+    "name": "Bar Revival",
+    "address": "161 Ludlow St, New York, NY 10002",
+    "category": "Bar",
+    "rating": 4.7,
+    "price": null,
+    "creators": 2,
+    "evidence_count": 3,
+    "intelligence": {
+      "intents": [
+        {
+          "name": "happy_hour",
+          "confidence": 0.9,
+          "source": "observed"
+        },
+        {
+          "name": "girls_night",
+          "confidence": 0.8,
+          "source": "inferred"
+        },
+        {
+          "name": "guys_night",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "vibes": [
+        {
+          "name": "cozy",
+          "confidence": 0.8,
+          "source": "observed"
+        },
+        {
+          "name": "fun",
+          "confidence": 0.9,
+          "source": "inferred"
+        }
+      ],
+      "music": [
+        {
+          "name": "background_music",
+          "confidence": 0.7,
+          "source": "model_knowledge"
+        }
+      ],
+      "features": [
+        {
+          "name": "outdoor_seating",
+          "confidence": 0.6,
+          "source": "model_knowledge"
+        }
+      ],
+      "time": [
+        {
+          "name": "happy_hour_time",
+          "confidence": 0.9,
+          "source": "observed"
+        }
+      ],
+      "flow_roles": [
+        {
+          "name": "cocktail_stop",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "best_for": [
+        {
+          "name": "friend_groups",
+          "confidence": 0.9,
+          "source": "inferred"
+        },
+        {
+          "name": "nightlife_crowd",
+          "confidence": 0.8,
+          "source": "inferred"
+        }
+      ],
+      "energy": {
+        "level": "high",
+        "confidence": 0.8,
+        "source": "inferred"
+      },
+      "insufficient_evidence": [],
+      "reasoning": "Bar Revival is popular for its happy hour and cozy atmosphere, making it a great spot for groups and nightlife.",
+      "known_venue": true
+    },
+    "violations": [
+      "features:cocktail_stop"
+    ],
+    "sources": {
+      "observed": 3,
+      "inferred": 6,
+      "model_knowledge": 2
+    },
+    "profile_quality": "EXCELLENT",
+    "discovery_quality": "GOOD",
+    "overall_quality": "EXCELLENT"
+  }
+]
