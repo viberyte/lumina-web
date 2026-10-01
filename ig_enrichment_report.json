@@ -1,0 +1,1586 @@
+[
+  {
+    "name": "230 Fifth Rooftop Bar",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "rooftop",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "verified"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "3 Dollar Bill",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "99 Scott Studio",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "A10",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "intimate",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "live_music",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Adobo Mexican Grill",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Alfie's Kitchen & Craft Beer Bar",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "time",
+        "name": "brunch",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Alice",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "intimate",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Amaru Bar",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Amber Room",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Aqua Roma | New York",
+    "corroborated": [
+      {
+        "type": "time",
+        "name": "dinner",
+        "existing_conf": 0.7,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Arno",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "sophisticated",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "wine_focused",
+        "conf": 0.5
+      },
+      {
+        "type": "vibe",
+        "name": "elegant",
+        "conf": 0.5
+      },
+      {
+        "type": "vibe",
+        "name": "artsy",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Arthur's Tavern",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Ayah Restaurant",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "tasting_menu",
+        "conf": 0.5
+      }
+    ],
+    "rejected": [
+      "tax:vibe:celebration"
+    ]
+  },
+  {
+    "name": "A\u00f1ejo",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Bar Revival",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "BarDough",
+    "corroborated": [
+      {
+        "type": "best_for",
+        "name": "friend_groups",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "inferred"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Beatbox",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Becco",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "craft_cocktails",
+        "conf": 0.5
+      }
+    ],
+    "rejected": [
+      "gate:vibe:energetic"
+    ]
+  },
+  {
+    "name": "Bella Union",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Blue Hour",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Blue Note",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "live_music",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "verified"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Bowery Meat Company",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Brooklyn Chop House Steakhouse Times Square",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:signature_cocktails"
+    ]
+  },
+  {
+    "name": "Buddakan",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:dim_sum_hour"
+    ]
+  },
+  {
+    "name": "Butter Smashburgers",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:smash_burgers"
+    ]
+  },
+  {
+    "name": "Cafe Erzulie",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:vibe:nostalgic"
+    ]
+  },
+  {
+    "name": "Cath\u00e9drale",
+    "corroborated": [
+      {
+        "type": "best_for",
+        "name": "couples",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "inferred"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "buzzy",
+        "conf": 0.75
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Cave",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "energetic",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Cecconi's DUMBO",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Cellar Dog",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Chi Restaurant & Bar",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "private_dining",
+        "conf": 0.5
+      },
+      {
+        "type": "time",
+        "name": "happy_hour_time",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Connect Astoria",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "energetic",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "dance_floor",
+        "conf": 0.5
+      },
+      {
+        "type": "energy",
+        "name": "high",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Crazy Pizza",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Da Andrea Chelsea",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "energetic",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Da Nico",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "romantic",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Daisy's Diner & Bar",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "existing_conf": 0.7,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Dead Letter No. 9",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Dig Inn",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:seasonal_menu",
+      "tax:feature:seasonal_menu"
+    ]
+  },
+  {
+    "name": "Din Tai Fung",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Don Angie",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Drift BK Restaurant & Lounge",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Duomo51",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:terrace",
+      "tax:feature:breathtaking_views",
+      "tax:feature:al_fresco_dining",
+      "tax:feature:elegant_escape",
+      "tax:feature:event_space",
+      "tax:feature:stunning_views",
+      "tax:feature:midtown_views"
+    ]
+  },
+  {
+    "name": "Dutch Fred's",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Eccolo Italian Restaurant",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      }
+    ],
+    "rejected": [
+      "gate:feature:private_dining"
+    ]
+  },
+  {
+    "name": "Ellen's Stardust Diner",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Emily",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Empanada Mama LES",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "existing_conf": 0.6,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Essex",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Forsythia NYC",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Gaia Restaurant",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "romantic",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "private_dining",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      }
+    ],
+    "rejected": [
+      "gate:feature:live_music"
+    ]
+  },
+  {
+    "name": "Golden Diner",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Harbor NYC Rooftop",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Haswell Green's",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Have & Meyer",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "chill",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "IKON NEW YORK",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Ichiran",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Industry Kitchen",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "waterfront",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Isla & Co - Lower East Side",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Keens Steakhouse",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Lawn Club",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:lawn games"
+    ]
+  },
+  {
+    "name": "Lost in Paradise Rooftop",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "rooftop",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "verified"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Love's Club",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Lucinda's",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Lucky Charlie",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:coal-fired pizza oven"
+    ]
+  },
+  {
+    "name": "L\u00c9L\u00c9",
+    "corroborated": [
+      {
+        "type": "intent",
+        "name": "date_night",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      },
+      {
+        "type": "time",
+        "name": "dinner",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      },
+      {
+        "type": "best_for",
+        "name": "couples",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      },
+      {
+        "type": "energy",
+        "name": "medium",
+        "existing_conf": 0.7,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "energetic",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "craft_cocktails",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Madeline's",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Magic Hour Rooftop Bar & Lounge",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Marquee New York",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Medium Rare",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Midnight Spaghetti",
+    "corroborated": [
+      {
+        "type": "time",
+        "name": "late_night",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Milk & Roses",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Mira Mediterranean & Hookah Lounge",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Monkey Bar",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "classic",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Morton's The Steakhouse",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Motek Flatiron",
+    "corroborated": [
+      {
+        "type": "best_for",
+        "name": "friend_groups",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "conf": 0.5
+      },
+      {
+        "type": "time",
+        "name": "dinner",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Nizza",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Nowadays",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Nubeluz",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "luxurious",
+        "conf": 0.5
+      }
+    ],
+    "rejected": [
+      "gate:feature:rooftop"
+    ]
+  },
+  {
+    "name": "One if by Land, Two if by Sea",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "romantic",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      },
+      {
+        "type": "best_for",
+        "name": "couples",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "inferred"
+      },
+      {
+        "type": "time",
+        "name": "dinner",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "inferred"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Oregano",
+    "corroborated": [
+      {
+        "type": "intent",
+        "name": "date_night",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "romantic",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Osteria 57",
+    "corroborated": [
+      {
+        "type": "intent",
+        "name": "date_night",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      },
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "P.S. Kitchen",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "chill",
+        "existing_conf": 0.7,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "intent",
+        "name": "brunch",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "craft_cocktails",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Pacha New York",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "energetic",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      },
+      {
+        "type": "feature",
+        "name": "dance_floor",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Palma",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "intimate",
+        "existing_conf": 0.7,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "romantic",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "private_dining",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Peak with Priceless Restaurant & Bar",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "luxurious",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      },
+      {
+        "type": "feature",
+        "name": "skyline_views",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Peasant",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "classic",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "private_dining",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Quality Meats",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Rampoldi",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "elegant",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Record Room",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Rosa's At Park",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Sake No Hana",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "private_dining",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Sei Less",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Serendipity 3 - Times Square",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:charming interiors",
+      "tax:feature:world-famous dishes",
+      "tax:feature:celebrating 70 years"
+    ]
+  },
+  {
+    "name": "Shoo Shoo East",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:time:lunch and brunch"
+    ]
+  },
+  {
+    "name": "Sirrah",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:vibe:right atmosphere"
+    ]
+  },
+  {
+    "name": "Sky Wise Lounge",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Soda Club",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Solas",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Soothr",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Superbueno",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "outdoor_seating",
+        "existing_conf": 0.6,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "TAB\u00da - Williamsburg",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:vibe:authentic",
+      "tax:feature:handcrafted_cocktails"
+    ]
+  },
+  {
+    "name": "THE PENTHOUSE",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": [
+      "tax:feature:intimate_private_event"
+    ]
+  },
+  {
+    "name": "TOKIODELIC",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Take Care",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "intimate",
+        "conf": 0.5
+      },
+      {
+        "type": "best_for",
+        "name": "couples",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "The Carnegie Club",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "The Cutting Room",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "The Django",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "live_music",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "verified"
+      },
+      {
+        "type": "time",
+        "name": "dinner",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "waterfront",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "The Eighth",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "The Munchies",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "The Red Lion | NYC",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "live_music",
+        "existing_conf": 0.9,
+        "ig_conf": 0.5,
+        "existing_source": "verified"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "The Red Pavilion",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "The River Caf\u00e9",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "waterfront",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "verified"
+      },
+      {
+        "type": "feature",
+        "name": "skyline_views",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      },
+      {
+        "type": "vibe",
+        "name": "sophisticated",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "The Sultan Room",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "The Three Monkeys",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "The Tyger",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "time",
+        "name": "lunch",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "private_dining",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "instagrammable",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "craft_cocktails",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "tasting_menu",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Tiki Chick",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Toloache",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "conf": 0.5
+      },
+      {
+        "type": "vibe",
+        "name": "energetic",
+        "conf": 0.5
+      },
+      {
+        "type": "time",
+        "name": "brunch",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "live_music",
+        "conf": 0.5
+      },
+      {
+        "type": "feature",
+        "name": "bottle_service",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Tosokchon NYC",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "cozy",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      },
+      {
+        "type": "best_for",
+        "name": "friend_groups",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "energetic",
+        "conf": 0.5
+      },
+      {
+        "type": "best_for",
+        "name": "couples",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "VIDA SteakHouse NYC",
+    "corroborated": [],
+    "new_proposed": [
+      {
+        "type": "vibe",
+        "name": "luxurious",
+        "conf": 0.5
+      },
+      {
+        "type": "vibe",
+        "name": "sophisticated",
+        "conf": 0.5
+      }
+    ],
+    "rejected": [
+      "gate:best_for:special_occasion_seekers",
+      "gate:feature:private_dining"
+    ]
+  },
+  {
+    "name": "Westlight",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "rooftop",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "verified"
+      },
+      {
+        "type": "vibe",
+        "name": "trendy",
+        "existing_conf": 0.8,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [
+      {
+        "type": "time",
+        "name": "after_midnight",
+        "conf": 0.5
+      }
+    ],
+    "rejected": []
+  },
+  {
+    "name": "Wildcard Bar",
+    "corroborated": [
+      {
+        "type": "feature",
+        "name": "speakeasy",
+        "existing_conf": 0.7,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "ZEN",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Zama Omakase",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "romantic",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "observed"
+      },
+      {
+        "type": "feature",
+        "name": "omakase",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "verified"
+      },
+      {
+        "type": "time",
+        "name": "dinner",
+        "existing_conf": 1.0,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Zinc Bar",
+    "corroborated": [],
+    "new_proposed": [],
+    "rejected": []
+  },
+  {
+    "name": "Zou Zou\u2019s",
+    "corroborated": [
+      {
+        "type": "vibe",
+        "name": "energetic",
+        "existing_conf": 0.7,
+        "ig_conf": 0.5,
+        "existing_source": "model_knowledge"
+      }
+    ],
+    "new_proposed": [],
+    "rejected": []
+  }
+]

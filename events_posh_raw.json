@@ -1,0 +1,6386 @@
+[{
+  "eventId": "2522227",
+  "title": "Jamie xx All Night",
+  "eventUrl": "https://ra.co/events/2522227",
+  "date": "2026-10-01",
+  "startTime": "21:00",
+  "endTime": "02:00",
+  "venue": "Nowadays",
+  "venueUrl": "https://ra.co/clubs/105873",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Jamie xx"
+  ],
+  "genres": [
+    "Bass",
+    "Electronica"
+  ],
+  "ticketUrl": "https://www.nowadays.nyc",
+  "isTicketed": true,
+  "cost": "$20+",
+  "lineupText": "Jamie xx",
+  "allArtists": [
+    "Jamie xx"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:47.982813+00:00"
+},
+{
+  "eventId": "2521118",
+  "title": "DJ Plead, rrao",
+  "eventUrl": "https://ra.co/events/2521118",
+  "date": "2026-10-01",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Good Room",
+  "venueUrl": "https://ra.co/clubs/97606",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "DJ Plead",
+    "rrao"
+  ],
+  "ticketUrl": "http://goodroombk.com",
+  "isTicketed": true,
+  "cost": "$10-20",
+  "lineupText": "DJ Plead\nrrao",
+  "allArtists": [
+    "DJ Plead",
+    "rrao"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.105905+00:00"
+},
+{
+  "eventId": "2542437",
+  "title": "feedbk - industry night with Will DiMaggio, Ryan King",
+  "eventUrl": "https://ra.co/events/2542437",
+  "date": "2026-10-01",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "feedbk",
+  "venueUrl": "https://ra.co/clubs/301444",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Will DiMaggio",
+    "Ryan King"
+  ],
+  "genres": [
+    "House",
+    "Tech House"
+  ],
+  "ticketUrl": "https://www.instagram.com/feedbk_/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "Downstairs Bar"
+  ],
+  "lineupText": "Downstairs Bar\nWill DiMaggio\nRyan King",
+  "allArtists": [
+    "Downstairs Bar",
+    "Will DiMaggio",
+    "Ryan King"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.137472+00:00"
+},
+{
+  "eventId": "2530584",
+  "title": "SOLVENT",
+  "eventUrl": "https://ra.co/events/2530584",
+  "date": "2026-10-01",
+  "startTime": "21:00",
+  "endTime": "04:00",
+  "venue": "ErF Studios",
+  "venueUrl": "https://ra.co/clubs/294488",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "CYCLO BONETTE",
+    "Devoye",
+    "Very J",
+    "estro",
+    "Leafy Greens"
+  ],
+  "genres": [
+    "Progressive House",
+    "Acid"
+  ],
+  "isTicketed": true,
+  "cost": "15",
+  "unlinkedArtists": [
+    "Devoye  (lineup change from Very J)",
+    "estro b2b Amy L'Nitrate (Leafy Greens)"
+  ],
+  "lineupText": "CYCLO BONETTE\nDevoye  (lineup change from Very J)\nestro b2b Amy L'Nitrate (Leafy Greens)",
+  "allArtists": [
+    "CYCLO BONETTE",
+    "Devoye  (lineup change from Very J)",
+    "estro b2b Amy L'Nitrate (Leafy Greens)",
+    "Devoye",
+    "Very J",
+    "estro",
+    "Leafy Greens"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.160355+00:00"
+},
+{
+  "eventId": "2532241",
+  "title": "Spoonerism presents: flutter listening session",
+  "eventUrl": "https://ra.co/events/2532241",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "22:00",
+  "venue": "Silence Please",
+  "venueUrl": "https://ra.co/clubs/267250",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Pop"
+  ],
+  "ticketUrl": "https://instagram.com/wowitsfrau",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "frau"
+  ],
+  "lineupText": "frau",
+  "allArtists": [
+    "frau"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.186659+00:00"
+},
+{
+  "eventId": "2535407",
+  "title": "People You may Know: Ash, Han G, Jake From State Pharm, RICK E, Soggymilktoast, ZIGGGY",
+  "eventUrl": "https://ra.co/events/2535407",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "02:00",
+  "venue": "Jupiter Disco",
+  "venueUrl": "https://ra.co/clubs/128789",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Han G",
+    "Jake From State Pharm",
+    "RICK E"
+  ],
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "ASH",
+    "Soggymilktoast",
+    "ZIGGGY"
+  ],
+  "lineupText": "Han G\nJake From State Pharm\nASH\nSoggymilktoast\nZIGGGY\nRICK E",
+  "allArtists": [
+    "Han G",
+    "Jake From State Pharm",
+    "ASH",
+    "Soggymilktoast",
+    "ZIGGGY",
+    "RICK E"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.213277+00:00"
+},
+{
+  "eventId": "2546868",
+  "title": "ON TOP by Susanne Bartsch",
+  "eventUrl": "https://ra.co/events/2546868",
+  "date": "2026-10-01",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Le Bain",
+  "venueUrl": "https://ra.co/clubs/36873",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "Flemish Fetish",
+    "Chloe Jane (live show & DJ set)",
+    "Angel"
+  ],
+  "lineupText": "Flemish Fetish\nChloe Jane (live show & DJ set)\nAngel",
+  "allArtists": [
+    "Flemish Fetish",
+    "Chloe Jane (live show & DJ set)",
+    "Angel"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.238458+00:00"
+},
+{
+  "eventId": "2546178",
+  "title": "CODED Thursdays 10.01.26 w/ LOFTUS, Ben Wagner",
+  "eventUrl": "https://ra.co/events/2546178",
+  "date": "2026-10-01",
+  "startTime": "21:00",
+  "endTime": "02:00",
+  "venue": "Club Rawhide",
+  "venueUrl": "https://ra.co/clubs/294929",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "LOFTUS",
+    "Ben Wagner"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://rawhide.nyc",
+  "isTicketed": true,
+  "cost": "20.00",
+  "unlinkedArtists": [
+    "LOFTUS, Ben Wagner"
+  ],
+  "lineupText": "LOFTUS, Ben Wagner",
+  "allArtists": [
+    "LOFTUS, Ben Wagner",
+    "LOFTUS",
+    "Ben Wagner"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.260227+00:00"
+},
+{
+  "eventId": "2469916",
+  "title": "Kruder & Dorfmeister",
+  "eventUrl": "https://ra.co/events/2469916",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "23:59",
+  "venue": "Terminal 5",
+  "venueUrl": "https://ra.co/clubs/7517",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Kruder & Dorfmeister"
+  ],
+  "ticketUrl": "https://www.axs.com/events/1357385/kruder-dorfmeister-tickets?skin=terminal5&_gl=1*1x55cj8*_gcl_au*MjM2OTEyMDI4LjE3Nzk0NzE4MDY.",
+  "isTicketed": false,
+  "lineupText": "Kruder & Dorfmeister",
+  "allArtists": [
+    "Kruder & Dorfmeister"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.282574+00:00"
+},
+{
+  "eventId": "2536155",
+  "title": "Woodshop with Bae Jing, ellen.j - Dead Letter No.9",
+  "eventUrl": "https://ra.co/events/2536155",
+  "date": "2026-10-01",
+  "startTime": "21:00",
+  "endTime": "02:00",
+  "venue": "Dead Letter No. 9",
+  "venueUrl": "https://ra.co/clubs/226651",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "ellen.j"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.instagram.com/no9nyc/",
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Bae Jing"
+  ],
+  "lineupText": "Bae Jing\nellen.j",
+  "allArtists": [
+    "Bae Jing",
+    "ellen.j"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.315626+00:00"
+},
+{
+  "eventId": "2542229",
+  "title": "Outer Heaven presents: Dragoş Ilici - Pablo Romero - Bruno Gervais",
+  "eventUrl": "https://ra.co/events/2542229",
+  "date": "2026-10-01",
+  "startTime": "20:00",
+  "endTime": "04:00",
+  "venue": "Outer Heaven",
+  "venueUrl": "https://ra.co/clubs/209094",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Dragos Ilici",
+    "Pablo Romero",
+    "Bruno Gervais"
+  ],
+  "genres": [
+    "House",
+    "Minimal"
+  ],
+  "isTicketed": true,
+  "cost": "50",
+  "lineupText": "Dragos Ilici\nPablo Romero\nBruno Gervais",
+  "allArtists": [
+    "Dragos Ilici",
+    "Pablo Romero",
+    "Bruno Gervais"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.335825+00:00"
+},
+{
+  "eventId": "2529673",
+  "title": "Synthicide with Lloyd, For Future's Sake, Andi",
+  "eventUrl": "https://ra.co/events/2529673",
+  "date": "2026-10-01",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Bossa Nova Civic Club",
+  "venueUrl": "https://ra.co/clubs/71292",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Lloydski",
+    "For Future's Sake",
+    "Andi"
+  ],
+  "genres": [
+    "House",
+    "Italo Disco"
+  ],
+  "isTicketed": false,
+  "lineupText": "Lloydski\nFor Future's Sake\nAndi",
+  "allArtists": [
+    "Lloydski",
+    "For Future's Sake",
+    "Andi"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.358652+00:00"
+},
+{
+  "eventId": "2532153",
+  "title": "BKG: Boydell, sasababy, Ladler",
+  "eventUrl": "https://ra.co/events/2532153",
+  "date": "2026-10-01",
+  "startTime": "22:30",
+  "endTime": "04:00",
+  "venue": "Elsewhere",
+  "venueUrl": "https://ra.co/clubs/139960",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Boydell",
+    "sasababy"
+  ],
+  "ticketUrl": "https://www.elsewhere.club/help",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "ZONE ONE",
+    "Ladler"
+  ],
+  "lineupText": "ZONE ONE\nBKG:\nBoydell\nsasababy\nLadler",
+  "allArtists": [
+    "ZONE ONE",
+    "Boydell",
+    "sasababy",
+    "Ladler"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.380684+00:00"
+},
+{
+  "eventId": "2544622",
+  "title": "Refuge Thursday with Sam Alfred",
+  "eventUrl": "https://ra.co/events/2544622",
+  "date": "2026-10-01",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Refuge",
+  "venueUrl": "https://ra.co/clubs/285748",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Sam Alfred",
+    "Poolhaus"
+  ],
+  "ticketUrl": "https://RToct1st.eventbrite.com/?aff=RA",
+  "isTicketed": false,
+  "lineupText": "Sam Alfred\nPoolhaus",
+  "allArtists": [
+    "Sam Alfred",
+    "Poolhaus"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.401419+00:00"
+},
+{
+  "eventId": "2539014",
+  "title": "Heart Beats 3 Year Anniversary",
+  "eventUrl": "https://ra.co/events/2539014",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "03:00",
+  "venue": "Mood Ring",
+  "venueUrl": "https://ra.co/clubs/141852",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "DAYE.",
+    "Arielle Lana",
+    "Kassita",
+    "WTCHCRFT"
+  ],
+  "ticketUrl": "https://www.instagram.com/p/DdZO8E2Jq9P/",
+  "isTicketed": false,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Ell.html",
+    "7-10 PM Open Aux [open decks]"
+  ],
+  "lineupText": "DAYE.\nArielle Lana\nEll.html\nKassita\nWTCHCRFT\n7-10 PM Open Aux [open decks]",
+  "allArtists": [
+    "DAYE.",
+    "Arielle Lana",
+    "Ell.html",
+    "Kassita",
+    "WTCHCRFT",
+    "7-10 PM Open Aux [open decks]"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.423026+00:00"
+},
+{
+  "eventId": "2532793",
+  "title": "sinuous sound",
+  "eventUrl": "https://ra.co/events/2532793",
+  "date": "2026-10-01",
+  "startTime": "20:00",
+  "endTime": "01:00",
+  "venue": "Honey's",
+  "venueUrl": "https://ra.co/clubs/135831",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Preacher's Daughter",
+    "senoritajuicy",
+    "PUFF"
+  ],
+  "genres": [
+    "Techno",
+    "Club"
+  ],
+  "isTicketed": false,
+  "cost": "0",
+  "lineupText": "Preacher's Daughter\nsenoritajuicy\nPUFF",
+  "allArtists": [
+    "Preacher's Daughter",
+    "senoritajuicy",
+    "PUFF"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.456634+00:00"
+},
+{
+  "eventId": "2548017",
+  "title": "CLÜBSESSION VOL. 12: FULL MOON",
+  "eventUrl": "https://ra.co/events/2548017",
+  "date": "2026-10-01",
+  "startTime": "22:00",
+  "endTime": "02:00",
+  "venue": "Mehanata Bar",
+  "venueUrl": "https://ra.co/clubs/31258",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "MAXWELL HöUSE",
+    "DJ Sauci Soni"
+  ],
+  "genres": [
+    "Drum & Bass",
+    "Experimental"
+  ],
+  "ticketUrl": "https://www.instagram.com/clubsessionnyc?stkn=MXZtNHM3bWl3aDJoNg%3D%3D&utm_source=qr",
+  "isTicketed": false,
+  "cost": "0.00",
+  "unlinkedArtists": [
+    "@Dj Pizza Hands",
+    "@ TimmyD"
+  ],
+  "lineupText": "MAXWELL HöUSE\n@Dj Pizza Hands\n@ TimmyD\nDJ Sauci Soni",
+  "allArtists": [
+    "MAXWELL HöUSE",
+    "@Dj Pizza Hands",
+    "@ TimmyD",
+    "DJ Sauci Soni"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.492837+00:00"
+},
+{
+  "eventId": "2549957",
+  "title": "ROMANCE w Eli Escobar",
+  "eventUrl": "https://ra.co/events/2549957",
+  "date": "2026-10-01",
+  "startTime": "21:00",
+  "endTime": "03:00",
+  "venue": "Gabriela",
+  "venueUrl": "https://ra.co/clubs/226608",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Eli Escobar"
+  ],
+  "genres": [
+    "Electro",
+    "Pop"
+  ],
+  "isTicketed": false,
+  "cost": "0",
+  "lineupText": "Eli Escobar",
+  "allArtists": [
+    "Eli Escobar"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.515553+00:00"
+},
+{
+  "eventId": "2502205",
+  "title": "BEYOND THE STARDUST",
+  "eventUrl": "https://ra.co/events/2502205",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "20:00",
+  "venue": "The Flea Theater",
+  "venueUrl": "https://ra.co/clubs/298330",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "The Illustrious Blacks"
+  ],
+  "genres": [
+    "House",
+    "Disco"
+  ],
+  "ticketUrl": "https://theflea.org/stardust",
+  "isTicketed": true,
+  "cost": "$29.50-$39.75",
+  "unlinkedArtists": [
+    "Niegel Smith",
+    "Amazonian Rockstar",
+    "Courtney J. Cook",
+    "Queen Ravenden",
+    "Javi Perez",
+    "Blaine Petrovia"
+  ],
+  "lineupText": "The Illustrious Blacks\nNiegel Smith\nAmazonian Rockstar\nCourtney J. Cook\nQueen Ravenden\nJavi Perez\nBlaine Petrovia",
+  "allArtists": [
+    "The Illustrious Blacks",
+    "Niegel Smith",
+    "Amazonian Rockstar",
+    "Courtney J. Cook",
+    "Queen Ravenden",
+    "Javi Perez",
+    "Blaine Petrovia"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.539168+00:00"
+},
+{
+  "eventId": "2551354",
+  "title": "ANIMAL Thursday Night w/ Colin Self, Will Jack",
+  "eventUrl": "https://ra.co/events/2551354",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "04:00",
+  "venue": "Animal",
+  "venueUrl": "https://ra.co/clubs/282886",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Colin Self",
+    "Will Jack"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.instagram.com/animal.nyc/",
+  "isTicketed": false,
+  "lineupText": "Colin Self\nWill Jack",
+  "allArtists": [
+    "Colin Self",
+    "Will Jack"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:48.559205+00:00"
+},
+{
+  "eventId": "2550344",
+  "title": "HOUSE HATS: Valencia + Teecee / KENZII SCOTT / AAFTERS / James Cook + TIDDY / CatLadyHi",
+  "eventUrl": "https://ra.co/events/2550344",
+  "date": "2026-10-01",
+  "startTime": "17:00",
+  "endTime": "02:00",
+  "venue": "MAD Radio NYC",
+  "venueUrl": "https://ra.co/clubs/279719",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Valencia",
+    "Teecee",
+    "James Cook",
+    "CatLadyHi"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://shotgun.live/events/madradionyc100126",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "KENZII SCOTT",
+    "AAFTERS",
+    "TIDDY"
+  ],
+  "lineupText": "Valencia + Teecee\nKENZII SCOTT\nAAFTERS\nJames Cook  + TIDDY\nCatLadyHi",
+  "allArtists": [
+    "Valencia",
+    "Teecee",
+    "KENZII SCOTT",
+    "AAFTERS",
+    "James Cook",
+    "TIDDY",
+    "CatLadyHi"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.027413+00:00"
+},
+{
+  "eventId": "2548654",
+  "title": "Techno Blade NYC Open Decks",
+  "eventUrl": "https://ra.co/events/2548654",
+  "date": "2026-10-01",
+  "startTime": "12:00",
+  "endTime": "03:00",
+  "venue": "TBA",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Techno",
+    "Psytrance"
+  ],
+  "ticketUrl": "https://www.technobladenyc.com/",
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "David Techno Blade (NYC)"
+  ],
+  "lineupText": "David Techno Blade (NYC)",
+  "allArtists": [
+    "David Techno Blade (NYC)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.047100+00:00"
+},
+{
+  "eventId": "2537028",
+  "title": "Reggaeton on Houston - Latin & Reggaeton Party NYC",
+  "eventUrl": "https://ra.co/events/2537028",
+  "date": "2026-10-01",
+  "startTime": "17:00",
+  "endTime": "03:00",
+  "venue": "San Antonios",
+  "venueUrl": "https://ra.co/clubs/254498",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hip-Hop",
+    "Disco"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.071123+00:00"
+},
+{
+  "eventId": "2546014",
+  "title": "I Challenged The Master and Won Album Listening Session",
+  "eventUrl": "https://ra.co/events/2546014",
+  "date": "2026-10-01",
+  "startTime": "17:00",
+  "endTime": "02:00",
+  "venue": "Moondog Hifi",
+  "venueUrl": "https://ra.co/clubs/250960",
+  "city": "New York City",
+  "country": "United States of America",
+  "ticketUrl": "https://www.moondoghifi.com/",
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "NENJAH NYCIST"
+  ],
+  "lineupText": "NENJAH NYCIST",
+  "allArtists": [
+    "NENJAH NYCIST"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.098418+00:00"
+},
+{
+  "eventId": "2546396",
+  "title": "Klub Kitsch International, Disco Exotica",
+  "eventUrl": "https://ra.co/events/2546396",
+  "date": "2026-09-25",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Danger Danger",
+  "venueUrl": "https://ra.co/clubs/236697",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Disco",
+    "Electronica"
+  ],
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "@Justin Denaro"
+  ],
+  "lineupText": "@Justin Denaro",
+  "allArtists": [
+    "@Justin Denaro"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.118731+00:00"
+},
+{
+  "eventId": "2548887",
+  "title": "Baile Tropidélico",
+  "eventUrl": "https://ra.co/events/2548887",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "00:00",
+  "venue": "Friends & Lovers",
+  "venueUrl": "https://ra.co/clubs/88376",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": false,
+  "cost": "0.00",
+  "unlinkedArtists": [
+    "@NXN",
+    "@Radio Ramsés",
+    "@Woof",
+    "@UtteraMutter",
+    "@Heavy Flow"
+  ],
+  "lineupText": "@NXN\n@Radio Ramsés\n@Woof\n@UtteraMutter\n@Heavy Flow",
+  "allArtists": [
+    "@NXN",
+    "@Radio Ramsés",
+    "@Woof",
+    "@UtteraMutter",
+    "@Heavy Flow"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.140123+00:00"
+},
+{
+  "eventId": "2551335",
+  "title": "CTRL ALT DLT",
+  "eventUrl": "https://ra.co/events/2551335",
+  "date": "2026-10-01",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "C'mon Everybody",
+  "venueUrl": "https://ra.co/clubs/104864",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hardcore",
+    "Industrial"
+  ],
+  "ticketUrl": "https://www.instagram.com/cmoneverybodybk/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Ickarus"
+  ],
+  "lineupText": "Ickarus",
+  "allArtists": [
+    "Ickarus"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.160660+00:00"
+},
+{
+  "eventId": "2547870",
+  "title": "Critical Mass with B+ & ∞",
+  "eventUrl": "https://ra.co/events/2547870",
+  "date": "2026-10-01",
+  "startTime": "11:00",
+  "endTime": "18:00",
+  "venue": "Silence Please",
+  "venueUrl": "https://ra.co/clubs/267250",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Ambient"
+  ],
+  "ticketUrl": "https://instagram.com/__criticalmass",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "B",
+    "∞"
+  ],
+  "lineupText": "B+\n∞",
+  "allArtists": [
+    "B",
+    "∞"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.183556+00:00"
+},
+{
+  "eventId": "2538190",
+  "title": "Jozzy: Get Her Back Tour",
+  "eventUrl": "https://ra.co/events/2538190",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "23:00",
+  "venue": "SOBs",
+  "venueUrl": "https://ra.co/clubs/8591",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hip-Hop",
+    "R&B"
+  ],
+  "ticketUrl": "https://link.dice.fm/z7cffaea791d?dice_id=z7cffaea791d",
+  "isTicketed": false,
+  "cost": "$25",
+  "unlinkedArtists": [
+    "@jozzy"
+  ],
+  "lineupText": "@jozzy",
+  "allArtists": [
+    "@jozzy"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.209251+00:00"
+},
+{
+  "eventId": "2551382",
+  "title": "Oberon Thursday Night w/ scrap metal jodi",
+  "eventUrl": "https://ra.co/events/2551382",
+  "date": "2026-10-01",
+  "startTime": "22:00",
+  "endTime": "01:00",
+  "venue": "Oberon",
+  "venueUrl": "https://ra.co/clubs/272064",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Pop",
+    "Electronica"
+  ],
+  "ticketUrl": "https://www.instagram.com/sapphterhours/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "scrap metal jodi"
+  ],
+  "lineupText": "scrap metal jodi",
+  "allArtists": [
+    "scrap metal jodi"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.229751+00:00"
+},
+{
+  "eventId": "2545964",
+  "title": "Rendezvous Grooves Open Decks",
+  "eventUrl": "https://ra.co/events/2545964",
+  "date": "2026-10-01",
+  "startTime": "21:00",
+  "endTime": "04:00",
+  "venue": "Idle Mind Tavern",
+  "venueUrl": "https://ra.co/clubs/258334",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "isTicketed": false,
+  "cost": "00",
+  "unlinkedArtists": [
+    "Open Decks"
+  ],
+  "lineupText": "Open Decks",
+  "allArtists": [
+    "Open Decks"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.250708+00:00"
+},
+{
+  "eventId": "2533870",
+  "title": "Zenker Brothers / Pangaea / re:ni / The Carry Nation / Analog Soul / ALEXIS DE LA ROSA",
+  "eventUrl": "https://ra.co/events/2533870",
+  "date": "2026-10-02",
+  "startTime": "22:30",
+  "endTime": "07:00",
+  "venue": "BASEMENT",
+  "venueUrl": "https://ra.co/clubs/165976",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Zenker Brothers",
+    "Pangaea",
+    "re:ni",
+    "The Carry Nation",
+    "Analog Soul",
+    "ALEXIS DE LA ROSA"
+  ],
+  "ticketUrl": "https://basementny.net/house-rules",
+  "isTicketed": true,
+  "lineupText": "BASEMENT:\nZenker Brothers\nPangaea\nre:ni\nSTUDIO:\nThe Carry Nation\nAnalog Soul\nALEXIS DE LA ROSA",
+  "allArtists": [
+    "Zenker Brothers",
+    "Pangaea",
+    "re:ni",
+    "The Carry Nation",
+    "Analog Soul",
+    "ALEXIS DE LA ROSA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.288201+00:00"
+},
+{
+  "eventId": "2522236",
+  "title": "Residency Night: x3butterfly invites: Skee Mask & Shai FM",
+  "eventUrl": "https://ra.co/events/2522236",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "06:00",
+  "venue": "Nowadays",
+  "venueUrl": "https://ra.co/clubs/105873",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Shai FM",
+    "Skee Mask",
+    "x3butterfly"
+  ],
+  "genres": [
+    "Breakbeat",
+    "Bass"
+  ],
+  "ticketUrl": "https://www.nowadays.nyc",
+  "isTicketed": true,
+  "cost": "$30+",
+  "lineupText": "22:00–00:00: Shai FM\n00:00–03:00: Skee Mask\n03:00–close: x3butterfly",
+  "allArtists": [
+    "Shai FM",
+    "Skee Mask",
+    "x3butterfly"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.315485+00:00"
+},
+{
+  "eventId": "2516868",
+  "title": "AGAPĒ PRESENTS: Vladimir Dubyshkin (LIVE) + PETERBLUE",
+  "eventUrl": "https://ra.co/events/2516868",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "99 Scott Ave",
+  "venueUrl": "https://ra.co/clubs/103503",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Vladimir Dubyshkin",
+    "PETERBLUE",
+    "A.K.R"
+  ],
+  "genres": [
+    "Trance",
+    "Techno"
+  ],
+  "ticketUrl": "https://agapemusic.us/",
+  "isTicketed": true,
+  "cost": "37.50",
+  "lineupText": "Vladimir Dubyshkin\nPETERBLUE\nA.K.R",
+  "allArtists": [
+    "Vladimir Dubyshkin",
+    "PETERBLUE",
+    "A.K.R"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.352252+00:00"
+},
+{
+  "eventId": "2522196",
+  "title": "Night & Day: Objekt, Dan Ghenacia, Kiernan Laveaux b2b fleet.dreams, Bambi, deep creep, + more",
+  "eventUrl": "https://ra.co/events/2522196",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "16:00",
+  "venue": "Signal",
+  "venueUrl": "https://ra.co/clubs/256148",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Objekt",
+    "Dan Ghenacia",
+    "Kiernan Laveaux",
+    "fleet.dreams",
+    "deep creep",
+    "Taylor Shockley"
+  ],
+  "isTicketed": true,
+  "lineupText": "Objekt, Dan Ghenacia, Kiernan Laveaux b2b fleet.dreams, Bambi,  deep creep, Taylor Shockley",
+  "allArtists": [
+    "Objekt",
+    "Dan Ghenacia",
+    "Kiernan Laveaux",
+    "fleet.dreams",
+    "deep creep",
+    "Taylor Shockley"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.393561+00:00"
+},
+{
+  "eventId": "2533505",
+  "title": "Fundido ft Emma Dufaux, Gianna, Dam Vera, okDUNC, Clay Cornelius",
+  "eventUrl": "https://ra.co/events/2533505",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "05:00",
+  "venue": "Good Room",
+  "venueUrl": "https://ra.co/clubs/97606",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Fundido",
+    "Gianna G",
+    "DAM (Galaxie Nites)",
+    "okDUNC"
+  ],
+  "ticketUrl": "http://goodroombk.com",
+  "isTicketed": true,
+  "cost": "$10-20",
+  "unlinkedArtists": [
+    "Fundido ft Emma Dufaux",
+    "Bad Room-",
+    "Clay Cornelius"
+  ],
+  "lineupText": "Fundido ft Emma Dufaux\nGianna G\nBad Room-\nDAM (Galaxie Nites)\nokDUNC\nClay Cornelius",
+  "allArtists": [
+    "Fundido ft Emma Dufaux",
+    "Gianna G",
+    "Bad Room-",
+    "DAM (Galaxie Nites)",
+    "okDUNC",
+    "Clay Cornelius",
+    "Fundido"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.445506+00:00"
+},
+{
+  "eventId": "2525324",
+  "title": "Golden Record NYC presents Josh Caffé (LIVE), Carlos Souffront, Mike Servito, S4M23",
+  "eventUrl": "https://ra.co/events/2525324",
+  "date": "2026-10-02",
+  "startTime": "23:00",
+  "endTime": "08:00",
+  "venue": "Green Room NYC",
+  "venueUrl": "https://ra.co/clubs/278409",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "S4M23",
+    "Carlos Souffront",
+    "Josh Caffé",
+    "Mike Servito"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://www.goldenrecordnyc.com/",
+  "isTicketed": true,
+  "cost": "20",
+  "lineupText": "S4M23 23:00-01:00\nCarlos Souffront 01:00-04:00\nJosh Caffé LIVE 04:00-05:00\nMike Servito 05:00-CLOSE",
+  "allArtists": [
+    "S4M23",
+    "Carlos Souffront",
+    "Josh Caffé",
+    "Mike Servito"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.467487+00:00"
+},
+{
+  "eventId": "2531204",
+  "title": "The Hood Needs House: Dantiez Saunderson b2b Pinto, Kweku Saunderson, TMPR, DJ RaQuel & More",
+  "eventUrl": "https://ra.co/events/2531204",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "03:00",
+  "venue": "Paragon",
+  "venueUrl": "https://ra.co/clubs/195815",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Dantiez",
+    "Pinto (US)",
+    "Kweku Saunderson",
+    "DJ RaQuel",
+    "Naija Couture",
+    "Bodegaparty"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "isTicketed": true,
+  "cost": "$25",
+  "unlinkedArtists": [
+    "Dantiez b2b Pinto (US)",
+    "TMPR b2b Supply & Demand",
+    "Jowil Dela Vega",
+    "Veralyn"
+  ],
+  "lineupText": "Dantiez b2b Pinto (US)\nKweku Saunderson\nTMPR b2b Supply & Demand\nDJ RaQuel\nJowil Dela Vega\nNaija Couture\nBodegaparty\nVeralyn",
+  "allArtists": [
+    "Dantiez b2b Pinto (US)",
+    "Kweku Saunderson",
+    "TMPR b2b Supply & Demand",
+    "DJ RaQuel",
+    "Jowil Dela Vega",
+    "Naija Couture",
+    "Bodegaparty",
+    "Veralyn",
+    "Dantiez",
+    "Pinto (US)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.498544+00:00"
+},
+{
+  "eventId": "2471738",
+  "title": "House of Grooves: Eli Escobar All Night + Sissies of Mercy",
+  "eventUrl": "https://ra.co/events/2471738",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "House of Yes",
+  "venueUrl": "https://ra.co/clubs/21488",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Eli Escobar",
+    "Sissies of Mercy"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://www.houseofyes.org/",
+  "isTicketed": true,
+  "cost": "20-40",
+  "lineupText": "Eli Escobar\nSissies of Mercy",
+  "allArtists": [
+    "Eli Escobar",
+    "Sissies of Mercy"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.520581+00:00"
+},
+{
+  "eventId": "2496857",
+  "title": "Joris Voorn - Trip to Galaxy Tour",
+  "eventUrl": "https://ra.co/events/2496857",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "The Chocolate Factory",
+  "venueUrl": "https://ra.co/clubs/213602",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Joris Voorn"
+  ],
+  "genres": [
+    "Progressive House",
+    "Techno"
+  ],
+  "isTicketed": true,
+  "cost": "35",
+  "lineupText": "Joris Voorn",
+  "allArtists": [
+    "Joris Voorn"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.539939+00:00"
+},
+{
+  "eventId": "2520306",
+  "title": "Jubilee, nextdimensional, Bella De León, Jawar - Dead Letter No.9",
+  "eventUrl": "https://ra.co/events/2520306",
+  "date": "2026-10-02",
+  "startTime": "21:00",
+  "endTime": "04:00",
+  "venue": "Dead Letter No. 9",
+  "venueUrl": "https://ra.co/clubs/226651",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Jubilee",
+    "nextdimensional",
+    "JAWAR (3)"
+  ],
+  "genres": [
+    "House",
+    "Electro"
+  ],
+  "ticketUrl": "https://www.instagram.com/no9nyc/",
+  "isTicketed": true,
+  "cost": "20",
+  "unlinkedArtists": [
+    "Bella de león"
+  ],
+  "lineupText": "Jubilee\nnextdimensional\nJAWAR (3)\nBella de león",
+  "allArtists": [
+    "Jubilee",
+    "nextdimensional",
+    "JAWAR (3)",
+    "Bella de león"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:49.998462+00:00"
+},
+{
+  "eventId": "2466485",
+  "title": "19:26 presents The Passage Between Worlds",
+  "eventUrl": "https://ra.co/events/2466485",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "05:00",
+  "venue": "Knockdown Center",
+  "venueUrl": "https://ra.co/clubs/69401",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "19:26",
+    "Woo York",
+    "Layla Benitez",
+    "BELLADONNA",
+    "Melissa XYZ"
+  ],
+  "genres": [
+    "Minimal Techno"
+  ],
+  "ticketUrl": "https://link.dice.fm/P202478c5261",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "L9"
+  ],
+  "lineupText": "19:26\nWoo York\nLayla Benitez\nBELLADONNA\nMelissa XYZ\nL9",
+  "allArtists": [
+    "19:26",
+    "Woo York",
+    "Layla Benitez",
+    "BELLADONNA",
+    "Melissa XYZ",
+    "L9"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.046459+00:00"
+},
+{
+  "eventId": "2546167",
+  "title": "Club Rawhide FRIDAY NIGHT 10.02.26 w/ Michael Magnan, Dj Warning, TYJAH",
+  "eventUrl": "https://ra.co/events/2546167",
+  "date": "2026-10-02",
+  "startTime": "21:00",
+  "endTime": "04:00",
+  "venue": "Club Rawhide",
+  "venueUrl": "https://ra.co/clubs/294929",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Michael Magnan",
+    "Dj Warning",
+    "TYJAH"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://rawhide.nyc",
+  "isTicketed": true,
+  "cost": "30.00",
+  "unlinkedArtists": [
+    "Michael Magnan, Dj Warning, TYJAH"
+  ],
+  "lineupText": "Michael Magnan, Dj Warning, TYJAH",
+  "allArtists": [
+    "Michael Magnan, Dj Warning, TYJAH",
+    "Michael Magnan",
+    "Dj Warning",
+    "TYJAH"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.138940+00:00"
+},
+{
+  "eventId": "2531595",
+  "title": "People You May Know: Rich NXT",
+  "eventUrl": "https://ra.co/events/2531595",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "08:00",
+  "venue": "Green Room NYC",
+  "venueUrl": "https://ra.co/clubs/278409",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Rich NXT",
+    "Auphoria",
+    "Jeny Michelle",
+    "RICCI (US)",
+    "sanatswrld",
+    "MANE (IN)"
+  ],
+  "genres": [
+    "House",
+    "Minimal"
+  ],
+  "isTicketed": true,
+  "cost": "20",
+  "lineupText": "Rich NXT, Auphoria, Jeny Michelle, RICCI (US) sanatswrld,  MANE (IN), ZIGGGY",
+  "allArtists": [
+    "Rich NXT",
+    "Auphoria",
+    "Jeny Michelle",
+    "RICCI (US)",
+    "sanatswrld",
+    "MANE (IN)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.162714+00:00"
+},
+{
+  "eventId": "2540733",
+  "title": "QNCC presents: DOWNTEMPO",
+  "eventUrl": "https://ra.co/events/2540733",
+  "date": "2026-10-02",
+  "startTime": "16:00",
+  "endTime": "18:00",
+  "venue": "Qncc",
+  "venueUrl": "https://ra.co/clubs/273399",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Pure Immanence"
+  ],
+  "genres": [
+    "Downtempo"
+  ],
+  "ticketUrl": "http://qncc.org",
+  "isTicketed": true,
+  "cost": "0-$10",
+  "lineupText": "Pure Immanence",
+  "allArtists": [
+    "Pure Immanence"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.203199+00:00"
+},
+{
+  "eventId": "2532300",
+  "title": "Volvox, AZA / Space Drum Meditation, Laurence Matte / bbbBbBB",
+  "eventUrl": "https://ra.co/events/2532300",
+  "date": "2026-10-02",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "public records",
+  "venueUrl": "https://ra.co/clubs/164270",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Volvox",
+    "AZA",
+    "Space Drum Meditation",
+    "Laurence Matte",
+    "BbbBbBB (2)"
+  ],
+  "genres": [
+    "Techno"
+  ],
+  "isTicketed": true,
+  "lineupText": "Volvox\nAZA\nSpace Drum Meditation\nLaurence Matte\nBbbBbBB (2)",
+  "allArtists": [
+    "Volvox",
+    "AZA",
+    "Space Drum Meditation",
+    "Laurence Matte",
+    "BbbBbBB (2)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.218029+00:00"
+},
+{
+  "eventId": "2478442",
+  "title": "Dusky, dj poolboi (open to close), Rae Sada, shimmer: After Wes, dunne, fruitgrl, softsky",
+  "eventUrl": "https://ra.co/events/2478442",
+  "date": "2026-10-02",
+  "startTime": "22:30",
+  "endTime": "04:00",
+  "venue": "Elsewhere",
+  "venueUrl": "https://ra.co/clubs/139960",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Dusky",
+    "dj poolboi",
+    "softsky"
+  ],
+  "ticketUrl": "https://www.elsewhere.club/help",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "HALL",
+    "Rae Sada",
+    "ZONE ONE",
+    "dj poolboi (open to close)",
+    "LOFT",
+    "After Wes",
+    "dunne",
+    "fruitgrl"
+  ],
+  "lineupText": "HALL\nDusky\nRae Sada\nZONE ONE\ndj poolboi (open to close)\nLOFT\nshimmer:\nAfter Wes\ndunne\nfruitgrl\nsoftsky",
+  "allArtists": [
+    "HALL",
+    "Dusky",
+    "Rae Sada",
+    "ZONE ONE",
+    "dj poolboi (open to close)",
+    "LOFT",
+    "After Wes",
+    "dunne",
+    "fruitgrl",
+    "softsky",
+    "dj poolboi"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.238499+00:00"
+},
+{
+  "eventId": "2476408",
+  "title": "DOUBLEHEADER: ALT8 x Pawlowski",
+  "eventUrl": "https://ra.co/events/2476408",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Superior Ingredients",
+  "venueUrl": "https://ra.co/clubs/187711",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "ALT8",
+    "Pawlowski"
+  ],
+  "genres": [
+    "Techno"
+  ],
+  "ticketUrl": "https://grayarea.co/events/doubleheader-alt8-x-pawlowski-oct-2-2026",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "Adam Meliani",
+    "Øme"
+  ],
+  "lineupText": "ALT8\nPawlowski\nAdam Meliani\nØme",
+  "allArtists": [
+    "ALT8",
+    "Pawlowski",
+    "Adam Meliani",
+    "Øme"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.267653+00:00"
+},
+{
+  "eventId": "2417784",
+  "title": "Book Club Radio Festival #2 The Outer Rim",
+  "eventUrl": "https://ra.co/events/2417784",
+  "date": "2026-10-02",
+  "startTime": "17:00",
+  "endTime": "04:00",
+  "venue": "Brooklyn Roots Collective",
+  "venueUrl": "https://ra.co/clubs/288988",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Tinzo",
+    "Jojo Lorenzo",
+    "Machinedrum",
+    "Mark Farina",
+    "Hiroko Yamamura",
+    "Byron The Aquarius",
+    "Nikki Nair",
+    "MikeQ",
+    "Soul Summit Music",
+    "Toribio",
+    "Jex Opolis",
+    "Regularfantasy",
+    "Willo",
+    "DJ Heather",
+    "Öona Dahl",
+    "Varist",
+    "RaeCola",
+    "Fibre"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://shotgun.live/en/festivals/bookclubradiofest2",
+  "isTicketed": false,
+  "lineupText": "Tinzo • Jojo Lorenzo • Machinedrum • Mark Farina • Hiroko Yamamura • Byron The Aquarius • Nikki Nair • MikeQ • Soul Summit Music • Toribio • Jex Opolis • Regularfantasy • Willo • DJ Heather • Öona Dahl • Zainab • Varist • RaeCola • Fibre",
+  "allArtists": [
+    "Tinzo",
+    "Jojo Lorenzo",
+    "Machinedrum",
+    "Mark Farina",
+    "Hiroko Yamamura",
+    "Byron The Aquarius",
+    "Nikki Nair",
+    "MikeQ",
+    "Soul Summit Music",
+    "Toribio",
+    "Jex Opolis",
+    "Regularfantasy",
+    "Willo",
+    "DJ Heather",
+    "Öona Dahl",
+    "Varist",
+    "RaeCola",
+    "Fibre"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.298554+00:00"
+},
+{
+  "eventId": "2545039",
+  "title": "Techno Brooklyn presents Samuel Moriero",
+  "eventUrl": "https://ra.co/events/2545039",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "314 Scholes",
+  "venueUrl": "https://ra.co/clubs/283772",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Samuel Moriero (2)"
+  ],
+  "isTicketed": true,
+  "cost": "25",
+  "unlinkedArtists": [
+    "More artist to be announced."
+  ],
+  "lineupText": "Samuel Moriero (2) + More artist to be announced.",
+  "allArtists": [
+    "Samuel Moriero (2)",
+    "More artist to be announced."
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.311779+00:00"
+},
+{
+  "eventId": "2478624",
+  "title": "Lost Miracle: Sébastien Léger x Roy Rosenfeld",
+  "eventUrl": "https://ra.co/events/2478624",
+  "date": "2026-10-02",
+  "startTime": "15:00",
+  "endTime": "22:00",
+  "venue": "Knockdown Center",
+  "venueUrl": "https://ra.co/clubs/69401",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Sebastien Leger",
+    "Roy Rosenfeld",
+    "Khen",
+    "Nadav Vee"
+  ],
+  "genres": [
+    "Tech House"
+  ],
+  "ticketUrl": "https://link.dice.fm/L86dbce7232a",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Sasha Atlas"
+  ],
+  "lineupText": "Sebastien Leger\nRoy Rosenfeld\nKhen\nNadav Vee\nSasha Atlas",
+  "allArtists": [
+    "Sebastien Leger",
+    "Roy Rosenfeld",
+    "Khen",
+    "Nadav Vee",
+    "Sasha Atlas"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.332541+00:00"
+},
+{
+  "eventId": "2510934",
+  "title": "Bussdown Baddies",
+  "eventUrl": "https://ra.co/events/2510934",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Mood Ring",
+  "venueUrl": "https://ra.co/clubs/141852",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Darling Cool",
+    "Joogmac",
+    "JAMBALAYA"
+  ],
+  "ticketUrl": "https://www.instagram.com/p/DdijHrbT0WK/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "4DHILA"
+  ],
+  "lineupText": "Darling Cool\nJoogmac\n4DHILA\nJAMBALAYA",
+  "allArtists": [
+    "Darling Cool",
+    "Joogmac",
+    "4DHILA",
+    "JAMBALAYA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.345026+00:00"
+},
+{
+  "eventId": "2530559",
+  "title": "Global Entry",
+  "eventUrl": "https://ra.co/events/2530559",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Rebecca's",
+  "venueUrl": "https://ra.co/clubs/125612",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "AJACENT",
+    "DEE-MEE"
+  ],
+  "genres": [
+    "Baile Funk",
+    "Ghetto Tech"
+  ],
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "MKMIXES",
+    "RADIZZY",
+    "TRISTAN"
+  ],
+  "lineupText": "AJACENT\nMKMIXES\nRADIZZY\nDEE-MEE\nTRISTAN",
+  "allArtists": [
+    "AJACENT",
+    "MKMIXES",
+    "RADIZZY",
+    "DEE-MEE",
+    "TRISTAN"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.369762+00:00"
+},
+{
+  "eventId": "2543552",
+  "title": "Rich Medina X Le Bain",
+  "eventUrl": "https://ra.co/events/2543552",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Le Bain",
+  "venueUrl": "https://ra.co/clubs/36873",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Rich Medina"
+  ],
+  "isTicketed": true,
+  "lineupText": "Rich Medina",
+  "allArtists": [
+    "Rich Medina"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.382289+00:00"
+},
+{
+  "eventId": "2522978",
+  "title": "SITH: SECRET RENDEZVOUS - 20 W 36th St., New York, NY 10018",
+  "eventUrl": "https://ra.co/events/2522978",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "03:00",
+  "venue": "Eden NYC",
+  "venueUrl": "https://ra.co/clubs/14020",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Natasha Diggs",
+    "Ashley Younniä",
+    "Karizma",
+    "Baronhawk Poitier",
+    "Brett Dancer"
+  ],
+  "genres": [
+    "House",
+    "Funk / Soul"
+  ],
+  "ticketUrl": "https://soulinthehorn.com",
+  "isTicketed": true,
+  "cost": "25",
+  "lineupText": "Natasha Diggs, Ashley Younniä, Karizma, Baronhawk Poitier, Brett Dancer",
+  "allArtists": [
+    "Natasha Diggs",
+    "Ashley Younniä",
+    "Karizma",
+    "Baronhawk Poitier",
+    "Brett Dancer"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.412194+00:00"
+},
+{
+  "eventId": "2415022",
+  "title": "Friends In High Places feat. Jazzy",
+  "eventUrl": "https://ra.co/events/2415022",
+  "date": "2026-10-02",
+  "startTime": "17:00",
+  "endTime": "00:00",
+  "venue": "Westlight Rooftop at The William Vale",
+  "venueUrl": "https://ra.co/clubs/289077",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Deep House"
+  ],
+  "ticketUrl": "https://link.dice.fm/c87e7b4f3365",
+  "isTicketed": true,
+  "cost": "29.99",
+  "unlinkedArtists": [
+    "@Jazzy"
+  ],
+  "lineupText": "@Jazzy",
+  "allArtists": [
+    "@Jazzy"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.433726+00:00"
+},
+{
+  "eventId": "2547960",
+  "title": "feedbk with Ty Serna, Taiga",
+  "eventUrl": "https://ra.co/events/2547960",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "feedbk",
+  "venueUrl": "https://ra.co/clubs/301444",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Ty Serna",
+    "Taiga"
+  ],
+  "genres": [
+    "House",
+    "Tech House"
+  ],
+  "ticketUrl": "https://www.instagram.com/feedbk_/",
+  "isTicketed": true,
+  "lineupText": "Downstairs Bar :\nTy Serna\nTaiga",
+  "allArtists": [
+    "Ty Serna",
+    "Taiga"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.453605+00:00"
+},
+{
+  "eventId": "2476530",
+  "title": "We Belong Here: Central Park",
+  "eventUrl": "https://ra.co/events/2476530",
+  "date": "2026-10-02",
+  "startTime": "16:00",
+  "endTime": "21:00",
+  "venue": "Wollman Rink",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Meduza",
+    "LP Giobbi",
+    "Ben Böhmer",
+    "Stephan Bodzin",
+    "Steve Angello",
+    "Bob Moses",
+    "Ashibah",
+    "Tripolism",
+    "Amanda Simpson",
+    "Anthony Romano",
+    "ASMOT",
+    "Lexicon",
+    "Mafia B",
+    "Malcolm Zeller",
+    "Nog",
+    "Slaycey"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.webelonghere.world/centralpark/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Meduza ^3",
+    "Stephan Bodzin Live",
+    "Bob Moses (Club Set)",
+    "Eve Lauren",
+    "After Ours",
+    "Amanda Usher",
+    "Emily Bass",
+    "J. Force",
+    "Kitty",
+    "Quantum.Cor",
+    "Sanvero",
+    "SebiLuca",
+    "Squared",
+    "Zoe Vi"
+  ],
+  "lineupText": "Meduza ^3\nLP Giobbi\nBen Böhmer\nStephan Bodzin Live\nSteve Angello\nBob Moses (Club Set)\nAshibah\nEve Lauren\nTripolism\nAfter Ours\nAmanda Simpson\nAmanda Usher\nAnthony Romano\nASMOT\nEmily Bass\nJ. Force\nKitty\nLexicon\nMafia B\nMalcolm Zeller\nNog\nQuantum.Cor\nSanvero\nSebiLuca\nSlaycey\nSquared\nZoe Vi",
+  "allArtists": [
+    "Meduza ^3",
+    "LP Giobbi",
+    "Ben Böhmer",
+    "Stephan Bodzin Live",
+    "Steve Angello",
+    "Bob Moses (Club Set)",
+    "Ashibah",
+    "Eve Lauren",
+    "Tripolism",
+    "After Ours",
+    "Amanda Simpson",
+    "Amanda Usher",
+    "Anthony Romano",
+    "ASMOT",
+    "Emily Bass",
+    "J. Force",
+    "Kitty",
+    "Lexicon",
+    "Mafia B",
+    "Malcolm Zeller",
+    "Nog",
+    "Quantum.Cor",
+    "Sanvero",
+    "SebiLuca",
+    "Slaycey",
+    "Squared",
+    "Zoe Vi",
+    "Meduza",
+    "Stephan Bodzin",
+    "Bob Moses"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.467873+00:00"
+},
+{
+  "eventId": "2526281",
+  "title": "Happy Hour: COMMUTER with Muenfua, source, CYB3RT0NIN B2B Freequincy",
+  "eventUrl": "https://ra.co/events/2526281",
+  "date": "2026-10-02",
+  "startTime": "19:00",
+  "endTime": "22:00",
+  "venue": "Bossa Nova Civic Club",
+  "venueUrl": "https://ra.co/clubs/71292",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "CYB3R T0NIN"
+  ],
+  "genres": [
+    "Techno",
+    "Club"
+  ],
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Muenfua",
+    "source",
+    "CYB3R T0NIN b2b Freequincy"
+  ],
+  "lineupText": "Muenfua\nsource\nCYB3R T0NIN b2b Freequincy",
+  "allArtists": [
+    "Muenfua",
+    "source",
+    "CYB3R T0NIN b2b Freequincy",
+    "CYB3R T0NIN"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.492893+00:00"
+},
+{
+  "eventId": "2469916",
+  "title": "Kruder & Dorfmeister",
+  "eventUrl": "https://ra.co/events/2469916",
+  "date": "2026-10-01",
+  "startTime": "19:00",
+  "endTime": "23:59",
+  "venue": "Terminal 5",
+  "venueUrl": "https://ra.co/clubs/7517",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Kruder & Dorfmeister"
+  ],
+  "ticketUrl": "https://www.axs.com/events/1357385/kruder-dorfmeister-tickets?skin=terminal5&_gl=1*1x55cj8*_gcl_au*MjM2OTEyMDI4LjE3Nzk0NzE4MDY.",
+  "isTicketed": false,
+  "lineupText": "Kruder & Dorfmeister",
+  "allArtists": [
+    "Kruder & Dorfmeister"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.508913+00:00"
+},
+{
+  "eventId": "2539330",
+  "title": "Refuge Friday: Robag Wruhme",
+  "eventUrl": "https://ra.co/events/2539330",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "09:00",
+  "venue": "Refuge",
+  "venueUrl": "https://ra.co/clubs/285748",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Robag Wruhme"
+  ],
+  "ticketUrl": "https://RFoct2nd.eventbrite.com/?aff=RA",
+  "isTicketed": false,
+  "lineupText": "Robag Wruhme",
+  "allArtists": [
+    "Robag Wruhme"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:50.977421+00:00"
+},
+{
+  "eventId": "2544626",
+  "title": "GAY.FM (PLURGBTQ 8===) <3",
+  "eventUrl": "https://ra.co/events/2544626",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Metropolitan Bar",
+  "venueUrl": "https://ra.co/clubs/236906",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "BABES The DJ",
+    "ConCon"
+  ],
+  "genres": [
+    "Pop",
+    "Club"
+  ],
+  "ticketUrl": "http://www.instagram.com/gayfm.nyc",
+  "isTicketed": true,
+  "cost": "5+",
+  "unlinkedArtists": [
+    "BABES The DJ  ConCon Pristál cassidj"
+  ],
+  "lineupText": "BABES The DJ  ConCon Pristál cassidj",
+  "allArtists": [
+    "BABES The DJ  ConCon Pristál cassidj",
+    "BABES The DJ",
+    "ConCon"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.000971+00:00"
+},
+{
+  "eventId": "2542223",
+  "title": "KYRUH All Night Long",
+  "eventUrl": "https://ra.co/events/2542223",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Mansions",
+  "venueUrl": "https://ra.co/clubs/197275",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "KYRUH"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "isTicketed": false,
+  "cost": "20",
+  "lineupText": "KYRUH",
+  "allArtists": [
+    "KYRUH"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.023038+00:00"
+},
+{
+  "eventId": "2528999",
+  "title": "Outer Heaven presents: Jack Mulqueen b2b Secret Guest",
+  "eventUrl": "https://ra.co/events/2528999",
+  "date": "2026-10-02",
+  "startTime": "20:00",
+  "endTime": "04:00",
+  "venue": "Outer Heaven",
+  "venueUrl": "https://ra.co/clubs/209094",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Jack Mulqueen",
+    "Mac Briggs"
+  ],
+  "genres": [
+    "Tech House"
+  ],
+  "isTicketed": true,
+  "cost": "50",
+  "unlinkedArtists": [
+    "Jack Mulqueen b2b ???"
+  ],
+  "lineupText": "Jack Mulqueen b2b ???\nMac Briggs",
+  "allArtists": [
+    "Jack Mulqueen b2b ???",
+    "Mac Briggs",
+    "Jack Mulqueen"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.045791+00:00"
+},
+{
+  "eventId": "2502206",
+  "title": "BEYOND THE STARDUST",
+  "eventUrl": "https://ra.co/events/2502206",
+  "date": "2026-10-02",
+  "startTime": "19:00",
+  "endTime": "20:00",
+  "venue": "The Flea Theater",
+  "venueUrl": "https://ra.co/clubs/298330",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "The Illustrious Blacks"
+  ],
+  "genres": [
+    "House",
+    "Disco"
+  ],
+  "ticketUrl": "https://theflea.org/stardust",
+  "isTicketed": true,
+  "cost": "29.50-55.50",
+  "unlinkedArtists": [
+    "Niegel Smith",
+    "Amazonian Rockstar",
+    "Courtney J. Cook",
+    "Queen Ravenden",
+    "Javi Perez",
+    "Blaine Petrovia"
+  ],
+  "lineupText": "The Illustrious Blacks\nNiegel Smith\nAmazonian Rockstar\nCourtney J. Cook\nQueen Ravenden\nJavi Perez\nBlaine Petrovia",
+  "allArtists": [
+    "The Illustrious Blacks",
+    "Niegel Smith",
+    "Amazonian Rockstar",
+    "Courtney J. Cook",
+    "Queen Ravenden",
+    "Javi Perez",
+    "Blaine Petrovia"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.061405+00:00"
+},
+{
+  "eventId": "2533567",
+  "title": "Rollup: KEBRA (BR/CDMX), Dj Rankng (CDMX), La Maquina, zorenLo",
+  "eventUrl": "https://ra.co/events/2533567",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Bossa Nova Civic Club",
+  "venueUrl": "https://ra.co/clubs/71292",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "KEBRA",
+    "Dj Rankng",
+    "zorenLo"
+  ],
+  "genres": [
+    "Latin Bass",
+    "Guaracha"
+  ],
+  "ticketUrl": "https://www.instagram.com/lorenzorenlo/",
+  "isTicketed": false,
+  "cost": "$10 / $15",
+  "unlinkedArtists": [
+    "KEBRA Dj Rankng @La Maquina zorenLo"
+  ],
+  "lineupText": "KEBRA Dj Rankng @La Maquina zorenLo",
+  "allArtists": [
+    "KEBRA Dj Rankng @La Maquina zorenLo",
+    "KEBRA",
+    "Dj Rankng",
+    "zorenLo"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.085606+00:00"
+},
+{
+  "eventId": "2543613",
+  "title": "SOFI TUKKER",
+  "eventUrl": "https://ra.co/events/2543613",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Pacha New York",
+  "venueUrl": "https://ra.co/clubs/286414",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "SOFI TUKKER"
+  ],
+  "ticketUrl": "https://pacha-nyc.com/event/sofi-tukker-02-10-2026",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "SOFI TUKKER, The Bausa (Live), Mango & Ginger"
+  ],
+  "lineupText": "SOFI TUKKER, The Bausa (Live), Mango & Ginger",
+  "allArtists": [
+    "SOFI TUKKER, The Bausa (Live), Mango & Ginger",
+    "SOFI TUKKER"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.098441+00:00"
+},
+{
+  "eventId": "2546032",
+  "title": "less Is MORE: Connie + KANZE",
+  "eventUrl": "https://ra.co/events/2546032",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Moondog Hifi",
+  "venueUrl": "https://ra.co/clubs/250960",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Connie",
+    "KANZE"
+  ],
+  "ticketUrl": "https://www.moondoghifi.com/",
+  "isTicketed": true,
+  "cost": "0",
+  "lineupText": "Connie\nKANZE",
+  "allArtists": [
+    "Connie",
+    "KANZE"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.128603+00:00"
+},
+{
+  "eventId": "2535882",
+  "title": "Dil Se presents",
+  "eventUrl": "https://ra.co/events/2535882",
+  "date": "2026-10-02",
+  "startTime": "19:00",
+  "endTime": "22:00",
+  "venue": "Mood Ring",
+  "venueUrl": "https://ra.co/clubs/141852",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Handsome Krish",
+    "AMLA.DHAS",
+    "Sanjay Nara",
+    "XAYN"
+  ],
+  "isTicketed": false,
+  "cost": "0",
+  "lineupText": "Handsome Krish\nAMLA.DHAS\nSanjay Nara\nXAYN",
+  "allArtists": [
+    "Handsome Krish",
+    "AMLA.DHAS",
+    "Sanjay Nara",
+    "XAYN"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.149351+00:00"
+},
+{
+  "eventId": "2545631",
+  "title": "UMORA with Jean-Paul, Nico Noir, Ani Be",
+  "eventUrl": "https://ra.co/events/2545631",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Dada",
+  "venueUrl": "https://ra.co/clubs/224002",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Jean-Paul",
+    "Nico Noir",
+    "Ani Be"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.eventbrite.com/e/umora-w-jean-paul-nico-noir-ani-be-tickets-2002105422213?aff=oddtdtcreator",
+  "isTicketed": false,
+  "cost": "$20",
+  "lineupText": "Jean-Paul\nNico Noir\nAni Be",
+  "allArtists": [
+    "Jean-Paul",
+    "Nico Noir",
+    "Ani Be"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.194208+00:00"
+},
+{
+  "eventId": "2546485",
+  "title": "Sonic Catering: Night Of Eternal Purgatory",
+  "eventUrl": "https://ra.co/events/2546485",
+  "date": "2026-10-02",
+  "startTime": "21:00",
+  "endTime": "01:00",
+  "venue": "Sisters",
+  "venueUrl": "https://ra.co/clubs/108415",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Nondough",
+    "promethalina"
+  ],
+  "genres": [
+    "Ambient",
+    "Experimental"
+  ],
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Nondough promethalina"
+  ],
+  "lineupText": "Nondough promethalina",
+  "allArtists": [
+    "Nondough promethalina",
+    "Nondough",
+    "promethalina"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.217755+00:00"
+},
+{
+  "eventId": "2549985",
+  "title": "Andi + James Anthony",
+  "eventUrl": "https://ra.co/events/2549985",
+  "date": "2026-10-02",
+  "startTime": "21:00",
+  "endTime": "03:00",
+  "venue": "Gabriela",
+  "venueUrl": "https://ra.co/clubs/226608",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Andi"
+  ],
+  "genres": [
+    "House",
+    "New Wave"
+  ],
+  "isTicketed": false,
+  "cost": "0-20",
+  "unlinkedArtists": [
+    "James Anthony"
+  ],
+  "lineupText": "Andi + James Anthony",
+  "allArtists": [
+    "Andi",
+    "James Anthony"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.239272+00:00"
+},
+{
+  "eventId": "2548975",
+  "title": "BK LOVES UKG PRESENTS :BUS LOVES GARAGE",
+  "eventUrl": "https://ra.co/events/2548975",
+  "date": "2026-10-02",
+  "startTime": "21:00",
+  "endTime": "03:00",
+  "venue": "TBA - REEGADE STYLE POP UP, REVEALED WITH RSVP",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Cryostatik",
+    "tonton",
+    "BLCKLST",
+    "Chizzum",
+    "Lovelydaze",
+    "Sasha Rome"
+  ],
+  "genres": [
+    "Garage",
+    "Dubstep"
+  ],
+  "ticketUrl": "https://partiful.com/e/mNDVtYe2jqdqYELZJ2mT?c=xog1y5ty",
+  "isTicketed": false,
+  "cost": "$0.00",
+  "unlinkedArtists": [
+    "Cryostatik X Stealth Sequence",
+    "@Bella De Leon X Preethi",
+    "BLCKLST X Chizzum",
+    "Lovelydaze X Sasha Rome",
+    "Kasp"
+  ],
+  "lineupText": "Cryostatik X Stealth Sequence\n@Bella De Leon X Preethi\ntonton\nBLCKLST X Chizzum\nLovelydaze X Sasha Rome\nKasp",
+  "allArtists": [
+    "Cryostatik X Stealth Sequence",
+    "@Bella De Leon X Preethi",
+    "tonton",
+    "BLCKLST X Chizzum",
+    "Lovelydaze X Sasha Rome",
+    "Kasp",
+    "Cryostatik",
+    "BLCKLST",
+    "Chizzum",
+    "Lovelydaze",
+    "Sasha Rome"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.262714+00:00"
+},
+{
+  "eventId": "2546575",
+  "title": "Acropolis - A House Music Journey",
+  "eventUrl": "https://ra.co/events/2546575",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "03:00",
+  "venue": "Althea's Rooftop",
+  "venueUrl": "https://ra.co/clubs/218898",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "GIO (AR)"
+  ],
+  "genres": [
+    "House",
+    "Afro House"
+  ],
+  "ticketUrl": "https://linktr.ee/The.Aziman.Tribe",
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Nessa Sakura (12am-1am)",
+    "Fariko (11pm-12am)",
+    "La Loca (2am-3am)",
+    "Olyvya (10pm-11pm)",
+    "GIO (AR) (1am-2am)",
+    "JRumzzy (Percussionist) (10pm-12am)"
+  ],
+  "lineupText": "Nessa Sakura (12am-1am)\nFariko (11pm-12am)\nLa Loca (2am-3am)\nOlyvya (10pm-11pm)\nGIO (AR) (1am-2am)\nJRumzzy (Percussionist) (10pm-12am)",
+  "allArtists": [
+    "Nessa Sakura (12am-1am)",
+    "Fariko (11pm-12am)",
+    "La Loca (2am-3am)",
+    "Olyvya (10pm-11pm)",
+    "GIO (AR) (1am-2am)",
+    "JRumzzy (Percussionist) (10pm-12am)",
+    "GIO (AR)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.297810+00:00"
+},
+{
+  "eventId": "2551358",
+  "title": "ANIMAL Friday Night w/ Eric Umble",
+  "eventUrl": "https://ra.co/events/2551358",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Animal",
+  "venueUrl": "https://ra.co/clubs/282886",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Eric Umble"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.instagram.com/animal.nyc/",
+  "isTicketed": false,
+  "lineupText": "Eric Umble",
+  "allArtists": [
+    "Eric Umble"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.342766+00:00"
+},
+{
+  "eventId": "2550397",
+  "title": "NON-FRICTION: Tony Quattro / Vibeiana / LOVE LANGUAGE / AMERICA ROSE",
+  "eventUrl": "https://ra.co/events/2550397",
+  "date": "2026-10-02",
+  "startTime": "17:00",
+  "endTime": "04:00",
+  "venue": "MAD Radio NYC",
+  "venueUrl": "https://ra.co/clubs/279719",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Tony Quattro",
+    "Vibeiana",
+    "Love Language (CDMX)"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://shotgun.live/events/madradionyc100226",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "AMERICA ROSE"
+  ],
+  "lineupText": "Tony Quattro\nVibeiana\nLove Language (CDMX)\nAMERICA ROSE",
+  "allArtists": [
+    "Tony Quattro",
+    "Vibeiana",
+    "Love Language (CDMX)",
+    "AMERICA ROSE"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.356466+00:00"
+},
+{
+  "eventId": "2457272",
+  "title": "Whipped Cream, MUSUBI",
+  "eventUrl": "https://ra.co/events/2457272",
+  "date": "2026-10-02",
+  "startTime": "18:00",
+  "endTime": "22:00",
+  "venue": "Elsewhere",
+  "venueUrl": "https://ra.co/clubs/139960",
+  "city": "New York City",
+  "country": "United States of America",
+  "ticketUrl": "https://www.elsewhere.club/help",
+  "isTicketed": true,
+  "cost": "$20 - $25",
+  "unlinkedArtists": [
+    "ROOFTOP",
+    "Whipped Cream",
+    "MUSUBI"
+  ],
+  "lineupText": "ROOFTOP\nWhipped Cream\nMUSUBI",
+  "allArtists": [
+    "ROOFTOP",
+    "Whipped Cream",
+    "MUSUBI"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.387180+00:00"
+},
+{
+  "eventId": "2540951",
+  "title": "ANKHARA SESSION 002",
+  "eventUrl": "https://ra.co/events/2540951",
+  "date": "2026-10-02",
+  "startTime": "06:00",
+  "endTime": "10:00",
+  "venue": "Pianos",
+  "venueUrl": "https://ra.co/clubs/8400",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Afrobeat",
+    "R&B"
+  ],
+  "ticketUrl": "https://ankharaworld.com/",
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "DJ MAC",
+    "JONESY",
+    "CAMOMAC",
+    "PULPTABOO"
+  ],
+  "lineupText": "DJ MAC\nJONESY\nCAMOMAC\nPULPTABOO",
+  "allArtists": [
+    "DJ MAC",
+    "JONESY",
+    "CAMOMAC",
+    "PULPTABOO"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.414742+00:00"
+},
+{
+  "eventId": "2531518",
+  "title": "Medellin Fridays - Colombian Latin & Reggaeton Party NYC",
+  "eventUrl": "https://ra.co/events/2531518",
+  "date": "2026-10-02",
+  "startTime": "17:00",
+  "endTime": "03:00",
+  "venue": "San Antonios",
+  "venueUrl": "https://ra.co/clubs/254498",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Reggaeton"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.446813+00:00"
+},
+{
+  "eventId": "2532274",
+  "title": "Garden of Penumbra with X4N",
+  "eventUrl": "https://ra.co/events/2532274",
+  "date": "2026-10-02",
+  "startTime": "11:00",
+  "endTime": "14:00",
+  "venue": "Silence Please",
+  "venueUrl": "https://ra.co/clubs/267250",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Ambient",
+    "IDM"
+  ],
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "X4N"
+  ],
+  "lineupText": "X4N",
+  "allArtists": [
+    "X4N"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.473470+00:00"
+},
+{
+  "eventId": "2522204",
+  "title": "LOVE 2 LOVE - A DONNA SUMMER DISCO PARTY",
+  "eventUrl": "https://ra.co/events/2522204",
+  "date": "2026-10-02",
+  "startTime": "23:00",
+  "endTime": "03:00",
+  "venue": "TV EYE",
+  "venueUrl": "https://ra.co/clubs/188683",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Disco"
+  ],
+  "isTicketed": true,
+  "cost": "10.00",
+  "unlinkedArtists": [
+    "Michael T"
+  ],
+  "lineupText": "Michael T",
+  "allArtists": [
+    "Michael T"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.937990+00:00"
+},
+{
+  "eventId": "2415396",
+  "title": "Apollo Studio presents",
+  "eventUrl": "https://ra.co/events/2415396",
+  "date": "2026-10-02",
+  "startTime": "23:00",
+  "endTime": "06:00",
+  "venue": "Apollo Studio",
+  "venueUrl": "https://ra.co/clubs/188907",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Special Guests"
+  ],
+  "lineupText": "Special Guests",
+  "allArtists": [
+    "Special Guests"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.964029+00:00"
+},
+{
+  "eventId": "2543513",
+  "title": "Perreito",
+  "eventUrl": "https://ra.co/events/2543513",
+  "date": "2026-10-02",
+  "startTime": "18:00",
+  "endTime": "22:00",
+  "venue": "Elsewhere",
+  "venueUrl": "https://ra.co/clubs/139960",
+  "city": "New York City",
+  "country": "United States of America",
+  "ticketUrl": "https://www.elsewhere.club/help",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "ROOFTOP",
+    "Perreito"
+  ],
+  "lineupText": "ROOFTOP\nPerreito",
+  "allArtists": [
+    "ROOFTOP",
+    "Perreito"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:51.989162+00:00"
+},
+{
+  "eventId": "2490057",
+  "title": "#1 AVENIDA DE PERREO - Latin Reggaeton Rooftop Party",
+  "eventUrl": "https://ra.co/events/2490057",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Avenida NYC",
+  "venueUrl": "https://ra.co/clubs/297413",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.020335+00:00"
+},
+{
+  "eventId": "2546396",
+  "title": "Klub Kitsch International, Disco Exotica",
+  "eventUrl": "https://ra.co/events/2546396",
+  "date": "2026-09-25",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Danger Danger",
+  "venueUrl": "https://ra.co/clubs/236697",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Disco",
+    "Electronica"
+  ],
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "@Justin Denaro"
+  ],
+  "lineupText": "@Justin Denaro",
+  "allArtists": [
+    "@Justin Denaro"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.043787+00:00"
+},
+{
+  "eventId": "2545229",
+  "title": "Shadowbeats presents The Warren - Deep House / Dark Techno",
+  "eventUrl": "https://ra.co/events/2545229",
+  "date": "2026-10-02",
+  "startTime": "21:00",
+  "endTime": "04:00",
+  "venue": "Danger Danger",
+  "venueUrl": "https://ra.co/clubs/236697",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Techno",
+    "Deep House"
+  ],
+  "ticketUrl": "https://shotgun.live/en/events/shadowbeats1",
+  "isTicketed": false,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Shadowbeats presents",
+    "L.x.D",
+    "thexthdj",
+    "XIKOSIS"
+  ],
+  "lineupText": "Shadowbeats presents\nL.x.D\nthexthdj\nXIKOSIS",
+  "allArtists": [
+    "Shadowbeats presents",
+    "L.x.D",
+    "thexthdj",
+    "XIKOSIS"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.105618+00:00"
+},
+{
+  "eventId": "2548896",
+  "title": "Stoop World + Ariiineversrry present: NO STANDING",
+  "eventUrl": "https://ra.co/events/2548896",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Friends & Lovers",
+  "venueUrl": "https://ra.co/clubs/88376",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hip-Hop",
+    "Afrobeat"
+  ],
+  "ticketUrl": "https://www.eventbrite.com/e/no-standing-stoop-world-ariiineversrry-tickets-2002296063426?aff=oddtdtcreator",
+  "isTicketed": false,
+  "cost": "5.00 - 10.00",
+  "unlinkedArtists": [
+    "@SeanGreenTea",
+    "@Chip NYC",
+    "@JKCRadio",
+    "@STICKIRIC3"
+  ],
+  "lineupText": "@SeanGreenTea\n@Chip NYC\n@JKCRadio\n@STICKIRIC3",
+  "allArtists": [
+    "@SeanGreenTea",
+    "@Chip NYC",
+    "@JKCRadio",
+    "@STICKIRIC3"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.126864+00:00"
+},
+{
+  "eventId": "2546509",
+  "title": "B2B NY October Edition: Eugene Tambourine, Jools Palmer & Mandy Graves",
+  "eventUrl": "https://ra.co/events/2546509",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "The Monster",
+  "venueUrl": "https://ra.co/clubs/48114",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "House",
+    "Club"
+  ],
+  "ticketUrl": "https://www.b2bassment.com/",
+  "isTicketed": false,
+  "cost": "$10",
+  "unlinkedArtists": [
+    "Eugene Tambourine aka North Satellite",
+    "Jools Palmer",
+    "Mandy Graves"
+  ],
+  "lineupText": "Eugene Tambourine aka North Satellite\nJools Palmer\nMandy Graves",
+  "allArtists": [
+    "Eugene Tambourine aka North Satellite",
+    "Jools Palmer",
+    "Mandy Graves"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.158218+00:00"
+},
+{
+  "eventId": "2550748",
+  "title": "Latin & Reggaeton Fridays at OOO Nightclub",
+  "eventUrl": "https://ra.co/events/2550748",
+  "date": "2026-10-02",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "Out Of Ordinary",
+  "venueUrl": "https://ra.co/clubs/282285",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Reggaeton",
+    "Latin Bass"
+  ],
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "0 - $10.00",
+  "unlinkedArtists": [
+    "TBC"
+  ],
+  "lineupText": "TBC",
+  "allArtists": [
+    "TBC"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.171300+00:00"
+},
+{
+  "eventId": "2550622",
+  "title": "Motion Fridays Reloaded",
+  "eventUrl": "https://ra.co/events/2550622",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Level Astoria",
+  "venueUrl": "https://ra.co/clubs/283204",
+  "city": "New York City",
+  "country": "United States of America",
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "0 - $20.00",
+  "unlinkedArtists": [
+    "MTS Productions DJs"
+  ],
+  "lineupText": "MTS Productions DJs",
+  "allArtists": [
+    "MTS Productions DJs"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.198784+00:00"
+},
+{
+  "eventId": "2548439",
+  "title": "Reggaeton Boat Party NYC - Avalon Yacht – Oct 02",
+  "eventUrl": "https://ra.co/events/2548439",
+  "date": "2026-10-02",
+  "startTime": "22:30",
+  "endTime": "03:00",
+  "venue": "Skyport Marina",
+  "venueUrl": "https://ra.co/clubs/210989",
+  "city": "New York City",
+  "country": "United States of America",
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "$30.00 - $500.00",
+  "unlinkedArtists": [
+    "DJ Lineup TBA"
+  ],
+  "lineupText": "DJ Lineup TBA",
+  "allArtists": [
+    "DJ Lineup TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.225950+00:00"
+},
+{
+  "eventId": "2550649",
+  "title": "Reggaeton Friday Rave NYC",
+  "eventUrl": "https://ra.co/events/2550649",
+  "date": "2026-10-02",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Club 51",
+  "venueUrl": "https://ra.co/clubs/163084",
+  "city": "New York City",
+  "country": "United States of America",
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "0 - $35.80",
+  "unlinkedArtists": [
+    "2 DJs"
+  ],
+  "lineupText": "2 DJs",
+  "allArtists": [
+    "2 DJs"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.247304+00:00"
+},
+{
+  "eventId": "2537043",
+  "title": "Reggaeton on Houston - Latin & Reggaeton Party NYC",
+  "eventUrl": "https://ra.co/events/2537043",
+  "date": "2026-10-02",
+  "startTime": "17:00",
+  "endTime": "03:00",
+  "venue": "San Antonios",
+  "venueUrl": "https://ra.co/clubs/254498",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hip-Hop",
+    "Disco"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.277445+00:00"
+},
+{
+  "eventId": "2533873",
+  "title": "Wrecked: Julia Govor / Concrete Husband / T.Wan / S4M23 / Ryan Smith / Ron Like Hell",
+  "eventUrl": "https://ra.co/events/2533873",
+  "date": "2026-10-03",
+  "startTime": "22:30",
+  "endTime": "07:00",
+  "venue": "BASEMENT",
+  "venueUrl": "https://ra.co/clubs/165976",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Julia Govor",
+    "Concrete Husband",
+    "Ron Like Hell",
+    "T.Wan",
+    "S4M23",
+    "Ryan Smith"
+  ],
+  "ticketUrl": "https://basementny.net/house-rules",
+  "isTicketed": true,
+  "lineupText": "BASEMENT:\nJulia Govor\nConcrete Husband\nRon Like Hell\nSTUDIO:\nT.Wan\nS4M23\nRyan Smith",
+  "allArtists": [
+    "Julia Govor",
+    "Concrete Husband",
+    "Ron Like Hell",
+    "T.Wan",
+    "S4M23",
+    "Ryan Smith"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.328369+00:00"
+},
+{
+  "eventId": "2509327",
+  "title": "MERGE all night long: Rrose",
+  "eventUrl": "https://ra.co/events/2509327",
+  "date": "2026-10-03",
+  "startTime": "23:59",
+  "endTime": "08:00",
+  "venue": "TBA - Brooklyn",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Rrose"
+  ],
+  "genres": [
+    "Techno"
+  ],
+  "isTicketed": true,
+  "cost": "40",
+  "unlinkedArtists": [
+    "Rrose (all night long)"
+  ],
+  "lineupText": "Rrose (all night long)",
+  "allArtists": [
+    "Rrose (all night long)",
+    "Rrose"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.366537+00:00"
+},
+{
+  "eventId": "2522247",
+  "title": "Nonstop: Angel D'lite b2b tINI, DJ Fart in the Club, Eli Verveine, Francesco Del Garda + more",
+  "eventUrl": "https://ra.co/events/2522247",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "15:00",
+  "venue": "Nowadays",
+  "venueUrl": "https://ra.co/clubs/105873",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "KUDZU AUDIO",
+    "Eli Verveine",
+    "DJ Fart in the Club",
+    "SPRKLBB",
+    "Angel D'lite",
+    "tINI",
+    "Francesco Del Garda"
+  ],
+  "genres": [
+    "Techno",
+    "Bass"
+  ],
+  "ticketUrl": "https://www.nowadays.nyc",
+  "isTicketed": true,
+  "cost": "$30+",
+  "lineupText": "22:00–01:00: KUDZU AUDIO\n01:00–03:30: Eli Verveine\n03:30–06:00: DJ Fart in the Club\n06:00–09:00: SPRKLBB\n09:00–12:00: Angel D'lite b2b tINI\n12:00–15:00: Francesco Del Garda",
+  "allArtists": [
+    "KUDZU AUDIO",
+    "Eli Verveine",
+    "DJ Fart in the Club",
+    "SPRKLBB",
+    "Angel D'lite",
+    "tINI",
+    "Francesco Del Garda"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.378797+00:00"
+},
+{
+  "eventId": "2532442",
+  "title": "Club Stars: Detroit In Effect, DJ Slugo, Amarji King + Sirens(MORENXXX b2b Loka)",
+  "eventUrl": "https://ra.co/events/2532442",
+  "date": "2026-10-03",
+  "startTime": "21:30",
+  "endTime": "03:00",
+  "venue": "Paragon",
+  "venueUrl": "https://ra.co/clubs/195815",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Detroit In Effect",
+    "DJ Slugo",
+    "Amarji King",
+    "MORENXXX",
+    "LOKA (US)"
+  ],
+  "genres": [
+    "Techno",
+    "Ghetto Tech"
+  ],
+  "isTicketed": true,
+  "cost": "$25",
+  "unlinkedArtists": [
+    "Sirens(MORENXXX b2b LOKA (US) )"
+  ],
+  "lineupText": "Detroit In Effect\nDJ Slugo\nAmarji King\nSirens(MORENXXX b2b LOKA (US) )",
+  "allArtists": [
+    "Detroit In Effect",
+    "DJ Slugo",
+    "Amarji King",
+    "Sirens(MORENXXX b2b LOKA (US) )",
+    "MORENXXX",
+    "LOKA (US)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.420782+00:00"
+},
+{
+  "eventId": "2538997",
+  "title": "POSER",
+  "eventUrl": "https://ra.co/events/2538997",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "08:00",
+  "venue": "Green Room NYC",
+  "venueUrl": "https://ra.co/clubs/278409",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Griffin Maxwell Brooks",
+    "Josh Caffé",
+    "BEIGE",
+    "Lauren Flax",
+    "Josh Steers",
+    "Sevyn Love"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://www.goldenrecordnyc.com/",
+  "isTicketed": true,
+  "cost": "20",
+  "lineupText": "Griffin Maxwell Brooks\nJosh Caffé\nBEIGE\nLauren Flax\nJosh Steers\nSevyn Love",
+  "allArtists": [
+    "Griffin Maxwell Brooks",
+    "Josh Caffé",
+    "BEIGE",
+    "Lauren Flax",
+    "Josh Steers",
+    "Sevyn Love"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.434576+00:00"
+},
+{
+  "eventId": "2502142",
+  "title": "RAW CUTS x House of Yes: DJ Minx, Bridge",
+  "eventUrl": "https://ra.co/events/2502142",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "House of Yes",
+  "venueUrl": "https://ra.co/clubs/21488",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "DJ Minx",
+    "Bridge (NY)"
+  ],
+  "genres": [
+    "House",
+    "Club"
+  ],
+  "isTicketed": true,
+  "cost": "20-45",
+  "lineupText": "DJ Minx\nBridge (NY)",
+  "allArtists": [
+    "DJ Minx",
+    "Bridge (NY)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.463961+00:00"
+},
+{
+  "eventId": "2527753",
+  "title": "Moritz von Oswald, Sarah Wreath",
+  "eventUrl": "https://ra.co/events/2527753",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "05:00",
+  "venue": "Signal",
+  "venueUrl": "https://ra.co/clubs/256148",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Moritz von Oswald",
+    "Sarah Wreath"
+  ],
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "Moritz von Oswald, Sarah Wreath"
+  ],
+  "lineupText": "Moritz von Oswald, Sarah Wreath",
+  "allArtists": [
+    "Moritz von Oswald, Sarah Wreath",
+    "Moritz von Oswald",
+    "Sarah Wreath"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.476801+00:00"
+},
+{
+  "eventId": "2532305",
+  "title": "Titonton Duvanté, Shawn Dub / Mike Servito & JADALAREIGN / kels",
+  "eventUrl": "https://ra.co/events/2532305",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "public records",
+  "venueUrl": "https://ra.co/clubs/164270",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Titonton Duvanté",
+    "Shawn Dub",
+    "Mike Servito",
+    "JADALAREIGN",
+    "Kels (US)"
+  ],
+  "genres": [
+    "House",
+    "Deep House"
+  ],
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "Mike Servito & JADALAREIGN"
+  ],
+  "lineupText": "Titonton Duvanté\nShawn Dub\nMike Servito & JADALAREIGN\nKels (US)",
+  "allArtists": [
+    "Titonton Duvanté",
+    "Shawn Dub",
+    "Mike Servito & JADALAREIGN",
+    "Kels (US)",
+    "Mike Servito",
+    "JADALAREIGN"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.946518+00:00"
+},
+{
+  "eventId": "2539413",
+  "title": "VERS UNDIES: OCT 3RD",
+  "eventUrl": "https://ra.co/events/2539413",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "VERS",
+  "venueUrl": "https://ra.co/clubs/228894",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Kyle Hamilton",
+    "Tasheff"
+  ],
+  "genres": [
+    "Electro",
+    "Pop"
+  ],
+  "isTicketed": true,
+  "cost": "30",
+  "lineupText": "Kyle Hamilton\nTasheff",
+  "allArtists": [
+    "Kyle Hamilton",
+    "Tasheff"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:52.974705+00:00"
+},
+{
+  "eventId": "2532697",
+  "title": "Resurface",
+  "eventUrl": "https://ra.co/events/2532697",
+  "date": "2026-10-03",
+  "startTime": "18:00",
+  "endTime": "02:00",
+  "venue": "TBA - Open Air",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Auspex",
+    "Elle Dee"
+  ],
+  "genres": [
+    "Techno"
+  ],
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Bsv9",
+    "Danilo"
+  ],
+  "lineupText": "Auspex\nElle Dee\nBsv9\nDanilo",
+  "allArtists": [
+    "Auspex",
+    "Elle Dee",
+    "Bsv9",
+    "Danilo"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.008603+00:00"
+},
+{
+  "eventId": "2542404",
+  "title": "feedbk - grand opening with Gwenan, Dragos Illici, Kian OK, Rasho & More",
+  "eventUrl": "https://ra.co/events/2542404",
+  "date": "2026-10-03",
+  "startTime": "17:00",
+  "endTime": "02:00",
+  "venue": "feedbk",
+  "venueUrl": "https://ra.co/clubs/301444",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Gwenan",
+    "Dragos Ilici",
+    "Kian OK",
+    "Rasho",
+    "ADREE",
+    "Grem (IT)",
+    "Mazko A",
+    "Manny (us)",
+    "Taiga",
+    "Hugo (US)"
+  ],
+  "genres": [
+    "House",
+    "Tech House"
+  ],
+  "ticketUrl": "https://www.instagram.com/feedbk_/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "Sergio Dimoff",
+    "& Special Guests"
+  ],
+  "lineupText": "Gwenan\nDragos Ilici\nKian OK\nRasho\nADREE\nGrem (IT)\nMazko A\nManny (us)\nTaiga\nHugo (US)\nSergio Dimoff\n& Special Guests",
+  "allArtists": [
+    "Gwenan",
+    "Dragos Ilici",
+    "Kian OK",
+    "Rasho",
+    "ADREE",
+    "Grem (IT)",
+    "Mazko A",
+    "Manny (us)",
+    "Taiga",
+    "Hugo (US)",
+    "Sergio Dimoff",
+    "& Special Guests"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.023148+00:00"
+},
+{
+  "eventId": "2540465",
+  "title": "Jordan Nocturne, Arvin T, Laila Amira and Lady Harley (all night)",
+  "eventUrl": "https://ra.co/events/2540465",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "05:00",
+  "venue": "Good Room",
+  "venueUrl": "https://ra.co/clubs/97606",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Jordan Nocturne",
+    "Arvin T",
+    "Laila Amira",
+    "Lady Harley"
+  ],
+  "ticketUrl": "http://goodroombk.com",
+  "isTicketed": true,
+  "cost": "$10-25",
+  "unlinkedArtists": [
+    "Bad Room-",
+    "Laila Amira and Lady Harley (all night)"
+  ],
+  "lineupText": "Jordan Nocturne\nArvin T\nBad Room-\nLaila Amira and Lady Harley (all night)",
+  "allArtists": [
+    "Jordan Nocturne",
+    "Arvin T",
+    "Bad Room-",
+    "Laila Amira and Lady Harley (all night)",
+    "Laila Amira",
+    "Lady Harley"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.044391+00:00"
+},
+{
+  "eventId": "2491681",
+  "title": "RIRIA, Jubilee, SHAKING b2b Clearcast, āndrra: Toola, B Hills, IZ:AK",
+  "eventUrl": "https://ra.co/events/2491681",
+  "date": "2026-10-03",
+  "startTime": "22:30",
+  "endTime": "04:00",
+  "venue": "Elsewhere",
+  "venueUrl": "https://ra.co/clubs/139960",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "RIRIA",
+    "Jubilee",
+    "SHAKING",
+    "Clearcast",
+    "B Hills"
+  ],
+  "ticketUrl": "https://www.elsewhere.club/help",
+  "isTicketed": true,
+  "cost": "$30 - $35",
+  "unlinkedArtists": [
+    "HALL",
+    "ZONE ONE",
+    "LOFT",
+    "Toola",
+    "IZ:AK"
+  ],
+  "lineupText": "HALL\nRIRIA\nJubilee\nZONE ONE\nSHAKING\nClearcast\nLOFT\nāndrra:\nToola\nB Hills\nIZ:AK",
+  "allArtists": [
+    "HALL",
+    "RIRIA",
+    "Jubilee",
+    "ZONE ONE",
+    "SHAKING",
+    "Clearcast",
+    "LOFT",
+    "Toola",
+    "B Hills",
+    "IZ:AK"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.079631+00:00"
+},
+{
+  "eventId": "2537927",
+  "title": "Papaya Papaya Mamão",
+  "eventUrl": "https://ra.co/events/2537927",
+  "date": "2026-10-03",
+  "startTime": "21:00",
+  "endTime": "03:00",
+  "venue": "TBA - Secret Location, Bed Stuy",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Siete Catorce",
+    "FEDRA.",
+    "FUGE"
+  ],
+  "genres": [
+    "Latin Bass"
+  ],
+  "isTicketed": true,
+  "cost": "$35",
+  "unlinkedArtists": [
+    "Contrafuego"
+  ],
+  "lineupText": "Siete Catorce\nContrafuego\nFEDRA.\nFUGE",
+  "allArtists": [
+    "Siete Catorce",
+    "Contrafuego",
+    "FEDRA.",
+    "FUGE"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.097798+00:00"
+},
+{
+  "eventId": "2548103",
+  "title": "After Dark: Nacho Isa , Santelises",
+  "eventUrl": "https://ra.co/events/2548103",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:30",
+  "venue": "Unveiled",
+  "venueUrl": "https://ra.co/clubs/256294",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Ryan Santelises",
+    "Nacho Isa"
+  ],
+  "genres": [
+    "Deep House",
+    "Afro House"
+  ],
+  "ticketUrl": "https://link.dice.fm/L962a022c2f2?dice_id=L962a022c2f2",
+  "isTicketed": true,
+  "cost": "20",
+  "unlinkedArtists": [
+    "alimae"
+  ],
+  "lineupText": "Ryan Santelises\nNacho Isa\nalimae",
+  "allArtists": [
+    "Ryan Santelises",
+    "Nacho Isa",
+    "alimae"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.118830+00:00"
+},
+{
+  "eventId": "2417784",
+  "title": "Book Club Radio Festival #2 The Outer Rim",
+  "eventUrl": "https://ra.co/events/2417784",
+  "date": "2026-10-02",
+  "startTime": "17:00",
+  "endTime": "04:00",
+  "venue": "Brooklyn Roots Collective",
+  "venueUrl": "https://ra.co/clubs/288988",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Tinzo",
+    "Jojo Lorenzo",
+    "Machinedrum",
+    "Mark Farina",
+    "Hiroko Yamamura",
+    "Byron The Aquarius",
+    "Nikki Nair",
+    "MikeQ",
+    "Soul Summit Music",
+    "Toribio",
+    "Jex Opolis",
+    "Regularfantasy",
+    "Willo",
+    "DJ Heather",
+    "Öona Dahl",
+    "Varist",
+    "RaeCola",
+    "Fibre"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://shotgun.live/en/festivals/bookclubradiofest2",
+  "isTicketed": false,
+  "lineupText": "Tinzo • Jojo Lorenzo • Machinedrum • Mark Farina • Hiroko Yamamura • Byron The Aquarius • Nikki Nair • MikeQ • Soul Summit Music • Toribio • Jex Opolis • Regularfantasy • Willo • DJ Heather • Öona Dahl • Zainab • Varist • RaeCola • Fibre",
+  "allArtists": [
+    "Tinzo",
+    "Jojo Lorenzo",
+    "Machinedrum",
+    "Mark Farina",
+    "Hiroko Yamamura",
+    "Byron The Aquarius",
+    "Nikki Nair",
+    "MikeQ",
+    "Soul Summit Music",
+    "Toribio",
+    "Jex Opolis",
+    "Regularfantasy",
+    "Willo",
+    "DJ Heather",
+    "Öona Dahl",
+    "Varist",
+    "RaeCola",
+    "Fibre"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.148237+00:00"
+},
+{
+  "eventId": "2516305",
+  "title": "Dom Dolla",
+  "eventUrl": "https://ra.co/events/2516305",
+  "date": "2026-10-03",
+  "startTime": "03:00",
+  "endTime": "20:00",
+  "venue": "Flushing Meadows Corona Park",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Dom Dolla",
+    "Peggy Gou",
+    "Basement Jaxx"
+  ],
+  "genres": [
+    "House",
+    "Tech House"
+  ],
+  "ticketUrl": "https://nyc.domdolla.com/",
+  "isTicketed": false,
+  "cost": "$135+",
+  "unlinkedArtists": [
+    "Basement Jaxx (DJ SET)",
+    "Not Without Friends"
+  ],
+  "lineupText": "Dom Dolla\nPeggy Gou\nBasement Jaxx (DJ SET)\nNot Without Friends",
+  "allArtists": [
+    "Dom Dolla",
+    "Peggy Gou",
+    "Basement Jaxx (DJ SET)",
+    "Not Without Friends",
+    "Basement Jaxx"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.169932+00:00"
+},
+{
+  "eventId": "2530118",
+  "title": "MetroTek",
+  "eventUrl": "https://ra.co/events/2530118",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Branded Saloon",
+  "venueUrl": "https://ra.co/clubs/149488",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "House",
+    "Disco"
+  ],
+  "isTicketed": true,
+  "cost": "10",
+  "unlinkedArtists": [
+    "Peter Madden"
+  ],
+  "lineupText": "Peter Madden",
+  "allArtists": [
+    "Peter Madden"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.188283+00:00"
+},
+{
+  "eventId": "2535408",
+  "title": "Office Hours: funkin donut, Arjun Shah, Inés",
+  "eventUrl": "https://ra.co/events/2535408",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Jupiter Disco",
+  "venueUrl": "https://ra.co/clubs/128789",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "funkin donut",
+    "Arjun Shah",
+    "Inés"
+  ],
+  "isTicketed": true,
+  "lineupText": "funkin donut\nArjun Shah\nInés",
+  "allArtists": [
+    "funkin donut",
+    "Arjun Shah",
+    "Inés"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.218822+00:00"
+},
+{
+  "eventId": "2548916",
+  "title": "Elsewhere x H0L0: not without friends: Luke Alessi, William Kiss, Jordan Brando, Miata Boys",
+  "eventUrl": "https://ra.co/events/2548916",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "H0L0",
+  "venueUrl": "https://ra.co/clubs/137550",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Luke Alessi",
+    "William Kiss",
+    "Jordan Brando",
+    "Miata Boys",
+    "Gigi Rio",
+    "amita",
+    "Craic Feen"
+  ],
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "H0L0"
+  ],
+  "lineupText": "H0L0\nnot without friends:\nLuke Alessi\nWilliam Kiss\nJordan Brando\nMiata Boys\nBar Room:\nGigi Rio + amita + Craic Feen",
+  "allArtists": [
+    "H0L0",
+    "Luke Alessi",
+    "William Kiss",
+    "Jordan Brando",
+    "Miata Boys",
+    "Gigi Rio",
+    "amita",
+    "Craic Feen"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.239489+00:00"
+},
+{
+  "eventId": "2546434",
+  "title": "TAD ALL NIGHT",
+  "eventUrl": "https://ra.co/events/2546434",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Le Bain",
+  "venueUrl": "https://ra.co/clubs/36873",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Tad Haes"
+  ],
+  "isTicketed": true,
+  "lineupText": "Tad Haes",
+  "allArtists": [
+    "Tad Haes"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.261492+00:00"
+},
+{
+  "eventId": "2546170",
+  "title": "Club Rawhide SATURDAY NIGHT 10.03.26 w/ Kim Anh, verdigris, DJ Shiver",
+  "eventUrl": "https://ra.co/events/2546170",
+  "date": "2026-10-03",
+  "startTime": "21:00",
+  "endTime": "04:00",
+  "venue": "Club Rawhide",
+  "venueUrl": "https://ra.co/clubs/294929",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Kim Anh",
+    "verdigris",
+    "DJ Shiver (2)"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://rawhide.nyc",
+  "isTicketed": true,
+  "cost": "30.00",
+  "unlinkedArtists": [
+    "Kim Anh, verdigris, DJ Shiver (2)"
+  ],
+  "lineupText": "Kim Anh, verdigris, DJ Shiver (2)",
+  "allArtists": [
+    "Kim Anh, verdigris, DJ Shiver (2)",
+    "Kim Anh",
+    "verdigris",
+    "DJ Shiver (2)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.319663+00:00"
+},
+{
+  "eventId": "2476530",
+  "title": "We Belong Here: Central Park",
+  "eventUrl": "https://ra.co/events/2476530",
+  "date": "2026-10-02",
+  "startTime": "16:00",
+  "endTime": "21:00",
+  "venue": "Wollman Rink",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Meduza",
+    "LP Giobbi",
+    "Ben Böhmer",
+    "Stephan Bodzin",
+    "Steve Angello",
+    "Bob Moses",
+    "Ashibah",
+    "Tripolism",
+    "Amanda Simpson",
+    "Anthony Romano",
+    "ASMOT",
+    "Lexicon",
+    "Mafia B",
+    "Malcolm Zeller",
+    "Nog",
+    "Slaycey"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.webelonghere.world/centralpark/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Meduza ^3",
+    "Stephan Bodzin Live",
+    "Bob Moses (Club Set)",
+    "Eve Lauren",
+    "After Ours",
+    "Amanda Usher",
+    "Emily Bass",
+    "J. Force",
+    "Kitty",
+    "Quantum.Cor",
+    "Sanvero",
+    "SebiLuca",
+    "Squared",
+    "Zoe Vi"
+  ],
+  "lineupText": "Meduza ^3\nLP Giobbi\nBen Böhmer\nStephan Bodzin Live\nSteve Angello\nBob Moses (Club Set)\nAshibah\nEve Lauren\nTripolism\nAfter Ours\nAmanda Simpson\nAmanda Usher\nAnthony Romano\nASMOT\nEmily Bass\nJ. Force\nKitty\nLexicon\nMafia B\nMalcolm Zeller\nNog\nQuantum.Cor\nSanvero\nSebiLuca\nSlaycey\nSquared\nZoe Vi",
+  "allArtists": [
+    "Meduza ^3",
+    "LP Giobbi",
+    "Ben Böhmer",
+    "Stephan Bodzin Live",
+    "Steve Angello",
+    "Bob Moses (Club Set)",
+    "Ashibah",
+    "Eve Lauren",
+    "Tripolism",
+    "After Ours",
+    "Amanda Simpson",
+    "Amanda Usher",
+    "Anthony Romano",
+    "ASMOT",
+    "Emily Bass",
+    "J. Force",
+    "Kitty",
+    "Lexicon",
+    "Mafia B",
+    "Malcolm Zeller",
+    "Nog",
+    "Quantum.Cor",
+    "Sanvero",
+    "SebiLuca",
+    "Slaycey",
+    "Squared",
+    "Zoe Vi",
+    "Meduza",
+    "Stephan Bodzin",
+    "Bob Moses"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.334425+00:00"
+},
+{
+  "eventId": "2510935",
+  "title": "Hot Singles In Ur Area",
+  "eventUrl": "https://ra.co/events/2510935",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Mood Ring",
+  "venueUrl": "https://ra.co/clubs/141852",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "cry$cross",
+    "Suasimodo",
+    "DJ Ant (US)",
+    "BUNZ"
+  ],
+  "ticketUrl": "https://www.instagram.com/p/DdZewaaN74-/",
+  "isTicketed": true,
+  "lineupText": "cry$cross\nSuasimodo\nDJ Ant (US)\nBUNZ",
+  "allArtists": [
+    "cry$cross",
+    "Suasimodo",
+    "DJ Ant (US)",
+    "BUNZ"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.369103+00:00"
+},
+{
+  "eventId": "2539140",
+  "title": "Dee Diggs, TYLERFROMWHERE, Kilopatrah Jones, Barangay + Friends - Dead Letter No.9",
+  "eventUrl": "https://ra.co/events/2539140",
+  "date": "2026-10-03",
+  "startTime": "21:00",
+  "endTime": "04:00",
+  "venue": "Dead Letter No. 9",
+  "venueUrl": "https://ra.co/clubs/226651",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Dee Diggs",
+    "TYLERFROMWHERE",
+    "Kilopatrah Jones"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://www.instagram.com/no9nyc/",
+  "isTicketed": true,
+  "cost": "20",
+  "unlinkedArtists": [
+    "Barangay"
+  ],
+  "lineupText": "Dee Diggs\nTYLERFROMWHERE\nKilopatrah Jones\nBarangay",
+  "allArtists": [
+    "Dee Diggs",
+    "TYLERFROMWHERE",
+    "Kilopatrah Jones",
+    "Barangay"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.393295+00:00"
+},
+{
+  "eventId": "2502216",
+  "title": "BEYOND THE STARDUST",
+  "eventUrl": "https://ra.co/events/2502216",
+  "date": "2026-10-03",
+  "startTime": "19:00",
+  "endTime": "20:00",
+  "venue": "The Flea Theater",
+  "venueUrl": "https://ra.co/clubs/298330",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "The Illustrious Blacks"
+  ],
+  "genres": [
+    "House",
+    "Disco"
+  ],
+  "ticketUrl": "https://theflea.org/stardust",
+  "isTicketed": true,
+  "cost": "29.50-55.50",
+  "unlinkedArtists": [
+    "Niegel Smith",
+    "Amazonian Rockstar",
+    "Courtney J. Cook",
+    "Queen Ravenden",
+    "Javi Perez",
+    "Blaine Petrovia"
+  ],
+  "lineupText": "The Illustrious Blacks\nNiegel Smith\nAmazonian Rockstar\nCourtney J. Cook\nQueen Ravenden\nJavi Perez\nBlaine Petrovia",
+  "allArtists": [
+    "The Illustrious Blacks",
+    "Niegel Smith",
+    "Amazonian Rockstar",
+    "Courtney J. Cook",
+    "Queen Ravenden",
+    "Javi Perez",
+    "Blaine Petrovia"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.422643+00:00"
+},
+{
+  "eventId": "2546591",
+  "title": "BLIND_PMT",
+  "eventUrl": "https://ra.co/events/2546591",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "07:00",
+  "venue": "TBA - 1 Ingraham Street",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "SKIN CONTACT",
+    "Friedberg",
+    "OCTI"
+  ],
+  "genres": [
+    "Techno",
+    "Experimental"
+  ],
+  "isTicketed": false,
+  "cost": "0.00",
+  "unlinkedArtists": [
+    "Zach Davis"
+  ],
+  "lineupText": "SKIN CONTACT\nFriedberg\nOCTI\nZach Davis",
+  "allArtists": [
+    "SKIN CONTACT",
+    "Friedberg",
+    "OCTI",
+    "Zach Davis"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.433913+00:00"
+},
+{
+  "eventId": "2514948",
+  "title": "Simon Doty w. EMJIE [Extended Set]",
+  "eventUrl": "https://ra.co/events/2514948",
+  "date": "2026-10-03",
+  "startTime": "15:00",
+  "endTime": "22:00",
+  "venue": "Refuge",
+  "venueUrl": "https://ra.co/clubs/285748",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Simon Doty",
+    "EMJIE"
+  ],
+  "genres": [
+    "Progressive House"
+  ],
+  "ticketUrl": "https://grayarea.co/events/simon-doty-extended-set-oct-3-2026",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "koumby"
+  ],
+  "lineupText": "Simon Doty\nEMJIE\nkoumby",
+  "allArtists": [
+    "Simon Doty",
+    "EMJIE",
+    "koumby"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.929307+00:00"
+},
+{
+  "eventId": "2527124",
+  "title": "Photogenique Records x No.Vista with Left Early Bird, girl_irl, D3NIM, Mvtte0 + Jay3m",
+  "eventUrl": "https://ra.co/events/2527124",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Bossa Nova Civic Club",
+  "venueUrl": "https://ra.co/clubs/71292",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Lefto Early Bird",
+    "girl_irl",
+    "D3NIM"
+  ],
+  "genres": [
+    "Club"
+  ],
+  "isTicketed": false,
+  "cost": "$10/$15",
+  "unlinkedArtists": [
+    "@MVvtteo",
+    "@Jay3m"
+  ],
+  "lineupText": "Lefto Early Bird\ngirl_irl\nD3NIM\n@MVvtteo\n@Jay3m",
+  "allArtists": [
+    "Lefto Early Bird",
+    "girl_irl",
+    "D3NIM",
+    "@MVvtteo",
+    "@Jay3m"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.946194+00:00"
+},
+{
+  "eventId": "2547834",
+  "title": "Outer Heaven presents: CAMILLA - Gui Machado",
+  "eventUrl": "https://ra.co/events/2547834",
+  "date": "2026-10-03",
+  "startTime": "20:00",
+  "endTime": "04:00",
+  "venue": "Outer Heaven",
+  "venueUrl": "https://ra.co/clubs/209094",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "CAMILLA",
+    "Gui Machado"
+  ],
+  "genres": [
+    "House"
+  ],
+  "isTicketed": true,
+  "cost": "50",
+  "lineupText": "CAMILLA\nGui Machado",
+  "allArtists": [
+    "CAMILLA",
+    "Gui Machado"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.964695+00:00"
+},
+{
+  "eventId": "2549242",
+  "title": "Oscar G - Brooklyn After Dark with Cristian Arango n More",
+  "eventUrl": "https://ra.co/events/2549242",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "05:00",
+  "venue": "LoHi",
+  "venueUrl": "https://ra.co/clubs/187673",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Oscar G",
+    "Cristian Arango"
+  ],
+  "genres": [
+    "Tech House",
+    "Afro House"
+  ],
+  "isTicketed": true,
+  "cost": "$30",
+  "unlinkedArtists": [
+    "Niia Guerra",
+    "Sav-Oure"
+  ],
+  "lineupText": "Oscar G\nCristian Arango\nNiia Guerra\nSav-Oure",
+  "allArtists": [
+    "Oscar G",
+    "Cristian Arango",
+    "Niia Guerra",
+    "Sav-Oure"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:53.983201+00:00"
+},
+{
+  "eventId": "2492505",
+  "title": "Happy Hour: Aleska",
+  "eventUrl": "https://ra.co/events/2492505",
+  "date": "2026-10-03",
+  "startTime": "19:00",
+  "endTime": "22:00",
+  "venue": "Bossa Nova Civic Club",
+  "venueUrl": "https://ra.co/clubs/71292",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Aleska"
+  ],
+  "genres": [
+    "Techno"
+  ],
+  "isTicketed": false,
+  "lineupText": "Aleska",
+  "allArtists": [
+    "Aleska"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.061533+00:00"
+},
+{
+  "eventId": "2542500",
+  "title": "asfffff with Samuelx, Cuteboys, Tasheff",
+  "eventUrl": "https://ra.co/events/2542500",
+  "date": "2026-10-03",
+  "startTime": "19:00",
+  "endTime": "22:00",
+  "venue": "Mood Ring",
+  "venueUrl": "https://ra.co/clubs/141852",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Samuelx",
+    "cute boys",
+    "Tasheff"
+  ],
+  "isTicketed": false,
+  "cost": "0",
+  "lineupText": "Samuelx\ncute boys\nTasheff",
+  "allArtists": [
+    "Samuelx",
+    "cute boys",
+    "Tasheff"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.082661+00:00"
+},
+{
+  "eventId": "2546038",
+  "title": "Corey Baker",
+  "eventUrl": "https://ra.co/events/2546038",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Moondog Hifi",
+  "venueUrl": "https://ra.co/clubs/250960",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Corey Baker"
+  ],
+  "ticketUrl": "https://www.moondoghifi.com/",
+  "isTicketed": true,
+  "cost": "0",
+  "lineupText": "Corey Baker",
+  "allArtists": [
+    "Corey Baker"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.113425+00:00"
+},
+{
+  "eventId": "2546850",
+  "title": "Starstruck All Stars: Nugget, EEVEE, Helloniyx, and v64",
+  "eventUrl": "https://ra.co/events/2546850",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Happyfun Hideaway",
+  "venueUrl": "https://ra.co/clubs/108513",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "EEVEE (3)",
+    "Niyx",
+    "v64 (1)"
+  ],
+  "genres": [
+    "Club",
+    "Ghetto Tech"
+  ],
+  "isTicketed": false,
+  "cost": "$0",
+  "unlinkedArtists": [
+    "Nugget"
+  ],
+  "lineupText": "Nugget\nEEVEE (3)\nNiyx\nv64 (1)",
+  "allArtists": [
+    "Nugget",
+    "EEVEE (3)",
+    "Niyx",
+    "v64 (1)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.131767+00:00"
+},
+{
+  "eventId": "2547769",
+  "title": "BLOND:ISH, Mita Gami",
+  "eventUrl": "https://ra.co/events/2547769",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Pacha New York",
+  "venueUrl": "https://ra.co/clubs/286414",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "BLOND:ISH",
+    "Mita Gami",
+    "Nico Bernardini"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://pacha-nyc.com/event/blondish-26-09-2026",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "BLOND:ISH Mita Gami Nico Bernardini"
+  ],
+  "lineupText": "BLOND:ISH Mita Gami Nico Bernardini",
+  "allArtists": [
+    "BLOND:ISH Mita Gami Nico Bernardini",
+    "BLOND:ISH",
+    "Mita Gami",
+    "Nico Bernardini"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.159412+00:00"
+},
+{
+  "eventId": "2540309",
+  "title": "Refuge Saturday Daytime: Simon Doty [Extended Set], EMJIE and koumby",
+  "eventUrl": "https://ra.co/events/2540309",
+  "date": "2026-10-03",
+  "startTime": "15:00",
+  "endTime": "22:00",
+  "venue": "Refuge",
+  "venueUrl": "https://ra.co/clubs/285748",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Simon Doty",
+    "EMJIE"
+  ],
+  "ticketUrl": "https://RDoct3rd.eventbrite.com/?aff=RA",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "koumby"
+  ],
+  "lineupText": "Simon Doty\nEMJIE\nkoumby",
+  "allArtists": [
+    "Simon Doty",
+    "EMJIE",
+    "koumby"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.178234+00:00"
+},
+{
+  "eventId": "2549004",
+  "title": "RECESS 10/3",
+  "eventUrl": "https://ra.co/events/2549004",
+  "date": "2026-10-03",
+  "startTime": "22:30",
+  "endTime": "03:00",
+  "venue": "Alphaville",
+  "venueUrl": "https://ra.co/clubs/101610",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "JULESMCKOOLS",
+    "GUAVA (BK)"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "isTicketed": false,
+  "cost": "0",
+  "unlinkedArtists": [
+    "JULESMCKOOLS GUAVA (BK) @ndunge @mrlesbian @minky @rexpelium"
+  ],
+  "lineupText": "JULESMCKOOLS GUAVA (BK) @ndunge @mrlesbian @minky @rexpelium",
+  "allArtists": [
+    "JULESMCKOOLS GUAVA (BK) @ndunge @mrlesbian @minky @rexpelium",
+    "JULESMCKOOLS",
+    "GUAVA (BK)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.192724+00:00"
+},
+{
+  "eventId": "2548903",
+  "title": "Disco Libra",
+  "eventUrl": "https://ra.co/events/2548903",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Friends & Lovers",
+  "venueUrl": "https://ra.co/clubs/88376",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Myyuh"
+  ],
+  "genres": [
+    "Disco",
+    "Club"
+  ],
+  "ticketUrl": "https://www.eventbrite.com/e/disco-libra-disco-soul-funk-more-tickets-2002292241996?aff=oddtdtcreator",
+  "isTicketed": false,
+  "cost": "5.00 - 10.00",
+  "unlinkedArtists": [
+    "@Taj"
+  ],
+  "lineupText": "@Taj\nMyyuh",
+  "allArtists": [
+    "@Taj",
+    "Myyuh"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.206341+00:00"
+},
+{
+  "eventId": "2544466",
+  "title": "HEALING INTENT with Chinapoet, Hymn, Egoseed, Connect the Dots",
+  "eventUrl": "https://ra.co/events/2544466",
+  "date": "2026-10-03",
+  "startTime": "18:00",
+  "endTime": "22:30",
+  "venue": "Ki Smith Gallery",
+  "venueUrl": "https://ra.co/clubs/236884",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Battygyal"
+  ],
+  "genres": [
+    "Ambient",
+    "Experimental"
+  ],
+  "ticketUrl": "https://www.kismithgallery.com/event-details/healing-intent-ki-smith-gallery",
+  "isTicketed": false,
+  "cost": "7 - 15",
+  "unlinkedArtists": [
+    "Chinapoet",
+    "Egoseed",
+    "Connect the dots"
+  ],
+  "lineupText": "Chinapoet\nBattygyal\nEgoseed\nConnect the dots",
+  "allArtists": [
+    "Chinapoet",
+    "Battygyal",
+    "Egoseed",
+    "Connect the dots"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.226867+00:00"
+},
+{
+  "eventId": "2549279",
+  "title": "DJ Dom Fletch at Little Grand",
+  "eventUrl": "https://ra.co/events/2549279",
+  "date": "2026-10-03",
+  "startTime": "19:00",
+  "endTime": "23:00",
+  "venue": "Little Grand",
+  "venueUrl": "https://ra.co/clubs/304001",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "DJ Dom Fletch"
+  ],
+  "genres": [
+    "Disco",
+    "Funk / Soul"
+  ],
+  "ticketUrl": "https://www.instagram.com/djdomfletch",
+  "isTicketed": false,
+  "cost": "0.00",
+  "lineupText": "DJ Dom Fletch",
+  "allArtists": [
+    "DJ Dom Fletch"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.242413+00:00"
+},
+{
+  "eventId": "2546866",
+  "title": "Golden Hour: Season Closer with WEMI, Arianna Danae, J. Hamilton",
+  "eventUrl": "https://ra.co/events/2546866",
+  "date": "2026-10-03",
+  "startTime": "18:00",
+  "endTime": "22:00",
+  "venue": "Koukla Espresso Bar",
+  "venueUrl": "https://ra.co/clubs/303774",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "J. Hamilton",
+    "WEMI",
+    "Arianna Danae"
+  ],
+  "genres": [
+    "House",
+    "Afro House"
+  ],
+  "ticketUrl": "https://www.eventbrite.com/e/golden-hour-season-closer-at-koukla-espresso-bar-tickets-2002106967836?aff=RA",
+  "isTicketed": false,
+  "cost": "0",
+  "lineupText": "J. Hamilton\nWEMI\nArianna Danae",
+  "allArtists": [
+    "J. Hamilton",
+    "WEMI",
+    "Arianna Danae"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.268019+00:00"
+},
+{
+  "eventId": "2549987",
+  "title": "Planet B // ALL NIGHT LONG",
+  "eventUrl": "https://ra.co/events/2549987",
+  "date": "2026-10-03",
+  "startTime": "21:00",
+  "endTime": "03:00",
+  "venue": "Gabriela",
+  "venueUrl": "https://ra.co/clubs/226608",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Planet B"
+  ],
+  "genres": [
+    "House",
+    "Acid"
+  ],
+  "isTicketed": false,
+  "cost": "0-20",
+  "lineupText": "Planet B",
+  "allArtists": [
+    "Planet B"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.294128+00:00"
+},
+{
+  "eventId": "2551361",
+  "title": "ANIMAL Saturday w/ Flaming Fetish, Jacq Jill",
+  "eventUrl": "https://ra.co/events/2551361",
+  "date": "2026-10-03",
+  "startTime": "16:00",
+  "endTime": "04:00",
+  "venue": "Animal",
+  "venueUrl": "https://ra.co/clubs/282886",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Flemish.Fetish",
+    "Jacq Jill"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.instagram.com/animal.nyc/",
+  "isTicketed": false,
+  "lineupText": "Flemish.Fetish\nJacq Jill",
+  "allArtists": [
+    "Flemish.Fetish",
+    "Jacq Jill"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.326956+00:00"
+},
+{
+  "eventId": "2549539",
+  "title": "AURA Saturdays - Hip Hop & Afrobeats Party Queens – Oct 3",
+  "eventUrl": "https://ra.co/events/2549539",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "Level Astoria",
+  "venueUrl": "https://ra.co/clubs/283204",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "DJ MTS"
+  ],
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "0 - $25.00",
+  "lineupText": "DJ MTS",
+  "allArtists": [
+    "DJ MTS"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.347966+00:00"
+},
+{
+  "eventId": "2550413",
+  "title": "BEDFORD / SLEEPY BOO",
+  "eventUrl": "https://ra.co/events/2550413",
+  "date": "2026-10-03",
+  "startTime": "17:00",
+  "endTime": "04:00",
+  "venue": "MAD Radio NYC",
+  "venueUrl": "https://ra.co/clubs/279719",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Sleepy & Boo"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://shotgun.live/events/madradionyc100316",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "BEDFORD"
+  ],
+  "lineupText": "BEDFORD\nSleepy & Boo",
+  "allArtists": [
+    "BEDFORD",
+    "Sleepy & Boo"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.362599+00:00"
+},
+{
+  "eventId": "2550173",
+  "title": "Danger Danger presents Ultra Violet",
+  "eventUrl": "https://ra.co/events/2550173",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "02:00",
+  "venue": "Danger Danger",
+  "venueUrl": "https://ra.co/clubs/236697",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "DJ Ultra Violet"
+  ],
+  "genres": [
+    "House",
+    "Disco"
+  ],
+  "ticketUrl": "https://shotgun.live/en/events/ultraviolet2",
+  "isTicketed": false,
+  "cost": "0",
+  "lineupText": "DJ Ultra Violet",
+  "allArtists": [
+    "DJ Ultra Violet"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.378511+00:00"
+},
+{
+  "eventId": "2549505",
+  "title": "Reggaeton Boat Party NYC - Avalon Yacht - Oct 03",
+  "eventUrl": "https://ra.co/events/2549505",
+  "date": "2026-10-03",
+  "startTime": "22:30",
+  "endTime": "03:00",
+  "venue": "Skyport Marina",
+  "venueUrl": "https://ra.co/clubs/104916",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "DJ B2B"
+  ],
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "$30.00 - $500.00",
+  "unlinkedArtists": [
+    "DJ B2B / Live DJs",
+    "Reggaeton DJs",
+    "Top 40 DJs",
+    "Latin DJs",
+    "Open Format DJs"
+  ],
+  "lineupText": "DJ B2B / Live DJs\nReggaeton DJs\nTop 40 DJs\nLatin DJs\nOpen Format DJs",
+  "allArtists": [
+    "DJ B2B / Live DJs",
+    "Reggaeton DJs",
+    "Top 40 DJs",
+    "Latin DJs",
+    "Open Format DJs",
+    "DJ B2B"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.906903+00:00"
+},
+{
+  "eventId": "2551388",
+  "title": "THE ZOO: FEELS LIKE NICOLE",
+  "eventUrl": "https://ra.co/events/2551388",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Oberon",
+  "venueUrl": "https://ra.co/clubs/272064",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Luis Fernando",
+    "GOGO (3)"
+  ],
+  "genres": [
+    "Disco",
+    "Pop"
+  ],
+  "ticketUrl": "https://www.instagram.com/luisfernandosworld/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "MiSquared"
+  ],
+  "lineupText": "Luis Fernando\nGOGO (3)\nMiSquared",
+  "allArtists": [
+    "Luis Fernando",
+    "GOGO (3)",
+    "MiSquared"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.923613+00:00"
+},
+{
+  "eventId": "2538164",
+  "title": "RIOT CLUB (AN ELECTRO SLEAZE PARTY)",
+  "eventUrl": "https://ra.co/events/2538164",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "03:00",
+  "venue": "TBA",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": true,
+  "cost": "10.00",
+  "unlinkedArtists": [
+    "Deep thrills",
+    "Brightviolet"
+  ],
+  "lineupText": "Deep thrills\nBrightviolet",
+  "allArtists": [
+    "Deep thrills",
+    "Brightviolet"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.957964+00:00"
+},
+{
+  "eventId": "2537050",
+  "title": "Reggaeton on Houston - Latin & Reggaeton Party NYC",
+  "eventUrl": "https://ra.co/events/2537050",
+  "date": "2026-10-03",
+  "startTime": "17:00",
+  "endTime": "03:00",
+  "venue": "San Antonios",
+  "venueUrl": "https://ra.co/clubs/254498",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hip-Hop",
+    "Disco"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.969545+00:00"
+},
+{
+  "eventId": "2516791",
+  "title": "A night at Studio 54",
+  "eventUrl": "https://ra.co/events/2516791",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "06:00",
+  "venue": "TBA",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Disco",
+    "Club"
+  ],
+  "isTicketed": false,
+  "cost": "$30",
+  "unlinkedArtists": [
+    "DJ Steve Mack"
+  ],
+  "lineupText": "DJ Steve Mack",
+  "allArtists": [
+    "DJ Steve Mack"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:54.990390+00:00"
+},
+{
+  "eventId": "2509954",
+  "title": "Off The Record at PUBLIC Hotel",
+  "eventUrl": "https://ra.co/events/2509954",
+  "date": "2026-10-03",
+  "startTime": "22:30",
+  "endTime": "04:00",
+  "venue": "Public Arts",
+  "venueUrl": "https://ra.co/clubs/139613",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "House",
+    "Electronica"
+  ],
+  "ticketUrl": "https://offtherecord-ny.com/",
+  "isTicketed": true,
+  "cost": "30",
+  "unlinkedArtists": [
+    "Club Room: LUCHINI - VALENTIN - ZIPORI",
+    "Blue Room: MODNNY - ROCKO - BRiNX",
+    "Unisex: NDRS - OASIIS"
+  ],
+  "lineupText": "Club Room: LUCHINI - VALENTIN - ZIPORI\nBlue Room: MODNNY - ROCKO - BRiNX\nUnisex: NDRS - OASIIS",
+  "allArtists": [
+    "Club Room: LUCHINI - VALENTIN - ZIPORI",
+    "Blue Room: MODNNY - ROCKO - BRiNX",
+    "Unisex: NDRS - OASIIS"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.011970+00:00"
+},
+{
+  "eventId": "2501757",
+  "title": "DISTRICT PERREO - Latin & Reggaeton Dance Party - Nexo CLUB NYC",
+  "eventUrl": "https://ra.co/events/2501757",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "Nexo",
+  "venueUrl": "https://ra.co/clubs/274523",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.032996+00:00"
+},
+{
+  "eventId": "2415399",
+  "title": "Apollo Studio presents",
+  "eventUrl": "https://ra.co/events/2415399",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "06:00",
+  "venue": "Apollo Studio",
+  "venueUrl": "https://ra.co/clubs/188907",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Special Guests"
+  ],
+  "lineupText": "Special Guests",
+  "allArtists": [
+    "Special Guests"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.052874+00:00"
+},
+{
+  "eventId": "2440653",
+  "title": "Aventura Night - #1 Bachata Party NYC",
+  "eventUrl": "https://ra.co/events/2440653",
+  "date": "2026-10-03",
+  "startTime": "21:00",
+  "endTime": "02:00",
+  "venue": "San Antonios",
+  "venueUrl": "https://ra.co/clubs/254498",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.083093+00:00"
+},
+{
+  "eventId": "2545970",
+  "title": "Echo Reset: Boy Sharp, DJ Jos, Danny Astin Louxx",
+  "eventUrl": "https://ra.co/events/2545970",
+  "date": "2026-10-03",
+  "startTime": "20:00",
+  "endTime": "04:00",
+  "venue": "Idle Mind Tavern",
+  "venueUrl": "https://ra.co/clubs/258334",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "House",
+    "Tech House"
+  ],
+  "isTicketed": false,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Boy Sharp",
+    "DJ Jos",
+    "Danny Astin",
+    "Louxx"
+  ],
+  "lineupText": "Boy Sharp\nDJ Jos\nDanny Astin\nLouxx",
+  "allArtists": [
+    "Boy Sharp",
+    "DJ Jos",
+    "Danny Astin",
+    "Louxx"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.105844+00:00"
+},
+{
+  "eventId": "2542524",
+  "title": "Home & Abroad",
+  "eventUrl": "https://ra.co/events/2542524",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "The Sultan Room",
+  "venueUrl": "https://ra.co/clubs/170479",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Amapiano",
+    "Afro House"
+  ],
+  "ticketUrl": "https://link.dice.fm/c5fef2c1ee4c",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Nikki Anticss, Ephniko, Rey Rey"
+  ],
+  "lineupText": "Nikki Anticss, Ephniko, Rey Rey",
+  "allArtists": [
+    "Nikki Anticss, Ephniko, Rey Rey"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.145616+00:00"
+},
+{
+  "eventId": "2546396",
+  "title": "Klub Kitsch International, Disco Exotica",
+  "eventUrl": "https://ra.co/events/2546396",
+  "date": "2026-09-25",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Danger Danger",
+  "venueUrl": "https://ra.co/clubs/236697",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Disco",
+    "Electronica"
+  ],
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "@Justin Denaro"
+  ],
+  "lineupText": "@Justin Denaro",
+  "allArtists": [
+    "@Justin Denaro"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.175923+00:00"
+},
+{
+  "eventId": "2535294",
+  "title": "DAY26 & J. Howell",
+  "eventUrl": "https://ra.co/events/2535294",
+  "date": "2026-10-03",
+  "startTime": "18:00",
+  "endTime": "22:30",
+  "venue": "SOBs",
+  "venueUrl": "https://ra.co/clubs/8591",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "R&B"
+  ],
+  "ticketUrl": "https://kydlabs.com/e/EV269c13eb-59c9-4878-9584-4101f2d8f4ba?referral_id=g-41b1efe2-a6e3-4785-8e32-dca4cad29481",
+  "isTicketed": false,
+  "cost": "$50",
+  "unlinkedArtists": [
+    "@DAY26 @J. Howell"
+  ],
+  "lineupText": "@DAY26 @J. Howell",
+  "allArtists": [
+    "@DAY26 @J. Howell"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.227886+00:00"
+},
+{
+  "eventId": "2546882",
+  "title": "DJ Niko RnB nights",
+  "eventUrl": "https://ra.co/events/2546882",
+  "date": "2026-10-03",
+  "startTime": "18:00",
+  "endTime": "23:59",
+  "venue": "TBA",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "R&B"
+  ],
+  "isTicketed": true,
+  "cost": "46",
+  "unlinkedArtists": [
+    "DJ Niko"
+  ],
+  "lineupText": "DJ Niko",
+  "allArtists": [
+    "DJ Niko"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.285542+00:00"
+},
+{
+  "eventId": "2546369",
+  "title": "DJ Niko Rnb nights",
+  "eventUrl": "https://ra.co/events/2546369",
+  "date": "2026-10-03",
+  "startTime": "18:00",
+  "endTime": "23:30",
+  "venue": "TBA",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "R&B"
+  ],
+  "isTicketed": true,
+  "cost": "46",
+  "unlinkedArtists": [
+    "DJ NIko"
+  ],
+  "lineupText": "DJ NIko",
+  "allArtists": [
+    "DJ NIko"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.301424+00:00"
+},
+{
+  "eventId": "2550646",
+  "title": "DOLLHOUSE — Soft Opening - Grown Latin Nightlife",
+  "eventUrl": "https://ra.co/events/2550646",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "The Zone NYC",
+  "venueUrl": "https://ra.co/clubs/304121",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Reggaeton",
+    "Latin Bass"
+  ],
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "0 - $50",
+  "unlinkedArtists": [
+    "Top NYC DJs"
+  ],
+  "lineupText": "Top NYC DJs",
+  "allArtists": [
+    "Top NYC DJs"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.312479+00:00"
+},
+{
+  "eventId": "2551334",
+  "title": "District Saturdays: Reggaeton & Dancing Midtown Nightclub Halloween",
+  "eventUrl": "https://ra.co/events/2551334",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "Nexo",
+  "venueUrl": "https://ra.co/clubs/274523",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hip-Hop",
+    "Disco"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.340140+00:00"
+},
+{
+  "eventId": "2547588",
+  "title": "Recsin44",
+  "eventUrl": "https://ra.co/events/2547588",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "06:00",
+  "venue": "White House Hamptons",
+  "venueUrl": "https://ra.co/clubs/10295",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Ambient",
+    "Baile Funk"
+  ],
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Grigh recsin44"
+  ],
+  "lineupText": "Grigh recsin44",
+  "allArtists": [
+    "Grigh recsin44"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.351972+00:00"
+},
+{
+  "eventId": "2549487",
+  "title": "Reggaeton Paradise Rooftop Party – Lost in Paradise, Queens – Oct 03",
+  "eventUrl": "https://ra.co/events/2549487",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "Lost in Paradise Rooftop",
+  "venueUrl": "https://ra.co/clubs/256065",
+  "city": "New York City",
+  "country": "United States of America",
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "$60.00",
+  "unlinkedArtists": [
+    "NYC Top DJs"
+  ],
+  "lineupText": "NYC Top DJs",
+  "allArtists": [
+    "NYC Top DJs"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.378570+00:00"
+},
+{
+  "eventId": "2535448",
+  "title": "SOY PEOR Reggaeton Party Cocktail Bar",
+  "eventUrl": "https://ra.co/events/2535448",
+  "date": "2026-10-03",
+  "startTime": "17:00",
+  "endTime": "03:00",
+  "venue": "San Antonios",
+  "venueUrl": "https://ra.co/clubs/254498",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Disco",
+    "Reggaeton"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.401855+00:00"
+},
+{
+  "eventId": "2551345",
+  "title": "SXTPS: NYC",
+  "eventUrl": "https://ra.co/events/2551345",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "TBA",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "House",
+    "Hip-Hop"
+  ],
+  "ticketUrl": "https://www.instagram.com/sxtps.exe/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "KIDD",
+    "Monte Christo",
+    "TAYLORMADE"
+  ],
+  "lineupText": "KIDD\nMonte Christo\nTAYLORMADE",
+  "allArtists": [
+    "KIDD",
+    "Monte Christo",
+    "TAYLORMADE"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.858995+00:00"
+},
+{
+  "eventId": "2550708",
+  "title": "Saturday Nights NYC - Latin Night Saturday - Every Saturday",
+  "eventUrl": "https://ra.co/events/2550708",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Club 51",
+  "venueUrl": "https://ra.co/clubs/163084",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Reggaeton",
+    "Latin Bass"
+  ],
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "0 - $35.80",
+  "unlinkedArtists": [
+    "Top NYC DJs"
+  ],
+  "lineupText": "Top NYC DJs",
+  "allArtists": [
+    "Top NYC DJs"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.874845+00:00"
+},
+{
+  "eventId": "2550109",
+  "title": "TBA - Artist Page Approval",
+  "eventUrl": "https://ra.co/events/2550109",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "06:00",
+  "venue": "TBA - New York City",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Deep House",
+    "Club"
+  ],
+  "isTicketed": false,
+  "cost": "$25",
+  "unlinkedArtists": [
+    "Edgar Torres"
+  ],
+  "lineupText": "Edgar Torres",
+  "allArtists": [
+    "Edgar Torres"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.916184+00:00"
+},
+{
+  "eventId": "2544345",
+  "title": "THE Y2K Parrty at the Legendary Mehanata NYC - 18",
+  "eventUrl": "https://ra.co/events/2544345",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Mehanata Bar",
+  "venueUrl": "https://ra.co/clubs/31258",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Reggaeton"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.948288+00:00"
+},
+{
+  "eventId": "2545638",
+  "title": "The 2000s Forever Parrty by THE Y2K Parrty - Saturdays at Mehanata NYC",
+  "eventUrl": "https://ra.co/events/2545638",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Mehanata Bar",
+  "venueUrl": "https://ra.co/clubs/31258",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Reggaeton"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:55.985528+00:00"
+},
+{
+  "eventId": "2470715",
+  "title": "The Gasolina Reggaeton Party Nightclub",
+  "eventUrl": "https://ra.co/events/2470715",
+  "date": "2026-10-03",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "Nexo",
+  "venueUrl": "https://ra.co/clubs/274523",
+  "city": "New York City",
+  "country": "United States of America",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.009243+00:00"
+},
+{
+  "eventId": "2550677",
+  "title": "Viva Allure Days Saturday",
+  "eventUrl": "https://ra.co/events/2550677",
+  "date": "2026-10-03",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Viva Toro Nightclub",
+  "venueUrl": "https://ra.co/clubs/271388",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Reggaeton",
+    "Latin Bass"
+  ],
+  "ticketUrl": "https://mtsproductions.com/events/",
+  "isTicketed": true,
+  "cost": "$20.00",
+  "unlinkedArtists": [
+    "Runrie, DJ Oncue, and DJ Kassy"
+  ],
+  "lineupText": "Runrie, DJ Oncue, and DJ Kassy",
+  "allArtists": [
+    "Runrie, DJ Oncue, and DJ Kassy"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.025671+00:00"
+},
+{
+  "eventId": "2412508",
+  "title": "The Nursery: Floorplan, CARISTA",
+  "eventUrl": "https://ra.co/events/2412508",
+  "date": "2026-10-04",
+  "startTime": "15:00",
+  "endTime": "21:00",
+  "venue": "public records",
+  "venueUrl": "https://ra.co/clubs/164270",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Floorplan",
+    "CARISTA"
+  ],
+  "genres": [
+    "Techno"
+  ],
+  "isTicketed": true,
+  "lineupText": "Floorplan\nCARISTA",
+  "allArtists": [
+    "Floorplan",
+    "CARISTA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.039370+00:00"
+},
+{
+  "eventId": "2503324",
+  "title": "Mister Sunday: Eamon Harkin and Justin Carter",
+  "eventUrl": "https://ra.co/events/2503324",
+  "date": "2026-10-04",
+  "startTime": "15:00",
+  "endTime": "21:00",
+  "venue": "Nowadays",
+  "venueUrl": "https://ra.co/clubs/105873",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Justin Carter",
+    "Eamon Harkin"
+  ],
+  "ticketUrl": "https://nowadays.nyc/rsvp/",
+  "isTicketed": true,
+  "lineupText": "Justin Carter\nEamon Harkin",
+  "allArtists": [
+    "Justin Carter",
+    "Eamon Harkin"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.060492+00:00"
+},
+{
+  "eventId": "2504224",
+  "title": "Disco Tehran Anniversary Party",
+  "eventUrl": "https://ra.co/events/2504224",
+  "date": "2026-10-04",
+  "startTime": "04:00",
+  "endTime": "22:00",
+  "venue": "Elsewhere",
+  "venueUrl": "https://ra.co/clubs/139960",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Marco Weibel",
+    "MIRZA",
+    "Willy Soul",
+    "Omer Mil",
+    "Arjun Shah"
+  ],
+  "ticketUrl": "https://www.elsewhere.club/help",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "ROOFTOP",
+    "Rahill",
+    "MIRZA b2b Willy Soul",
+    "(Funky Seshwa)",
+    "LOFT",
+    "Yonglin"
+  ],
+  "lineupText": "ROOFTOP\nMarco Weibel\nRahill\nMIRZA b2b Willy Soul\n(Funky Seshwa)\nLOFT\nOmer Mil\nArjun Shah\nYonglin",
+  "allArtists": [
+    "ROOFTOP",
+    "Marco Weibel",
+    "Rahill",
+    "MIRZA b2b Willy Soul",
+    "(Funky Seshwa)",
+    "LOFT",
+    "Omer Mil",
+    "Arjun Shah",
+    "Yonglin",
+    "MIRZA",
+    "Willy Soul"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.074726+00:00"
+},
+{
+  "eventId": "2542404",
+  "title": "feedbk - grand opening with Gwenan, Dragos Illici, Kian OK, Rasho & More",
+  "eventUrl": "https://ra.co/events/2542404",
+  "date": "2026-10-03",
+  "startTime": "17:00",
+  "endTime": "02:00",
+  "venue": "feedbk",
+  "venueUrl": "https://ra.co/clubs/301444",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Gwenan",
+    "Dragos Ilici",
+    "Kian OK",
+    "Rasho",
+    "ADREE",
+    "Grem (IT)",
+    "Mazko A",
+    "Manny (us)",
+    "Taiga",
+    "Hugo (US)"
+  ],
+  "genres": [
+    "House",
+    "Tech House"
+  ],
+  "ticketUrl": "https://www.instagram.com/feedbk_/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "Sergio Dimoff",
+    "& Special Guests"
+  ],
+  "lineupText": "Gwenan\nDragos Ilici\nKian OK\nRasho\nADREE\nGrem (IT)\nMazko A\nManny (us)\nTaiga\nHugo (US)\nSergio Dimoff\n& Special Guests",
+  "allArtists": [
+    "Gwenan",
+    "Dragos Ilici",
+    "Kian OK",
+    "Rasho",
+    "ADREE",
+    "Grem (IT)",
+    "Mazko A",
+    "Manny (us)",
+    "Taiga",
+    "Hugo (US)",
+    "Sergio Dimoff",
+    "& Special Guests"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.090885+00:00"
+},
+{
+  "eventId": "2542296",
+  "title": "Family Affair - Hot Honey Sundays, Moving Company, nyc rave girls, Third Floor Sounds, Vin.yl",
+  "eventUrl": "https://ra.co/events/2542296",
+  "date": "2026-10-04",
+  "startTime": "15:00",
+  "endTime": "21:00",
+  "venue": "McCarren Park",
+  "venueUrl": "https://ra.co/clubs/106316",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Anna Collecta",
+    "Deo'jorge",
+    "TEE EM DEE",
+    "DJ Ultra Violet",
+    "Van Der Laan"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "isTicketed": true,
+  "cost": "0",
+  "lineupText": "Hot Honey Sundays, Moving Company, NYC Rave Girls, Third Floor Sounds, Toucan Sounds, Ultra Friends\nAnna Collecta, Deo'jorge, TEE EM DEE, DJ Ultra Violet, Van Der Laan",
+  "allArtists": [
+    "Anna Collecta",
+    "Deo'jorge",
+    "TEE EM DEE",
+    "DJ Ultra Violet",
+    "Van Der Laan"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.114740+00:00"
+},
+{
+  "eventId": "2541184",
+  "title": "SanDia presents SEEDS: Caleaf Sellers, Bendito, Jeremy Giros",
+  "eventUrl": "https://ra.co/events/2541184",
+  "date": "2026-10-04",
+  "startTime": "18:00",
+  "endTime": "23:00",
+  "venue": "TBA - SpinnaVerse BK",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Bendito",
+    "Jeremy Giros"
+  ],
+  "genres": [
+    "Deep House",
+    "Afro House"
+  ],
+  "ticketUrl": "https://www.djspinna.com/events/sandia-presents-seeds-exclusive-screening-of-wreckin-shop-discussion-dance-jam-the-spinnaverse-bk-ny",
+  "isTicketed": true,
+  "cost": "20",
+  "unlinkedArtists": [
+    "Caleaf Sellers"
+  ],
+  "lineupText": "Caleaf Sellers\nBendito\nJeremy Giros",
+  "allArtists": [
+    "Caleaf Sellers",
+    "Bendito",
+    "Jeremy Giros"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.133790+00:00"
+},
+{
+  "eventId": "2546174",
+  "title": "LOVE SENSATION SUNDAYS 10.04.26 w/ Morabito, Ben Wild",
+  "eventUrl": "https://ra.co/events/2546174",
+  "date": "2026-10-04",
+  "startTime": "18:00",
+  "endTime": "23:59",
+  "venue": "Club Rawhide",
+  "venueUrl": "https://ra.co/clubs/294929",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Morabito",
+    "Ben Wild"
+  ],
+  "genres": [
+    "House",
+    "Disco"
+  ],
+  "ticketUrl": "https://rawhide.nyc",
+  "isTicketed": true,
+  "cost": "10.00",
+  "unlinkedArtists": [
+    "Morabito, Ben Wild"
+  ],
+  "lineupText": "Morabito, Ben Wild",
+  "allArtists": [
+    "Morabito, Ben Wild",
+    "Morabito",
+    "Ben Wild"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.147731+00:00"
+},
+{
+  "eventId": "2536111",
+  "title": "FREESTYLE NIGHT",
+  "eventUrl": "https://ra.co/events/2536111",
+  "date": "2026-10-04",
+  "startTime": "21:00",
+  "endTime": "02:00",
+  "venue": "Gabriela",
+  "venueUrl": "https://ra.co/clubs/226608",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Joey LaBeija",
+    "DJ Ultra Violet",
+    "HD (US)"
+  ],
+  "genres": [
+    "Club",
+    "Latin Bass"
+  ],
+  "isTicketed": true,
+  "cost": "$5-20",
+  "unlinkedArtists": [
+    "Maluca (DJ SET)",
+    "Soft Threat (FKA Joey LaBeija)",
+    "your resident HD (US)"
+  ],
+  "lineupText": "Sounds by:\nMaluca (DJ SET)\nSoft Threat (FKA Joey LaBeija)\nDJ Ultra Violet\n+ your resident HD (US)",
+  "allArtists": [
+    "Maluca (DJ SET)",
+    "Soft Threat (FKA Joey LaBeija)",
+    "DJ Ultra Violet",
+    "your resident HD (US)",
+    "Joey LaBeija",
+    "HD (US)"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.159038+00:00"
+},
+{
+  "eventId": "2476530",
+  "title": "We Belong Here: Central Park",
+  "eventUrl": "https://ra.co/events/2476530",
+  "date": "2026-10-02",
+  "startTime": "16:00",
+  "endTime": "21:00",
+  "venue": "Wollman Rink",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Meduza",
+    "LP Giobbi",
+    "Ben Böhmer",
+    "Stephan Bodzin",
+    "Steve Angello",
+    "Bob Moses",
+    "Ashibah",
+    "Tripolism",
+    "Amanda Simpson",
+    "Anthony Romano",
+    "ASMOT",
+    "Lexicon",
+    "Mafia B",
+    "Malcolm Zeller",
+    "Nog",
+    "Slaycey"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.webelonghere.world/centralpark/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Meduza ^3",
+    "Stephan Bodzin Live",
+    "Bob Moses (Club Set)",
+    "Eve Lauren",
+    "After Ours",
+    "Amanda Usher",
+    "Emily Bass",
+    "J. Force",
+    "Kitty",
+    "Quantum.Cor",
+    "Sanvero",
+    "SebiLuca",
+    "Squared",
+    "Zoe Vi"
+  ],
+  "lineupText": "Meduza ^3\nLP Giobbi\nBen Böhmer\nStephan Bodzin Live\nSteve Angello\nBob Moses (Club Set)\nAshibah\nEve Lauren\nTripolism\nAfter Ours\nAmanda Simpson\nAmanda Usher\nAnthony Romano\nASMOT\nEmily Bass\nJ. Force\nKitty\nLexicon\nMafia B\nMalcolm Zeller\nNog\nQuantum.Cor\nSanvero\nSebiLuca\nSlaycey\nSquared\nZoe Vi",
+  "allArtists": [
+    "Meduza ^3",
+    "LP Giobbi",
+    "Ben Böhmer",
+    "Stephan Bodzin Live",
+    "Steve Angello",
+    "Bob Moses (Club Set)",
+    "Ashibah",
+    "Eve Lauren",
+    "Tripolism",
+    "After Ours",
+    "Amanda Simpson",
+    "Amanda Usher",
+    "Anthony Romano",
+    "ASMOT",
+    "Emily Bass",
+    "J. Force",
+    "Kitty",
+    "Lexicon",
+    "Mafia B",
+    "Malcolm Zeller",
+    "Nog",
+    "Quantum.Cor",
+    "Sanvero",
+    "SebiLuca",
+    "Slaycey",
+    "Squared",
+    "Zoe Vi",
+    "Meduza",
+    "Stephan Bodzin",
+    "Bob Moses"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.185387+00:00"
+},
+{
+  "eventId": "2476768",
+  "title": "L.P. Rhythm w/ Olive F & Guests",
+  "eventUrl": "https://ra.co/events/2476768",
+  "date": "2026-10-04",
+  "startTime": "14:00",
+  "endTime": "22:00",
+  "venue": "Superior Ingredients",
+  "venueUrl": "https://ra.co/clubs/187711",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "L.P. Rhythm",
+    "Olive F",
+    "Collin Oliver",
+    "Ford Scott"
+  ],
+  "genres": [
+    "House",
+    "Minimal Techno"
+  ],
+  "ticketUrl": "https://grayarea.co/events/l-p-rhythm-and-guests-oct-4-2026",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "stixx"
+  ],
+  "lineupText": "L.P. Rhythm\nOlive F\nCollin Oliver\nFord Scott\nstixx",
+  "allArtists": [
+    "L.P. Rhythm",
+    "Olive F",
+    "Collin Oliver",
+    "Ford Scott",
+    "stixx"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.206566+00:00"
+},
+{
+  "eventId": "2541646",
+  "title": "Refuge Sunday Daytime: Marcellus Pittman, Glenn Underground, Razor-N-Tape",
+  "eventUrl": "https://ra.co/events/2541646",
+  "date": "2026-10-04",
+  "startTime": "15:00",
+  "endTime": "22:00",
+  "venue": "Refuge",
+  "venueUrl": "https://ra.co/clubs/285748",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Glenn Underground",
+    "Marcellus Pittman"
+  ],
+  "ticketUrl": "https://RSoct4th.eventbrite.com/?aff=RA",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Razor-N-Tape"
+  ],
+  "lineupText": "Glenn Underground\nMarcellus Pittman\nRazor-N-Tape",
+  "allArtists": [
+    "Glenn Underground",
+    "Marcellus Pittman",
+    "Razor-N-Tape"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.217863+00:00"
+},
+{
+  "eventId": "2546872",
+  "title": "WORLD OF ECHOES",
+  "eventUrl": "https://ra.co/events/2546872",
+  "date": "2026-10-04",
+  "startTime": "16:00",
+  "endTime": "22:00",
+  "venue": "Le Bain",
+  "venueUrl": "https://ra.co/clubs/36873",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Francois K"
+  ],
+  "isTicketed": true,
+  "lineupText": "Francois K",
+  "allArtists": [
+    "Francois K"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.243653+00:00"
+},
+{
+  "eventId": "2536121",
+  "title": "Sunday Bliss: Elephantglasses, KATA, Blvck Truffle",
+  "eventUrl": "https://ra.co/events/2536121",
+  "date": "2026-10-04",
+  "startTime": "19:00",
+  "endTime": "02:00",
+  "venue": "Jupiter Disco",
+  "venueUrl": "https://ra.co/clubs/128789",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Elephantglasses",
+    "/KATA/",
+    "Blvck Truffle"
+  ],
+  "isTicketed": true,
+  "lineupText": "Elephantglasses\n/KATA/\nBlvck Truffle",
+  "allArtists": [
+    "Elephantglasses",
+    "/KATA/",
+    "Blvck Truffle"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.264740+00:00"
+},
+{
+  "eventId": "2534678",
+  "title": "Sunday Sunday: Axel Boman and Rebolledo",
+  "eventUrl": "https://ra.co/events/2534678",
+  "date": "2026-10-04",
+  "startTime": "15:00",
+  "endTime": "22:00",
+  "venue": "Knockdown Center",
+  "venueUrl": "https://ra.co/clubs/69401",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Axel Boman",
+    "Rebolledo"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://link.dice.fm/SundaySunday-Ruins-Oct4",
+  "isTicketed": false,
+  "lineupText": "Axel Boman\nRebolledo",
+  "allArtists": [
+    "Axel Boman",
+    "Rebolledo"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.736677+00:00"
+},
+{
+  "eventId": "2492505",
+  "title": "Happy Hour: Aleska",
+  "eventUrl": "https://ra.co/events/2492505",
+  "date": "2026-10-03",
+  "startTime": "19:00",
+  "endTime": "22:00",
+  "venue": "Bossa Nova Civic Club",
+  "venueUrl": "https://ra.co/clubs/71292",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Aleska"
+  ],
+  "genres": [
+    "Techno"
+  ],
+  "isTicketed": false,
+  "lineupText": "Aleska",
+  "allArtists": [
+    "Aleska"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.751207+00:00"
+},
+{
+  "eventId": "2532342",
+  "title": "Lu2k b2b Hyas b2b Pura Pura ALL NIGHT",
+  "eventUrl": "https://ra.co/events/2532342",
+  "date": "2026-10-04",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Bossa Nova Civic Club",
+  "venueUrl": "https://ra.co/clubs/71292",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Lu2k",
+    "Hyas",
+    "Pura Pura"
+  ],
+  "genres": [
+    "Techno"
+  ],
+  "isTicketed": false,
+  "cost": "$10",
+  "lineupText": "Lu2k\nHyas\nPura Pura",
+  "allArtists": [
+    "Lu2k",
+    "Hyas",
+    "Pura Pura"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.792177+00:00"
+},
+{
+  "eventId": "2547846",
+  "title": "Yasuhiro Fujioka presents John Coltrane's Centennial Celebration",
+  "eventUrl": "https://ra.co/events/2547846",
+  "date": "2026-10-04",
+  "startTime": "19:00",
+  "endTime": "22:00",
+  "venue": "Silence Please",
+  "venueUrl": "https://ra.co/clubs/267250",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Jazz"
+  ],
+  "ticketUrl": "https://instagram.com/yasuhirofujifujioka",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "Yasuhiro Fujioka",
+    "John Coltrane"
+  ],
+  "lineupText": "Yasuhiro Fujioka\nJohn Coltrane",
+  "allArtists": [
+    "Yasuhiro Fujioka",
+    "John Coltrane"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.814389+00:00"
+},
+{
+  "eventId": "2502217",
+  "title": "BEYOND THE STARDUST",
+  "eventUrl": "https://ra.co/events/2502217",
+  "date": "2026-10-04",
+  "startTime": "15:00",
+  "endTime": "16:00",
+  "venue": "The Flea Theater",
+  "venueUrl": "https://ra.co/clubs/298330",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "The Illustrious Blacks"
+  ],
+  "genres": [
+    "House",
+    "Disco"
+  ],
+  "ticketUrl": "https://theflea.org/stardust",
+  "isTicketed": true,
+  "cost": "29.50-55.50",
+  "unlinkedArtists": [
+    "Niegel Smith",
+    "Amazonian Rockstar",
+    "Courtney J. Cook",
+    "Queen Ravenden",
+    "Javi Perez",
+    "Blaine Petrovia"
+  ],
+  "lineupText": "The Illustrious Blacks\nNiegel Smith\nAmazonian Rockstar\nCourtney J. Cook\nQueen Ravenden\nJavi Perez\nBlaine Petrovia",
+  "allArtists": [
+    "The Illustrious Blacks",
+    "Niegel Smith",
+    "Amazonian Rockstar",
+    "Courtney J. Cook",
+    "Queen Ravenden",
+    "Javi Perez",
+    "Blaine Petrovia"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.831796+00:00"
+},
+{
+  "eventId": "2543666",
+  "title": "Sásta Sundays: The Flair, Club Sásta",
+  "eventUrl": "https://ra.co/events/2543666",
+  "date": "2026-10-04",
+  "startTime": "22:00",
+  "endTime": "03:00",
+  "venue": "Bar Bonobo",
+  "venueUrl": "https://ra.co/clubs/280503",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "The Flair"
+  ],
+  "genres": [
+    "House",
+    "Funk / Soul"
+  ],
+  "isTicketed": false,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Club Sásta"
+  ],
+  "lineupText": "The Flair\nClub Sásta",
+  "allArtists": [
+    "The Flair",
+    "Club Sásta"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.853236+00:00"
+},
+{
+  "eventId": "2549279",
+  "title": "DJ Dom Fletch at Little Grand",
+  "eventUrl": "https://ra.co/events/2549279",
+  "date": "2026-10-03",
+  "startTime": "19:00",
+  "endTime": "23:00",
+  "venue": "Little Grand",
+  "venueUrl": "https://ra.co/clubs/304001",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "DJ Dom Fletch"
+  ],
+  "genres": [
+    "Disco",
+    "Funk / Soul"
+  ],
+  "ticketUrl": "https://www.instagram.com/djdomfletch",
+  "isTicketed": false,
+  "cost": "0.00",
+  "lineupText": "DJ Dom Fletch",
+  "allArtists": [
+    "DJ Dom Fletch"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.864953+00:00"
+},
+{
+  "eventId": "2551365",
+  "title": "ANIMAL Sunday w/ Malzof, Princess Peggie",
+  "eventUrl": "https://ra.co/events/2551365",
+  "date": "2026-10-04",
+  "startTime": "16:00",
+  "endTime": "04:00",
+  "venue": "Animal",
+  "venueUrl": "https://ra.co/clubs/282886",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Malzof",
+    "Princess Peggie"
+  ],
+  "genres": [
+    "House"
+  ],
+  "ticketUrl": "https://www.instagram.com/animal.nyc/",
+  "isTicketed": false,
+  "lineupText": "Malzof\nPrincess Peggie",
+  "allArtists": [
+    "Malzof",
+    "Princess Peggie"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.889724+00:00"
+},
+{
+  "eventId": "2551325",
+  "title": "THE WOR$T AFTERPARTY IN AMERICA",
+  "eventUrl": "https://ra.co/events/2551325",
+  "date": "2026-10-04",
+  "startTime": "22:00",
+  "endTime": "05:00",
+  "venue": "9 Bob Note",
+  "venueUrl": "https://ra.co/clubs/217985",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Luis Fernando"
+  ],
+  "genres": [
+    "Pop",
+    "Club"
+  ],
+  "ticketUrl": "https://www.instagram.com/luisfernandosworld/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "Rocket",
+    "P_A_T"
+  ],
+  "lineupText": "Luis Fernando\nRocket\nP_A_T",
+  "allArtists": [
+    "Luis Fernando",
+    "Rocket",
+    "P_A_T"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.902161+00:00"
+},
+{
+  "eventId": "2551403",
+  "title": "Therapy",
+  "eventUrl": "https://ra.co/events/2551403",
+  "date": "2026-10-04",
+  "startTime": "23:00",
+  "endTime": "04:00",
+  "venue": "Oberon",
+  "venueUrl": "https://ra.co/clubs/272064",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "zzzzach",
+    "PUNKAL0ID"
+  ],
+  "genres": [
+    "Club"
+  ],
+  "ticketUrl": "https://www.instagram.com/oberonnyc/",
+  "isTicketed": false,
+  "unlinkedArtists": [
+    "sleepowder",
+    "miss hoochie"
+  ],
+  "lineupText": "zzzzach\nsleepowder\nmiss hoochie\nPUNKAL0ID",
+  "allArtists": [
+    "zzzzach",
+    "sleepowder",
+    "miss hoochie",
+    "PUNKAL0ID"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.922126+00:00"
+},
+{
+  "eventId": "2546064",
+  "title": "Opal Skies: Love, Highlife",
+  "eventUrl": "https://ra.co/events/2546064",
+  "date": "2026-10-04",
+  "startTime": "19:00",
+  "endTime": "23:59",
+  "venue": "Moondog Hifi",
+  "venueUrl": "https://ra.co/clubs/250960",
+  "city": "New York City",
+  "country": "United States of America",
+  "ticketUrl": "https://www.moondoghifi.com/",
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Grey",
+    "Nwao",
+    "Xéynamay"
+  ],
+  "lineupText": "Grey\nNwao\nXéynamay",
+  "allArtists": [
+    "Grey",
+    "Nwao",
+    "Xéynamay"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.935719+00:00"
+},
+{
+  "eventId": "2548062",
+  "title": "FLY Queens - Lost in Paradise",
+  "eventUrl": "https://ra.co/events/2548062",
+  "date": "2026-10-04",
+  "startTime": "17:00",
+  "endTime": "00:00",
+  "venue": "Lost in Paradise Rooftop",
+  "venueUrl": "https://ra.co/clubs/256065",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Tech House",
+    "Afro House"
+  ],
+  "ticketUrl": "https://luma.com/ncb6t7rx",
+  "isTicketed": false,
+  "cost": "30.00",
+  "unlinkedArtists": [
+    "Joshua Orange",
+    "Joshua Ruiz"
+  ],
+  "lineupText": "Joshua Orange\nJoshua Ruiz",
+  "allArtists": [
+    "Joshua Orange",
+    "Joshua Ruiz"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.951016+00:00"
+},
+{
+  "eventId": "2537819",
+  "title": "Reggaeton on Houston - Latin & Reggaeton Party NYC",
+  "eventUrl": "https://ra.co/events/2537819",
+  "date": "2026-10-04",
+  "startTime": "17:00",
+  "endTime": "03:00",
+  "venue": "San Antonios",
+  "venueUrl": "https://ra.co/clubs/254498",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hip-Hop",
+    "Disco"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:56.985983+00:00"
+},
+{
+  "eventId": "2535502",
+  "title": "The Legends 'La Sinfonica'",
+  "eventUrl": "https://ra.co/events/2535502",
+  "date": "2026-10-04",
+  "startTime": "19:00",
+  "endTime": "23:30",
+  "venue": "SOBs",
+  "venueUrl": "https://ra.co/clubs/8591",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Dembow"
+  ],
+  "ticketUrl": "https://kydlabs.com/e/EV9e1d34bc-a8ee-46cd-ab53-0846302f95df?ref=shortlink",
+  "isTicketed": false,
+  "cost": "$50",
+  "unlinkedArtists": [
+    "@thelegends"
+  ],
+  "lineupText": "@thelegends",
+  "allArtists": [
+    "@thelegends"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:57.010038+00:00"
+},
+{
+  "eventId": "2545491",
+  "title": "The Y2k Parrty- Can you hear me now? Classics Cocktail Bar",
+  "eventUrl": "https://ra.co/events/2545491",
+  "date": "2026-10-04",
+  "startTime": "17:00",
+  "endTime": "03:00",
+  "venue": "San Antonios",
+  "venueUrl": "https://ra.co/clubs/254498",
+  "city": "New York City",
+  "country": "United States of America",
+  "genres": [
+    "Hip-Hop",
+    "Disco"
+  ],
+  "ticketUrl": "https://www.iboatnyc.com/",
+  "isTicketed": true,
+  "unlinkedArtists": [
+    "TBA"
+  ],
+  "lineupText": "TBA",
+  "allArtists": [
+    "TBA"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:57.025768+00:00"
+},
+{
+  "eventId": "2542471",
+  "title": "MMF Society Open Decks",
+  "eventUrl": "https://ra.co/events/2542471",
+  "date": "2026-10-05",
+  "startTime": "18:00",
+  "endTime": "00:00",
+  "venue": "The Rose",
+  "venueUrl": "https://ra.co/clubs/261688",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "shirlz",
+    "7ACHIEF"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://www.instagram.com/matchmyfreq.society/",
+  "isTicketed": true,
+  "cost": "0",
+  "unlinkedArtists": [
+    "Xeltrex"
+  ],
+  "lineupText": "shirlz\n7ACHIEF\nXeltrex",
+  "allArtists": [
+    "shirlz",
+    "7ACHIEF",
+    "Xeltrex"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:57.043143+00:00"
+},
+{
+  "eventId": "2543605",
+  "title": "Dead Inside Society 6 Year Anniversary with Khadija, motiv-a, Zanias",
+  "eventUrl": "https://ra.co/events/2543605",
+  "date": "2026-10-05",
+  "startTime": "22:00",
+  "endTime": "04:00",
+  "venue": "Bossa Nova Civic Club",
+  "venueUrl": "https://ra.co/clubs/71292",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Khadija",
+    "motiv-a",
+    "Zanias"
+  ],
+  "genres": [
+    "Techno",
+    "EBM"
+  ],
+  "isTicketed": false,
+  "cost": "$0",
+  "lineupText": "Khadija\nmotiv-a\nZanias",
+  "allArtists": [
+    "Khadija",
+    "motiv-a",
+    "Zanias"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:57.067592+00:00"
+},
+{
+  "eventId": "2534304",
+  "title": "New York Modular Society 7th Anniversary",
+  "eventUrl": "https://ra.co/events/2534304",
+  "date": "2026-10-05",
+  "startTime": "19:00",
+  "endTime": "22:00",
+  "venue": "The Sultan Room",
+  "venueUrl": "https://ra.co/clubs/170479",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "5ToK3",
+    "Ben The Glorious Bastard",
+    "Crew Called Self",
+    "Todd Sines"
+  ],
+  "genres": [
+    "Techno",
+    "Electro"
+  ],
+  "ticketUrl": "https://link.dice.fm/NYMS7thAnniversary",
+  "isTicketed": false,
+  "lineupText": "19:00 Nicky Bagels\n19:30 5ToK3\n20:00 Dngrhndz\n20:30 Ben The Glorious Bastard\n21:00 Crew Called Self\n21:30 Todd Sines",
+  "allArtists": [
+    "5ToK3",
+    "Ben The Glorious Bastard",
+    "Crew Called Self",
+    "Todd Sines"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:57.079299+00:00"
+},
+{
+  "eventId": "2548116",
+  "title": "The Hella Sketchy X Kudu: Floor Space, Dune Machine, Erin Wajufos",
+  "eventUrl": "https://ra.co/events/2548116",
+  "date": "2026-10-05",
+  "startTime": "19:00",
+  "endTime": "23:00",
+  "venue": "Hart Bar",
+  "venueUrl": "https://ra.co/clubs/165116",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Erin Wajufos"
+  ],
+  "genres": [
+    "Techno",
+    "Ambient"
+  ],
+  "isTicketed": true,
+  "cost": "$10-$15",
+  "unlinkedArtists": [
+    "Floor Space",
+    "Dune Machine"
+  ],
+  "lineupText": "Floor Space\nDune Machine\nErin Wajufos",
+  "allArtists": [
+    "Floor Space",
+    "Dune Machine",
+    "Erin Wajufos"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:57.097052+00:00"
+},
+{
+  "eventId": "2510807",
+  "title": "The Faggots Fête: Nightboat Gala Afterparty",
+  "eventUrl": "https://ra.co/events/2510807",
+  "date": "2026-10-06",
+  "startTime": "22:00",
+  "endTime": "02:00",
+  "venue": "Sugar Hill Disco",
+  "venueUrl": "https://ra.co/clubs/136811",
+  "city": "New York City",
+  "country": "United States of America",
+  "artists": [
+    "Juliana Huxtable",
+    "DJPT",
+    "Soo Intoit"
+  ],
+  "genres": [
+    "Techno",
+    "House"
+  ],
+  "ticketUrl": "https://nightboat.org/the-faggots-fete/",
+  "isTicketed": true,
+  "cost": "25",
+  "lineupText": "Juliana Huxtable\nDJPT\nSoo Intoit",
+  "allArtists": [
+    "Juliana Huxtable",
+    "DJPT",
+    "Soo Intoit"
+  ],
+  "recordType": "event",
+  "scrapedAt": "2026-10-01T22:53:57.117559+00:00"
+}]
